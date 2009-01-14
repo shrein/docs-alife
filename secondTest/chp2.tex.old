@@ -1,0 +1,382 @@
+%\chapter{Neural Fields as Control and Planning Systems} \label{ch:chp2}
+\section{Introduction} 
+In this chapter we aim to propose a control planning system or
+architechture based on neural fields which is suitable to control a
+relatively complex system. We test it over a typical inverted-pendulum
+problem and compare it against a more traditional recurrent neural
+network controller. First, we present the neural fields model, some
+variations of it which will be useful for its evolution (detailed in
+next chapters) and some of the properties that arise from it. Next, we
+study its applications to control and compare it with the recurrent
+neural network control scheme. We briefly compare its properties with
+traditional control schemes, and finally we test it with the
+inverted-pendulum problem.
+
+%\section{Goal-Based Planning and Control Planning}
+\section{Models of Neural Fields}
+Neural fields arise as a tissue level model of neural populations in
+brain. It has been proposed by Wilson and Cowan \cite{Wilson72Excitatory} and detailed
+by Amari \cite{Amari77Dynamics} in the particular case of lateral inhibition. In
+this model, neural population in considered continuum in which exists
+a dynamical evolution equation where the mean activation potential
+evaluated in one place is affected by its neighborhood according to a
+so-called mexican hat function (as noted by Coombes \cite{Coombes05Waves} better
+called wizard hat function) in which close neighbors act as exciters
+and distant ones act as inhibitors.
+
+The base model, as presented by Amari \cite{Amari77Dynamics} for the multiple
+layer case is:
+
+\begin{equation}
+  \label{eq:nf-base}
+  \tau_i\frac{\delta u_i(x,t)}{\delta
+    t}=-u_i+\sum_{j=1}^{m}{\int{w_{i,j}(x,x';t-t')f_j\left(
+    u_j(x',t')\right) dx' dt'}+h_i+s_i(x,t)}
+\end{equation}
+
+Where $\tau$ is a temporal constant of synaptic decay rate, $u_i(x,t)$
+is the average membrane potential of the neurons located at position
+$x$ at time $t$ on layer $i$ (where $x$ can be 1-dimensional, 2-dimensional or even
+of higher dimension). The average intensity of connection from neurons
+on layer $j$ at $y$ to neurons on layer $i$ at $x$ is modeled with
+$w_{i,j}(x,y)$, $f_j(\cdot)$ is the saturating output function which is
+monotonically nondecreasing. The deviation of the average stimulation
+potential at place $x$ at time $y$ of layer $i$ is represented by
+$s_i(x,t)$, and $h_i=\bar{s_i}-r_i$ is the sum of the average
+stimulation potential an the resting potential of layer $i$. 
+
+
+There are several assumptions that produce simplifications over the
+previous model. One of them is to include the additional dependence of the time lag of
+signals $t'=\lvert x-x'\rvert /v$ where $v$ is the velocity of an action
+potential \cite{Wilson72Excitatory}. Nonetheless, while not stated
+otherwise we will not take into account the time lag, as well as the multiple layers. We
+will also merge the non-homogeneous terms $S(x,t)=h+s(x,t)$. This
+way, the resulting equation takes the form (for $x$ $n$-dimensional):
+
+\begin{equation}
+  \label{eq:nf-simp}
+  \tau \frac{\delta u(x,t)}{\delta
+    t}=-u+\int_{\mathbb{R}^{n}}{w(x,x')f\left(
+    u(x')\right) dx'}+S(x,t)
+\end{equation}
+
+For further simplification, temporarily we will consider the
+connection kernel $w(x,x')$ as isotropic and homogeneous, so that it
+only depends on the norm of the vector difference $\lVert x-x'\rVert$
+i.e. $w\left( \lVert x-x'\rVert \right)$. Amari found diverse
+stable-state solutions for the one-dimensional case (isotropic and
+homogeneous), where the model is:
+
+\begin{equation}
+  \label{eq:nf-oned}
+  \tau \frac{\delta u(x,t)} {\delta
+    t}=-u+\int_{-\infty}^{\infty} {w\left( \lvert x-x'\rvert \right)
+    f\left( u(x') \right) dx'}+S(x,t)
+\end{equation}
+
+The typical form for the connection kernel (for which Amari obtained
+his results) can be seen in figure \ref{fig:wiz-hat}.
+
+\begin{figure}[h]
+  \centering
+  \caption{Wizard hat function used as connection kernel.}
+  \label{fig:wiz-hat}
+\end{figure}
+
+Also, the typical sigmoid saturation function, as well as its maximum
+gain limit case (the Heaviside function), are shown in the figure \ref{fig:sat-fun}.
+
+\begin{figure}[h]
+  \centering
+  \caption{Sigmoid and Heaviside saturation functions.}
+  \label{fig:sat-fun}
+\end{figure}
+
+\section{Neural Fields for Control and Planning}
+For the purpose of control and planning we need some particular
+requirements. 
+
+The first one is to have a preprocessing over the input
+obtained from the sensors, so that there is a closed loop where the
+representation of inputs has an appropriate form. This mechanism alone
+(a particular form for the inputs) has shown to be enough for the robot
+ARNOLD to navigate in the plane with obstacles
+\cite{Bergener99Complex}.
+
+The second one is to be able to modify the connection kernel so that
+it can be suitable to our control problem. In order to do that, we
+will consider that the connection kernel $w(y)$ is a symmetric
+function (i.e. $w(y)=w(-y)$), that also is a
+2-power Lebesgue integrable function so that it also belong to $L^2$. It can be
+shown that, whit that definition, a sum of an arbitrary number of kernel functions will
+also be a kernel function. This way, we have a inner-product defined
+by the Lebesgue measure:
+
+\begin{equation}
+  \label{eq:eq-l2}
+  \langle f,g \rangle_{L^2} = \int_{\mathbb{R}}{f\cdot g d\mu}
+\end{equation}
+
+The defined space, whit its measure, conforms a Hilbert space, and
+therefore is complete and metrizable. It also gives a notion of sum,
+and scalar product:
+\begin{eqnarray}
+  \label{eq:eq-leb-opers}
+  (f+g)(x)=&f(x)+g(x) \\
+  (\lambda f)(x)=&\lambda f(x)
+\end{eqnarray}
+
+Those properties will be used shortly when arises the problem
+kernel evolution.
+
+The third one consists of its suitability to simulation. This is not an
+inherent restriction for it to be physically (or biologically)
+plausible, but to be implementable on a computer. We will take a
+discrete form of the equation \ref{eq:nf-simp}:
+
+
+\begin{equation}
+  \label{eq:nf-disc}
+  \tau \dot{u}_i=-u_i+\sum_{x_j \in B_p(x_i)} {w\left(x_i,x_j\right)
+    f\left( u_j \right)}+S(x_i,t)
+\end{equation}
+
+Where we replace the integral for a sum over the point included inside
+a finite neighborhood (ball) around $x_i$ with radius $p$. The time is considered
+continuous, and the computation of the dynamical system behavior is
+evaluated with a Runge-Kutta method. We denote $u_i=u(x_i,t)$. It
+should be noted that the previous equation can be applied to the
+$n$-dimensional case without modification.
+
+\section{Evolution of Neural Fields}
+\subsection{Neural Field Controller Architecture}
+The architecture used for the neural field controller uses a structure
+similar to that of multilayer perceptrons, i.e. an input layer, a
+hidden layer and an output layer. The hidden layer has the properties
+so far presented in the neural field model. The input and output layers are also
+modelled as a population of neurons but without inner
+dynamics. Nonetheless, it is used a kernel for the connection from the
+input layer to the hidden layer, as well for the connection from the
+hidden layer to the output layer.
+The input layer is used as a buffer where sensory inputs are placed
+before they are processed by the hidden layer. The output layer is
+used so that it can be applied some form of post-processing to the
+output of the hidden layer without changing the inner dynamics of the
+neural field.
+
+\subsection{Evolutionary Algorithm Structure and Parameters}
+For the evolution process it is used a simple evolutionary algorithm
+as shown in the preliminaries, with random elimination of individuals
+inversely proportional with its fitness.
+
+% , but with the addition of niching in the
+% for of Deterministic Crowding (see \cite{referencia-dc}), in order to
+% promote additional diversity and to prevent premature convergence.
+
+The evolution parameters are the connection kernels between the input
+layer and the hidden layer, and between the hidden layer and the
+output layer. The recurrent connections of the hidden layer with
+itself are left fixed, in the form of a wizard hat function.
+
+The connection kernels are considered isotropic and homogeneous along
+the field, so that they can be described as symmetric one-dimensional
+arrays of values. 
+
+\subsection{Genotypic Representation and Evolution Operators}
+Each connection kernel can be represented as an array of $N$ values from
+$w(0)$ to $w(p)$ with homogeneous spacing, using its symmetry. This
+way, for an equal boundary radius for all the kernels, and a 3-layered
+architecture, there are $3N$ real values in the genotype. As can be
+seen, the number of evolution parameters does not have a direct
+relation with the simulation size of the neural fields (the number of
+discrete points used), in contradistinction with recurrent neural
+networks, where the number of parameters depends on the
+number $n$ of neurons with a polynomial order $O(n^2)$.
+
+\subsection{Fitness Functions}
+The fitness functions were selected in such a way that the stability controller
+only has the goal to reduce inclination, while the positioning
+controller has to take into account both inclination and position. The
+fitness functions were tuned experimentally to attain a convergence
+velocity suitable for the experiment. This has in mind a notion of
+sequential evolution of, first, the capability to attain equilibrium,
+and later, the capability to perturb the equilibrium controller in
+such a way that a planned objective can be reached. 
+
+The fitness function for the stability controller is:
+
+\begin{equation}
+F_1(\theta )=100-\frac{100\theta ^4}{\theta _{max}^4 T_{total}}
+\end{equation}
+
+And for the positioning controller is:
+
+\begin{equation}
+F_1(\theta ,e_x)=100-\frac{100(\theta ^4+e_x^4)}{(\theta _{max}^4+e_{x,max}^4) T_{total}}
+\end{equation}
+
+
+\section{Experimental Framework}
+The model used consists of an approach to biped walking based on a
+inverted pendulum (car-and-pole) system in which the pendulum equilibrium is looked
+for. Nonetheless, supposing that the pendulum mass represents the body
+center of mass, it is proposed that is reasonable to expect a system
+with its sole function being to stabilize the body. This way, the
+navigation system has as purpose to carefully perturb the first controller
+in such a way that the stabilizing controller moves the car to the
+desired position.
+
+\subsection{Dynamic Model}
+The dynamic model used, in mathematical terms, is expressed in the two
+equations:
+
+\begin{align}
+\ddot{x}&=\frac{F+ml\dot{\theta}^2\sin\theta-mg\cos\theta\sin\theta}{M+m\sin^2\theta}\\
+\ddot{\theta}&=\frac{(M+m)g\sin\theta-F\cos\theta-ml\dot{\theta}^2\sin\theta\cos\theta}{l(M+m\sin^2\theta)}+\frac{\tau}{ml^2}
+\end{align} 
+
+This model consists of four state variables and a high non-linearity
+as it departs from equilibrium points. It is worth noting that the
+wanted equilibrium point is in fact unstable.
+
+
+\section{A RNN Approach for Comparison}
+The proposed architecture for the recurrent neural network controller
+has two expert recurrent networks, whose interaction will achieve
+positioning and equilibrium as well.
+
+There has been applied a preprocessing stage previous to the input
+neurons, so that the actual values are not used and instead the inputs
+are mapped to 3 fuzzy sets. In this way, the stability controller only
+has 3 inputs, while the positioning controller has 6, corresponding to
+the same 3 inputs previously described and another 3 due to the fuzzy
+mapping of the error signal. All neurons are interconnected and the
+first one of them is selected as output without loss of
+generality. The neural network topology for the first controller
+(stability) is shown in the figure \ref{fig:rnn-arch}.
+
+\begin{figure}[t]
+\label{rnn-arch}
+\centering
+\includegraphics[width=7cm]{rnn.png}
+\caption{Neural net for stability control including fuzzy mapping}
+\label{rnn}
+\end{figure}
+
+\subsection{Evolutionary Algorithm Structure for the RNN Controller}
+It is expected, based on the approach of artificial life to
+evolutionary robotics (Nolfi y Floreano), that the sequential and
+cooperative evolution of elements with biological similarity leads to
+an specialization in the process of stabilization and positioning
+(despite the antagonistic individual goals of each controller because of the
+interest of the positioning controller to maximize also the global
+performance).
+
+As said, the two steps are executed sequentially, taking the best
+individual of the first step to collaborate with the individual
+evolved in the second step. 
+
+Aiming to obtain a fixed length representation and limit the problem
+dimensionality, it is used a model of order $Q$ totally connected. Any
+network with an order equal or lesser and with total or partial
+connections can be represented by the proposed model, by the addition
+of activating/deactivating elements for neurons and
+connections. Therefore, individual are codified as: 
+
+\begin{itemize}
+ \item A bit sequence representing a serialization of an activation matrix
+   $A_a$ of dimension $Q$-by-$Q$ which activates/deactivates a
+   recurrent connection.
+ \item A sequence of real numbers representing a serialization of
+   matrices $W_a$ and $W_b$, of dimension $Q$-by-$Q$ and
+   $Q$-by-$(m+1)$ respectively.
+\end{itemize}
+
+The $C$ matrix is not evolved because it is chosen arbitrarily only
+one output (the first neuron). 
+
+The evolution operations used in both steps are:
+\begin{itemize}
+ \item Parametric mutation of inputs: Gaussian modification of real
+   codified matrix weights, which varies connection weights of inputs.
+ \item Parametric mutation of recurrences: Gaussian modification of real
+   codified matrix weights, which varies connection weights of recurrences.
+ \item Selection: Calculates population fitness, selects with elitism
+   and culling (5\% of both) couples of parents for generating new
+   offsprings, calculates the fitness function for both offsprings.
+\end{itemize}
+
+The fitness functions used are the same presented for the neural field controller.
+
+
+\section{Experimental Results}
+\subsection*{Experimentation Parameters}
+The sampling time used was 0.04s (for neural networks and
+visualization) and were performed 20s tests.
+
+The differential equation system was solved by a numerical method,
+4th Order Runge-Kutta. The iteration step selected was $h=0.002s$ for
+each test.
+
+\subsection*{Results}
+The first experiment tests the physical model using both controllers
+without evolution, to see the natural dynamics of the system whit the
+controller configured arbitrarily (in such a way that can be perceived
+the action of the algorithm). Results are shown in the figure
+\ref{inestabilidad}. As can be seen, it is an unstable system in the
+origin. Red dots represent the pendulum position referenced to
+universal coordinates, and blue dots represent the base (car)
+position.
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=7cm]{inestabilidadG.png}
+\\
+\includegraphics[width=7cm]{inestabilidadC.png}
+\caption{System dynamics with an untrained controller}
+\label{inestabilidad}
+\end{figure}
+
+After the first step of the algorithm, and once done the stability
+controller evolution, it is shown the behavior withdrawing the
+positioning controller in the figure \ref{estabilidad}. The evolution was performed with a population
+of 50 individuals and 300 iterations.
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=7cm]{estabilidadG.png}
+\\
+\includegraphics[width=7cm]{estabilidadC.png}
+\caption{System dynamics with a trained controller. Without reference tracking.}
+\label{estabilidad}
+\end{figure}
+
+Later, it was applied the second step of the algorithm. It was
+connected the positioning controller and fixed the stability
+controller (which is the best one of the previous step). It was
+obtained the final performance shown in the figure \ref{final}.
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=7cm]{finalG.png}
+\\
+\includegraphics[width=7cm]{finalC.png}
+\caption{System dynamics with both controllers trained. Suitable behavior.}
+\label{final}
+\end{figure}
+
+\section{Discussion}
+Under Construction ...
+
+
+
+
+
+
+
+
+

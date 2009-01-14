@@ -1,0 +1,62 @@
+\message{ !name(thesis.tex)}\documentclass{book}
+
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}   
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{phdthesis}
+\usepackage{titlepage_melbourne_uni}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{problem}[theorem]{Problem}
+
+%\title{Title of Thesis}
+%\submitted{Month Year}  %graduation date
+%\author{Insert Your Name}
+
+%\abstract{
+%\input{abstract}
+%}
+
+%\acknowledgements{
+%\input{acknow}
+%}
+
+\begin{document}
+
+\message{ !name(thesis.tex) !offset(-3) }
+
+\author{Jamie Brett Stevens}
+\title{Neutral Hydrogen in Nearby Galaxy Groups}
+\date{February 2005}
+\maketitle
+\chapter*{Introduction}  %insert chapter 1 title
+%\input{chp1}    %insert chapter 1 file name
+\begin{equation}
+  x=3y
+\end{equation}
+\begin{savequote}[10pc]
+\sffamily
+Smoke whirls\\
+After the passage of a train.\\
+Young foliage.
+\qauthor{Shiki Masaoka (1867-1902)}
+\end{savequote}
+\chapter{Star Formation in HIPASS Galaxies}\label{sfringalaxies}
+\chapter{Preliminaries}  %continue adding chapter titles
+\input{chp2}    %and files
+
+% \input{bibliography}
+
+\end{document}
+
+\message{ !name(thesis.tex) !offset(-62) }

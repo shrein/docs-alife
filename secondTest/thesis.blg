@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: thesis.aux
+The style file: natbib.bst
+Database file #1: bibanot.bib
+Warning--can't use both volume and number fields in Basdogan96Nonlinear
+You've used 51 entries,
+            2378 wiz_defined-function locations,
+            865 strings with 13219 characters,
+and the built_in function-call counts, 24869 in all, are:
+= -- 2557
+> -- 1217
+< -- 42
++ -- 365
+- -- 345
+* -- 2195
+:= -- 4191
+add.period$ -- 213
+call.type$ -- 51
+change.case$ -- 322
+chr.to.int$ -- 49
+cite$ -- 52
+duplicate$ -- 1006
+empty$ -- 1631
+format.name$ -- 432
+if$ -- 5009
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 44
+newline$ -- 250
+num.names$ -- 204
+pop$ -- 318
+preamble$ -- 1
+purify$ -- 324
+quote$ -- 0
+skip$ -- 726
+stack$ -- 0
+substring$ -- 1735
+swap$ -- 229
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 453
+warning$ -- 1
+while$ -- 240
+width$ -- 0
+write$ -- 651
+(There was 1 warning)

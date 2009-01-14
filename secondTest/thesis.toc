@@ -1,0 +1,56 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1.1}Goals}{3}
+\contentsline {section}{\numberline {1.2}Main Contributions}{5}
+\contentsline {section}{\numberline {1.3}Contents Overview}{6}
+\contentsline {chapter}{\numberline {2}Preliminaries}{7}
+\contentsline {section}{\numberline {2.1}Introduction}{7}
+\contentsline {section}{\numberline {2.2}Biped Walking}{8}
+\contentsline {subsection}{\numberline {2.2.1}Static and Dynamic Stability}{8}
+\contentsline {subsection}{\numberline {2.2.2}Biological Considerations on Biped Locomotion}{9}
+\contentsline {section}{\numberline {2.3}Neural Fields}{10}
+\contentsline {section}{\numberline {2.4}Evolution and Adaptation}{11}
+\contentsline {subsection}{\numberline {2.4.1}Evolutionary Algorithms}{11}
+\contentsline {section}{\numberline {2.5}Computational Intelligence Applied to Biped Robotics: A Survey}{11}
+\contentsline {subsection}{\numberline {2.5.1}Central Pattern Generator (CPG) Methods}{12}
+\contentsline {subsection}{\numberline {2.5.2}Trajectory Tracking Methods}{17}
+\contentsline {subsection}{\numberline {2.5.3}Dynamic Walking Control}{19}
+\contentsline {subsection}{\numberline {2.5.4}Static Walking Control}{24}
+\contentsline {chapter}{\numberline {3}Neural Fields as Control and Planning Systems}{27}
+\contentsline {section}{\numberline {3.1}Introduction}{27}
+\contentsline {section}{\numberline {3.2}Neural Fields for Control and Planning}{27}
+\contentsline {section}{\numberline {3.3}Control Architecture}{28}
+\contentsline {section}{\numberline {3.4}Evolution of Neural Fields}{29}
+\contentsline {subsection}{\numberline {3.4.1}Neural Field Controller Architecture}{29}
+\contentsline {subsection}{\numberline {3.4.2}Evolutionary Algorithm Structure and Parameters}{29}
+\contentsline {subsection}{\numberline {3.4.3}Genotypic Representation and Evolution Operators}{29}
+\contentsline {subsection}{\numberline {3.4.4}Fitness Functions}{30}
+\contentsline {section}{\numberline {3.5}Experimental Framework}{30}
+\contentsline {subsection}{\numberline {3.5.1}Dynamic Model}{30}
+\contentsline {section}{\numberline {3.6}A RNN Approach for Comparison}{31}
+\contentsline {subsection}{\numberline {3.6.1}Evolutionary Algorithm Structure for the RNN Controller}{31}
+\contentsline {section}{\numberline {3.7}Experimental Set-up}{32}
+\contentsline {section}{\numberline {3.8}Experimental Results}{33}
+\contentsline {section}{\numberline {3.9}Discussion}{34}
+\contentsline {chapter}{\numberline {4}Adquisition of Goals by Evolution of Neural Fields}{36}
+\contentsline {section}{\numberline {4.1}Introduction}{36}
+\contentsline {section}{\numberline {4.2}Evolution of Neural Fields}{36}
+\contentsline {section}{\numberline {4.3}Topological Structures for Multiple Goals}{36}
+\contentsline {section}{\numberline {4.4}Co-evolution and Complexification}{36}
+\contentsline {section}{\numberline {4.5}Acquisition of Objectives by Evolution}{36}
+\contentsline {section}{\numberline {4.6}Experimental Framework}{36}
+\contentsline {section}{\numberline {4.7}Experimental Results}{36}
+\contentsline {section}{\numberline {4.8}Discussion}{36}
+\contentsline {chapter}{\numberline {5}Goal-Based Control and Planning in Biped Locomotion}{37}
+\contentsline {section}{\numberline {5.1}Introduction}{37}
+\contentsline {section}{\numberline {5.2}Computational Intelligence Methods in Biped Locomotion}{37}
+\contentsline {section}{\numberline {5.3}Neural Fields for Control in Biped Locomotion}{37}
+\contentsline {section}{\numberline {5.4}Neural Fields for Goal-Based Plannning in Biped Locomotion}{37}
+\contentsline {section}{\numberline {5.5}Adquisition of New Goals by Evolution}{37}
+\contentsline {section}{\numberline {5.6}Sustainable Learning by Evolutionary Landscape Adaptation}{37}
+\contentsline {section}{\numberline {5.7}Experimental Framework}{37}
+\contentsline {section}{\numberline {5.8}Experimental Results}{37}
+\contentsline {section}{\numberline {5.9}Discussion}{37}
+\contentsline {chapter}{\numberline {6}Conclusions}{38}
+\contentsline {section}{\numberline {6.1}Main Contributions}{38}
+\contentsline {section}{\numberline {6.2}Future Work}{38}

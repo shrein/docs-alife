@@ -1,0 +1,29 @@
+\documentclass{puthesis}
+
+
+
+\author{My Name}
+\title{Thesis Title}
+\abstract{The abstract goes here.}
+\acknowledgements{Thank you very much.}
+\dedication{To myself.}
+
+
+
+\begin{document}
+
+
+
+\chapter{Chapter}
+
+\section{Section}
+
+\subsection{Subsection}
+
+Text.
+
+\section{New Section}
+
+\subsection{Subsection}
+
+\end{document}
