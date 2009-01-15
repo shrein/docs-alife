@@ -38,13 +38,13 @@
      inkscape:cx="678.3965"
      inkscape:cy="-176.77647"
      inkscape:document-units="px"
-     inkscape:current-layer="g9109"
+     inkscape:current-layer="g2571"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1022"
      inkscape:window-height="729"
-     inkscape:window-x="1"
-     inkscape:window-y="1"
+     inkscape:window-x="2"
+     inkscape:window-y="2"
      showgrid="false" />
   <metadata
      id="metadata7">
@@ -264,40 +264,35 @@
            y="153.13104" />
         <text
            xml:space="preserve"
-           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-           x="181.28571"
-           y="391.50504"
-           id="text7105"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+           x="146.87494"
+           y="357.89453"
+           id="text7105"
+           sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
-             id="tspan7107"
-             x="181.28571"
-             y="391.50504"
-             style="text-align:center;text-anchor:middle">Entradas</tspan><tspan
-             sodipodi:role="line"
-             x="181.28571"
-             y="406.50504"
-             id="tspan8127"
-             style="text-align:center;text-anchor:middle">Difusas</tspan></text>
+             id="tspan2449"
+             x="146.87494"
+             y="357.89453">Input Layer</tspan></text>
         <text
            xml:space="preserve"
-           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-           x="296.97656"
-           y="426.83582"
-           id="text7109"><tspan
+           style="font-size:12.00000014px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           x="295.37607"
+           y="414.83206"
+           id="text7109"
+           sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
-             id="tspan7111"
-             x="296.97656"
-             y="426.83582">Capa Recurrente</tspan></text>
+             id="tspan2451">Recurrent Layer</tspan></text>
         <text
            xml:space="preserve"
-           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
            x="463"
-           y="189.36218"
-           id="text7113"><tspan
+           y="182.15993"
+           id="text7113"
+           sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
-             id="tspan7115"
+             id="tspan2453"
              x="463"
-             y="189.36218">Salida</tspan></text>
+             y="182.15993">Output</tspan></text>
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="M 366.50131,158.15742 L 476.02723,158.15742"
@@ -314,15 +309,14 @@
            y="185.36218" />
         <text
            xml:space="preserve"
-           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+           style="font-size:12.00000014px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
            x="227.85437"
            y="-98.886719"
            id="text8117"
-           transform="matrix(0,1,-1,0,0,0)"><tspan
+           transform="matrix(0,1,-1,0,0,0)"
+           sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
-             id="tspan8119"
-             x="227.85437"
-             y="-98.886719">Mapeo Difuso</tspan></text>
+             id="tspan2445">Fuzzy Mapping</tspan></text>
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="M 175.48278,213.98471 L 129,249.8186"
@@ -360,14 +354,13 @@
            inkscape:connection-end="#rect7146" />
         <text
            xml:space="preserve"
-           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+           style="font-size:12.00000014px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
            x="12"
            y="301.36218"
-           id="text9105"><tspan
+           id="text9105"
+           sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
-             id="tspan9107"
-             x="12"
-             y="301.36218">Entrada</tspan></text>
+             id="tspan2447">Input</tspan></text>
       </g>
     </g>
   </g>
