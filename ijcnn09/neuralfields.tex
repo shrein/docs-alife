@@ -38,24 +38,30 @@
 \title{\ \\ \LARGE\bf Neural Fields Applied to the Stability Problem
   of a Simple Biped Walking Model \thanks{Juan Figueredo and Jonatan
     Gómez are with the Department of Systems and Industrial
-    Engineering, The National University of Colombia, Bogotá, Colombia
-    (email: \{jjfigueredou,jgomezpe\}@unal.edu.co).}}
+    Engineering, National University of Colombia, Bogotá, Colombia
+    (email: jjfigueredou@unal.edu.co).}}
 
 \author{Juan Figueredo and Jonatan Gómez}
 
 \maketitle
 
 \begin{abstract}
-  We aim here to propose a control planning system or architecture
-  based on neural fields which is suitable to control a relatively
-  complex system. We test it over the stability problem on a typical
-  inverted-pendulum and compare it against a more traditional
-  recurrent neural network controller. First, we present the neural
-  fields model, some variations of it which will be useful for its
-  evolution and some of the properties that arise from it. Next, we
-  study its applications to control and compare it with the recurrent
-  neural network control scheme, which is also evolved. Finally we
-  test it with the inverted-pendulum problem.
+  The neural field model has the potential to address goal-based
+  planning problems but has not been significantly applied to dynamic
+  control problems. We propose a control architecture based on neural
+  fields which is suitable to perform the control of a relatively
+  complex and unstable system. We test it over the stability problem
+  on a typical inverted-pendulum and compare it against a more
+  traditional recurrent neural network controller, which is
+  parameterized by an evolutionary algorithm. There are presented some
+  relevant requirements for the neural field controller architecture
+  and its parameterization by evolution, and the controller
+  architecture is detailed. Remarkably, the non-evolved neural field
+  controller performs in the simulation as good or better than the
+  evolved recurrent neural network controller. Furthermore, the neural
+  field has a spatial representation which allows interpretation of
+  field potentials. This makes the neural field controller not as
+  black-box as the RNN controller.
 \end{abstract}
 
 \section{Introduction}
@@ -69,7 +75,7 @@ from a very simple or non-functional initialization, in this case
 using a neural control architecture.
 
 In biped robotics, the methods based on computational intelligence for
-planning and control, have shown to be able to achieve static
+planning and control have shown to be able to achieve static
 stability \cite{Kun97Adaptive}, dynamical stability
 \cite{Nakanishi2004b,Komatsu05Dynamic}, achieve simple control
 structures \cite{Huelse04Structure}, and tolerate perturbations
@@ -86,9 +92,9 @@ neural network. The second one, based on neural fields, has a deeper
 biological basis, applies more restrictions and extends the discrete
 model to a continuous one, following the method of planning and
 control by means of neural fields \cite{Bergener99Complex}. The neural
-field model, as noted in the article by Bergener et al., has te
+field model, as noted in the article by Bergener et al., has the
 potential to address goal-based planning problems, so we are here
-interested its capability to solve dynamic control problems.
+interested on its capability to solve dynamic control problems.
 
 The control problem set for testing the architectures is the stability
 problem on a inverted pendulum, so that the controller ability to
@@ -228,6 +234,7 @@ The dynamic model used, in mathematical terms, is expressed in the two
 equations:
 
 \begin{align}
+  \label{eq:nf-simp}
   \ddot{x}&=\frac{F+ml\dot{\theta}^2\sin\theta-mg\cos\theta\sin\theta}{M+m\sin^2\theta}\\
   \ddot{\theta}&=\frac{(M+m)g\sin\theta-F\cos\theta-ml\dot{\theta}^2\sin\theta\cos\theta}{l(M+m\sin^2\theta)}+\frac{\tau}{ml^2}-\frac{\dot{\theta}}{2}
 \end{align}
@@ -371,7 +378,8 @@ from the elements in the same layer and in the input layer.
   \label{fig:nf-controller}
   \centering
   \includegraphics[width=7cm]{fieldsGaussians.eps}
-  \caption{Neural fields for stability control}
+  \caption{Neural fields for stability control (feedback with the
+    plant not shown).}
 \end{figure}
 
 
@@ -426,7 +434,7 @@ generality. The neural network topology for the first controller
 (stability) is shown in the figure \ref{fig:rnn-arch}.
 
 \begin{figure}[t]
-  \label{rnn-arch}
+  \label{fig:rnn-arch}
   \centering
   \includegraphics[width=7cm]{rnn.eps}
   \caption{Neural net for stability control including fuzzy mapping}
@@ -502,8 +510,8 @@ the neural field controller.
 
 \section{Experimental Results}
 \subsection*{Experimentation Details}
-The sampling time used was 0.025s (for neural networks, neural fields,
-and visualization) and were performed 20s tests.
+The sampling time used was $0.025$s (for neural networks, neural
+fields, and visualization) and were performed $10$s tests.
 
 The differential equation system was solved by a numerical method, 4th
 Order Runge-Kutta. The iteration step selected was also $h=0.025s$ for
@@ -538,7 +546,9 @@ the base (car) position.
   \includegraphics[width=7cm]{inestabilidadG.eps}
   \\
   \includegraphics[width=7cm]{inestabilidadC.eps}
-  \caption{System dynamics with an untrained controller}
+  \caption{System dynamics with an untrained RNN controller. The first
+  figure shows the pendulum trace and the second the pendulum at a
+  given time.}
   \label{inestabilidad}
 \end{figure}
 
@@ -547,21 +557,20 @@ RNN controller, it is shown the behavior of the controller in the
 figure \ref{rnnSimulation}. The evolution was performed with a
 population of 100 individuals and 500 iterations.
 
-% \begin{figure}[t]
-%   \centering
-%   \includegraphics[width=7cm]{rnnSimulationG.eps}
-%   \\
-%   \includegraphics[width=7cm]{rnnSimulationC.eps}
-%   \caption{System dynamics with a RNN controller trained.}
-%   \label{rnnSimulation}
-% \end{figure}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=7cm]{rnnSimulation.eps}
+  \caption{System dynamics with a RNN controller trained. The first
+  figure shows the pendulum trace and the second the pendulum at $t=3.5$s.}
+  \label{rnnSimulation}
+\end{figure}
 
-On the other hand, the
-neural field is able to control the stability without evolution with a
-performance similar (or even better) than the presented by the evolved
-RNN controller. The
-simulation is shown in the figure \ref{fieldSimulation}, including the
-neural field values at a given point of time.
+On the other hand, the neural field is able to control the stability
+without evolution with a performance similar (or even better) than the
+presented by the evolved RNN controller. The simulation is shown in
+the figure \ref{fieldSimulation}, including the neural field values at
+a given point of time. Different $k_{\omega}$ values affected the
+system response but kept the system stable.
 
 
 \begin{figure}[p]
@@ -570,26 +579,28 @@ neural field values at a given point of time.
   \caption{System dynamics with a non-trained Neural Field
     Controller. In order: the input layer at time $t=3.5$, the
     pendulum trace, the processing layer at time $t$, and the pendulum
-  at time $t$.}
+    at time $t$.}
   \label{fieldSimulation}
 \end{figure}
 
-A detailed evolution of the neural field controller
-can be seen in the figure \ref{fig:nf-controller}.
+A detailed evolution of the neural field controller can be seen in the
+figure \ref{fig:nf-controller}.
 
 \begin{figure}[t]
   \centering
   \includegraphics[angle=-90,width=7cm]{inputPopulation.eps}
   \includegraphics[angle=-90,width=7cm]{fieldPopulation.eps}
-  \caption{Neural Field simulation between $t=0$s and $t=10$s with steps
-  $h=1/40$s and positions between $x_{min}=-10$ and $x_{max}=10$. First figure is the input layer activation, with $\theta$ input with
-value $1$ and $\dot{\theta}}$ with value $k_{\omega}=0.8$. The second
-figure is the processing layer activation.}
+  \caption{Neural Field simulation between $t=0$s and $t=10$s with
+    steps $h=1/40$s and positions between $x_{min}=-10$ and
+    $x_{max}=10$. First figure is the input layer activation, with
+    $\theta$ input with value $1$ and $\dot{\theta}$ with value
+    $k_{\omega}=0.8$. The second figure is the processing layer
+    activation.}
   \label{fig:nf-controller}
 \end{figure}
 
 And a detailed evolution of the pendulum with the neural field
-controller can be seen in the figure  \ref{fig:nf-pendulum}.
+controller can be seen in the figure \ref{fig:nf-pendulum}.
 
 \begin{figure}[t]
   \centering
@@ -598,41 +609,53 @@ controller can be seen in the figure  \ref{fig:nf-pendulum}.
     $t=0$s and $t=10$. Each state is coded with a position (so that
     the pendulum can be simulated as a field on its own) this way:
     $x$:0, $\theta$:1, $\dot{x}$:2, $\dot{\theta}$:3. It can be seen
-    the little variation in the angular position ($\theta$)}
+    the little variation in the angular position ($\theta$). The
+    discontinuity in $x$ is present because position wraps in the
+    simulation so that $x=5$ is equivalent to $x=-5$.}
   \label{fig:nf-pendulum}
 \end{figure}
 
 
 
 \section{Conclusions}
-The results obtained from this chapter can be summarized in a short
-analysis.
-
 While the recurrent neural network controller is expressive enough to
-solve the problem at hand, the number of parameter to configure (or in
-this case to evolve) is of a quadratic order in relation to the number
-of nodes (or neurons). This were not a particular problem for the
-evolutionary algorithm used, but limits its potential
+solve the problem at hand, the number of parameters to configure (or
+in this case to evolve) is of a quadratic order in relation to the
+number of nodes (or neurons). This was not a particular problem for
+the evolutionary algorithm used, but limits its potential
 scalability. Furthermore, while it is expressive enough, does not show
-a particular suitability to the dynamic stability problem of the
-inverted pendulum and there are no reasons to expect something
-different for a more complex biped model.
+a particular suitability (needs explicit and specific
+parameterization) to the dynamic stability problem of the inverted
+pendulum and there are no reasons to expect something different for a
+more complex biped model.
 
 On the other hand, the neural field controller is a bit more complex
-and its simulation more costly, but has some notable advantages. The
-first one is its ability to self-compensate or, equivalently, the
-stability of its natural dynamics, which is attained after the setup
-of few parameters. The second one is it suitability to the problem at
-hand, being able to solve it with a acceptable degree of performance
-for small perturbations. Although there was a need to parameter
-configuration, evolution was not required because the small number of
-parameters to setup: basically three parameters of the kernel function
-and the resting potential of the field equation - a number of
-parameters of constant order in relation to the number of nodes (point
-potentials on the neural field).
+(in its implementation) and its simulation more costly, but has some
+notable advantages. The first one is its ability to self-compensate
+or, equivalently, the stability of its natural dynamics, which is
+attained after the setup of few parameters. The second one is its
+suitability to the problem at hand, being able to solve it with a
+good performance for low perturbations. Although
+there was a need for parameter configuration, evolution was not
+required because the small number of parameters to setup: basically
+three parameters of the kernel function and the resting potential of
+the field equation - a number of parameters of constant order in
+relation to the number of nodes (discrete potentials on the neural
+field).
 
-It is left for future work the challenging but promising task of
-neural field evolution.
+Remarkably, the non-evolved neural field controller performs as good
+or better than the evolved recurrent neural network
+controller. Furthermore, the neural field has a spatial representation
+which allows interpretation of field potentials (as shown in
+fig. \ref{fig:nf-controller}). The interpretation or understanding of
+recurrent neural networks is quite difficult and even more with
+increasing states involved. This makes the neural field controller not
+as black-box as the RNN controller.
+
+More complex control problems seem to require an strategy of
+parameterization of the neural field controller. This way, it is left
+for future work the task of neural field evolution as it was briefly
+presented in section \label{sec:properties}.
 
 \bibliographystyle{IEEEtran.bst}
 % \bibliographystyle{natbib}
