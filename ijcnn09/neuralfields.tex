@@ -83,26 +83,100 @@ control architectures and their suitability as controllers given their
 structure. The first one, uses a simple model of recurrent connections
 between neurons without additional restrictions, i.e. a recurrent
 neural network. The second one, based on neural fields, has a deeper
-biological basis, applying more restrictions and extending the
-discrete model to a continuous one, following the method of planning
-and control by means of neural fields \cite{Bergener99Complex}. The
-control problem set for testing the architectures is the stability
-problem on a inverted pendulum, so that their ability to perform
-dynamic control on an unstable plant can be evaluated. To the authors'
-knowledge this is the first time neural fields have been evaluated for
-solving a control problem for an unstable plant.
+biological basis, applies more restrictions and extends the discrete
+model to a continuous one, following the method of planning and
+control by means of neural fields \cite{Bergener99Complex}. The neural
+field model, as noted in the article by Bergener et al., has te
+potential to address goal-based planning problems, so we are here
+interested its capability to solve dynamic control problems.
+
+The control problem set for testing the architectures is the stability
+problem on a inverted pendulum, so that the controller ability to
+perform dynamic control on an unstable plant can be evaluated. To the
+authors' knowledge this is the first time neural fields have been
+evaluated for solving a control problem for an unstable plant.
 
 First, some preliminaries on computational intelligence are presented,
-mainly in the areas of evolutionary computation, and in the area of
-neural controllers, which is the main focus of the article. In the
-remaining sections the control problem used as test bed is presented,
-an application of traditional evolutionary computation methods is
-shown, a co-evolution scheme is applied, other incremental evolution
-methods are used to obtain greater complexity, and finally, a
-discussion is made.
+mainly in the area of neural fields and recurrent neural networks,
+which is the main focus of the article, and in the area of
+evolutionary computation. In the remaining sections the control
+problem used as test bed is detailed, the neural field control
+architecture is presented and a strategy for its parameterization by
+evolution is mentioned, the recurrent neural network controller and
+its evolution is shown, the experimental results are presented, and
+finally, a discussion is made.
 
 
 \section{Preliminaries on Computational Intelligence}
+\subsection*{Recurrent Neural Networks and Neural Fields}
+Artificial neural networks are a connectionist computing scheme
+inspired by brain neural layout at cellular level. It is based on
+simple computing structures called neurons which have several inputs
+and a single output.
+
+The particular topologies of interest here are recurrent neural
+networks and neural fields.
+
+For recurrent neural networks the model, as is presented in
+\cite{Haykin98Neural} is:
+
+\begin{align}
+  \begin{split}
+    x_{rnn}(n+1)&=\Psi (W_ax_{rnn}(n)+W_bu_{rnn}(n)) \\
+    y_{rnn}(n)&=Cx_{rnn}(n)
+  \end{split}
+\end{align}
+
+Here, $x_{rnn}$ is the 1-by-q system state vector at $n$, $\Psi$ is a
+diagonal function with domain and co-domain $R^q$ corresponding to
+activation function, $u_{rnn}$ is the 1-by-m input vector at $n$, the
+.q-by-q matrix $W_a$ represents the connection weights between
+neurons, and the q-by-m+1 matrix represents the connection weights
+between input nodes and neurons, including a bias term. Also,
+$y_{rnn}$ is the neural output vector of the neural net, and $C$ is a
+p-by-q matrix of linear combination from the neurons to the outputs.
+
+Recurrent neural networks present a dynamic behavior because of its
+memory, that is, each state depends of the previous state in such a
+way that a difference equation arises. There is not a notion of
+locality in this model and the interactions between neurons and inputs
+is given by parameter matrices.
+
+Neural fields, on the other hand, arise as a tissue level model of
+neural populations in brain. It has been proposed by Wilson and Cowan
+\cite{Wilson72Excitatory} and detailed by Amari \cite{Amari77Dynamics}
+in the particular case of lateral inhibition. In this model, neural
+population in considered continuum in which exists a dynamical
+evolution equation where the mean activation potential evaluated in
+one place is affected by its neighborhood according to a so-called
+mexican hat function (as noted by Coombes \cite{Coombes05Waves} better
+called wizard hat function) in which close neighbors act as exciters
+and distant ones act as inhibitors. Their mathematical formulation for
+the one-dimensional case is:
+
+\begin{equation}
+  \label{eq:neuralfield}
+  \frac{1}{\alpha}
+  \dot{u}(\psi)=-u(\psi)-h+s(\psi)+\int_{-\infty}^{\infty}{w(\psi,\psi')\sigma(u(\psi'))d\psi'}
+\end{equation}
+Where $\alpha$ is a temporal constant of synaptic decay rate,
+$u(\psi)$ is the average membrane potential of the neurons located at
+position $\psi$ at time $t$ (where $\psi$ is supposed to be
+1-dimensional and the time is omitted for readeability). The average
+intensity of connection from neurons at $\psi$ to neurons at $\psi'$
+is modeled with $w(\psi,\psi')$, $f(\cdot)$ is the saturating output
+function which is monotonically nondecreasing. The deviation of the
+average stimulation potential at place $\psi$ at time $t$ is
+represented by $s(\psi)$, and $h=\bar{s}-r$ is the sum of the average
+stimulation potential an the resting potential.
+
+The main difference between recurrent neural networks and neural
+fields is that, in the first, the relation among the neurons is
+arbitrary and discrete, but in the second is continuous and is meant
+to be related to locality. Besides, the first right hand element
+assures and stable homogeneous behavior in the simplified linearized
+form.
+
 \subsection*{Evolutionary algorithms}
 Evolutionary algorithms are a set of population-based heuristic search
 and optimization techniques. They maintain a population, and apply a
@@ -136,58 +210,11 @@ are implemented with a generational replacement of population, but in
 some situations it is useful to conserve a small set of the better
 individuals across generations in a steady-steady replacement.
 
-\subsection*{Neural networks}
-Artificial neural networks are a connectionist computing scheme
-inspired by brain neural layout at cellular level. It is based on
-simple computing structures called neurons which have several inputs
-and a single output.
-
-The particular topologies of interest here are recurrent neural
-networks and neural fields.
-
-For recurrent neural networks the model, as is presented in
-\cite{Haykin98Neural} is:
-
-\begin{align}
-  \begin{split}
-    x_{rnn}(n+1)&=\Psi (W_ax_{rnn}(n)+W_bu_{rnn}(n)) \\
-    y_{rnn}(n)&=Cx_{rnn}(n)
-  \end{split}
-\end{align}
-
-Here, $x_{rnn}$ is the 1-by-q system state vector at $n$, $\Psi$ is a
-diagonal function with domain and co-domain $R^q$ corresponding to
-activation function, $u_{rnn}$ is the 1-by-m input vector at $n$, the
-.q-by-q matrix $W_a$ represents the connection weights between
-neurons, and the q-by-m+1 matrix represents the connection weights
-between input nodes and neurons, including a bias term. Also,
-$y_{rnn}$ is the neural output vector of the neural net, and $C$ is a
-p-by-q matrix of linear combination from the neurons to the outputs.
-
-Recurrent neural networks present a dynamic behavior because of its
-memory, that is, each state depends of the previous state in such a
-way that a difference equation arises. Here, there is not a notion of
-locality and the interactions between neurons and inputs is given by
-parameter matrices.
-
-Neural fields, on the other, hand are tissue level models which
-describe the evolution of distributed variables (e.g. the activation
-potential). Their mathematical formulation for the one-dimensional
-case is:
-
-\begin{equation}
-  \label{eq:neuralfield}
-  \frac{1}{\alpha}
-  \dot{u}(\psi)=-u(\psi)-h+s(\psi)+\int_{-\infty}^{\infty}{w(\psi,\psi')\sigma(u(\psi'))d\psi'}
-\end{equation}
-
-The main difference between recurrent neural networks and neural
-fields is that, in the first, the relation among the neurons is
-arbitrary and discrete, but in the second is continuous and is meant
-to be related to locality. Besides, the first right hand element
-assures and stable homogeneous behavior in linear form.
 
 \section{Neural Fields for Control and Planning}
+
+\subsection*{Properties}
+\label{sec:properties}
 For the purpose of control and planning we need some particular
 requirements on the neural fields.
 
@@ -198,7 +225,7 @@ form for the inputs) has shown to be enough for the robot ARNOLD to
 navigate in the plane with obstacles \cite{Bergener99Complex}.
 
 The second one is to be able to modify the connection kernel so that
-it can be suitable to our control problem. In order to do that, we
+it can be suitable to complex control problem. In order to do that, we
 will consider that the connection kernel $w(y)$ is a symmetric
 function (i.e. $w(y)=w(-y)$), that also is a 2-power Lebesgue
 integrable function so that it also belong to $L^2$. It can be shown
@@ -219,8 +246,9 @@ and scalar product:
   (f+g)(x)=&f(x)+g(x) \\
   (\lambda f)(x)=&\lambda f(x)
 \end{eqnarray}
-Those properties will be used shortly when arises the problem kernel
-evolution.
+Those properties define and space with its operators which can be used
+to apply an evolutionary algorithm, by evolving the kernel function of
+the neural field.
 
 The third one consists of its suitability to simulation. This is not
 an inherent restriction for it to be physically (or biologically)
@@ -241,7 +269,7 @@ behavior is evaluated with a Runge-Kutta method. We denote
 $u_i=u(x_i,t)$. It should be noted that the previous equation can be
 applied to the $n$-dimensional case without modification.
 
-\section{Control Architecture}
+\subsection*{Control Architecture} 
 The control architecture built based on the neural fields has three
 basic elements.
 
