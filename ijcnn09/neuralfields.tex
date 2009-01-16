@@ -210,6 +210,37 @@ are implemented with a generational replacement of population, but in
 some situations it is useful to conserve a small set of the better
 individuals across generations in a steady-steady replacement.
 
+\section{The Stability Problem Model}
+\label{sec:model}
+
+The model used consists of an approach to biped walking based on a
+inverted pendulum (car-and-pole) system in which the pendulum
+equilibrium is looked for. Nonetheless, supposing that the pendulum
+mass represents the body center of mass, it is proposed that is
+reasonable to expect a system with its sole function being to
+stabilize the body. This way, if we where to devise a navigation
+system, it would have as purpose to
+carefully perturb the first controller in such a way that the
+stabilizing controller moves the car to the desired position.
+
+\subsection*{Dynamic Model}
+The dynamic model used, in mathematical terms, is expressed in the two
+equations:
+
+\begin{align}
+  \ddot{x}&=\frac{F+ml\dot{\theta}^2\sin\theta-mg\cos\theta\sin\theta}{M+m\sin^2\theta}\\
+  \ddot{\theta}&=\frac{(M+m)g\sin\theta-F\cos\theta-ml\dot{\theta}^2\sin\theta\cos\theta}{l(M+m\sin^2\theta)}+\frac{\tau}{ml^2}-\frac{\dot{\theta}}{2}
+\end{align}
+Where $x$ here is the linear position, $\theta$ is the angular
+position, $M$ is the pendulum mass (located at the outer side), $m$ is
+the cart mass, $l$ is the pendulum length and $g$ is the gravity
+acceleration. It is included in the model a viscous friction for the rotation.
+
+
+This model consists of four state variables and a high non-linearity
+as it departs from equilibrium points. It is worth noting that the
+wanted equilibrium point is in fact unstable.
+
 
 \section{Neural Fields for Control and Planning}
 
@@ -249,6 +280,23 @@ and scalar product:
 Those properties define and space with its operators which can be used
 to apply an evolutionary algorithm, by evolving the kernel function of
 the neural field.
+
+The evolution parameters are the connection kernels between the input
+layer and the hidden layer, and between the hidden layer and the
+output layer. The recurrent connections of the hidden layer with
+itself are left fixed, in the form of a wizard hat function.
+
+If the connection kernels are considered isotropic and homogeneous
+along the field, each connection kernel can be represented as an array
+of $N$ values from $w(0)$ to $w(p)$ with homogeneous spacing, using
+its symmetry. This way, for an equal boundary radius for all the
+kernels, and a 3-layered architecture, there are $3N$ real values in
+the genotype. As can be seen, the number of evolution parameters does
+not have a direct relation with the simulation size of the neural
+fields (the number of discrete points used), in contradistinction with
+recurrent neural networks, where the number of parameters depends on
+the number $n$ of neurons with a polynomial order $O(n^2)$.
+
 
 The third one consists of its suitability to simulation. This is not
 an inherent restriction for it to be physically (or biologically)
@@ -310,8 +358,8 @@ simple Heaviside function.
 
 The figure \ref{fig:nf-controller} shows the input and output layers
 (in the 2-dimensional case for generality) and the participation on
-the potential of a single element in the processing (or main) layer from the
-elements in the same layer and in the input layer.
+the potential of a single element in the processing (or main) layer
+from the elements in the same layer and in the input layer.
 
 
 \begin{figure}[t]
@@ -323,86 +371,63 @@ elements in the same layer and in the input layer.
 
 
 
-\section{Evolution of Neural Field Controllers for Biped Stability}
-\subsection*{Evolutionary Algorithm Structure and Parameters}
-For the evolution process it is used a simple evolutionary algorithm
-as shown in the preliminaries, with random elimination of individuals
-inversely proportional with its fitness.
+% \section{Evolution of Neural Field Controllers for Biped Stability}
+% \subsection*{Evolutionary Algorithm Structure and Parameters}
+% For the evolution process it is used a simple evolutionary algorithm
+% as shown in the preliminaries, with random elimination of individuals
+% inversely proportional with its fitness.
 
 % , but with the addition of niching in the for of Deterministic
 % Crowding (see \cite{referencia-dc}), in order to promote additional
 % diversity and to prevent premature convergence.
 
-The evolution parameters are the connection kernels between the input
-layer and the hidden layer, and between the hidden layer and the
-output layer. The recurrent connections of the hidden layer with
-itself are left fixed, in the form of a wizard hat function.
+% The evolution parameters are the connection kernels between the input
+% layer and the hidden layer, and between the hidden layer and the
+% output layer. The recurrent connections of the hidden layer with
+% itself are left fixed, in the form of a wizard hat function.
 
-The connection kernels are considered isotropic and homogeneous along
-the field, so that they can be described as symmetric one-dimensional
-arrays of values.
+% The connection kernels are considered isotropic and homogeneous along
+% the field, so that they can be described as symmetric one-dimensional
+% arrays of values.
 
-\subsection*{Genotypic Representation and Evolution Operators}
-Each connection kernel can be represented as an array of $N$ values
-from $w(0)$ to $w(p)$ with homogeneous spacing, using its
-symmetry. This way, for an equal boundary radius for all the kernels,
-and a 3-layered architecture, there are $3N$ real values in the
-genotype. As can be seen, the number of evolution parameters does not
-have a direct relation with the simulation size of the neural fields
-(the number of discrete points used), in contradistinction with
-recurrent neural networks, where the number of parameters depends on
-the number $n$ of neurons with a polynomial order $O(n^2)$.
+% \subsection*{Genotypic Representation and Evolution Operators}
+% Each connection kernel can be represented as an array of $N$ values
+% from $w(0)$ to $w(p)$ with homogeneous spacing, using its
+% symmetry. This way, for an equal boundary radius for all the kernels,
+% and a 3-layered architecture, there are $3N$ real values in the
+% genotype. As can be seen, the number of evolution parameters does not
+% have a direct relation with the simulation size of the neural fields
+% (the number of discrete points used), in contradistinction with
+% recurrent neural networks, where the number of parameters depends on
+% the number $n$ of neurons with a polynomial order $O(n^2)$.
 
-\subsection*{Fitness Functions}
-The fitness functions were selected in such a way that the stability
-controller only has the goal to reduce inclination, while the
-positioning controller has to take into account both inclination and
-position. The fitness functions were tuned experimentally to attain a
-convergence velocity suitable for the experiment. This has in mind a
-notion of sequential evolution of, first, the capability to attain
-equilibrium, and later, the capability to perturb the equilibrium
-controller in such a way that a planned objective can be reached.
+% \subsection*{Fitness Functions}
+% The fitness functions were selected in such a way that the stability
+% controller only has the goal to reduce inclination, while the
+% positioning controller has to take into account both inclination and
+% position. The fitness functions were tuned experimentally to attain a
+% convergence velocity suitable for the experiment. This has in mind a
+% notion of sequential evolution of, first, the capability to attain
+% equilibrium, and later, the capability to perturb the equilibrium
+% controller in such a way that a planned objective can be reached.
 
-The fitness function for the stability controller is:
+% The fitness function for the stability controller is:
 
-\begin{equation}
-  F_1(\theta )=100-\frac{100\theta ^4}{\theta _{max}^4 T_{total}}
-\end{equation}
+% \begin{equation}
+%   F_1(\theta )=100-\frac{100\theta ^4}{\theta _{max}^4 T_{total}}
+% \end{equation}
 
-And for the positioning controller is:
+% And for the positioning controller is:
 
-\begin{equation}
-  F_1(\theta ,e_x)=100-\frac{100(\theta ^4+e_x^4)}{(\theta _{max}^4+e_{x,max}^4) T_{total}}
-\end{equation}
+% \begin{equation}
+%   F_1(\theta ,e_x)=100-\frac{100(\theta ^4+e_x^4)}{(\theta _{max}^4+e_{x,max}^4) T_{total}}
+% \end{equation}
 
 
 
-\section{Experimental Set-up}
-\label{sec:setup}
-
-The model used consists of an approach to biped walking based on a
-inverted pendulum (car-and-pole) system in which the pendulum
-equilibrium is looked for. Nonetheless, supposing that the pendulum
-mass represents the body center of mass, it is proposed that is
-reasonable to expect a system with its sole function being to
-stabilize the body. This way, the navigation system has as purpose to
-carefully perturb the first controller in such a way that the
-stabilizing controller moves the car to the desired position.
-
-\subsection*{Dynamic Model}
-The dynamic model used, in mathematical terms, is expressed in the two
-equations:
-
-\begin{align}
-  \ddot{x}&=\frac{F+ml\dot{\theta}^2\sin\theta-mg\cos\theta\sin\theta}{M+m\sin^2\theta}\\
-  \ddot{\theta}&=\frac{(M+m)g\sin\theta-F\cos\theta-ml\dot{\theta}^2\sin\theta\cos\theta}{l(M+m\sin^2\theta)}+\frac{\tau}{ml^2}
-\end{align}
-
-This model consists of four state variables and a high non-linearity
-as it departs from equilibrium points. It is worth noting that the
-wanted equilibrium point is in fact unstable.
-
-\subsection*{RNN Controller Architecture for Comparison}
+\section{The RNN Controller Architecture}
+\label{sec:rnncontroller}
+%\subsection*{RNN Controller Architecture for Comparison}
 The proposed architecture for the recurrent neural network controller
 has two expert recurrent networks, whose interaction will achieve
 positioning and equilibrium as well.
