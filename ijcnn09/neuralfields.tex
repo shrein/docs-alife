@@ -157,18 +157,18 @@ the one-dimensional case is:
 \begin{equation}
   \label{eq:neuralfield}
   \frac{1}{\alpha}
-  \dot{u}(\psi)=-u(\psi)-h+s(\psi)+\int_{-\infty}^{\infty}{w(\psi,\psi')\sigma(u(\psi'))d\psi'}
+  \dot{u}(x)=-u(x)-h+s(x)+\int_{-\infty}^{\infty}{w(x,x')\sigma(u(x'))dx'}
 \end{equation}
-Where $\alpha$ is a temporal constant of synaptic decay rate,
-$u(\psi)$ is the average membrane potential of the neurons located at
-position $\psi$ at time $t$ (where $\psi$ is supposed to be
-1-dimensional and the time is omitted for readeability). The average
-intensity of connection from neurons at $\psi$ to neurons at $\psi'$
-is modeled with $w(\psi,\psi')$, $f(\cdot)$ is the saturating output
-function which is monotonically nondecreasing. The deviation of the
-average stimulation potential at place $\psi$ at time $t$ is
-represented by $s(\psi)$, and $h=\bar{s}-r$ is the sum of the average
-stimulation potential an the resting potential.
+Where $\alpha$ is a temporal constant of synaptic decay rate, $u(x)$
+is the average membrane potential of the neurons located at position
+$\psi$ at time $t$ (where $\psi$ is supposed to be 1-dimensional and
+the time is omitted for readability). The average intensity of
+connection from neurons at $\psi$ to neurons at $x'$ is modeled with
+$w(x,x')$, $f(\cdot)$ is the saturating output function which is
+monotonically nondecreasing. The deviation of the average stimulation
+potential at place $\psi$ at time $t$ is represented by $s(x)$, and
+$h=\bar{s}-r$ is the sum of the average stimulation potential an the
+resting potential.
 
 The main difference between recurrent neural networks and neural
 fields is that, in the first, the relation among the neurons is
@@ -265,9 +265,9 @@ discrete form of the equation \ref{eq:nf-simp}:
 Where we replace the integral for a sum over the point included inside
 a finite neighborhood (ball) around $x_i$ with radius $p$. The time is
 considered continuous, and the computation of the dynamical system
-behavior is evaluated with a Runge-Kutta method. We denote
-$u_i=u(x_i,t)$. It should be noted that the previous equation can be
-applied to the $n$-dimensional case without modification.
+behavior is evaluated with a fourth-order Runge-Kutta method. We
+denote $u_i=u(x_i,t)$. It should be noted that the previous equation
+can be applied to the $n$-dimensional case without modification.
 
 \subsection*{Control Architecture} 
 The control architecture built based on the neural fields has three
@@ -276,14 +276,20 @@ basic elements.
 The first one, is a sensor, which reads the states from the plant and
 also their derivatives (computed from the dynamical equation of the
 plant). In particular, the sensor used for the neural field controller
-is based on the angular acceleration of the pendulum pole, loosely
-resembling the vestibular system on the inner ear.
+is rather simple, taking the values of the angular-related states
+(i.e. angular position and angular velocity) as feedback.
 
 The second one is the input layer, which consists of a simple neural
 field without natural dynamics, where the spatial codification of the
 sensed values is made. For the problem at hand, we use a finite
 one-dimensional neural field, where a sensed input with value zero
-maps to the center point of the field.
+maps to the center point of the field, and other values are
+correspondingly coded in other (positive or negative)
+positions. Angular position values are coded as local potentials with
+value $u(x)=1$ and angular velocities as local potentials with value
+$u(x)=k_\omega$, where $0 \le k_\omega < 1$. It is worth noting that
+the sum between input states is performed directly by the neural field
+dynamics.
 
 The third one is the processing layer, which has a more typical neural
 field which has inner dynamics given by the eq. \ref{eq:nf-disc},
@@ -304,7 +310,7 @@ simple Heaviside function.
 
 The figure \ref{fig:nf-controller} shows the input and output layers
 (in the 2-dimensional case for generality) and the participation on
-the potential of a single element in the processing layer from the
+the potential of a single element in the processing (or main) layer from the
 elements in the same layer and in the input layer.
 
 
