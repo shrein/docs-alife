@@ -56,11 +56,12 @@
   compare the performance of an evolved neural field and a hand-tuned
   neural field. There are presented some relevant requirements for the
   neural field controller architecture and its parameterization by
-  evolution, and the controller architecture is detailed. Remarkably,
-  the neural field controller performs well in the simulation and has
-  a spatial representation which allows interpretation of field
+  evolution, and the controller architecture is detailed. The neural
+  field controller performs well in the simulation and has a spatial
+  representation which allows interpretation of field
   potentials. Also, the evolved neural field performs better than the
-  non-evolved one, but uses a different strategy to control the plant.
+  non-evolved one, uses a different strategy to control the plant, and
+  is able to recover fast from worst-case initial conditions.
 \end{abstract}
 
 \category{I.2.8}{Artificial Intelligence}{Problem Solving, Control
@@ -98,7 +99,7 @@ of following goals.
 
 Here is proposed a control scheme based on neural fields and a
 comparison is made between a hand-tuned controller and a controller
-parameterized by an evolutionary algorithm. As controller, the neural
+parameterized by an evolutionary algorithm. As controllers, the neural
 fields, compared with recurrent neural networks, have a deeper
 biological basis, apply more restrictions and extend the discrete
 model to a continuous one, following the method of planning and
@@ -108,7 +109,7 @@ potential to address goal-based planning problems, so we are here
 interested on its capability to solve dynamic control problems.
 
 The control problem set for testing the architectures is the stability
-problem on an inverted pendulum, so that the controller ability to
+problem of an inverted pendulum, so that the controller ability to
 perform dynamic control on an unstable plant can be evaluated. To the
 authors' knowledge this is the first time neural fields parameterized
 by evolutionary algorithms have been evaluated for solving a control
@@ -125,7 +126,7 @@ made.
 
 
 \section{Preliminaries on Computational Intelligence}
-\subsection{Recurrent Neural Networks and Neural Fields}
+\subsection{Neural Fields}
 Artificial neural networks are a connectionist computing scheme
 inspired by brain neural layout at cellular level. It is based on
 simple computing structures called neurons which have several inputs
@@ -271,31 +272,16 @@ inner-product defined by the Lebesgue measure:
 The defined space, whit its measure, conforms a Hilbert space, and
 therefore is complete and metrizable. It also gives a notion of sum,
 and scalar product:
+
 \begin{eqnarray}
   \label{eq:eq-leb-opers}
   (f+g)(x)=&f(x)+g(x) \\
   (\lambda f)(x)=&\lambda f(x)
 \end{eqnarray}
+
 Those properties define and space with its operators which can be used
 to apply an evolutionary algorithm, by evolving the kernel function of
 the neural field.
-
-The evolution parameters are the connection kernels between the input
-layer and the hidden layer, and between the hidden layer and the
-output layer. The recurrent connections of the hidden layer with
-itself are left fixed, in the form of a wizard hat function.
-
-If the connection kernels are considered isotropic and homogeneous
-along the field, each connection kernel can be represented as an array
-of $N$ values from $w(0)$ to $w(p)$ with homogeneous spacing, using
-its symmetry. This way, for an equal boundary radius for all the
-kernels, and a 3-layered architecture, there are $3N$ real values in
-the genotype. As can be seen, the number of evolution parameters does
-not have a direct relation with the simulation size of the neural
-fields (the number of discrete points used), in contradistinction with
-recurrent neural networks, where the number of parameters depends on
-the number $n$ of neurons with a polynomial order $O(n^2)$.
-
 
 The third one consists of its suitability to simulation. This is not
 an inherent restriction for it to be physically (or biologically)
@@ -316,7 +302,7 @@ behavior is evaluated with a fourth-order Runge-Kutta method. We
 denote $u_i=u(x_i,t)$. It should be noted that the previous equation
 can be applied to the $n$-dimensional case without modification.
 
-\subsection{Control Architecture} 
+\subsection{Control Architecture}
 The control architecture built based on the neural fields has three
 basic elements.
 
@@ -338,12 +324,12 @@ $u(x)=k_\omega$, where $0 \le k_\omega < 1$. It is worth noting that
 the sum between input states is performed directly by the neural field
 dynamics.
 
-The third one is the processing layer, which has a more typical neural
-field which has inner dynamics given by the eq. \ref{eq:nf-disc},
-where the fields taken into the sum are the input neural field, and
-the processing neural field. This way, besides its natural dynamics,
-the processing layer receives the inputs from the input field filtered
-by the kernel operator.
+The third one is the processing layer, which consists of a more
+typical neural field which has inner dynamics given by the
+eq. \ref{eq:nf-disc}, where the fields taken into the sum are the
+input neural field, and the processing neural field. This way, besides
+its natural dynamics, the processing layer receives the inputs from
+the input field filtered by a kernel operator.
 
 The parameterization of the controller is performed by varying the
 kernel operator. For the hand-tuned case, the kernel operator used is
@@ -463,99 +449,6 @@ control problem with a neural field controller grown from the two
 kernel arrays.
 
 
-% \section{The RNN Controller Architecture}
-% \label{sec:rnncontroller}
-% % \subsection{RNN Controller Architecture for Comparison}
-% The proposed architecture for the recurrent neural network
-% controller has two expert recurrent networks, whose interaction will
-% achieve positioning and equilibrium as well.
-
-% There has been applied a preprocessing stage previous to the input
-% neurons, so that the actual values are not used and instead the
-% inputs are mapped to 3 fuzzy sets. In this way, the stability
-% controller only has 3 inputs, while the positioning controller has
-% 6, corresponding to the same 3 inputs previously described and
-% another 3 due to the fuzzy mapping of the error signal. All neurons
-% are interconnected and the first one of them is selected as output
-% without loss of generality. The neural network topology for the
-% first controller (stability) is shown in the figure
-% \ref{fig:rnn-arch}.
-
-% \begin{figure}[t]
-%   \label{fig:rnn-arch}
-%   \centering \epsfig{file=rnn.eps, width=7cm}
-%   \caption{Neural net for stability control including fuzzy mapping}
-%   \label{rnn}
-% \end{figure}
-
-% \subsection{Evolutionary Algorithm Structure for the RNN Controller}
-% It is expected, based on the approach of artificial life to
-% evolutionary robotics (Nolfi y Floreano), that the sequential and
-% cooperative evolution of elements with biological similarity leads
-% to an specialization in the process of stabilization and positioning
-% (despite the antagonistic individual goals of each controller
-% because of the interest of the positioning controller to maximize
-% also the global performance).
-
-% As said, the two steps are executed sequentially, taking the best
-% individual of the first step to collaborate with the individual
-% evolved in the second step.
-
-% Aiming to obtain a fixed length representation and limit the problem
-% dimensionality, it is used a model of order $Q$ totally
-% connected. Any network with an order equal or lesser and with total
-% or partial connections can be represented by the proposed model, by
-% the addition of activating/deactivating elements for neurons and
-% connections. Therefore, individual are codified as:
-
-% \begin{itemize}
-% \item A bit sequence representing a serialization of an activation
-%   matrix $A_a$ of dimension $Q$-by-$Q$ which activates/deactivates a
-%   recurrent connection.
-% \item A sequence of real numbers representing a serialization of
-%   matrices $W_a$ and $W_b$, of dimension $Q$-by-$Q$ and
-%   $Q$-by-$(m+1)$ respectively.
-% \end{itemize}
-
-% The $C$ matrix is not evolved because it is chosen arbitrarily only
-% one output (the first neuron).
-
-% The evolution operations used in both steps are:
-% \begin{itemize}
-% \item Parametric mutation of inputs: Gaussian modification of real
-%   codified matrix weights, which varies connection weights of
-%   inputs.
-% \item Parametric mutation of recurrences: Gaussian modification of
-%   real codified matrix weights, which varies connection weights of
-%   recurrences.
-% \item Selection: Calculates population fitness, selects with elitism
-%   and culling (5\% of both) couples of parents for generating new
-%   offsprings, calculates the fitness function for both offsprings.
-% \end{itemize}
-
-% The fitness functions were selected in such a way that the stability
-% controller only has the goal to reduce inclination. The fitness
-% functions were tuned experimentally to attain a convergence velocity
-% suitable for the experiment. This has in mind a notion of sequential
-% evolution of, first, the capability to attain equilibrium, and
-% later, the capability to perturb the equilibrium controller in such
-% a way that a planned objective can be reached.
-
-% The fitness function for the stability controller is:
-
-% \begin{equation}
-%   F_1(\theta )=100-\frac{100\theta ^4}{\theta _{max}^4 T_{total}}
-% \end{equation}
-
-% And for the positioning controller is:
-
-% \begin{equation}
-%   F_1(\theta ,e_x)=100-\frac{100(\theta ^4+e_x^4)}{(\theta _{max}^4+e_{x,max}^4) T_{total}}
-% \end{equation}
-
-% The fitness functions used are could be also applied to a evolution
-% of the neural field controller.
-
 \section{Experimental Results}
 \subsection{Experimentation Details}
 The sampling time used was $0.025$s (for neural fields, and
@@ -567,13 +460,11 @@ $h=0.025s$ for each test.
 
 Here are shown the results for the proposed neural field architecture
 with and without evolution (with an appropriate selection of
-parameters for the non-evolved case made taking in account only the
-self-stability of the neural fields and the time constants of the
-plant). Also, for reference, it is included the simulation of a
-controller omitting the processing layer (direct controller), which is
-roughly equivalent to a simple state space controller. The last
-controller does not need any additional parameters aside the common
-ones.
+parameters for the non-evolved case). Also, for reference, it is
+included the simulation of a controller omitting the processing layer
+(direct controller), which is roughly equivalent to a simple state
+space controller. The last controller does not need any additional
+parameters aside the common ones.
 
 For all the simulations, the initial angular position was
 $\theta=\pi/6$, the number of discrete positions used in the
@@ -581,7 +472,7 @@ simulation of the neural field was $21$, and the angular position
 $\theta$ was encoded into the input field with value $1$ while the
 angular velocity $\omega$ was coded with value $k_\omega=0.5$. The
 neural field time constant was taken with value $\tau=1/10$s. The
-filtering wizard hat kernel on the actuator had values $k=1$,
+filtering (wizard hat) kernel on the actuator had values $k=1$,
 $\delta=2$ and $H_0=0$.
 
 For the non-evolved controller, it were used also wizard hat kernels
@@ -590,7 +481,7 @@ $k=2$, $\delta=2$ and $H_0=0.1$. The processing kernel had values
 $k=0.3$, $\delta=2$ and $H_0=0.1$. Those values were derived mostly by
 trial-and-error.
 
-For the evolved controller, it were used parameterized kernels feed by
+For the evolved controller, there were used parameterized kernels feed by
 the kernel arrays on the genome of the evolutionary algorithm. The
 Gaussian mutation operators were initialized with a standard deviation
 of 0.3. Its application rate is evolved itself by the evolutionary
@@ -598,39 +489,6 @@ algorithm used, which was previously designed by professor Gómez
 (Hybrid Adaptive Evolutionary Algorithm).
 
 \subsection{Results}
-% The first experiment tests the physical model using the recurrent
-% neural network controller without evolution, to see the natural
-% dynamics of the system when the controller is configured arbitrarily
-% (in such a way that can be perceived the need of the evolutionary
-% algorithm for the recurrent neural network controller). Results are
-% shown in the figure \ref{inestabilidad}. As can be seen, it is an
-% unstable system in the origin. Red dots represent the pendulum
-% position referenced to universal coordinates, and blue dots
-% represent the base (car) position.
-
-
-% \begin{figure}[t]
-%   \centering \epsfig{file=inestabilidadG.eps, width=7cm}
-%   \\
-%   \epsfig{file=inestabilidadC.eps, width=7cm}
-%   \caption{System dynamics with an untrained RNN controller. The
-%     first figure shows the pendulum trace and the second the
-%     pendulum at a given time.}
-%   \label{inestabilidad}
-% \end{figure}
-
-% After the parameterization made by the evolutionary algorithm for
-% the RNN controller, it is shown the behavior of the controller in
-% the figure \ref{rnnSimulation}. The evolution was performed with a
-% population of 100 individuals and 500 iterations.
-
-% \begin{figure}[t]
-%   \centering \epsfig{file=rnnSimulation.eps, width=7cm}
-%   \caption{System dynamics with a RNN controller trained. The first
-%     figure shows the pendulum trace and the second the pendulum at
-%     $t=3.5$s.}
-%   \label{rnnSimulation}
-% \end{figure}
 
 The direct controller can by itself attain stability for the initial
 value $\theta=\pi/6$ but the performance is poor. While not shown, it
@@ -639,7 +497,7 @@ $\theta=\pi/3$ or higher.
 
 The hand-tuned controller is able to control the stability without
 evolution with a better performance than the presented by the direct
-controller. It can stabilize in the 10s lapse instances with an
+controller. It can stabilize in the 10s time those instances with an
 initial value of $\theta=\pi/3$ or higher. Nonetheless, it causes big
 displacements and tends to keep a small but persistent orientation
 error.
@@ -661,18 +519,13 @@ close-to-optimal manner.
   \caption{System dynamics with an evolved Neural Field Controller, at
     time $t=4$. Left: trace of the pendulum (cart in blue and pole tip
     in red). Right: snapshot of the animation at time $t$.}
-  \label{fig:tetha-pi}
+  \label{fig:theta-pi}
 \end{figure*}
 
 The three figures \ref{fig:inputs}, \ref{fig:processings} and
 \ref{fig:pendulum-states} show the input fields, the processing fields
 and the state variables evolution (respectively) for the three
 controllers.
-
-The simulation is shown in the figure \ref{fieldSimulation}, including
-the neural field values at a given point of time. Different
-$k_{\omega}$ values affected the system response but kept the system
-stable.
 
 \begin{figure}
   \centering \epsfig{file=inputPopulation_old.eps, width=7cm,
@@ -714,7 +567,7 @@ stable.
     equivalent to $x=-5$. First: direct (without processing layer)
     controller. Second: non-evolved controller. Third: evolved
     controller.}
-\label{fig:pendulum-states}
+  \label{fig:pendulum-states}
 \end{figure}
 
 
@@ -731,7 +584,7 @@ performance for low and mid perturbations without evolution.
 Although there was a need for parameter configuration to attain a good
 performance, evolution was not strictly required because the small
 number of parameters to setup: basically three parameters of the
-kernel function and the resting potential of the field equation - a
+kernel function and the resting potential of the field equation, a
 number of parameters of constant order in relation to the number of
 nodes (discrete potentials on the neural field). Nonetheless, the
 evolved controller performed better than the other two, is more
