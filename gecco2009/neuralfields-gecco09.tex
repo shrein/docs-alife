@@ -432,7 +432,7 @@ The evolution operations used in both steps are:
 \end{itemize}
 
 The mutation operators implemented apply the sum operator defined in
-eq. ref{eq:eq-leb-opers} but there was not implemented a crossover
+eq. \ref{eq:eq-leb-opers} but there was not implemented a crossover
 operator that used the scalar operator as it was not deemed necessary,
 but can be easily implemented for another application if it is
 considered useful.
@@ -655,7 +655,16 @@ understood by looking at processing field activation values, and this
 controller seems to apply short burst of switching maximum values in a
 close-to-optimal manner.
 
-The three figures \ref{fig:input}, \ref{fig:processing} and
+
+\begin{figure*}
+  \centering \epsfig{file=neuralfield-panel-2.eps, width=14cm}
+  \caption{System dynamics with an evolved Neural Field Controller, at
+    time $t=4$. Left: trace of the pendulum (cart in blue and pole tip
+    in red). Right: snapshot of the animation at time $t$.}
+  \label{fig:tetha-pi}
+\end{figure*}
+
+The three figures \ref{fig:inputs}, \ref{fig:processings} and
 \ref{fig:pendulum-states} show the input fields, the processing fields
 and the state variables evolution (respectively) for the three
 controllers.
@@ -665,86 +674,86 @@ the neural field values at a given point of time. Different
 $k_{\omega}$ values affected the system response but kept the system
 stable.
 
-
-\begin{figure}[p]
-  \centering \epsfig{file=neuralfield-panel-1.eps, width=7cm}
-  \caption{System dynamics with a non-trained Neural Field
-    Controller. In order: the input layer at time $t=3.5$, the
-    pendulum trace, the processing layer at time $t$, and the pendulum
-    at time $t$.}
-  \label{fieldSimulation}
+\begin{figure}
+  \centering \epsfig{file=inputPopulation_old.eps, width=7cm,
+    angle=-90} \epsfig{file=inputPopulation.eps, width=7cm, angle=-90}
+  \epsfig{file=inputPopulation_evo.eps, width=7cm, angle=-90}
+  \caption{Input layer activation for simulations between $t=0$s and
+    $t=10$s with steps $h=1/40$s and positions between $x_{min}=-10$
+    and $x_{max}=10$. First: direct (without processing layer)
+    controller. Second: non-evolved controller. Third: evolved
+    controller.}
+  \label{fig:inputs}
 \end{figure}
 
-A detailed evolution of the neural field controller can be seen in the
-figure \ref{fig:nf-controller}.
-
-\begin{figure}[t]
-  \centering \epsfig{file=inputPopulation.eps, width=7cm, angle=-90}
-  \epsfig{file=fieldPopulation.eps, width=7cm}
-  \caption{Neural Field simulation between $t=0$s and $t=10$s with
-    steps $h=1/40$s and positions between $x_{min}=-10$ and
-    $x_{max}=10$. First figure is the input layer activation, with
-    $\theta$ input with value $1$ and $\dot{\theta}$ with value
-    $k_{\omega}=0.8$. The second figure is the processing layer
-    activation.}
-  \label{fig:nf-controller}
+\begin{figure}
+  \centering \epsfig{file=fieldPopulation_old.eps, width=7cm,
+    angle=-90} \epsfig{file=fieldPopulation.eps, width=7cm, angle=-90}
+  \epsfig{file=fieldPopulation_evo.eps, width=7cm, angle=-90}
+  \caption{Processing layer activation for simulations between $t=0$s
+    and $t=10$s with steps $h=1/40$s and positions between
+    $x_{min}=-10$ and $x_{max}=10$. First: direct (without processing
+    layer) controller, illustrative of field dynamics as it is
+    excluded of the control action. Second: non-evolved
+    controller. Third: evolved controller.}
+  \label{fig:processings}
 \end{figure}
 
-And a detailed evolution of the pendulum with the neural field
-controller can be seen in the figure \ref{fig:nf-pendulum}.
 
-\begin{figure}[t]
-  \centering \epsfig{file=pendulum.eps, width=7cm, angle=-90}
-  \caption{Pendulum simulation with neural field controller between
-    $t=0$s and $t=10$. Each state is coded with a position (so that
-    the pendulum can be simulated as a field on its own) this way:
-    $x$:0, $\theta$:1, $\dot{x}$:2, $\dot{\theta}$:3. It can be seen
-    the little variation in the angular position ($\theta$). The
-    discontinuity in $x$ is present because position wraps in the
-    simulation so that $x=5$ is equivalent to $x=-5$.}
-  \label{fig:nf-pendulum}
+\begin{figure}
+  \centering \epsfig{file=pendulum_old.eps, width=7cm, angle=-90}
+  \epsfig{file=pendulum.eps, width=7cm, angle=-90}
+  \epsfig{file=pendulum_evo.eps, width=7cm, angle=-90}
+  \caption{Pendulum simulation states with several neural field
+    controllers between $t=0$s and $t=10$. Each state is coded with a
+    position (so that the pendulum can be simulated as a field on its
+    own) this way: $x$:0, $\theta$:1, $\dot{x}$:2,
+    $\dot{\theta}$:3. It can be seen the little variation in the
+    angular position ($\theta$). The discontinuity in $x$ is present
+    because position wraps in the simulation so that $x=5$ is
+    equivalent to $x=-5$. First: direct (without processing layer)
+    controller. Second: non-evolved controller. Third: evolved
+    controller.}
+\label{fig:pendulum-states}
 \end{figure}
 
 
 
 \section{Conclusions}
-While the recurrent neural network controller is expressive enough to
-solve the problem at hand, the number of parameters to configure (or
-in this case to evolve) is of a quadratic order in relation to the
-number of nodes (or neurons). This was not a particular problem for
-the evolutionary algorithm used, but limits its potential
-scalability. Furthermore, while it is expressive enough, does not show
-a particular suitability (needs explicit and specific
-parameterization) to the dynamic stability problem of the inverted
-pendulum and there are no reasons to expect something different for a
-more complex biped model.
-
-On the other hand, the neural field controller is a bit more complex
-(in its implementation) and its simulation more costly, but has some
+The neural field controller architecture is a bit complex (in its
+implementation) and its simulation slightly costly, but has some
 notable advantages. The first one is its ability to self-compensate
 or, equivalently, the stability of its natural dynamics, which is
 attained after the setup of few parameters. The second one is its
 suitability to the problem at hand, being able to solve it with a good
-performance for low perturbations. Although there was a need for
-parameter configuration, evolution was not required because the small
+performance for low and mid perturbations without evolution.
+
+Although there was a need for parameter configuration to attain a good
+performance, evolution was not strictly required because the small
 number of parameters to setup: basically three parameters of the
 kernel function and the resting potential of the field equation - a
 number of parameters of constant order in relation to the number of
-nodes (discrete potentials on the neural field).
+nodes (discrete potentials on the neural field). Nonetheless, the
+evolved controller performed better than the other two, is more
+general because eliminates the need for manual conscious
+parameterization and allows the designer to specify more precisely the
+performance measure desired.
 
-Remarkably, the non-evolved neural field controller performs as good
-or better than the evolved recurrent neural network
-controller. Furthermore, the neural field has a spatial representation
+It is worth noting that the neural field has a spatial representation
 which allows interpretation of field potentials (as shown in
-fig. \ref{fig:nf-controller}). The interpretation or understanding of
-recurrent neural networks is quite difficult and even more with
+fig. \ref{fig:processings}). Indeed, its geometrical representation
+allows for a small switch between a state-space like controller to a
+neural field controller. The interpretation or understanding of
+recurrent neural networks tends to be difficult and even more with
 increasing states involved. This makes the neural field controller not
-as black-box as the RNN controller.
+as black-box as the a recurrent neural network controller. This holds
+even in the case of the evolved neural field controller.
 
-More complex control problems seem to require an strategy of
-parameterization of the neural field controller. This way, it is left
-for future work the task of neural field evolution as it was briefly
-presented in section \label{sec:properties}.
+More complex control problems could benefit from the strategy of
+parameterization of neural field controllers by evolution here
+developed. This way, it is left for future work the task of
+integration of multiple goals in different populations and the design
+of an arbitration scheme compatible with the architecture.
 
 \bibliographystyle{abbrv} \bibliography{bibanot}
 
