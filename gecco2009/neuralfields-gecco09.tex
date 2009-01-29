@@ -350,6 +350,7 @@ kernel operator. For the hand-tuned case, the kernel operator used is
 a Wizard Hat Function with the expression:
 
 \begin{equation}
+  \label{eq:wizard-hat}
   w(x_i,x_j)=ke^{-(x_i-x_j)^2/\delta^2}-H_0
 \end{equation}
 
@@ -569,59 +570,100 @@ with and without evolution (with an appropriate selection of
 parameters for the non-evolved case made taking in account only the
 self-stability of the neural fields and the time constants of the
 plant). Also, for reference, it is included the simulation of a
-controller omitting the processing layer, which is roughly equivalent
-to a simple state space controller. The initial angular position was
-$\theta=\pi/6$ and the number of discrete positions used in the
-simulation of the neural field was $21$. 
+controller omitting the processing layer (direct controller), which is
+roughly equivalent to a simple state space controller. The last
+controller does not need any additional parameters aside the common
+ones.
 
+For all the simulations, the initial angular position was
+$\theta=\pi/6$, the number of discrete positions used in the
+simulation of the neural field was $21$, and the angular position
+$\theta$ was encoded into the input field with value $1$ while the
+angular velocity $\omega$ was coded with value $k_\omega=0.5$. The
+neural field time constant was taken with value $\tau=1/10$s. The
+filtering wizard hat kernel on the actuator had values $k=1$,
+$\delta=2$ and $H_0=0$.
 
+For the non-evolved controller, it were used also wizard hat kernels
+as defined in eq. \ref{eq:wizard-hat}. The input kernel had values
+$k=2$, $\delta=2$ and $H_0=0.1$. The processing kernel had values
+$k=0.3$, $\delta=2$ and $H_0=0.1$. Those values were derived mostly by
+trial-and-error.
 
-It was used the same kernel
-and kernel parameters for the self connections of the processing layer
-and the connections from the input layer to the processing layer. The
-neural field time constant was taken with value $\tau=1/10$s.
+For the evolved controller, it were used parameterized kernels feed by
+the kernel arrays on the genome of the evolutionary algorithm. The
+Gaussian mutation operators were initialized with a standard deviation
+of 0.3. Its application rate is evolved itself by the evolutionary
+algorithm used, which was previously designed by professor Gómez
+(Hybrid Adaptive Evolutionary Algorithm).
 
 \subsection{Results}
-The first experiment tests the physical model using the recurrent
-neural network controller without evolution, to see the natural
-dynamics of the system when the controller is configured arbitrarily
-(in such a way that can be perceived the need of the evolutionary
-algorithm for the recurrent neural network controller). Results are
-shown in the figure \ref{inestabilidad}. As can be seen, it is an
-unstable system in the origin. Red dots represent the pendulum
-position referenced to universal coordinates, and blue dots represent
-the base (car) position.
+% The first experiment tests the physical model using the recurrent
+% neural network controller without evolution, to see the natural
+% dynamics of the system when the controller is configured arbitrarily
+% (in such a way that can be perceived the need of the evolutionary
+% algorithm for the recurrent neural network controller). Results are
+% shown in the figure \ref{inestabilidad}. As can be seen, it is an
+% unstable system in the origin. Red dots represent the pendulum
+% position referenced to universal coordinates, and blue dots
+% represent the base (car) position.
 
 
-\begin{figure}[t]
-  \centering \epsfig{file=inestabilidadG.eps, width=7cm}
-  \\
-  \epsfig{file=inestabilidadC.eps, width=7cm}
-  \caption{System dynamics with an untrained RNN controller. The first
-    figure shows the pendulum trace and the second the pendulum at a
-    given time.}
-  \label{inestabilidad}
-\end{figure}
+% \begin{figure}[t]
+%   \centering \epsfig{file=inestabilidadG.eps, width=7cm}
+%   \\
+%   \epsfig{file=inestabilidadC.eps, width=7cm}
+%   \caption{System dynamics with an untrained RNN controller. The
+%     first figure shows the pendulum trace and the second the
+%     pendulum at a given time.}
+%   \label{inestabilidad}
+% \end{figure}
 
-After the parameterization made by the evolutionary algorithm for the
-RNN controller, it is shown the behavior of the controller in the
-figure \ref{rnnSimulation}. The evolution was performed with a
-population of 100 individuals and 500 iterations.
+% After the parameterization made by the evolutionary algorithm for
+% the RNN controller, it is shown the behavior of the controller in
+% the figure \ref{rnnSimulation}. The evolution was performed with a
+% population of 100 individuals and 500 iterations.
 
-\begin{figure}[t]
-  \centering \epsfig{file=rnnSimulation.eps, width=7cm}
-  \caption{System dynamics with a RNN controller trained. The first
-    figure shows the pendulum trace and the second the pendulum at
-    $t=3.5$s.}
-  \label{rnnSimulation}
-\end{figure}
+% \begin{figure}[t]
+%   \centering \epsfig{file=rnnSimulation.eps, width=7cm}
+%   \caption{System dynamics with a RNN controller trained. The first
+%     figure shows the pendulum trace and the second the pendulum at
+%     $t=3.5$s.}
+%   \label{rnnSimulation}
+% \end{figure}
 
-On the other hand, the neural field is able to control the stability
-without evolution with a performance similar (or even better) than the
-presented by the evolved RNN controller. The simulation is shown in
-the figure \ref{fieldSimulation}, including the neural field values at
-a given point of time. Different $k_{\omega}$ values affected the
-system response but kept the system stable.
+The direct controller can by itself attain stability for the initial
+value $\theta=\pi/6$ but the performance is poor. While not shown, it
+has problems stabilizing the pendulum with an initial value of
+$\theta=\pi/3$ or higher.
+
+The hand-tuned controller is able to control the stability without
+evolution with a better performance than the presented by the direct
+controller. It can stabilize in the 10s lapse instances with an
+initial value of $\theta=\pi/3$ or higher. Nonetheless, it causes big
+displacements and tends to keep a small but persistent orientation
+error.
+
+Finally, the evolved controller has the best performance of the three,
+performs a fast stabilization of the pendulum even with an initial
+value of $\theta=\pi$ (worst-case scenario for the initial
+orientation), which is shown in figure \ref{fig:theta-pi}. It is the
+only one that stays for long periods of time on the reference
+orientation and it causes the least displacements. Despite its
+parameterization being carried out by evolution, its strategy can be
+understood by looking at processing field activation values, and this
+controller seems to apply short burst of switching maximum values in a
+close-to-optimal manner.
+
+The three figures \ref{fig:input}, \ref{fig:processing} and
+\ref{fig:pendulum-states} show the input fields, the processing fields
+and the state variables evolution (respectively) for the three
+controllers.
+
+The simulation is shown in the figure \ref{fieldSimulation}, including
+the neural field values at a given point of time. Different
+$k_{\omega}$ values affected the system response but kept the system
+stable.
 
 
 \begin{figure}[p]
@@ -637,7 +679,7 @@ A detailed evolution of the neural field controller can be seen in the
 figure \ref{fig:nf-controller}.
 
 \begin{figure}[t]
-  \centering \epsfig{file=inputPopulation.eps, width=7cm}
+  \centering \epsfig{file=inputPopulation.eps, width=7cm, angle=-90}
   \epsfig{file=fieldPopulation.eps, width=7cm}
   \caption{Neural Field simulation between $t=0$s and $t=10$s with
     steps $h=1/40$s and positions between $x_{min}=-10$ and
@@ -652,7 +694,7 @@ And a detailed evolution of the pendulum with the neural field
 controller can be seen in the figure \ref{fig:nf-pendulum}.
 
 \begin{figure}[t]
-  \centering \epsfig{file=pendulum.eps, width=7cm}
+  \centering \epsfig{file=pendulum.eps, width=7cm, angle=-90}
   \caption{Pendulum simulation with neural field controller between
     $t=0$s and $t=10$. Each state is coded with a position (so that
     the pendulum can be simulated as a field on its own) this way:
