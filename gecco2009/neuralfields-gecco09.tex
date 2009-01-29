@@ -21,9 +21,9 @@
 % \crdata{0-12345-67-8/90/01} % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Evolved Neural Fields Applied to the Stability Problem of a Simple
-  Biped Walking Model} \subtitle{[Track: Artificial Life, Evolutionary
-  Robotics, Adaptive Behavior, Evolvable Hardware]}
+\title{Evolved Neural Fields Applied to the Stability Problem of a
+  Simple Biped Walking Model} \subtitle{[Track: Artificial Life,
+  Evolutionary Robotics, Adaptive Behavior, Evolvable Hardware]}
 
 \numberofauthors{2}
 
@@ -138,16 +138,17 @@ locality in this model and the interactions between neurons and inputs
 is given by parameter matrices.
 
 Neural fields, on the other hand, arise as a tissue level model of
-neural populations in brain. The model has been proposed by Wilson and Cowan
-\cite{Wilson72Excitatory} and detailed by Amari \cite{Amari77Dynamics}
-in the particular case of lateral inhibition. In this model, neural
-population in considered a continuum in which exists a dynamical
-evolution equation where the mean activation potential evaluated in
-one place is affected by its neighborhood, according to a so-called
-mexican hat function (as noted by Coombes \cite{Coombes05Waves} better
-called wizard hat function), in which close neighbors act as exciters
-and distant ones act as inhibitors. Their mathematical formulation for
-the one-dimensional case is:
+neural populations in brain. The model has been proposed by Wilson and
+Cowan \cite{Wilson72Excitatory} and detailed by Amari
+\cite{Amari77Dynamics} in the particular case of lateral
+inhibition. In this model, neural population in considered a continuum
+in which exists a dynamical evolution equation where the mean
+activation potential evaluated in one place is affected by its
+neighborhood, according to a so-called mexican hat function (as noted
+by Coombes \cite{Coombes05Waves} better called wizard hat function),
+in which close neighbors act as exciters and distant ones act as
+inhibitors. Their mathematical formulation for the one-dimensional
+case is:
 
 \begin{equation}
   \label{eq:neuralfield}
@@ -342,11 +343,11 @@ field which has inner dynamics given by the eq. \ref{eq:nf-disc},
 where the fields taken into the sum are the input neural field, and
 the processing neural field. This way, besides its natural dynamics,
 the processing layer receives the inputs from the input field filtered
-by the kernel operator. 
+by the kernel operator.
 
 The parameterization of the controller is performed by varying the
-kernel operator. For the hand-tuned case, the kernel operator used is a Wizard Hat
-Function with the expression:
+kernel operator. For the hand-tuned case, the kernel operator used is
+a Wizard Hat Function with the expression:
 
 \begin{equation}
   w(x_i,x_j)=ke^{-(x_i-x_j)^2/\delta^2}-H_0
@@ -375,10 +376,11 @@ The output is processed taking the position with highest activation on
 the processing filtered by another wizard-hat function, and decoding
 it to a value.
 
-The figure \ref{fig:nf-controller} illustrates the input and output layers
-(in the 2-dimensional case for generality) and the participation on
-the potential of a single element in the processing (or main) layer
-from the elements in the same layer and in the input layer.
+The figure \ref{fig:nf-controller} illustrates the input and output
+layers (in the 2-dimensional case for generality) and the
+participation on the potential of a single element in the processing
+(or main) layer from the elements in the same layer and in the input
+layer.
 
 
 \begin{figure}[t]
@@ -389,128 +391,162 @@ from the elements in the same layer and in the input layer.
 \end{figure}
 
 
-\section{Evolution of Neural Field Controllers for Biped Stability}
+\section{Evolution of Neural Field Controllers}
 \subsection{Evolutionary Algorithm Structure and Parameters}
 For the evolution process it is used a simple evolutionary algorithm
-as shown in the preliminaries, with random elimination of
-individuals inversely proportional with its fitness.
+as shown in the preliminaries, with random elimination of individuals
+inversely proportional with their fitness.
 
-, but with the addition of niching in the for of Deterministic
-Crowding (see \cite{referencia-dc}), in order to promote additional
-diversity and to prevent premature convergence.
-
-The evolution parameters are the connection kernels between the
-input layer and the hidden layer, and between the hidden layer and
-the output layer. The recurrent connections of the hidden layer with
-itself are left fixed, in the form of a wizard hat function.
-
-The connection kernels are considered isotropic and homogeneous
-along the field, so that they can be described as symmetric
-one-dimensional arrays of values.
+The evolution parameters are the connection kernels between the input
+layer and the processing layer, and the recurrent connections of the
+processing layer with itself. The connection kernels are considered
+isotropic and homogeneous along the field, so that they can be
+described as symmetric one-dimensional arrays of values.
 
 \subsection{Genotypic Representation and Evolution Operators}
 Each connection kernel can be represented as an array of $N$ values
-from $w(0)$ to $w(p)$ with homogeneous spacing, using its
-symmetry. This way, for an equal boundary radius for all the
-kernels, and a 3-layered architecture, there are $3N$ real values in
-the genotype. As can be seen, the number of evolution parameters
-does not have a direct relation with the simulation size of the
-neural fields (the number of discrete points used), in
-contradistinction with recurrent neural networks, where the number
-of parameters depends on the number $n$ of neurons with a polynomial
-order $O(n^2)$.
-
-
-\section{The RNN Controller Architecture}
-\label{sec:rnncontroller}
-% \subsection{RNN Controller Architecture for Comparison}
-The proposed architecture for the recurrent neural network controller
-has two expert recurrent networks, whose interaction will achieve
-positioning and equilibrium as well.
-
-There has been applied a preprocessing stage previous to the input
-neurons, so that the actual values are not used and instead the inputs
-are mapped to 3 fuzzy sets. In this way, the stability controller only
-has 3 inputs, while the positioning controller has 6, corresponding to
-the same 3 inputs previously described and another 3 due to the fuzzy
-mapping of the error signal. All neurons are interconnected and the
-first one of them is selected as output without loss of
-generality. The neural network topology for the first controller
-(stability) is shown in the figure \ref{fig:rnn-arch}.
-
-\begin{figure}[t]
-  \label{fig:rnn-arch}
-  \centering \epsfig{file=rnn.eps, width=7cm}
-  \caption{Neural net for stability control including fuzzy mapping}
-  \label{rnn}
-\end{figure}
-
-\subsection{Evolutionary Algorithm Structure for the RNN Controller}
-It is expected, based on the approach of artificial life to
-evolutionary robotics (Nolfi y Floreano), that the sequential and
-cooperative evolution of elements with biological similarity leads to
-an specialization in the process of stabilization and positioning
-(despite the antagonistic individual goals of each controller because
-of the interest of the positioning controller to maximize also the
-global performance).
-
-As said, the two steps are executed sequentially, taking the best
-individual of the first step to collaborate with the individual
-evolved in the second step.
-
-Aiming to obtain a fixed length representation and limit the problem
-dimensionality, it is used a model of order $Q$ totally connected. Any
-network with an order equal or lesser and with total or partial
-connections can be represented by the proposed model, by the addition
-of activating/deactivating elements for neurons and
-connections. Therefore, individual are codified as:
-
-\begin{itemize}
-\item A bit sequence representing a serialization of an activation
-  matrix $A_a$ of dimension $Q$-by-$Q$ which activates/deactivates a
-  recurrent connection.
-\item A sequence of real numbers representing a serialization of
-  matrices $W_a$ and $W_b$, of dimension $Q$-by-$Q$ and $Q$-by-$(m+1)$
-  respectively.
-\end{itemize}
-
-The $C$ matrix is not evolved because it is chosen arbitrarily only
-one output (the first neuron).
+from $w(0)$ to $w(p)$ with homogeneous spacing, using their
+symmetry. This way, for an equal boundary radius for all the kernels,
+and a 2-layered architecture, there are $2N$ real values in the
+genotype. As can be seen, the number of evolution parameters does not
+have a direct relation with the simulation size of the neural fields
+(the number of discrete points used), in contradistinction with
+recurrent neural networks, where the number of parameters depends on
+the number $n$ of neurons with a polynomial order
+$O(n^2)$. Nonetheless, here is taken a more general approach and the
+boundary radius is set equal to $n$, so that there are $O(n)$
+parameters.
 
 The evolution operations used in both steps are:
 \begin{itemize}
-\item Parametric mutation of inputs: Gaussian modification of real
-  codified matrix weights, which varies connection weights of inputs.
-\item Parametric mutation of recurrences: Gaussian modification of
-  real codified matrix weights, which varies connection weights of
-  recurrences.
+\item Parametric mutation of input array: Gaussian modification of
+  real codified array values, which varies the connection kernel
+  between input layer and processing layer.
+\item Parametric mutation of recurrence array: Gaussian modification
+  of real codified array values, which varies the recurrent connection
+  kernel of the processing layer.
 \item Selection: Calculates population fitness, selects with elitism
   and culling (5\% of both) couples of parents for generating new
   offsprings, calculates the fitness function for both offsprings.
 \end{itemize}
 
-The fitness functions were selected in such a way that the stability
-controller only has the goal to reduce inclination. The fitness
-functions were tuned experimentally to attain a convergence velocity
-suitable for the experiment. This has in mind a notion of sequential
-evolution of, first, the capability to attain equilibrium, and later,
-the capability to perturb the equilibrium controller in such a way
-that a planned objective can be reached.
+The mutation operators implemented apply the sum operator defined in
+eq. ref{eq:eq-leb-opers} but there was not implemented a crossover
+operator that used the scalar operator as it was not deemed necessary,
+but can be easily implemented for another application if it is
+considered useful.
+
+\subsection{Fitness Function}
+The fitness function is selected in such a way that the stability
+controller mainly has the goal to reduce inclination. It was tuned
+experimentally to attain a convergence velocity suitable for the
+experiment. This has in mind a notion of sequential evolution of,
+first, the capability to attain equilibrium, and later, the capability
+to perturb the equilibrium controller in such a way that a planned
+trajectory can be followed or a reference can be tracked. Here we are
+interested only on the stability problem.
 
 The fitness function for the stability controller is:
 
 \begin{equation}
-  F_1(\theta )=100-\frac{100\theta ^4}{\theta _{max}^4 T_{total}}
+  F_1=100-\frac{100}{(\pi^4+2)T_{total}}\sum_t{\left(\theta(t) ^4+\frac{|x(t)|}{10}\right)}
 \end{equation}
 
-And for the positioning controller is:
+This fitness function aims to minimize the orientation error, but also
+has as a minor second goal to minimize the total horizontal
+displacement.
 
-\begin{equation}
-  F_1(\theta ,e_x)=100-\frac{100(\theta ^4+e_x^4)}{(\theta _{max}^4+e_{x,max}^4) T_{total}}
-\end{equation}
 
-The fitness functions used are could be also applied to a evolution of
-the neural field controller.
+% \section{The RNN Controller Architecture}
+% \label{sec:rnncontroller}
+% % \subsection{RNN Controller Architecture for Comparison}
+% The proposed architecture for the recurrent neural network controller
+% has two expert recurrent networks, whose interaction will achieve
+% positioning and equilibrium as well.
+
+% There has been applied a preprocessing stage previous to the input
+% neurons, so that the actual values are not used and instead the inputs
+% are mapped to 3 fuzzy sets. In this way, the stability controller only
+% has 3 inputs, while the positioning controller has 6, corresponding to
+% the same 3 inputs previously described and another 3 due to the fuzzy
+% mapping of the error signal. All neurons are interconnected and the
+% first one of them is selected as output without loss of
+% generality. The neural network topology for the first controller
+% (stability) is shown in the figure \ref{fig:rnn-arch}.
+
+% \begin{figure}[t]
+%   \label{fig:rnn-arch}
+%   \centering \epsfig{file=rnn.eps, width=7cm}
+%   \caption{Neural net for stability control including fuzzy mapping}
+%   \label{rnn}
+% \end{figure}
+
+% \subsection{Evolutionary Algorithm Structure for the RNN Controller}
+% It is expected, based on the approach of artificial life to
+% evolutionary robotics (Nolfi y Floreano), that the sequential and
+% cooperative evolution of elements with biological similarity leads to
+% an specialization in the process of stabilization and positioning
+% (despite the antagonistic individual goals of each controller because
+% of the interest of the positioning controller to maximize also the
+% global performance).
+
+% As said, the two steps are executed sequentially, taking the best
+% individual of the first step to collaborate with the individual
+% evolved in the second step.
+
+% Aiming to obtain a fixed length representation and limit the problem
+% dimensionality, it is used a model of order $Q$ totally connected. Any
+% network with an order equal or lesser and with total or partial
+% connections can be represented by the proposed model, by the addition
+% of activating/deactivating elements for neurons and
+% connections. Therefore, individual are codified as:
+
+% \begin{itemize}
+% \item A bit sequence representing a serialization of an activation
+%   matrix $A_a$ of dimension $Q$-by-$Q$ which activates/deactivates a
+%   recurrent connection.
+% \item A sequence of real numbers representing a serialization of
+%   matrices $W_a$ and $W_b$, of dimension $Q$-by-$Q$ and $Q$-by-$(m+1)$
+%   respectively.
+% \end{itemize}
+
+% The $C$ matrix is not evolved because it is chosen arbitrarily only
+% one output (the first neuron).
+
+% The evolution operations used in both steps are:
+% \begin{itemize}
+% \item Parametric mutation of inputs: Gaussian modification of real
+%   codified matrix weights, which varies connection weights of inputs.
+% \item Parametric mutation of recurrences: Gaussian modification of
+%   real codified matrix weights, which varies connection weights of
+%   recurrences.
+% \item Selection: Calculates population fitness, selects with elitism
+%   and culling (5\% of both) couples of parents for generating new
+%   offsprings, calculates the fitness function for both offsprings.
+% \end{itemize}
+
+% The fitness functions were selected in such a way that the stability
+% controller only has the goal to reduce inclination. The fitness
+% functions were tuned experimentally to attain a convergence velocity
+% suitable for the experiment. This has in mind a notion of sequential
+% evolution of, first, the capability to attain equilibrium, and later,
+% the capability to perturb the equilibrium controller in such a way
+% that a planned objective can be reached.
+
+% The fitness function for the stability controller is:
+
+% \begin{equation}
+%   F_1(\theta )=100-\frac{100\theta ^4}{\theta _{max}^4 T_{total}}
+% \end{equation}
+
+% And for the positioning controller is:
+
+% \begin{equation}
+%   F_1(\theta ,e_x)=100-\frac{100(\theta ^4+e_x^4)}{(\theta _{max}^4+e_{x,max}^4) T_{total}}
+% \end{equation}
+
+% The fitness functions used are could be also applied to a evolution of
+% the neural field controller.
 
 \section{Experimental Results}
 \subsection{Experimentation Details}
