@@ -1,0 +1,3995 @@
+%!PS-Adobe-2.0
+%%Title: pendulum_evo.eps
+%%Creator: gnuplot 4.2 patchlevel 3 
+%%CreationDate: Wed Jan 28 00:13:16 2009
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following 6 true/false flags may be edited by hand if required
+% The unit line width may also be changed
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Rounded false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+Level1 {} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (pendulum_evo.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.2 patchlevel 3 )
+  /Author (jjfigueredou,,,)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Wed Jan 28 00:13:16 2009)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Gnuplot Prolog Version 4.2 (August 2006)
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  gsave 1 setgray fill grestore clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+1.000 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+971 1249 M
+2896 2356 L
+6229 1717 M
+2896 2356 L
+971 1249 M
+0 2214 V
+2896 2356 M
+0 1474 V
+6229 1717 M
+0 1268 V
+971 1249 M
+47 27 V
+908 1188 M
+( 0) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+2896 2356 M
+-48 -27 V
+2082 1036 M
+48 27 V
+2019 975 M
+( 1) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+4006 2143 M
+-47 -27 V
+3194 822 M
+47 28 V
+3130 762 M
+( 2) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+5118 1930 M
+-48 -27 V
+4304 609 M
+48 28 V
+4241 549 M
+( 3) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+6229 1717 M
+-47 -27 V
+4304 609 M
+-54 11 V
+127 -34 R
+( 0) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 1249 M
+54 -11 V
+4689 831 M
+-54 10 V
+127 -33 R
+( 2) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+1356 1470 M
+54 -10 V
+5074 1052 M
+-54 11 V
+127 -34 R
+( 4) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+1741 1692 M
+54 -11 V
+5459 1274 M
+-54 10 V
+127 -33 R
+( 6) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+2126 1913 M
+54 -10 V
+5844 1495 M
+-54 11 V
+127 -34 R
+( 8) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+2511 2135 M
+54 -11 V
+6229 1717 M
+-54 10 V
+127 -33 R
+( 10) Cshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+2896 2356 M
+54 -10 V
+971 1987 M
+63 0 V
+-189 0 R
+(-6) Rshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 2198 M
+63 0 V
+-189 0 R
+(-4) Rshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 2409 M
+63 0 V
+-189 0 R
+(-2) Rshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 2619 M
+63 0 V
+-189 0 R
+( 0) Rshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 2830 M
+63 0 V
+-189 0 R
+( 2) Rshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 3041 M
+63 0 V
+-189 0 R
+( 4) Rshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 3252 M
+63 0 V
+-189 0 R
+( 6) Rshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+971 3463 M
+63 0 V
+-189 0 R
+( 8) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+137 2885 M
+() Cshow
+LTb
+140 140 M
+() Lshow
+1.000 UP
+1.000 UP
+1.000 UL
+LT0
+.4286 g .4981 g 2895 3830 Pls
+.4375 g 4006 3527 Pls
+.5214 g 5118 3438 Pls
+.3594 g 6229 2985 Pls
+.4962 g 2890 3824 Pls
+.4389 g 4001 3526 Pls
+.4885 g 5113 3386 Pls
+.3889 g 6224 3026 Pls
+.4951 g 2885 3820 Pls
+.4395 g 3997 3524 Pls
+.456 g 5108 3335 Pls
+.4181 g 6219 3066 Pls
+.4949 g 2880 3816 Pls
+.4394 g 3992 3521 Pls
+.4237 g 5103 3285 Pls
+.4474 g 6215 3107 Pls
+.4954 g 2876 3814 Pls
+.4386 g 3987 3517 Pls
+.3912 g 5098 3234 Pls
+.4774 g 6210 3148 Pls
+.4967 g 2871 3814 Pls
+.437 g 3982 3512 Pls
+.3581 g 5094 3183 Pls
+.5088 g 6205 3192 Pls
+.4989 g 2866 3814 Pls
+.4346 g 3977 3506 Pls
+.3242 g 5089 3130 Pls
+.5419 g 6200 3238 Pls
+.502 g 2861 3816 Pls
+.4313 g 3973 3498 Pls
+.2893 g 5084 3075 Pls
+.5773 g 6195 3288 Pls
+.505 g 2856 3818 Pls
+.428 g 3968 3491 Pls
+.3252 g 5079 3126 Pls
+.5428 g 6191 3234 Pls
+.5071 g 2852 3818 Pls
+.4256 g 3963 3484 Pls
+.3605 g 5074 3175 Pls
+.5092 g 6186 3181 Pls
+.5084 g 2847 3817 Pls
+.424 g 3958 3479 Pls
+.3952 g 5070 3224 Pls
+.4762 g 6181 3130 Pls
+.5088 g 2842 3815 Pls
+.4232 g 3953 3475 Pls
+.4296 g 5065 3271 Pls
+.4436 g 6176 3079 Pls
+.5084 g 2837 3811 Pls
+.4232 g 3949 3472 Pls
+.4637 g 5060 3319 Pls
+.4109 g 6171 3028 Pls
+.5071 g 2832 3807 Pls
+.4241 g 3944 3471 Pls
+.4981 g 5055 3367 Pls
+.3774 g 6167 2976 Pls
+.5049 g 2828 3801 Pls
+.4258 g 3939 3471 Pls
+.5329 g 5050 3416 Pls
+.3427 g 6162 2922 Pls
+.5018 g 2823 3793 Pls
+.4284 g 3934 3472 Pls
+.5683 g 5046 3465 Pls
+.3064 g 6157 2865 Pls
+.4988 g 2818 3786 Pls
+.431 g 3929 3473 Pls
+.5328 g 5041 3410 Pls
+.3402 g 6152 2913 Pls
+.4966 g 2813 3780 Pls
+.4328 g 3924 3473 Pls
+.4979 g 5036 3356 Pls
+.3733 g 6147 2959 Pls
+.4953 g 2808 3776 Pls
+.4338 g 3920 3471 Pls
+.4635 g 5031 3302 Pls
+.406 g 6142 3004 Pls
+.4949 g 2803 3772 Pls
+.4339 g 3915 3469 Pls
+.4293 g 5026 3249 Pls
+.4388 g 6138 3050 Pls
+.4953 g 2799 3770 Pls
+.4333 g 3910 3465 Pls
+.395 g 5021 3195 Pls
+.4721 g 6133 3096 Pls
+.4965 g 2794 3769 Pls
+.4318 g 3905 3460 Pls
+.3603 g 5017 3141 Pls
+.5065 g 6128 3144 Pls
+.4978 g 2789 3768 Pls
+.4302 g 3900 3455 Pls
+.3929 g 5012 3187 Pls
+.4741 g 6123 3094 Pls
+.4983 g 2784 3766 Pls
+.4295 g 3896 3451 Pls
+.4253 g 5007 3232 Pls
+.4417 g 6118 3043 Pls
+.498 g 2779 3763 Pls
+.4296 g 3891 3449 Pls
+.4613 g 5002 3282 Pls
+.4055 g 6114 2987 Pls
+.4967 g 2775 3758 Pls
+.4306 g 3886 3447 Pls
+.4973 g 4997 3333 Pls
+.3686 g 6109 2929 Pls
+.4954 g 2770 3754 Pls
+.4317 g 3881 3446 Pls
+.4623 g 4993 3278 Pls
+.4024 g 6104 2977 Pls
+.495 g 2765 3750 Pls
+.4319 g 3876 3444 Pls
+.4275 g 4988 3224 Pls
+.4363 g 6099 3024 Pls
+.4955 g 2760 3748 Pls
+.4313 g 3872 3440 Pls
+.3926 g 4983 3170 Pls
+.4707 g 6094 3072 Pls
+.4968 g 2755 3747 Pls
+.4299 g 3867 3435 Pls
+.3609 g 4978 3120 Pls
+.5025 g 6090 3116 Pls
+.4981 g 2751 3746 Pls
+.4284 g 3862 3430 Pls
+.3932 g 4973 3165 Pls
+.4708 g 6085 3067 Pls
+.4985 g 2746 3744 Pls
+.4278 g 3857 3427 Pls
+.4252 g 4969 3210 Pls
+.4393 g 6080 3017 Pls
+.4982 g 2741 3741 Pls
+.4279 g 3852 3424 Pls
+.4571 g 4964 3254 Pls
+.4075 g 6075 2968 Pls
+.4979 g 2736 3738 Pls
+.428 g 3847 3421 Pls
+.4249 g 4959 3204 Pls
+.4398 g 6070 3013 Pls
+.4984 g 2731 3736 Pls
+.4273 g 3843 3418 Pls
+.3925 g 4954 3153 Pls
+.4727 g 6065 3058 Pls
+.4989 g 2726 3734 Pls
+.4266 g 3838 3414 Pls
+.4242 g 4949 3197 Pls
+.4418 g 6061 3010 Pls
+.4986 g 2722 3731 Pls
+.4267 g 3833 3411 Pls
+.4559 g 4944 3241 Pls
+.4106 g 6056 2961 Pls
+.4984 g 2717 3727 Pls
+.4267 g 3828 3408 Pls
+.4233 g 4940 3190 Pls
+.4436 g 6051 3007 Pls
+.4981 g 2712 3724 Pls
+.4267 g 3823 3406 Pls
+.455 g 4935 3234 Pls
+.4124 g 6046 2958 Pls
+.4978 g 2707 3721 Pls
+.4267 g 3819 3403 Pls
+.4224 g 4930 3183 Pls
+.4454 g 6041 3004 Pls
+.4976 g 2702 3718 Pls
+.4267 g 3814 3400 Pls
+.454 g 4925 3227 Pls
+.4143 g 6037 2955 Pls
+.4974 g 2698 3715 Pls
+.4266 g 3809 3397 Pls
+.4215 g 4920 3176 Pls
+.4473 g 6032 3001 Pls
+.4971 g 2693 3712 Pls
+.4265 g 3804 3394 Pls
+.4531 g 4916 3220 Pls
+.4163 g 6027 2953 Pls
+.4961 g 2688 3707 Pls
+.4273 g 3799 3393 Pls
+.4883 g 4911 3270 Pls
+.3811 g 6022 2898 Pls
+.495 g 2683 3703 Pls
+.428 g 3795 3391 Pls
+.4524 g 4906 3214 Pls
+.4168 g 6017 2948 Pls
+.4949 g 2678 3700 Pls
+.4279 g 3790 3388 Pls
+.4202 g 4901 3163 Pls
+.4493 g 6013 2993 Pls
+.4946 g 2674 3697 Pls
+.4278 g 3785 3385 Pls
+.4557 g 4896 3213 Pls
+.414 g 6008 2938 Pls
+.4935 g 2669 3693 Pls
+.4286 g 3780 3384 Pls
+.4913 g 4892 3263 Pls
+.3781 g 6003 2883 Pls
+.4915 g 2664 3687 Pls
+.4304 g 3775 3383 Pls
+.5272 g 4887 3313 Pls
+.3411 g 5998 2825 Pls
+.4895 g 2659 3681 Pls
+.4321 g 3770 3383 Pls
+.4921 g 4882 3259 Pls
+.3746 g 5993 2872 Pls
+.4883 g 2654 3677 Pls
+.4331 g 3766 3382 Pls
+.4575 g 4877 3205 Pls
+.4077 g 5988 2918 Pls
+.488 g 2649 3673 Pls
+.4332 g 3761 3379 Pls
+.4231 g 4872 3151 Pls
+.4409 g 5984 2964 Pls
+.4886 g 2645 3671 Pls
+.4324 g 3756 3375 Pls
+.3885 g 4867 3097 Pls
+.4747 g 5979 3011 Pls
+.49 g 2640 3671 Pls
+.4309 g 3751 3370 Pls
+.3536 g 4863 3043 Pls
+.5096 g 5974 3060 Pls
+.4914 g 2635 3670 Pls
+.4293 g 3746 3365 Pls
+.3896 g 4858 3093 Pls
+.474 g 5969 3005 Pls
+.492 g 2630 3668 Pls
+.4286 g 3742 3361 Pls
+.4254 g 4853 3143 Pls
+.4385 g 5964 2950 Pls
+.4916 g 2625 3665 Pls
+.4288 g 3737 3359 Pls
+.4611 g 4848 3193 Pls
+.4027 g 5960 2894 Pls
+.4903 g 2621 3660 Pls
+.4299 g 3732 3358 Pls
+.497 g 4843 3244 Pls
+.3661 g 5955 2837 Pls
+.4891 g 2616 3656 Pls
+.431 g 3727 3357 Pls
+.4618 g 4839 3189 Pls
+.4003 g 5950 2885 Pls
+.4887 g 2611 3652 Pls
+.4313 g 3722 3354 Pls
+.4267 g 4834 3134 Pls
+.4344 g 5945 2933 Pls
+.4892 g 2606 3650 Pls
+.4307 g 3718 3351 Pls
+.3917 g 4829 3080 Pls
+.4692 g 5940 2981 Pls
+.4905 g 2601 3649 Pls
+.4293 g 3713 3346 Pls
+.3563 g 4824 3025 Pls
+.5049 g 5936 3031 Pls
+.4928 g 2597 3650 Pls
+.4269 g 3708 3339 Pls
+.3205 g 4819 2969 Pls
+.5419 g 5931 3083 Pls
+.495 g 2592 3651 Pls
+.4245 g 3703 3333 Pls
+.3556 g 4815 3018 Pls
+.5088 g 5926 3031 Pls
+.4964 g 2587 3650 Pls
+.4229 g 3698 3328 Pls
+.39 g 4810 3066 Pls
+.4765 g 5921 2981 Pls
+.497 g 2582 3648 Pls
+.4221 g 3693 3324 Pls
+.424 g 4805 3114 Pls
+.4445 g 5916 2931 Pls
+.4967 g 2577 3645 Pls
+.4221 g 3689 3321 Pls
+.4579 g 4800 3161 Pls
+.4125 g 5911 2881 Pls
+.4955 g 2572 3640 Pls
+.4229 g 3684 3320 Pls
+.4919 g 4795 3208 Pls
+.3797 g 5907 2830 Pls
+.4944 g 2568 3636 Pls
+.4236 g 3679 3318 Pls
+.4551 g 4790 3151 Pls
+.4173 g 5902 2882 Pls
+.4942 g 2563 3633 Pls
+.4235 g 3674 3315 Pls
+.4183 g 4786 3094 Pls
+.4552 g 5897 2936 Pls
+.494 g 2558 3630 Pls
+.4232 g 3669 3312 Pls
+.4526 g 4781 3142 Pls
+.4225 g 5892 2885 Pls
+.4939 g 2553 3627 Pls
+.4229 g 3665 3309 Pls
+.4158 g 4776 3085 Pls
+.4607 g 5887 2938 Pls
+.4946 g 2548 3625 Pls
+.4216 g 3660 3304 Pls
+.3789 g 4771 3028 Pls
+.4996 g 5883 2993 Pls
+.4955 g 2544 3623 Pls
+.4202 g 3655 3299 Pls
+.4124 g 4766 3074 Pls
+.4689 g 5878 2945 Pls
+.4955 g 2539 3621 Pls
+.4196 g 3650 3295 Pls
+.4456 g 4762 3121 Pls
+.4384 g 5873 2897 Pls
+.4946 g 2534 3617 Pls
+.4197 g 3645 3293 Pls
+.4786 g 4757 3167 Pls
+.4078 g 5868 2849 Pls
+.493 g 2529 3611 Pls
+.4206 g 3641 3291 Pls
+.5118 g 4752 3213 Pls
+.3764 g 5863 2800 Pls
+.4913 g 2524 3606 Pls
+.4214 g 3636 3290 Pls
+.4747 g 4747 3155 Pls
+.4147 g 5859 2854 Pls
+.4906 g 2520 3602 Pls
+.4213 g 3631 3287 Pls
+.4377 g 4742 3098 Pls
+.4534 g 5854 2908 Pls
+.49 g 2515 3599 Pls
+.4211 g 3626 3284 Pls
+.4712 g 4738 3145 Pls
+.422 g 5849 2859 Pls
+.4894 g 2510 3595 Pls
+.4207 g 3621 3281 Pls
+.4341 g 4733 3087 Pls
+.461 g 5844 2914 Pls
+.4888 g 2505 3592 Pls
+.4203 g 3616 3277 Pls
+.4674 g 4728 3134 Pls
+.43 g 5839 2865 Pls
+.4875 g 2500 3587 Pls
+.4207 g 3612 3275 Pls
+.5007 g 4723 3180 Pls
+.3988 g 5834 2816 Pls
+.4861 g 2495 3582 Pls
+.4209 g 3607 3273 Pls
+.4636 g 4718 3122 Pls
+.4374 g 5830 2871 Pls
+.4857 g 2491 3579 Pls
+.4202 g 3602 3269 Pls
+.4264 g 4713 3065 Pls
+.4766 g 5825 2926 Pls
+.4853 g 2486 3575 Pls
+.4194 g 3597 3265 Pls
+.4595 g 4709 3111 Pls
+.4463 g 5820 2878 Pls
+.4842 g 2481 3571 Pls
+.4193 g 3592 3262 Pls
+.4925 g 4704 3157 Pls
+.416 g 5815 2831 Pls
+.4821 g 2476 3565 Pls
+.42 g 3588 3260 Pls
+.5255 g 4699 3203 Pls
+.385 g 5810 2782 Pls
+.4793 g 2471 3558 Pls
+.4215 g 3583 3260 Pls
+.5591 g 4694 3250 Pls
+.3529 g 5806 2732 Pls
+.4756 g 2467 3550 Pls
+.4238 g 3578 3260 Pls
+.5933 g 4689 3297 Pls
+.319 g 5801 2679 Pls
+.4711 g 2462 3540 Pls
+.427 g 3573 3262 Pls
+.6284 g 4685 3346 Pls
+.2832 g 5796 2623 Pls
+.4665 g 2457 3531 Pls
+.4302 g 3568 3264 Pls
+.5928 g 4680 3291 Pls
+.3172 g 5791 2671 Pls
+.4628 g 2452 3523 Pls
+.4326 g 3564 3265 Pls
+.5577 g 4675 3236 Pls
+.3503 g 5786 2717 Pls
+.4601 g 2447 3516 Pls
+.4341 g 3559 3264 Pls
+.5232 g 4670 3183 Pls
+.3827 g 5782 2762 Pls
+.4581 g 2443 3510 Pls
+.4349 g 3554 3263 Pls
+.4892 g 4665 3130 Pls
+.4148 g 5777 2807 Pls
+.457 g 2438 3506 Pls
+.4348 g 3549 3260 Pls
+.4553 g 4661 3077 Pls
+.447 g 5772 2852 Pls
+.4568 g 2433 3503 Pls
+.434 g 3544 3256 Pls
+.4212 g 4656 3024 Pls
+.48 g 5767 2897 Pls
+.4574 g 2428 3501 Pls
+.4323 g 3539 3250 Pls
+.3867 g 4651 2970 Pls
+.5142 g 5762 2945 Pls
+.458 g 2423 3499 Pls
+.4305 g 3535 3245 Pls
+.4194 g 4646 3016 Pls
+.4817 g 5757 2894 Pls
+.4578 g 2418 3496 Pls
+.4296 g 3530 3241 Pls
+.4554 g 4641 3066 Pls
+.4458 g 5753 2839 Pls
+.4567 g 2414 3491 Pls
+.4297 g 3525 3238 Pls
+.4914 g 4636 3116 Pls
+.4096 g 5748 2782 Pls
+.4547 g 2409 3486 Pls
+.4306 g 3520 3237 Pls
+.5274 g 4632 3167 Pls
+.3727 g 5743 2725 Pls
+.4526 g 2404 3480 Pls
+.4316 g 3515 3236 Pls
+.4924 g 4627 3112 Pls
+.4066 g 5738 2772 Pls
+.4515 g 2399 3475 Pls
+.4317 g 3511 3233 Pls
+.4575 g 4622 3058 Pls
+.4406 g 5733 2820 Pls
+.4512 g 2394 3472 Pls
+.431 g 3506 3229 Pls
+.4225 g 4617 3004 Pls
+.4752 g 5729 2868 Pls
+.4509 g 2390 3469 Pls
+.4302 g 3501 3225 Pls
+.4587 g 4612 3054 Pls
+.439 g 5724 2812 Pls
+.4497 g 2385 3464 Pls
+.4304 g 3496 3223 Pls
+.4948 g 4608 3105 Pls
+.4024 g 5719 2755 Pls
+.4485 g 2380 3460 Pls
+.4307 g 3491 3220 Pls
+.4596 g 4603 3050 Pls
+.4369 g 5714 2803 Pls
+.4481 g 2375 3457 Pls
+.43 g 3487 3217 Pls
+.4243 g 4598 2995 Pls
+.472 g 5709 2852 Pls
+.4478 g 2370 3453 Pls
+.4293 g 3482 3213 Pls
+.4567 g 4593 3040 Pls
+.4397 g 5705 2802 Pls
+.4467 g 2366 3449 Pls
+.4295 g 3477 3210 Pls
+.4891 g 4588 3085 Pls
+.4071 g 5700 2751 Pls
+.4457 g 2361 3445 Pls
+.4296 g 3472 3208 Pls
+.4536 g 4584 3030 Pls
+.4423 g 5695 2800 Pls
+.4455 g 2356 3442 Pls
+.4288 g 3467 3204 Pls
+.4181 g 4579 2975 Pls
+.4781 g 5690 2850 Pls
+.4462 g 2351 3440 Pls
+.4271 g 3462 3199 Pls
+.3822 g 4574 2919 Pls
+.5149 g 5685 2902 Pls
+.4469 g 2346 3438 Pls
+.4253 g 3458 3193 Pls
+.4174 g 4569 2968 Pls
+.4812 g 5680 2849 Pls
+.4467 g 2341 3435 Pls
+.4244 g 3453 3189 Pls
+.4521 g 4564 3017 Pls
+.4479 g 5676 2797 Pls
+.4457 g 2337 3431 Pls
+.4244 g 3448 3186 Pls
+.4866 g 4559 3065 Pls
+.4145 g 5671 2745 Pls
+.4438 g 2332 3425 Pls
+.4252 g 3443 3185 Pls
+.5213 g 4555 3113 Pls
+.3804 g 5666 2692 Pls
+.442 g 2327 3420 Pls
+.4259 g 3438 3183 Pls
+.485 g 4550 3057 Pls
+.4171 g 5661 2744 Pls
+.441 g 2322 3416 Pls
+.4257 g 3434 3180 Pls
+.4486 g 4545 3001 Pls
+.4541 g 5656 2796 Pls
+.441 g 2317 3413 Pls
+.4246 g 3429 3175 Pls
+.4122 g 4540 2944 Pls
+.4919 g 5652 2849 Pls
+.441 g 2313 3410 Pls
+.4234 g 3424 3171 Pls
+.4467 g 4535 2992 Pls
+.4592 g 5647 2797 Pls
+.4401 g 2308 3406 Pls
+.4231 g 3419 3168 Pls
+.4809 g 4531 3040 Pls
+.4266 g 5642 2746 Pls
+.4392 g 2303 3402 Pls
+.4227 g 3414 3164 Pls
+.4441 g 4526 2983 Pls
+.4649 g 5637 2800 Pls
+.4393 g 2298 3399 Pls
+.4213 g 3410 3159 Pls
+.4072 g 4521 2926 Pls
+.5039 g 5632 2855 Pls
+.4394 g 2293 3397 Pls
+.4198 g 3405 3154 Pls
+.4407 g 4516 2972 Pls
+.4734 g 5628 2807 Pls
+.4387 g 2289 3393 Pls
+.419 g 3400 3151 Pls
+.4736 g 4511 3018 Pls
+.4434 g 5623 2760 Pls
+.4372 g 2284 3388 Pls
+.419 g 3395 3148 Pls
+.5064 g 4507 3064 Pls
+.4132 g 5618 2713 Pls
+.4348 g 2279 3382 Pls
+.4198 g 3390 3146 Pls
+.5394 g 4502 3110 Pls
+.3824 g 5613 2665 Pls
+.4316 g 2274 3374 Pls
+.4213 g 3385 3146 Pls
+.5729 g 4497 3156 Pls
+.3503 g 5608 2614 Pls
+.4276 g 2269 3365 Pls
+.4237 g 3381 3146 Pls
+.6071 g 4492 3204 Pls
+.3165 g 5603 2562 Pls
+.4227 g 2264 3355 Pls
+.427 g 3376 3149 Pls
+.6422 g 4487 3253 Pls
+.2806 g 5599 2506 Pls
+.4178 g 2260 3345 Pls
+.4302 g 3371 3151 Pls
+.6065 g 4482 3198 Pls
+.3147 g 5594 2554 Pls
+.4138 g 2255 3337 Pls
+.4327 g 3366 3151 Pls
+.5715 g 4478 3143 Pls
+.3477 g 5589 2600 Pls
+.4106 g 2250 3329 Pls
+.4343 g 3361 3151 Pls
+.537 g 4473 3090 Pls
+.3801 g 5584 2645 Pls
+.4083 g 2245 3323 Pls
+.4351 g 3357 3149 Pls
+.5031 g 4468 3037 Pls
+.412 g 5579 2689 Pls
+.4069 g 2240 3318 Pls
+.4351 g 3352 3147 Pls
+.4692 g 4463 2984 Pls
+.444 g 5575 2734 Pls
+.4063 g 2236 3315 Pls
+.4343 g 3347 3143 Pls
+.4353 g 4458 2931 Pls
+.4768 g 5570 2779 Pls
+.4066 g 2231 3312 Pls
+.4327 g 3342 3138 Pls
+.4008 g 4454 2877 Pls
+.5107 g 5565 2826 Pls
+.4077 g 2226 3311 Pls
+.4302 g 3337 3131 Pls
+.3658 g 4449 2823 Pls
+.5462 g 5560 2876 Pls
+.4088 g 2221 3310 Pls
+.4277 g 3333 3125 Pls
+.4015 g 4444 2873 Pls
+.5117 g 5555 2822 Pls
+.4091 g 2216 3308 Pls
+.426 g 3328 3119 Pls
+.4368 g 4439 2922 Pls
+.4776 g 5551 2769 Pls
+.4084 g 2212 3304 Pls
+.4252 g 3323 3115 Pls
+.4718 g 4434 2971 Pls
+.4439 g 5546 2717 Pls
+.4069 g 2207 3299 Pls
+.4253 g 3318 3113 Pls
+.5066 g 4430 3020 Pls
+.4099 g 5541 2664 Pls
+.4045 g 2202 3293 Pls
+.4262 g 3313 3111 Pls
+.5415 g 4425 3069 Pls
+.3753 g 5536 2610 Pls
+.4013 g 2197 3285 Pls
+.428 g 3308 3111 Pls
+.5769 g 4420 3118 Pls
+.3394 g 5531 2554 Pls
+.3971 g 2192 3276 Pls
+.4306 g 3304 3112 Pls
+.6127 g 4415 3168 Pls
+.3021 g 5526 2496 Pls
+.3929 g 2187 3267 Pls
+.4334 g 3299 3114 Pls
+.5777 g 4410 3114 Pls
+.3348 g 5522 2542 Pls
+.3896 g 2183 3259 Pls
+.4353 g 3294 3114 Pls
+.5435 g 4405 3060 Pls
+.3665 g 5517 2586 Pls
+.3872 g 2178 3253 Pls
+.4365 g 3289 3113 Pls
+.5099 g 4401 3008 Pls
+.3975 g 5512 2629 Pls
+.3856 g 2173 3248 Pls
+.4369 g 3284 3111 Pls
+.4766 g 4396 2956 Pls
+.4284 g 5507 2672 Pls
+.3848 g 2168 3244 Pls
+.4365 g 3280 3107 Pls
+.4433 g 4391 2904 Pls
+.4597 g 5502 2715 Pls
+.3848 g 2163 3241 Pls
+.4353 g 3275 3103 Pls
+.4096 g 4386 2852 Pls
+.4919 g 5498 2760 Pls
+.3857 g 2159 3240 Pls
+.4333 g 3270 3097 Pls
+.3754 g 4381 2798 Pls
+.5256 g 5493 2807 Pls
+.3875 g 2154 3240 Pls
+.4305 g 3265 3090 Pls
+.3404 g 4377 2744 Pls
+.5612 g 5488 2857 Pls
+.3893 g 2149 3240 Pls
+.4276 g 3260 3083 Pls
+.3762 g 4372 2794 Pls
+.5267 g 5483 2803 Pls
+.3901 g 2144 3238 Pls
+.4256 g 3256 3077 Pls
+.4114 g 4367 2843 Pls
+.493 g 5478 2751 Pls
+.3901 g 2139 3235 Pls
+.4244 g 3251 3073 Pls
+.4462 g 4362 2892 Pls
+.4598 g 5474 2699 Pls
+.3892 g 2135 3231 Pls
+.424 g 3246 3069 Pls
+.4807 g 4357 2940 Pls
+.4267 g 5469 2647 Pls
+.3875 g 2130 3226 Pls
+.4245 g 3241 3067 Pls
+.5152 g 4353 2988 Pls
+.3931 g 5464 2595 Pls
+.3849 g 2125 3219 Pls
+.4258 g 3236 3066 Pls
+.55 g 4348 3037 Pls
+.3585 g 5459 2541 Pls
+.3814 g 2120 3211 Pls
+.428 g 3231 3067 Pls
+.5853 g 4343 3086 Pls
+.3226 g 5454 2485 Pls
+.378 g 2115 3203 Pls
+.4302 g 3227 3067 Pls
+.5497 g 4338 3031 Pls
+.3569 g 5449 2533 Pls
+.3754 g 2110 3197 Pls
+.4316 g 3222 3067 Pls
+.5146 g 4333 2976 Pls
+.3907 g 5445 2580 Pls
+.3737 g 2106 3192 Pls
+.4321 g 3217 3065 Pls
+.4797 g 4328 2922 Pls
+.4245 g 5440 2627 Pls
+.3728 g 2101 3188 Pls
+.4318 g 3212 3061 Pls
+.4449 g 4324 2868 Pls
+.4586 g 5435 2675 Pls
+.3729 g 2096 3185 Pls
+.4306 g 3207 3057 Pls
+.4099 g 4319 2813 Pls
+.4935 g 5430 2724 Pls
+.3738 g 2091 3183 Pls
+.4285 g 3203 3051 Pls
+.3744 g 4314 2758 Pls
+.5298 g 5425 2774 Pls
+.3747 g 2086 3182 Pls
+.4264 g 3198 3045 Pls
+.4099 g 4309 2808 Pls
+.4957 g 5421 2721 Pls
+.3747 g 2082 3179 Pls
+.4251 g 3193 3041 Pls
+.4449 g 4304 2857 Pls
+.462 g 5416 2669 Pls
+.3739 g 2077 3175 Pls
+.4247 g 3188 3037 Pls
+.4796 g 4300 2905 Pls
+.4285 g 5411 2616 Pls
+.3721 g 2072 3170 Pls
+.4251 g 3183 3035 Pls
+.5143 g 4295 2954 Pls
+.3945 g 5406 2563 Pls
+.3696 g 2067 3163 Pls
+.4264 g 3179 3034 Pls
+.5493 g 4290 3002 Pls
+.3596 g 5401 2509 Pls
+.367 g 2062 3157 Pls
+.4277 g 3174 3033 Pls
+.5133 g 4285 2946 Pls
+.3953 g 5397 2559 Pls
+.3653 g 2058 3152 Pls
+.4281 g 3169 3031 Pls
+.4774 g 4280 2891 Pls
+.4311 g 5392 2609 Pls
+.3646 g 2053 3148 Pls
+.4276 g 3164 3028 Pls
+.4415 g 4276 2835 Pls
+.4674 g 5387 2660 Pls
+.3638 g 2048 3144 Pls
+.427 g 3159 3024 Pls
+.4769 g 4271 2884 Pls
+.4327 g 5382 2606 Pls
+.3621 g 2043 3139 Pls
+.4274 g 3154 3022 Pls
+.5123 g 4266 2934 Pls
+.3975 g 5377 2551 Pls
+.3596 g 2038 3132 Pls
+.4286 g 3150 3021 Pls
+.5478 g 4261 2984 Pls
+.3615 g 5372 2495 Pls
+.3571 g 2033 3126 Pls
+.4298 g 3145 3020 Pls
+.5123 g 4256 2928 Pls
+.3962 g 5368 2544 Pls
+.3554 g 2029 3120 Pls
+.4302 g 3140 3018 Pls
+.4769 g 4251 2873 Pls
+.431 g 5363 2592 Pls
+.3547 g 2024 3116 Pls
+.4297 g 3135 3014 Pls
+.4416 g 4247 2819 Pls
+.4662 g 5358 2642 Pls
+.3539 g 2019 3113 Pls
+.4292 g 3130 3011 Pls
+.4775 g 4242 2869 Pls
+.4304 g 5353 2586 Pls
+.3522 g 2014 3107 Pls
+.4296 g 3126 3008 Pls
+.5134 g 4237 2919 Pls
+.3941 g 5348 2530 Pls
+.3505 g 2009 3102 Pls
+.4301 g 3121 3006 Pls
+.478 g 4232 2864 Pls
+.4289 g 5344 2578 Pls
+.3497 g 2005 3098 Pls
+.4296 g 3116 3003 Pls
+.4427 g 4227 2809 Pls
+.4642 g 5339 2628 Pls
+.3489 g 2000 3094 Pls
+.4292 g 3111 2999 Pls
+.4786 g 4223 2859 Pls
+.4283 g 5334 2572 Pls
+.3472 g 1995 3089 Pls
+.4296 g 3106 2997 Pls
+.5144 g 4218 2909 Pls
+.392 g 5329 2515 Pls
+.3455 g 1990 3084 Pls
+.4301 g 3102 2995 Pls
+.4791 g 4213 2854 Pls
+.4268 g 5324 2564 Pls
+.3447 g 1985 3080 Pls
+.4297 g 3097 2992 Pls
+.4437 g 4208 2799 Pls
+.462 g 5320 2613 Pls
+.3439 g 1981 3076 Pls
+.4293 g 3092 2989 Pls
+.4796 g 4203 2850 Pls
+.426 g 5315 2557 Pls
+.343 g 1976 3072 Pls
+.4289 g 3087 2985 Pls
+.4441 g 4199 2794 Pls
+.4616 g 5310 2607 Pls
+.3422 g 1971 3068 Pls
+.4286 g 3082 2982 Pls
+.4798 g 4194 2845 Pls
+.426 g 5305 2552 Pls
+.3414 g 1966 3064 Pls
+.4282 g 3077 2979 Pls
+.4441 g 4189 2789 Pls
+.462 g 5300 2602 Pls
+.3405 g 1961 3060 Pls
+.4278 g 3073 2975 Pls
+.4796 g 4184 2839 Pls
+.4268 g 5295 2548 Pls
+.3388 g 1956 3054 Pls
+.4283 g 3068 2973 Pls
+.5152 g 4179 2888 Pls
+.3912 g 5291 2492 Pls
+.3371 g 1952 3049 Pls
+.4288 g 3063 2971 Pls
+.4795 g 4174 2833 Pls
+.4266 g 5286 2542 Pls
+.3363 g 1947 3045 Pls
+.4284 g 3058 2968 Pls
+.4438 g 4170 2777 Pls
+.4625 g 5281 2592 Pls
+.3355 g 1942 3041 Pls
+.428 g 3053 2964 Pls
+.4794 g 4165 2827 Pls
+.4272 g 5276 2537 Pls
+.3337 g 1937 3036 Pls
+.4284 g 3049 2962 Pls
+.515 g 4160 2877 Pls
+.3915 g 5271 2482 Pls
+.332 g 1932 3030 Pls
+.4289 g 3044 2960 Pls
+.4793 g 4155 2822 Pls
+.4269 g 5267 2531 Pls
+.3312 g 1928 3026 Pls
+.4285 g 3039 2957 Pls
+.4437 g 4150 2766 Pls
+.4627 g 5262 2581 Pls
+.3304 g 1923 3022 Pls
+.4281 g 3034 2954 Pls
+.4793 g 4146 2816 Pls
+.4274 g 5257 2526 Pls
+.3287 g 1918 3017 Pls
+.4286 g 3029 2952 Pls
+.5149 g 4141 2866 Pls
+.3915 g 5252 2470 Pls
+.3269 g 1913 3012 Pls
+.4291 g 3025 2949 Pls
+.4793 g 4136 2810 Pls
+.4269 g 5247 2520 Pls
+.3261 g 1908 3008 Pls
+.4287 g 3020 2946 Pls
+.4437 g 4131 2755 Pls
+.4626 g 5243 2570 Pls
+.3262 g 1904 3005 Pls
+.4274 g 3015 2941 Pls
+.4079 g 4126 2699 Pls
+.4992 g 5238 2621 Pls
+.3263 g 1899 3003 Pls
+.426 g 3010 2937 Pls
+.4431 g 4122 2749 Pls
+.4651 g 5233 2568 Pls
+.3255 g 1894 2999 Pls
+.4255 g 3005 2933 Pls
+.4781 g 4117 2798 Pls
+.4311 g 5228 2515 Pls
+.3238 g 1889 2993 Pls
+.4259 g 3000 2931 Pls
+.513 g 4112 2846 Pls
+.3968 g 5223 2462 Pls
+.3212 g 1884 2987 Pls
+.4271 g 2996 2930 Pls
+.5482 g 4107 2896 Pls
+.3615 g 5218 2407 Pls
+.3187 g 1879 2980 Pls
+.4284 g 2991 2929 Pls
+.5123 g 4102 2840 Pls
+.3969 g 5214 2456 Pls
+.3171 g 1875 2975 Pls
+.4287 g 2986 2927 Pls
+.4766 g 4097 2784 Pls
+.4325 g 5209 2506 Pls
+.3163 g 1870 2971 Pls
+.4282 g 2981 2923 Pls
+.4409 g 4093 2729 Pls
+.4685 g 5204 2556 Pls
+.3156 g 1865 2967 Pls
+.4276 g 2976 2920 Pls
+.4764 g 4088 2778 Pls
+.4334 g 5199 2502 Pls
+.3139 g 1860 2962 Pls
+.4279 g 2972 2917 Pls
+.5119 g 4083 2828 Pls
+.398 g 5194 2447 Pls
+.3114 g 1855 2956 Pls
+.4291 g 2967 2916 Pls
+.5476 g 4078 2878 Pls
+.3617 g 5190 2390 Pls
+.3089 g 1851 2949 Pls
+.4304 g 2962 2915 Pls
+.5122 g 4073 2823 Pls
+.3962 g 5185 2439 Pls
+.3072 g 1846 2944 Pls
+.4308 g 2957 2913 Pls
+.477 g 4069 2768 Pls
+.4307 g 5180 2487 Pls
+.3064 g 1841 2940 Pls
+.4303 g 2952 2910 Pls
+.4418 g 4064 2714 Pls
+.4656 g 5175 2536 Pls
+.3065 g 1836 2937 Pls
+.4289 g 2948 2905 Pls
+.4063 g 4059 2658 Pls
+.5014 g 5170 2586 Pls
+.3076 g 1831 2936 Pls
+.4266 g 2943 2899 Pls
+.3705 g 4054 2603 Pls
+.5386 g 5166 2638 Pls
+.3086 g 1827 2935 Pls
+.4243 g 2938 2893 Pls
+.4055 g 4049 2652 Pls
+.5056 g 5161 2586 Pls
+.3087 g 1822 2932 Pls
+.4228 g 2933 2888 Pls
+.4399 g 4045 2700 Pls
+.4733 g 5156 2536 Pls
+.308 g 1817 2928 Pls
+.422 g 2928 2884 Pls
+.4738 g 4040 2747 Pls
+.4414 g 5151 2486 Pls
+.3064 g 1812 2923 Pls
+.4221 g 2923 2881 Pls
+.5077 g 4035 2794 Pls
+.4093 g 5146 2436 Pls
+.3049 g 1807 2918 Pls
+.4221 g 2919 2878 Pls
+.4707 g 4030 2737 Pls
+.4477 g 5141 2490 Pls
+.3035 g 1802 2913 Pls
+.422 g 2914 2875 Pls
+.5045 g 4025 2784 Pls
+.4156 g 5137 2440 Pls
+.302 g 1798 2909 Pls
+.4219 g 2909 2872 Pls
+.4675 g 4020 2727 Pls
+.4541 g 5132 2494 Pls
+.3006 g 1793 2904 Pls
+.4216 g 2904 2869 Pls
+.5013 g 4016 2774 Pls
+.4223 g 5127 2444 Pls
+.2993 g 1788 2899 Pls
+.4213 g 2899 2866 Pls
+.4642 g 4011 2716 Pls
+.4611 g 5122 2498 Pls
+.298 g 1783 2894 Pls
+.4209 g 2895 2863 Pls
+.4977 g 4006 2763 Pls
+.4298 g 5117 2449 Pls
+.2958 g 1778 2888 Pls
+.4213 g 2890 2860 Pls
+.5312 g 4001 2810 Pls
+.3982 g 5113 2400 Pls
+.2937 g 1774 2882 Pls
+.4215 g 2885 2858 Pls
+.4942 g 3996 2752 Pls
+.4366 g 5108 2454 Pls
+.2925 g 1769 2878 Pls
+.4209 g 2880 2854 Pls
+.4571 g 3992 2695 Pls
+.4756 g 5103 2509 Pls
+.2923 g 1764 2875 Pls
+.4192 g 2875 2849 Pls
+.42 g 3987 2637 Pls
+.5153 g 5098 2565 Pls
+.2921 g 1759 2872 Pls
+.4174 g 2871 2844 Pls
+.4528 g 3982 2683 Pls
+.4863 g 5093 2519 Pls
+.2911 g 1754 2867 Pls
+.4163 g 2866 2839 Pls
+.4849 g 3977 2727 Pls
+.4581 g 5089 2475 Pls
+.2893 g 1750 2862 Pls
+.4159 g 2861 2836 Pls
+.5167 g 3972 2772 Pls
+.4301 g 5084 2430 Pls
+.2867 g 1745 2855 Pls
+.4162 g 2856 2834 Pls
+.5484 g 3968 2816 Pls
+.4017 g 5079 2386 Pls
+.2833 g 1740 2848 Pls
+.4173 g 2851 2832 Pls
+.5805 g 3963 2860 Pls
+.3725 g 5074 2340 Pls
+.2799 g 1735 2840 Pls
+.4182 g 2846 2831 Pls
+.5431 g 3958 2802 Pls
+.4116 g 5069 2395 Pls
+.2775 g 1730 2834 Pls
+.4181 g 2842 2828 Pls
+.5057 g 3953 2744 Pls
+.4512 g 5064 2451 Pls
+.2752 g 1725 2827 Pls
+.4179 g 2837 2825 Pls
+.5381 g 3948 2789 Pls
+.4219 g 5060 2404 Pls
+.2729 g 1721 2821 Pls
+.4176 g 2832 2822 Pls
+.5007 g 3943 2731 Pls
+.4617 g 5055 2461 Pls
+.2707 g 1716 2815 Pls
+.4171 g 2827 2818 Pls
+.5329 g 3939 2776 Pls
+.4329 g 5050 2415 Pls
+.2677 g 1711 2808 Pls
+.4174 g 2822 2816 Pls
+.565 g 3934 2821 Pls
+.4038 g 5045 2369 Pls
+.2639 g 1706 2800 Pls
+.4183 g 2818 2815 Pls
+.5975 g 3929 2866 Pls
+.3738 g 5040 2322 Pls
+.2602 g 1701 2791 Pls
+.4192 g 2813 2813 Pls
+.5602 g 3924 2808 Pls
+.4127 g 5036 2377 Pls
+.2573 g 1697 2784 Pls
+.4191 g 2808 2810 Pls
+.5229 g 3919 2750 Pls
+.452 g 5031 2432 Pls
+.2546 g 1692 2778 Pls
+.4189 g 2803 2807 Pls
+.5557 g 3915 2796 Pls
+.422 g 5026 2385 Pls
+.2519 g 1687 2771 Pls
+.4186 g 2798 2804 Pls
+.5183 g 3910 2738 Pls
+.4616 g 5021 2441 Pls
+.2492 g 1682 2764 Pls
+.4181 g 2794 2800 Pls
+.5509 g 3905 2783 Pls
+.432 g 5016 2395 Pls
+.2457 g 1677 2756 Pls
+.4184 g 2789 2798 Pls
+.5834 g 3900 2829 Pls
+.4022 g 5012 2348 Pls
+.2415 g 1673 2747 Pls
+.4195 g 2784 2797 Pls
+.6163 g 3895 2874 Pls
+.3715 g 5007 2300 Pls
+.2372 g 1668 2738 Pls
+.4204 g 2779 2795 Pls
+.5791 g 3891 2817 Pls
+.4101 g 5002 2354 Pls
+.2339 g 1663 2730 Pls
+.4204 g 2774 2793 Pls
+.5419 g 3886 2759 Pls
+.449 g 4997 2409 Pls
+.2316 g 1658 2724 Pls
+.4194 g 2769 2788 Pls
+.5047 g 3881 2701 Pls
+.4886 g 4992 2464 Pls
+.2293 g 1653 2718 Pls
+.4183 g 2765 2784 Pls
+.5375 g 3876 2747 Pls
+.459 g 4987 2418 Pls
+.2261 g 1648 2711 Pls
+.4179 g 2760 2781 Pls
+.57 g 3871 2792 Pls
+.4297 g 4983 2372 Pls
+.2222 g 1644 2702 Pls
+.4182 g 2755 2778 Pls
+.6024 g 3866 2837 Pls
+.4 g 4978 2325 Pls
+.2174 g 1639 2692 Pls
+.4193 g 2750 2777 Pls
+.6352 g 3862 2883 Pls
+.3694 g 4973 2277 Pls
+.2127 g 1634 2683 Pls
+.4203 g 2745 2776 Pls
+.598 g 3857 2825 Pls
+.408 g 4968 2331 Pls
+.209 g 1629 2674 Pls
+.4203 g 2741 2773 Pls
+.5608 g 3852 2767 Pls
+.4469 g 4963 2386 Pls
+.2061 g 1624 2667 Pls
+.4194 g 2736 2769 Pls
+.5236 g 3847 2710 Pls
+.4864 g 4959 2442 Pls
+.2042 g 1620 2662 Pls
+.4174 g 2731 2763 Pls
+.4865 g 3842 2652 Pls
+.5266 g 4954 2498 Pls
+.2023 g 1615 2656 Pls
+.4153 g 2726 2757 Pls
+.5187 g 3838 2697 Pls
+.4989 g 4949 2455 Pls
+.1997 g 1610 2649 Pls
+.4139 g 2721 2753 Pls
+.5501 g 3833 2741 Pls
+.4722 g 4944 2412 Pls
+.1963 g 1605 2642 Pls
+.4131 g 2717 2749 Pls
+.581 g 3828 2783 Pls
+.4461 g 4939 2371 Pls
+.1921 g 1600 2633 Pls
+.413 g 2712 2746 Pls
+.6116 g 3823 2826 Pls
+.4201 g 4935 2330 Pls
+.1871 g 1596 2623 Pls
+.4136 g 2707 2744 Pls
+.6423 g 3818 2868 Pls
+.3936 g 4930 2288 Pls
+.1814 g 1591 2611 Pls
+.4148 g 2702 2743 Pls
+.6735 g 3814 2912 Pls
+.3659 g 4925 2244 Pls
+.1749 g 1586 2599 Pls
+.4167 g 2697 2743 Pls
+.7054 g 3809 2956 Pls
+.3367 g 4920 2198 Pls
+.1684 g 1581 2587 Pls
+.4185 g 2692 2743 Pls
+.6682 g 3804 2898 Pls
+.3752 g 4915 2252 Pls
+.1629 g 1576 2576 Pls
+.4194 g 2688 2741 Pls
+.6309 g 3799 2841 Pls
+.414 g 4910 2307 Pls
+.1583 g 1571 2566 Pls
+.4192 g 2683 2738 Pls
+.5936 g 3794 2783 Pls
+.4534 g 4906 2362 Pls
+.1546 g 1567 2558 Pls
+.4181 g 2678 2734 Pls
+.5563 g 3789 2725 Pls
+.4933 g 4901 2419 Pls
+.151 g 1562 2550 Pls
+.4169 g 2673 2729 Pls
+.5887 g 3785 2770 Pls
+.4646 g 4896 2373 Pls
+.1466 g 1557 2541 Pls
+.4163 g 2668 2726 Pls
+.6207 g 3780 2814 Pls
+.4363 g 4891 2329 Pls
+.1414 g 1552 2530 Pls
+.4165 g 2664 2723 Pls
+.6525 g 3775 2859 Pls
+.4078 g 4886 2284 Pls
+.1363 g 1547 2520 Pls
+.4165 g 2659 2720 Pls
+.615 g 3770 2800 Pls
+.4478 g 4882 2340 Pls
+.1312 g 1543 2510 Pls
+.4164 g 2654 2718 Pls
+.6468 g 3765 2845 Pls
+.4194 g 4877 2296 Pls
+.1254 g 1538 2498 Pls
+.417 g 2649 2716 Pls
+.6788 g 3761 2889 Pls
+.3905 g 4872 2250 Pls
+.1196 g 1533 2487 Pls
+.4174 g 2644 2714 Pls
+.6413 g 3756 2831 Pls
+.43 g 4867 2306 Pls
+.1148 g 1528 2477 Pls
+.4169 g 2640 2710 Pls
+.6039 g 3751 2773 Pls
+.4701 g 4862 2362 Pls
+.11 g 1523 2467 Pls
+.4162 g 2635 2706 Pls
+.6358 g 3746 2817 Pls
+.4419 g 4858 2318 Pls
+.1044 g 1519 2456 Pls
+.4162 g 2630 2703 Pls
+.6676 g 3741 2862 Pls
+.4136 g 4853 2273 Pls
+.098 g 1514 2444 Pls
+.417 g 2625 2702 Pls
+.6996 g 3737 2906 Pls
+.3846 g 4848 2228 Pls
+.0908 g 1509 2431 Pls
+.4184 g 2620 2701 Pls
+.7321 g 3732 2951 Pls
+.3544 g 4843 2180 Pls
+.0837 g 1504 2417 Pls
+.4198 g 2615 2700 Pls
+.6949 g 3727 2893 Pls
+.3929 g 4838 2234 Pls
+.0775 g 1499 2405 Pls
+.4202 g 2611 2698 Pls
+.6576 g 3722 2836 Pls
+.4318 g 4833 2289 Pls
+.0723 g 1494 2395 Pls
+.4196 g 2606 2695 Pls
+.6204 g 3717 2778 Pls
+.4711 g 4829 2344 Pls
+.7822 g 1490 3441 Pls
+.4181 g 2601 2690 Pls
+.5832 g 3712 2720 Pls
+.5111 g 4824 2401 Pls
+.7779 g 1485 3431 Pls
+.4164 g 2596 2684 Pls
+.6156 g 3708 2765 Pls
+.4827 g 4819 2356 Pls
+.7729 g 1480 3421 Pls
+.4154 g 2591 2680 Pls
+.6474 g 3703 2809 Pls
+.4551 g 4814 2312 Pls
+.767 g 1475 3410 Pls
+.415 g 2587 2677 Pls
+.6788 g 3698 2853 Pls
+.4277 g 4809 2269 Pls
+.7604 g 1470 3397 Pls
+.4154 g 2582 2675 Pls
+.7102 g 3693 2897 Pls
+.3999 g 4805 2225 Pls
+.7529 g 1466 3383 Pls
+.4165 g 2577 2673 Pls
+.742 g 3688 2941 Pls
+.3711 g 4800 2180 Pls
+.7447 g 1461 3368 Pls
+.4183 g 2572 2673 Pls
+.7745 g 3684 2986 Pls
+.3409 g 4795 2133 Pls
+.7365 g 1456 3354 Pls
+.42 g 2567 2673 Pls
+.7374 g 3679 2929 Pls
+.3791 g 4790 2186 Pls
+.7292 g 1451 3340 Pls
+.4208 g 2563 2671 Pls
+.7002 g 3674 2871 Pls
+.4177 g 4785 2240 Pls
+.7229 g 1446 3328 Pls
+.4206 g 2558 2668 Pls
+.6631 g 3669 2813 Pls
+.4566 g 4781 2295 Pls
+.7175 g 1442 3317 Pls
+.4194 g 2553 2664 Pls
+.6259 g 3664 2756 Pls
+.4962 g 4776 2351 Pls
+.7122 g 1437 3307 Pls
+.418 g 2548 2659 Pls
+.6587 g 3660 2801 Pls
+.4668 g 4771 2305 Pls
+.706 g 1432 3295 Pls
+.4174 g 2543 2655 Pls
+.6911 g 3655 2846 Pls
+.4378 g 4766 2259 Pls
+.699 g 1427 3282 Pls
+.4176 g 2538 2653 Pls
+.7234 g 3650 2891 Pls
+.4085 g 4761 2213 Pls
+.6913 g 1422 3267 Pls
+.4185 g 2534 2651 Pls
+.7559 g 3645 2936 Pls
+.3785 g 4756 2166 Pls
+.6827 g 1417 3252 Pls
+.4201 g 2529 2651 Pls
+.7889 g 3640 2983 Pls
+.3472 g 4752 2117 Pls
+.6732 g 1413 3235 Pls
+.4225 g 2524 2652 Pls
+.8228 g 3635 3030 Pls
+.3141 g 4747 2065 Pls
+.663 g 1408 3217 Pls
+.4258 g 2519 2654 Pls
+.8577 g 3631 3079 Pls
+.2787 g 4742 2010 Pls
+.6527 g 1403 3199 Pls
+.4291 g 2514 2656 Pls
+.8218 g 3626 3023 Pls
+.3132 g 4737 2058 Pls
+.6433 g 1398 3183 Pls
+.4316 g 2510 2657 Pls
+.7865 g 3621 2968 Pls
+.3468 g 4732 2105 Pls
+.6348 g 1393 3167 Pls
+.4332 g 2505 2657 Pls
+.7518 g 3616 2914 Pls
+.3797 g 4728 2151 Pls
+.6271 g 1389 3153 Pls
+.4341 g 2500 2655 Pls
+.7175 g 3611 2860 Pls
+.4122 g 4723 2196 Pls
+.6203 g 1384 3140 Pls
+.4341 g 2495 2652 Pls
+.6834 g 3607 2807 Pls
+.4449 g 4718 2242 Pls
+.6144 g 1379 3129 Pls
+.4332 g 2490 2648 Pls
+.649 g 3602 2754 Pls
+.4783 g 4713 2288 Pls
+.6093 g 1374 3119 Pls
+.4316 g 2486 2643 Pls
+.6143 g 3597 2700 Pls
+.5128 g 4708 2337 Pls
+.6051 g 1369 3110 Pls
+.429 g 2481 2636 Pls
+.579 g 3592 2645 Pls
+.549 g 4704 2387 Pls
+.6009 g 1365 3101 Pls
+.4264 g 2476 2630 Pls
+.6145 g 3587 2694 Pls
+.515 g 4699 2334 Pls
+.5958 g 1360 3090 Pls
+.4247 g 2471 2625 Pls
+.6495 g 3583 2743 Pls
+.4817 g 4694 2282 Pls
+.5899 g 1355 3079 Pls
+.4238 g 2466 2620 Pls
+.684 g 3578 2792 Pls
+.4487 g 4689 2231 Pls
+.583 g 1350 3066 Pls
+.4237 g 2461 2618 Pls
+.7183 g 3573 2840 Pls
+.4157 g 4684 2179 Pls
+.5754 g 1345 3052 Pls
+.4244 g 2457 2616 Pls
+.7528 g 3568 2888 Pls
+.3821 g 4679 2127 Pls
+.5668 g 1340 3037 Pls
+.426 g 2452 2615 Pls
+.7877 g 3563 2936 Pls
+.3473 g 4675 2073 Pls
+.5574 g 1336 3020 Pls
+.4285 g 2447 2616 Pls
+.8231 g 3558 2986 Pls
+.311 g 4670 2016 Pls
+.548 g 1331 3003 Pls
+.431 g 2442 2617 Pls
+.7876 g 3554 2931 Pls
+.3449 g 4665 2064 Pls
+.5394 g 1326 2988 Pls
+.4327 g 2437 2617 Pls
+.7528 g 3549 2877 Pls
+.3781 g 4660 2110 Pls
+.5318 g 1321 2974 Pls
+.4335 g 2433 2615 Pls
+.7183 g 3544 2823 Pls
+.4109 g 4655 2156 Pls
+.525 g 1316 2961 Pls
+.4336 g 2428 2613 Pls
+.684 g 3539 2769 Pls
+.4439 g 4651 2202 Pls
+.519 g 1312 2949 Pls
+.4328 g 2423 2609 Pls
+.6495 g 3534 2716 Pls
+.4775 g 4646 2249 Pls
+.5139 g 1307 2939 Pls
+.4311 g 2418 2604 Pls
+.6147 g 3530 2661 Pls
+.5123 g 4641 2297 Pls
+.5097 g 1302 2930 Pls
+.4286 g 2413 2597 Pls
+.5792 g 3525 2606 Pls
+.5487 g 4636 2348 Pls
+.5055 g 1297 2921 Pls
+.426 g 2409 2590 Pls
+.6147 g 3520 2656 Pls
+.5149 g 4631 2295 Pls
+.5004 g 1292 2911 Pls
+.4242 g 2404 2585 Pls
+.6495 g 3515 2705 Pls
+.4818 g 4627 2244 Pls
+.4945 g 1288 2899 Pls
+.4233 g 2399 2581 Pls
+.6839 g 3510 2753 Pls
+.4491 g 4622 2193 Pls
+.4876 g 1283 2886 Pls
+.4232 g 2394 2578 Pls
+.7181 g 3506 2800 Pls
+.4164 g 4617 2142 Pls
+.48 g 1278 2872 Pls
+.4239 g 2389 2576 Pls
+.7525 g 3501 2848 Pls
+.383 g 4612 2090 Pls
+.4714 g 1273 2857 Pls
+.4255 g 2384 2576 Pls
+.7872 g 3496 2897 Pls
+.3485 g 4607 2036 Pls
+.4629 g 1268 2842 Pls
+.4271 g 2380 2576 Pls
+.7546 g 3491 2846 Pls
+.3808 g 4602 2081 Pls
+.4552 g 1263 2827 Pls
+.4279 g 2375 2574 Pls
+.7186 g 3486 2790 Pls
+.4167 g 4598 2131 Pls
+.4484 g 1259 2815 Pls
+.4277 g 2370 2571 Pls
+.6827 g 3481 2734 Pls
+.4528 g 4593 2182 Pls
+.4425 g 1254 2803 Pls
+.4266 g 2365 2567 Pls
+.6467 g 3477 2678 Pls
+.4897 g 4588 2233 Pls
+.4366 g 1249 2792 Pls
+.4255 g 2360 2562 Pls
+.6818 g 3472 2727 Pls
+.4558 g 4583 2180 Pls
+.4298 g 1244 2779 Pls
+.4253 g 2356 2559 Pls
+.7167 g 3467 2776 Pls
+.4219 g 4578 2128 Pls
+.4222 g 1239 2765 Pls
+.4259 g 2351 2557 Pls
+.7516 g 3462 2825 Pls
+.3875 g 4574 2074 Pls
+.4137 g 1235 2749 Pls
+.4273 g 2346 2556 Pls
+.7868 g 3457 2874 Pls
+.3521 g 4569 2019 Pls
+.4052 g 1230 2734 Pls
+.4288 g 2341 2556 Pls
+.751 g 3453 2818 Pls
+.3872 g 4564 2068 Pls
+.3975 g 1225 2720 Pls
+.4294 g 2336 2554 Pls
+.7154 g 3448 2763 Pls
+.4223 g 4559 2117 Pls
+.3908 g 1220 2707 Pls
+.4291 g 2332 2551 Pls
+.6799 g 3443 2708 Pls
+.4578 g 4554 2167 Pls
+.385 g 1215 2696 Pls
+.4279 g 2327 2546 Pls
+.6442 g 3438 2652 Pls
+.4941 g 4550 2218 Pls
+.38 g 1211 2686 Pls
+.4258 g 2322 2540 Pls
+.6082 g 3433 2596 Pls
+.5316 g 4545 2270 Pls
+.3751 g 1206 2676 Pls
+.4237 g 2317 2534 Pls
+.6429 g 3429 2645 Pls
+.4989 g 4540 2219 Pls
+.3693 g 1201 2665 Pls
+.4223 g 2312 2530 Pls
+.6772 g 3424 2693 Pls
+.4668 g 4535 2169 Pls
+.3627 g 1196 2652 Pls
+.4218 g 2307 2526 Pls
+.711 g 3419 2740 Pls
+.435 g 4530 2119 Pls
+.3552 g 1191 2638 Pls
+.422 g 2303 2524 Pls
+.7448 g 3414 2787 Pls
+.403 g 4525 2069 Pls
+.3478 g 1186 2624 Pls
+.4222 g 2298 2521 Pls
+.7078 g 3409 2730 Pls
+.4413 g 4521 2123 Pls
+.3412 g 1182 2612 Pls
+.4214 g 2293 2517 Pls
+.6708 g 3404 2672 Pls
+.4802 g 4516 2178 Pls
+.3357 g 1177 2601 Pls
+.4196 g 2288 2512 Pls
+.6338 g 3400 2615 Pls
+.5198 g 4511 2233 Pls
+.3301 g 1172 2590 Pls
+.4177 g 2283 2506 Pls
+.6667 g 3395 2661 Pls
+.4906 g 4506 2188 Pls
+.3238 g 1167 2578 Pls
+.4165 g 2279 2502 Pls
+.6989 g 3390 2706 Pls
+.4622 g 4501 2143 Pls
+.3166 g 1162 2565 Pls
+.416 g 2274 2498 Pls
+.7308 g 3385 2750 Pls
+.4341 g 4497 2099 Pls
+.3086 g 1158 2550 Pls
+.4162 g 2269 2496 Pls
+.7625 g 3380 2794 Pls
+.4058 g 4492 2054 Pls
+.2999 g 1153 2534 Pls
+.4171 g 2264 2494 Pls
+.7945 g 3376 2838 Pls
+.3767 g 4487 2008 Pls
+.2903 g 1148 2517 Pls
+.4188 g 2259 2494 Pls
+.8272 g 3371 2884 Pls
+.3462 g 4482 1961 Pls
+.28 g 1143 2499 Pls
+.4212 g 2255 2495 Pls
+.8607 g 3366 2931 Pls
+.3138 g 4477 1910 Pls
+.2687 g 1138 2480 Pls
+.4245 g 2250 2497 Pls
+.8952 g 3361 2979 Pls
+.2791 g 4473 1856 Pls
+.2566 g 1134 2459 Pls
+.4287 g 2245 2500 Pls
+.9307 g 3356 3029 Pls
+.2421 g 4468 1798 Pls
+.2436 g 1129 2437 Pls
+.4339 g 2240 2505 Pls
+.9664 g 3352 3079 Pls
+.2032 g 4463 1738 Pls
+.2306 g 1124 2415 Pls
+.4391 g 2235 2510 Pls
+.9314 g 3347 3024 Pls
+.2334 g 4458 1780 Pls
+.2185 g 1119 2395 Pls
+.4437 g 2230 2514 Pls
+.8978 g 3342 2972 Pls
+.261 g 4453 1818 Pls
+.2071 g 1114 2375 Pls
+.4475 g 2226 2517 Pls
+.8659 g 3337 2922 Pls
+.2859 g 4448 1852 Pls
+.1966 g 1109 2357 Pls
+.4508 g 2221 2519 Pls
+.8357 g 3332 2874 Pls
+.3082 g 4444 1882 Pls
+.1868 g 1105 2340 Pls
+.4536 g 2216 2520 Pls
+.8071 g 3327 2829 Pls
+.3283 g 4439 1909 Pls
+.1776 g 1100 2323 Pls
+.4558 g 2211 2521 Pls
+.7797 g 3323 2786 Pls
+.3464 g 4434 1933 Pls
+.1692 g 1095 2308 Pls
+.4577 g 2206 2521 Pls
+.7534 g 3318 2744 Pls
+.363 g 4429 1955 Pls
+.1614 g 1090 2294 Pls
+.4591 g 2202 2520 Pls
+.7279 g 3313 2704 Pls
+.3785 g 4424 1975 Pls
+.1542 g 1085 2280 Pls
+.4602 g 2197 2519 Pls
+.703 g 3308 2665 Pls
+.3931 g 4420 1994 Pls
+.1477 g 1081 2268 Pls
+.4609 g 2192 2517 Pls
+.6786 g 3303 2626 Pls
+.4071 g 4415 2012 Pls
+.1417 g 1076 2256 Pls
+.4613 g 2187 2515 Pls
+.6545 g 3299 2587 Pls
+.4209 g 4410 2029 Pls
+.1364 g 1071 2246 Pls
+.4613 g 2182 2512 Pls
+.6304 g 3294 2549 Pls
+.4347 g 4405 2047 Pls
+.1316 g 1066 2236 Pls
+.461 g 2178 2509 Pls
+.6063 g 3289 2511 Pls
+.4489 g 4400 2065 Pls
+.1275 g 1061 2227 Pls
+.4603 g 2173 2505 Pls
+.5819 g 3284 2472 Pls
+.4636 g 4396 2084 Pls
+.124 g 1057 2219 Pls
+.4592 g 2168 2501 Pls
+.5571 g 3279 2432 Pls
+.4792 g 4391 2104 Pls
+.1203 g 1052 2211 Pls
+.4584 g 2163 2497 Pls
+.5931 g 3275 2483 Pls
+.4395 g 4386 2043 Pls
+.1157 g 1047 2201 Pls
+.4587 g 2158 2495 Pls
+.6293 g 3270 2534 Pls
+.3992 g 4381 1981 Pls
+.1103 g 1042 2191 Pls
+.4599 g 2153 2494 Pls
+.6651 g 3265 2584 Pls
+.3587 g 4376 1918 Pls
+.1047 g 1037 2180 Pls
+.4615 g 2149 2493 Pls
+.6403 g 3260 2544 Pls
+.3726 g 4371 1936 Pls
+.0997 g 1032 2169 Pls
+.4627 g 2144 2492 Pls
+.6162 g 3255 2506 Pls
+.3856 g 4367 1952 Pls
+.0953 g 1028 2160 Pls
+.4636 g 2139 2491 Pls
+.5926 g 3250 2468 Pls
+.3978 g 4362 1967 Pls
+.0915 g 1023 2152 Pls
+.4643 g 2134 2489 Pls
+.5694 g 3246 2431 Pls
+.4096 g 4357 1982 Pls
+.0882 g 1018 2144 Pls
+.4646 g 2129 2487 Pls
+.5464 g 3241 2395 Pls
+.4212 g 4352 1996 Pls
+.0856 g 1013 2138 Pls
+.4646 g 2125 2484 Pls
+.5234 g 3236 2358 Pls
+.4328 g 4347 2011 Pls
+.0835 g 1008 2132 Pls
+.4644 g 2120 2481 Pls
+.5005 g 3231 2321 Pls
+.4446 g 4343 2025 Pls
+.0813 g 1004 2126 Pls
+.4645 g 2115 2478 Pls
+.5355 g 3226 2370 Pls
+.4054 g 4338 1965 Pls
+.0789 g 999 2119 Pls
+.4649 g 2110 2476 Pls
+.5125 g 3222 2333 Pls
+.4168 g 4333 1979 Pls
+.0771 g 994 2114 Pls
+.465 g 2105 2474 Pls
+.4897 g 3217 2297 Pls
+.4281 g 4328 1993 Pls
+.0758 g 989 2109 Pls
+.4649 g 2101 2471 Pls
+.4669 g 3212 2260 Pls
+.4395 g 4323 2007 Pls
+.0744 g 984 2104 Pls
+.4651 g 2096 2468 Pls
+.5017 g 3207 2309 Pls
+.4005 g 4319 1946 Pls
+.0729 g 980 2099 Pls
+.4657 g 2091 2466 Pls
+.479 g 3202 2273 Pls
+.4113 g 4314 1960 Pls
+.0719 g 975 2095 Pls
+.466 g 2086 2464 Pls
+.4564 g 3198 2237 Pls
+.422 g 4309 1973 Pls
+.0715 g 970 2092 Pls
+.466 g 2081 2461 Pls
+.4339 g 3193 2201 Pls
+.4327 g 4304 1986 Pls
+.3594 g 6229 2985 Pls
+.3889 g 6224 3026 Pls
+.4181 g 6219 3066 Pls
+.4474 g 6215 3107 Pls
+.4774 g 6210 3148 Pls
+.5088 g 6205 3192 Pls
+.5419 g 6200 3238 Pls
+.5773 g 6195 3288 Pls
+.5428 g 6191 3234 Pls
+.5092 g 6186 3181 Pls
+.4762 g 6181 3130 Pls
+.4436 g 6176 3079 Pls
+.4109 g 6171 3028 Pls
+.3774 g 6167 2976 Pls
+.3427 g 6162 2922 Pls
+.3064 g 6157 2865 Pls
+.3402 g 6152 2913 Pls
+.3733 g 6147 2959 Pls
+.406 g 6142 3004 Pls
+.4388 g 6138 3050 Pls
+.4721 g 6133 3096 Pls
+.5065 g 6128 3144 Pls
+.4741 g 6123 3094 Pls
+.4417 g 6118 3043 Pls
+.4055 g 6114 2987 Pls
+.3686 g 6109 2929 Pls
+.4024 g 6104 2977 Pls
+.4363 g 6099 3024 Pls
+.4707 g 6094 3072 Pls
+.5025 g 6090 3116 Pls
+.4708 g 6085 3067 Pls
+.4393 g 6080 3017 Pls
+.4075 g 6075 2968 Pls
+.4398 g 6070 3013 Pls
+.4727 g 6065 3058 Pls
+.4418 g 6061 3010 Pls
+.4106 g 6056 2961 Pls
+.4436 g 6051 3007 Pls
+.4124 g 6046 2958 Pls
+.4454 g 6041 3004 Pls
+.4143 g 6037 2955 Pls
+.4473 g 6032 3001 Pls
+.4163 g 6027 2953 Pls
+.3811 g 6022 2898 Pls
+.4168 g 6017 2948 Pls
+.4493 g 6013 2993 Pls
+.414 g 6008 2938 Pls
+.3781 g 6003 2883 Pls
+.3411 g 5998 2825 Pls
+.3746 g 5993 2872 Pls
+.4077 g 5988 2918 Pls
+.4409 g 5984 2964 Pls
+.4747 g 5979 3011 Pls
+.5096 g 5974 3060 Pls
+.474 g 5969 3005 Pls
+.4385 g 5964 2950 Pls
+.4027 g 5960 2894 Pls
+.3661 g 5955 2837 Pls
+.4003 g 5950 2885 Pls
+.4344 g 5945 2933 Pls
+.4692 g 5940 2981 Pls
+.5049 g 5936 3031 Pls
+.5419 g 5931 3083 Pls
+.5088 g 5926 3031 Pls
+.4765 g 5921 2981 Pls
+.4445 g 5916 2931 Pls
+.4125 g 5911 2881 Pls
+.3797 g 5907 2830 Pls
+.4173 g 5902 2882 Pls
+.4552 g 5897 2936 Pls
+.4225 g 5892 2885 Pls
+.4607 g 5887 2938 Pls
+.4996 g 5883 2993 Pls
+.4689 g 5878 2945 Pls
+.4384 g 5873 2897 Pls
+.4078 g 5868 2849 Pls
+.3764 g 5863 2800 Pls
+.4147 g 5859 2854 Pls
+.4534 g 5854 2908 Pls
+.422 g 5849 2859 Pls
+.461 g 5844 2914 Pls
+.43 g 5839 2865 Pls
+.3988 g 5834 2816 Pls
+.4374 g 5830 2871 Pls
+.4766 g 5825 2926 Pls
+.4463 g 5820 2878 Pls
+.416 g 5815 2831 Pls
+.385 g 5810 2782 Pls
+.3529 g 5806 2732 Pls
+.319 g 5801 2679 Pls
+.2832 g 5796 2623 Pls
+.3172 g 5791 2671 Pls
+.3503 g 5786 2717 Pls
+.3827 g 5782 2762 Pls
+.4148 g 5777 2807 Pls
+.447 g 5772 2852 Pls
+.48 g 5767 2897 Pls
+.5142 g 5762 2945 Pls
+.4817 g 5757 2894 Pls
+.4458 g 5753 2839 Pls
+.4096 g 5748 2782 Pls
+.3727 g 5743 2725 Pls
+.4066 g 5738 2772 Pls
+.4406 g 5733 2820 Pls
+.4752 g 5729 2868 Pls
+.439 g 5724 2812 Pls
+.4024 g 5719 2755 Pls
+.4369 g 5714 2803 Pls
+.472 g 5709 2852 Pls
+.4397 g 5705 2802 Pls
+.4071 g 5700 2751 Pls
+.4423 g 5695 2800 Pls
+.4781 g 5690 2850 Pls
+.5149 g 5685 2902 Pls
+.4812 g 5680 2849 Pls
+.4479 g 5676 2797 Pls
+.4145 g 5671 2745 Pls
+.3804 g 5666 2692 Pls
+.4171 g 5661 2744 Pls
+.4541 g 5656 2796 Pls
+.4919 g 5652 2849 Pls
+.4592 g 5647 2797 Pls
+.4266 g 5642 2746 Pls
+.4649 g 5637 2800 Pls
+.5039 g 5632 2855 Pls
+.4734 g 5628 2807 Pls
+.4434 g 5623 2760 Pls
+.4132 g 5618 2713 Pls
+.3824 g 5613 2665 Pls
+.3503 g 5608 2614 Pls
+.3165 g 5603 2562 Pls
+.2806 g 5599 2506 Pls
+.3147 g 5594 2554 Pls
+.3477 g 5589 2600 Pls
+.3801 g 5584 2645 Pls
+.412 g 5579 2689 Pls
+.444 g 5575 2734 Pls
+.4768 g 5570 2779 Pls
+.5107 g 5565 2826 Pls
+.5462 g 5560 2876 Pls
+.5117 g 5555 2822 Pls
+.4776 g 5551 2769 Pls
+.4439 g 5546 2717 Pls
+.4099 g 5541 2664 Pls
+.3753 g 5536 2610 Pls
+.3394 g 5531 2554 Pls
+.3021 g 5526 2496 Pls
+.3348 g 5522 2542 Pls
+.3665 g 5517 2586 Pls
+.3975 g 5512 2629 Pls
+.4284 g 5507 2672 Pls
+.4597 g 5502 2715 Pls
+.4919 g 5498 2760 Pls
+.5256 g 5493 2807 Pls
+.5612 g 5488 2857 Pls
+.5267 g 5483 2803 Pls
+.493 g 5478 2751 Pls
+.4598 g 5474 2699 Pls
+.4267 g 5469 2647 Pls
+.3931 g 5464 2595 Pls
+.3585 g 5459 2541 Pls
+.3226 g 5454 2485 Pls
+.3569 g 5449 2533 Pls
+.3907 g 5445 2580 Pls
+.4245 g 5440 2627 Pls
+.4586 g 5435 2675 Pls
+.4935 g 5430 2724 Pls
+.5298 g 5425 2774 Pls
+.4957 g 5421 2721 Pls
+.462 g 5416 2669 Pls
+.4285 g 5411 2616 Pls
+.3945 g 5406 2563 Pls
+.3596 g 5401 2509 Pls
+.3953 g 5397 2559 Pls
+.4311 g 5392 2609 Pls
+.4674 g 5387 2660 Pls
+.4327 g 5382 2606 Pls
+.3975 g 5377 2551 Pls
+.3615 g 5372 2495 Pls
+.3962 g 5368 2544 Pls
+.431 g 5363 2592 Pls
+.4662 g 5358 2642 Pls
+.4304 g 5353 2586 Pls
+.3941 g 5348 2530 Pls
+.4289 g 5344 2578 Pls
+.4642 g 5339 2628 Pls
+.4283 g 5334 2572 Pls
+.392 g 5329 2515 Pls
+.4268 g 5324 2564 Pls
+.462 g 5320 2613 Pls
+.426 g 5315 2557 Pls
+.4616 g 5310 2607 Pls
+.426 g 5305 2552 Pls
+.462 g 5300 2602 Pls
+.4268 g 5295 2548 Pls
+.3912 g 5291 2492 Pls
+.4266 g 5286 2542 Pls
+.4625 g 5281 2592 Pls
+.4272 g 5276 2537 Pls
+.3915 g 5271 2482 Pls
+.4269 g 5267 2531 Pls
+.4627 g 5262 2581 Pls
+.4274 g 5257 2526 Pls
+.3915 g 5252 2470 Pls
+.4269 g 5247 2520 Pls
+.4626 g 5243 2570 Pls
+.4992 g 5238 2621 Pls
+.4651 g 5233 2568 Pls
+.4311 g 5228 2515 Pls
+.3968 g 5223 2462 Pls
+.3615 g 5218 2407 Pls
+.3969 g 5214 2456 Pls
+.4325 g 5209 2506 Pls
+.4685 g 5204 2556 Pls
+.4334 g 5199 2502 Pls
+.398 g 5194 2447 Pls
+.3617 g 5190 2390 Pls
+.3962 g 5185 2439 Pls
+.4307 g 5180 2487 Pls
+.4656 g 5175 2536 Pls
+.5014 g 5170 2586 Pls
+.5386 g 5166 2638 Pls
+.5056 g 5161 2586 Pls
+.4733 g 5156 2536 Pls
+.4414 g 5151 2486 Pls
+.4093 g 5146 2436 Pls
+.4477 g 5141 2490 Pls
+.4156 g 5137 2440 Pls
+.4541 g 5132 2494 Pls
+.4223 g 5127 2444 Pls
+.4611 g 5122 2498 Pls
+.4298 g 5117 2449 Pls
+.3982 g 5113 2400 Pls
+.4366 g 5108 2454 Pls
+.4756 g 5103 2509 Pls
+.5153 g 5098 2565 Pls
+.4863 g 5093 2519 Pls
+.4581 g 5089 2475 Pls
+.4301 g 5084 2430 Pls
+.4017 g 5079 2386 Pls
+.3725 g 5074 2340 Pls
+.4116 g 5069 2395 Pls
+.4512 g 5064 2451 Pls
+.4219 g 5060 2404 Pls
+.4617 g 5055 2461 Pls
+.4329 g 5050 2415 Pls
+.4038 g 5045 2369 Pls
+.3738 g 5040 2322 Pls
+.4127 g 5036 2377 Pls
+.452 g 5031 2432 Pls
+.422 g 5026 2385 Pls
+.4616 g 5021 2441 Pls
+.432 g 5016 2395 Pls
+.4022 g 5012 2348 Pls
+.3715 g 5007 2300 Pls
+.4101 g 5002 2354 Pls
+.449 g 4997 2409 Pls
+.4886 g 4992 2464 Pls
+.459 g 4987 2418 Pls
+.4297 g 4983 2372 Pls
+.4 g 4978 2325 Pls
+.3694 g 4973 2277 Pls
+.408 g 4968 2331 Pls
+.4469 g 4963 2386 Pls
+.4864 g 4959 2442 Pls
+.5266 g 4954 2498 Pls
+.4989 g 4949 2455 Pls
+.4722 g 4944 2412 Pls
+.4461 g 4939 2371 Pls
+.4201 g 4935 2330 Pls
+.3936 g 4930 2288 Pls
+.3659 g 4925 2244 Pls
+.3367 g 4920 2198 Pls
+.3752 g 4915 2252 Pls
+.414 g 4910 2307 Pls
+.4534 g 4906 2362 Pls
+.4933 g 4901 2419 Pls
+.4646 g 4896 2373 Pls
+.4363 g 4891 2329 Pls
+.4078 g 4886 2284 Pls
+.4478 g 4882 2340 Pls
+.4194 g 4877 2296 Pls
+.3905 g 4872 2250 Pls
+.43 g 4867 2306 Pls
+.4701 g 4862 2362 Pls
+.4419 g 4858 2318 Pls
+.4136 g 4853 2273 Pls
+.3846 g 4848 2228 Pls
+.3544 g 4843 2180 Pls
+.3929 g 4838 2234 Pls
+.4318 g 4833 2289 Pls
+.4711 g 4829 2344 Pls
+.5111 g 4824 2401 Pls
+.4827 g 4819 2356 Pls
+.4551 g 4814 2312 Pls
+.4277 g 4809 2269 Pls
+.3999 g 4805 2225 Pls
+.3711 g 4800 2180 Pls
+.3409 g 4795 2133 Pls
+.3791 g 4790 2186 Pls
+.4177 g 4785 2240 Pls
+.4566 g 4781 2295 Pls
+.4962 g 4776 2351 Pls
+.4668 g 4771 2305 Pls
+.4378 g 4766 2259 Pls
+.4085 g 4761 2213 Pls
+.3785 g 4756 2166 Pls
+.3472 g 4752 2117 Pls
+.3141 g 4747 2065 Pls
+.2787 g 4742 2010 Pls
+.3132 g 4737 2058 Pls
+.3468 g 4732 2105 Pls
+.3797 g 4728 2151 Pls
+.4122 g 4723 2196 Pls
+.4449 g 4718 2242 Pls
+.4783 g 4713 2288 Pls
+.5128 g 4708 2337 Pls
+.549 g 4704 2387 Pls
+.515 g 4699 2334 Pls
+.4817 g 4694 2282 Pls
+.4487 g 4689 2231 Pls
+.4157 g 4684 2179 Pls
+.3821 g 4679 2127 Pls
+.3473 g 4675 2073 Pls
+.311 g 4670 2016 Pls
+.3449 g 4665 2064 Pls
+.3781 g 4660 2110 Pls
+.4109 g 4655 2156 Pls
+.4439 g 4651 2202 Pls
+.4775 g 4646 2249 Pls
+.5123 g 4641 2297 Pls
+.5487 g 4636 2348 Pls
+.5149 g 4631 2295 Pls
+.4818 g 4627 2244 Pls
+.4491 g 4622 2193 Pls
+.4164 g 4617 2142 Pls
+.383 g 4612 2090 Pls
+.3485 g 4607 2036 Pls
+.3808 g 4602 2081 Pls
+.4167 g 4598 2131 Pls
+.4528 g 4593 2182 Pls
+.4897 g 4588 2233 Pls
+.4558 g 4583 2180 Pls
+.4219 g 4578 2128 Pls
+.3875 g 4574 2074 Pls
+.3521 g 4569 2019 Pls
+.3872 g 4564 2068 Pls
+.4223 g 4559 2117 Pls
+.4578 g 4554 2167 Pls
+.4941 g 4550 2218 Pls
+.5316 g 4545 2270 Pls
+.4989 g 4540 2219 Pls
+.4668 g 4535 2169 Pls
+.435 g 4530 2119 Pls
+.403 g 4525 2069 Pls
+.4413 g 4521 2123 Pls
+.4802 g 4516 2178 Pls
+.5198 g 4511 2233 Pls
+.4906 g 4506 2188 Pls
+.4622 g 4501 2143 Pls
+.4341 g 4497 2099 Pls
+.4058 g 4492 2054 Pls
+.3767 g 4487 2008 Pls
+.3462 g 4482 1961 Pls
+.3138 g 4477 1910 Pls
+.2791 g 4473 1856 Pls
+.2421 g 4468 1798 Pls
+.2032 g 4463 1738 Pls
+.2334 g 4458 1780 Pls
+.261 g 4453 1818 Pls
+.2859 g 4448 1852 Pls
+.3082 g 4444 1882 Pls
+.3283 g 4439 1909 Pls
+.3464 g 4434 1933 Pls
+.363 g 4429 1955 Pls
+.3785 g 4424 1975 Pls
+.3931 g 4420 1994 Pls
+.4071 g 4415 2012 Pls
+.4209 g 4410 2029 Pls
+.4347 g 4405 2047 Pls
+.4489 g 4400 2065 Pls
+.4636 g 4396 2084 Pls
+.4792 g 4391 2104 Pls
+.4395 g 4386 2043 Pls
+.3992 g 4381 1981 Pls
+.3587 g 4376 1918 Pls
+.3726 g 4371 1936 Pls
+.3856 g 4367 1952 Pls
+.3978 g 4362 1967 Pls
+.4096 g 4357 1982 Pls
+.4212 g 4352 1996 Pls
+.4328 g 4347 2011 Pls
+.4446 g 4343 2025 Pls
+.4054 g 4338 1965 Pls
+.4168 g 4333 1979 Pls
+.4281 g 4328 1993 Pls
+.4395 g 4323 2007 Pls
+.4005 g 4319 1946 Pls
+.4113 g 4314 1960 Pls
+.422 g 4309 1973 Pls
+.4327 g 4304 1986 Pls
+.5214 g 5118 3438 Pls
+.4885 g 5113 3386 Pls
+.456 g 5108 3335 Pls
+.4237 g 5103 3285 Pls
+.3912 g 5098 3234 Pls
+.3581 g 5094 3183 Pls
+.3242 g 5089 3130 Pls
+.2893 g 5084 3075 Pls
+.3252 g 5079 3126 Pls
+.3605 g 5074 3175 Pls
+.3952 g 5070 3224 Pls
+.4296 g 5065 3271 Pls
+.4637 g 5060 3319 Pls
+.4981 g 5055 3367 Pls
+.5329 g 5050 3416 Pls
+.5683 g 5046 3465 Pls
+.5328 g 5041 3410 Pls
+.4979 g 5036 3356 Pls
+.4635 g 5031 3302 Pls
+.4293 g 5026 3249 Pls
+.395 g 5021 3195 Pls
+.3603 g 5017 3141 Pls
+.3929 g 5012 3187 Pls
+.4253 g 5007 3232 Pls
+.4613 g 5002 3282 Pls
+.4973 g 4997 3333 Pls
+.4623 g 4993 3278 Pls
+.4275 g 4988 3224 Pls
+.3926 g 4983 3170 Pls
+.3609 g 4978 3120 Pls
+.3932 g 4973 3165 Pls
+.4252 g 4969 3210 Pls
+.4571 g 4964 3254 Pls
+.4249 g 4959 3204 Pls
+.3925 g 4954 3153 Pls
+.4242 g 4949 3197 Pls
+.4559 g 4944 3241 Pls
+.4233 g 4940 3190 Pls
+.455 g 4935 3234 Pls
+.4224 g 4930 3183 Pls
+.454 g 4925 3227 Pls
+.4215 g 4920 3176 Pls
+.4531 g 4916 3220 Pls
+.4883 g 4911 3270 Pls
+.4524 g 4906 3214 Pls
+.4202 g 4901 3163 Pls
+.4557 g 4896 3213 Pls
+.4913 g 4892 3263 Pls
+.5272 g 4887 3313 Pls
+.4921 g 4882 3259 Pls
+.4575 g 4877 3205 Pls
+.4231 g 4872 3151 Pls
+.3885 g 4867 3097 Pls
+.3536 g 4863 3043 Pls
+.3896 g 4858 3093 Pls
+.4254 g 4853 3143 Pls
+.4611 g 4848 3193 Pls
+.497 g 4843 3244 Pls
+.4618 g 4839 3189 Pls
+.4267 g 4834 3134 Pls
+.3917 g 4829 3080 Pls
+.3563 g 4824 3025 Pls
+.3205 g 4819 2969 Pls
+.3556 g 4815 3018 Pls
+.39 g 4810 3066 Pls
+.424 g 4805 3114 Pls
+.4579 g 4800 3161 Pls
+.4919 g 4795 3208 Pls
+.4551 g 4790 3151 Pls
+.4183 g 4786 3094 Pls
+.4526 g 4781 3142 Pls
+.4158 g 4776 3085 Pls
+.3789 g 4771 3028 Pls
+.4124 g 4766 3074 Pls
+.4456 g 4762 3121 Pls
+.4786 g 4757 3167 Pls
+.5118 g 4752 3213 Pls
+.4747 g 4747 3155 Pls
+.4377 g 4742 3098 Pls
+.4712 g 4738 3145 Pls
+.4341 g 4733 3087 Pls
+.4674 g 4728 3134 Pls
+.5007 g 4723 3180 Pls
+.4636 g 4718 3122 Pls
+.4264 g 4713 3065 Pls
+.4595 g 4709 3111 Pls
+.4925 g 4704 3157 Pls
+.5255 g 4699 3203 Pls
+.5591 g 4694 3250 Pls
+.5933 g 4689 3297 Pls
+.6284 g 4685 3346 Pls
+.5928 g 4680 3291 Pls
+.5577 g 4675 3236 Pls
+.5232 g 4670 3183 Pls
+.4892 g 4665 3130 Pls
+.4553 g 4661 3077 Pls
+.4212 g 4656 3024 Pls
+.3867 g 4651 2970 Pls
+.4194 g 4646 3016 Pls
+.4554 g 4641 3066 Pls
+.4914 g 4636 3116 Pls
+.5274 g 4632 3167 Pls
+.4924 g 4627 3112 Pls
+.4575 g 4622 3058 Pls
+.4225 g 4617 3004 Pls
+.4587 g 4612 3054 Pls
+.4948 g 4608 3105 Pls
+.4596 g 4603 3050 Pls
+.4243 g 4598 2995 Pls
+.4567 g 4593 3040 Pls
+.4891 g 4588 3085 Pls
+.4536 g 4584 3030 Pls
+.4181 g 4579 2975 Pls
+.3822 g 4574 2919 Pls
+.4174 g 4569 2968 Pls
+.4521 g 4564 3017 Pls
+.4866 g 4559 3065 Pls
+.5213 g 4555 3113 Pls
+.485 g 4550 3057 Pls
+.4486 g 4545 3001 Pls
+.4122 g 4540 2944 Pls
+.4467 g 4535 2992 Pls
+.4809 g 4531 3040 Pls
+.4441 g 4526 2983 Pls
+.4072 g 4521 2926 Pls
+.4407 g 4516 2972 Pls
+.4736 g 4511 3018 Pls
+.5064 g 4507 3064 Pls
+.5394 g 4502 3110 Pls
+.5729 g 4497 3156 Pls
+.6071 g 4492 3204 Pls
+.6422 g 4487 3253 Pls
+.6065 g 4482 3198 Pls
+.5715 g 4478 3143 Pls
+.537 g 4473 3090 Pls
+.5031 g 4468 3037 Pls
+.4692 g 4463 2984 Pls
+.4353 g 4458 2931 Pls
+.4008 g 4454 2877 Pls
+.3658 g 4449 2823 Pls
+.4015 g 4444 2873 Pls
+.4368 g 4439 2922 Pls
+.4718 g 4434 2971 Pls
+.5066 g 4430 3020 Pls
+.5415 g 4425 3069 Pls
+.5769 g 4420 3118 Pls
+.6127 g 4415 3168 Pls
+.5777 g 4410 3114 Pls
+.5435 g 4405 3060 Pls
+.5099 g 4401 3008 Pls
+.4766 g 4396 2956 Pls
+.4433 g 4391 2904 Pls
+.4096 g 4386 2852 Pls
+.3754 g 4381 2798 Pls
+.3404 g 4377 2744 Pls
+.3762 g 4372 2794 Pls
+.4114 g 4367 2843 Pls
+.4462 g 4362 2892 Pls
+.4807 g 4357 2940 Pls
+.5152 g 4353 2988 Pls
+.55 g 4348 3037 Pls
+.5853 g 4343 3086 Pls
+.5497 g 4338 3031 Pls
+.5146 g 4333 2976 Pls
+.4797 g 4328 2922 Pls
+.4449 g 4324 2868 Pls
+.4099 g 4319 2813 Pls
+.3744 g 4314 2758 Pls
+.4099 g 4309 2808 Pls
+.4449 g 4304 2857 Pls
+.4796 g 4300 2905 Pls
+.5143 g 4295 2954 Pls
+.5493 g 4290 3002 Pls
+.5133 g 4285 2946 Pls
+.4774 g 4280 2891 Pls
+.4415 g 4276 2835 Pls
+.4769 g 4271 2884 Pls
+.5123 g 4266 2934 Pls
+.5478 g 4261 2984 Pls
+.5123 g 4256 2928 Pls
+.4769 g 4251 2873 Pls
+.4416 g 4247 2819 Pls
+.4775 g 4242 2869 Pls
+.5134 g 4237 2919 Pls
+.478 g 4232 2864 Pls
+.4427 g 4227 2809 Pls
+.4786 g 4223 2859 Pls
+.5144 g 4218 2909 Pls
+.4791 g 4213 2854 Pls
+.4437 g 4208 2799 Pls
+.4796 g 4203 2850 Pls
+.4441 g 4199 2794 Pls
+.4798 g 4194 2845 Pls
+.4441 g 4189 2789 Pls
+.4796 g 4184 2839 Pls
+.5152 g 4179 2888 Pls
+.4795 g 4174 2833 Pls
+.4438 g 4170 2777 Pls
+.4794 g 4165 2827 Pls
+.515 g 4160 2877 Pls
+.4793 g 4155 2822 Pls
+.4437 g 4150 2766 Pls
+.4793 g 4146 2816 Pls
+.5149 g 4141 2866 Pls
+.4793 g 4136 2810 Pls
+.4437 g 4131 2755 Pls
+.4079 g 4126 2699 Pls
+.4431 g 4122 2749 Pls
+.4781 g 4117 2798 Pls
+.513 g 4112 2846 Pls
+.5482 g 4107 2896 Pls
+.5123 g 4102 2840 Pls
+.4766 g 4097 2784 Pls
+.4409 g 4093 2729 Pls
+.4764 g 4088 2778 Pls
+.5119 g 4083 2828 Pls
+.5476 g 4078 2878 Pls
+.5122 g 4073 2823 Pls
+.477 g 4069 2768 Pls
+.4418 g 4064 2714 Pls
+.4063 g 4059 2658 Pls
+.3705 g 4054 2603 Pls
+.4055 g 4049 2652 Pls
+.4399 g 4045 2700 Pls
+.4738 g 4040 2747 Pls
+.5077 g 4035 2794 Pls
+.4707 g 4030 2737 Pls
+.5045 g 4025 2784 Pls
+.4675 g 4020 2727 Pls
+.5013 g 4016 2774 Pls
+.4642 g 4011 2716 Pls
+.4977 g 4006 2763 Pls
+.5312 g 4001 2810 Pls
+.4942 g 3996 2752 Pls
+.4571 g 3992 2695 Pls
+.42 g 3987 2637 Pls
+.4528 g 3982 2683 Pls
+.4849 g 3977 2727 Pls
+.5167 g 3972 2772 Pls
+.5484 g 3968 2816 Pls
+.5805 g 3963 2860 Pls
+.5431 g 3958 2802 Pls
+.5057 g 3953 2744 Pls
+.5381 g 3948 2789 Pls
+.5007 g 3943 2731 Pls
+.5329 g 3939 2776 Pls
+.565 g 3934 2821 Pls
+.5975 g 3929 2866 Pls
+.5602 g 3924 2808 Pls
+.5229 g 3919 2750 Pls
+.5557 g 3915 2796 Pls
+.5183 g 3910 2738 Pls
+.5509 g 3905 2783 Pls
+.5834 g 3900 2829 Pls
+.6163 g 3895 2874 Pls
+.5791 g 3891 2817 Pls
+.5419 g 3886 2759 Pls
+.5047 g 3881 2701 Pls
+.5375 g 3876 2747 Pls
+.57 g 3871 2792 Pls
+.6024 g 3866 2837 Pls
+.6352 g 3862 2883 Pls
+.598 g 3857 2825 Pls
+.5608 g 3852 2767 Pls
+.5236 g 3847 2710 Pls
+.4865 g 3842 2652 Pls
+.5187 g 3838 2697 Pls
+.5501 g 3833 2741 Pls
+.581 g 3828 2783 Pls
+.6116 g 3823 2826 Pls
+.6423 g 3818 2868 Pls
+.6735 g 3814 2912 Pls
+.7054 g 3809 2956 Pls
+.6682 g 3804 2898 Pls
+.6309 g 3799 2841 Pls
+.5936 g 3794 2783 Pls
+.5563 g 3789 2725 Pls
+.5887 g 3785 2770 Pls
+.6207 g 3780 2814 Pls
+.6525 g 3775 2859 Pls
+.615 g 3770 2800 Pls
+.6468 g 3765 2845 Pls
+.6788 g 3761 2889 Pls
+.6413 g 3756 2831 Pls
+.6039 g 3751 2773 Pls
+.6358 g 3746 2817 Pls
+.6676 g 3741 2862 Pls
+.6996 g 3737 2906 Pls
+.7321 g 3732 2951 Pls
+.6949 g 3727 2893 Pls
+.6576 g 3722 2836 Pls
+.6204 g 3717 2778 Pls
+.5832 g 3712 2720 Pls
+.6156 g 3708 2765 Pls
+.6474 g 3703 2809 Pls
+.6788 g 3698 2853 Pls
+.7102 g 3693 2897 Pls
+.742 g 3688 2941 Pls
+.7745 g 3684 2986 Pls
+.7374 g 3679 2929 Pls
+.7002 g 3674 2871 Pls
+.6631 g 3669 2813 Pls
+.6259 g 3664 2756 Pls
+.6587 g 3660 2801 Pls
+.6911 g 3655 2846 Pls
+.7234 g 3650 2891 Pls
+.7559 g 3645 2936 Pls
+.7889 g 3640 2983 Pls
+.8228 g 3635 3030 Pls
+.8577 g 3631 3079 Pls
+.8218 g 3626 3023 Pls
+.7865 g 3621 2968 Pls
+.7518 g 3616 2914 Pls
+.7175 g 3611 2860 Pls
+.6834 g 3607 2807 Pls
+.649 g 3602 2754 Pls
+.6143 g 3597 2700 Pls
+.579 g 3592 2645 Pls
+.6145 g 3587 2694 Pls
+.6495 g 3583 2743 Pls
+.684 g 3578 2792 Pls
+.7183 g 3573 2840 Pls
+.7528 g 3568 2888 Pls
+.7877 g 3563 2936 Pls
+.8231 g 3558 2986 Pls
+.7876 g 3554 2931 Pls
+.7528 g 3549 2877 Pls
+.7183 g 3544 2823 Pls
+.684 g 3539 2769 Pls
+.6495 g 3534 2716 Pls
+.6147 g 3530 2661 Pls
+.5792 g 3525 2606 Pls
+.6147 g 3520 2656 Pls
+.6495 g 3515 2705 Pls
+.6839 g 3510 2753 Pls
+.7181 g 3506 2800 Pls
+.7525 g 3501 2848 Pls
+.7872 g 3496 2897 Pls
+.7546 g 3491 2846 Pls
+.7186 g 3486 2790 Pls
+.6827 g 3481 2734 Pls
+.6467 g 3477 2678 Pls
+.6818 g 3472 2727 Pls
+.7167 g 3467 2776 Pls
+.7516 g 3462 2825 Pls
+.7868 g 3457 2874 Pls
+.751 g 3453 2818 Pls
+.7154 g 3448 2763 Pls
+.6799 g 3443 2708 Pls
+.6442 g 3438 2652 Pls
+.6082 g 3433 2596 Pls
+.6429 g 3429 2645 Pls
+.6772 g 3424 2693 Pls
+.711 g 3419 2740 Pls
+.7448 g 3414 2787 Pls
+.7078 g 3409 2730 Pls
+.6708 g 3404 2672 Pls
+.6338 g 3400 2615 Pls
+.6667 g 3395 2661 Pls
+.6989 g 3390 2706 Pls
+.7308 g 3385 2750 Pls
+.7625 g 3380 2794 Pls
+.7945 g 3376 2838 Pls
+.8272 g 3371 2884 Pls
+.8607 g 3366 2931 Pls
+.8952 g 3361 2979 Pls
+.9307 g 3356 3029 Pls
+.9664 g 3352 3079 Pls
+.9314 g 3347 3024 Pls
+.8978 g 3342 2972 Pls
+.8659 g 3337 2922 Pls
+.8357 g 3332 2874 Pls
+.8071 g 3327 2829 Pls
+.7797 g 3323 2786 Pls
+.7534 g 3318 2744 Pls
+.7279 g 3313 2704 Pls
+.703 g 3308 2665 Pls
+.6786 g 3303 2626 Pls
+.6545 g 3299 2587 Pls
+.6304 g 3294 2549 Pls
+.6063 g 3289 2511 Pls
+.5819 g 3284 2472 Pls
+.5571 g 3279 2432 Pls
+.5931 g 3275 2483 Pls
+.6293 g 3270 2534 Pls
+.6651 g 3265 2584 Pls
+.6403 g 3260 2544 Pls
+.6162 g 3255 2506 Pls
+.5926 g 3250 2468 Pls
+.5694 g 3246 2431 Pls
+.5464 g 3241 2395 Pls
+.5234 g 3236 2358 Pls
+.5005 g 3231 2321 Pls
+.5355 g 3226 2370 Pls
+.5125 g 3222 2333 Pls
+.4897 g 3217 2297 Pls
+.4669 g 3212 2260 Pls
+.5017 g 3207 2309 Pls
+.479 g 3202 2273 Pls
+.4564 g 3198 2237 Pls
+.4339 g 3193 2201 Pls
+.4375 g 4006 3527 Pls
+.4389 g 4001 3526 Pls
+.4395 g 3997 3524 Pls
+.4394 g 3992 3521 Pls
+.4386 g 3987 3517 Pls
+.437 g 3982 3512 Pls
+.4346 g 3977 3506 Pls
+.4313 g 3973 3498 Pls
+.428 g 3968 3491 Pls
+.4256 g 3963 3484 Pls
+.424 g 3958 3479 Pls
+.4232 g 3953 3475 Pls
+.4232 g 3949 3472 Pls
+.4241 g 3944 3471 Pls
+.4258 g 3939 3471 Pls
+.4284 g 3934 3472 Pls
+.431 g 3929 3473 Pls
+.4328 g 3924 3473 Pls
+.4338 g 3920 3471 Pls
+.4339 g 3915 3469 Pls
+.4333 g 3910 3465 Pls
+.4318 g 3905 3460 Pls
+.4302 g 3900 3455 Pls
+.4295 g 3896 3451 Pls
+.4296 g 3891 3449 Pls
+.4306 g 3886 3447 Pls
+.4317 g 3881 3446 Pls
+.4319 g 3876 3444 Pls
+.4313 g 3872 3440 Pls
+.4299 g 3867 3435 Pls
+.4284 g 3862 3430 Pls
+.4278 g 3857 3427 Pls
+.4279 g 3852 3424 Pls
+.428 g 3847 3421 Pls
+.4273 g 3843 3418 Pls
+.4266 g 3838 3414 Pls
+.4267 g 3833 3411 Pls
+.4267 g 3828 3408 Pls
+.4267 g 3823 3406 Pls
+.4267 g 3819 3403 Pls
+.4267 g 3814 3400 Pls
+.4266 g 3809 3397 Pls
+.4265 g 3804 3394 Pls
+.4273 g 3799 3393 Pls
+.428 g 3795 3391 Pls
+.4279 g 3790 3388 Pls
+.4278 g 3785 3385 Pls
+.4286 g 3780 3384 Pls
+.4304 g 3775 3383 Pls
+.4321 g 3770 3383 Pls
+.4331 g 3766 3382 Pls
+.4332 g 3761 3379 Pls
+.4324 g 3756 3375 Pls
+.4309 g 3751 3370 Pls
+.4293 g 3746 3365 Pls
+.4286 g 3742 3361 Pls
+.4288 g 3737 3359 Pls
+.4299 g 3732 3358 Pls
+.431 g 3727 3357 Pls
+.4313 g 3722 3354 Pls
+.4307 g 3718 3351 Pls
+.4293 g 3713 3346 Pls
+.4269 g 3708 3339 Pls
+.4245 g 3703 3333 Pls
+.4229 g 3698 3328 Pls
+.4221 g 3693 3324 Pls
+.4221 g 3689 3321 Pls
+.4229 g 3684 3320 Pls
+.4236 g 3679 3318 Pls
+.4235 g 3674 3315 Pls
+.4232 g 3669 3312 Pls
+.4229 g 3665 3309 Pls
+.4216 g 3660 3304 Pls
+.4202 g 3655 3299 Pls
+.4196 g 3650 3295 Pls
+.4197 g 3645 3293 Pls
+.4206 g 3641 3291 Pls
+.4214 g 3636 3290 Pls
+.4213 g 3631 3287 Pls
+.4211 g 3626 3284 Pls
+.4207 g 3621 3281 Pls
+.4203 g 3616 3277 Pls
+.4207 g 3612 3275 Pls
+.4209 g 3607 3273 Pls
+.4202 g 3602 3269 Pls
+.4194 g 3597 3265 Pls
+.4193 g 3592 3262 Pls
+.42 g 3588 3260 Pls
+.4215 g 3583 3260 Pls
+.4238 g 3578 3260 Pls
+.427 g 3573 3262 Pls
+.4302 g 3568 3264 Pls
+.4326 g 3564 3265 Pls
+.4341 g 3559 3264 Pls
+.4349 g 3554 3263 Pls
+.4348 g 3549 3260 Pls
+.434 g 3544 3256 Pls
+.4323 g 3539 3250 Pls
+.4305 g 3535 3245 Pls
+.4296 g 3530 3241 Pls
+.4297 g 3525 3238 Pls
+.4306 g 3520 3237 Pls
+.4316 g 3515 3236 Pls
+.4317 g 3511 3233 Pls
+.431 g 3506 3229 Pls
+.4302 g 3501 3225 Pls
+.4304 g 3496 3223 Pls
+.4307 g 3491 3220 Pls
+.43 g 3487 3217 Pls
+.4293 g 3482 3213 Pls
+.4295 g 3477 3210 Pls
+.4296 g 3472 3208 Pls
+.4288 g 3467 3204 Pls
+.4271 g 3462 3199 Pls
+.4253 g 3458 3193 Pls
+.4244 g 3453 3189 Pls
+.4244 g 3448 3186 Pls
+.4252 g 3443 3185 Pls
+.4259 g 3438 3183 Pls
+.4257 g 3434 3180 Pls
+.4246 g 3429 3175 Pls
+.4234 g 3424 3171 Pls
+.4231 g 3419 3168 Pls
+.4227 g 3414 3164 Pls
+.4213 g 3410 3159 Pls
+.4198 g 3405 3154 Pls
+.419 g 3400 3151 Pls
+.419 g 3395 3148 Pls
+.4198 g 3390 3146 Pls
+.4213 g 3385 3146 Pls
+.4237 g 3381 3146 Pls
+.427 g 3376 3149 Pls
+.4302 g 3371 3151 Pls
+.4327 g 3366 3151 Pls
+.4343 g 3361 3151 Pls
+.4351 g 3357 3149 Pls
+.4351 g 3352 3147 Pls
+.4343 g 3347 3143 Pls
+.4327 g 3342 3138 Pls
+.4302 g 3337 3131 Pls
+.4277 g 3333 3125 Pls
+.426 g 3328 3119 Pls
+.4252 g 3323 3115 Pls
+.4253 g 3318 3113 Pls
+.4262 g 3313 3111 Pls
+.428 g 3308 3111 Pls
+.4306 g 3304 3112 Pls
+.4334 g 3299 3114 Pls
+.4353 g 3294 3114 Pls
+.4365 g 3289 3113 Pls
+.4369 g 3284 3111 Pls
+.4365 g 3280 3107 Pls
+.4353 g 3275 3103 Pls
+.4333 g 3270 3097 Pls
+.4305 g 3265 3090 Pls
+.4276 g 3260 3083 Pls
+.4256 g 3256 3077 Pls
+.4244 g 3251 3073 Pls
+.424 g 3246 3069 Pls
+.4245 g 3241 3067 Pls
+.4258 g 3236 3066 Pls
+.428 g 3231 3067 Pls
+.4302 g 3227 3067 Pls
+.4316 g 3222 3067 Pls
+.4321 g 3217 3065 Pls
+.4318 g 3212 3061 Pls
+.4306 g 3207 3057 Pls
+.4285 g 3203 3051 Pls
+.4264 g 3198 3045 Pls
+.4251 g 3193 3041 Pls
+.4247 g 3188 3037 Pls
+.4251 g 3183 3035 Pls
+.4264 g 3179 3034 Pls
+.4277 g 3174 3033 Pls
+.4281 g 3169 3031 Pls
+.4276 g 3164 3028 Pls
+.427 g 3159 3024 Pls
+.4274 g 3154 3022 Pls
+.4286 g 3150 3021 Pls
+.4298 g 3145 3020 Pls
+.4302 g 3140 3018 Pls
+.4297 g 3135 3014 Pls
+.4292 g 3130 3011 Pls
+.4296 g 3126 3008 Pls
+.4301 g 3121 3006 Pls
+.4296 g 3116 3003 Pls
+.4292 g 3111 2999 Pls
+.4296 g 3106 2997 Pls
+.4301 g 3102 2995 Pls
+.4297 g 3097 2992 Pls
+.4293 g 3092 2989 Pls
+.4289 g 3087 2985 Pls
+.4286 g 3082 2982 Pls
+.4282 g 3077 2979 Pls
+.4278 g 3073 2975 Pls
+.4283 g 3068 2973 Pls
+.4288 g 3063 2971 Pls
+.4284 g 3058 2968 Pls
+.428 g 3053 2964 Pls
+.4284 g 3049 2962 Pls
+.4289 g 3044 2960 Pls
+.4285 g 3039 2957 Pls
+.4281 g 3034 2954 Pls
+.4286 g 3029 2952 Pls
+.4291 g 3025 2949 Pls
+.4287 g 3020 2946 Pls
+.4274 g 3015 2941 Pls
+.426 g 3010 2937 Pls
+.4255 g 3005 2933 Pls
+.4259 g 3000 2931 Pls
+.4271 g 2996 2930 Pls
+.4284 g 2991 2929 Pls
+.4287 g 2986 2927 Pls
+.4282 g 2981 2923 Pls
+.4276 g 2976 2920 Pls
+.4279 g 2972 2917 Pls
+.4291 g 2967 2916 Pls
+.4304 g 2962 2915 Pls
+.4308 g 2957 2913 Pls
+.4303 g 2952 2910 Pls
+.4289 g 2948 2905 Pls
+.4266 g 2943 2899 Pls
+.4243 g 2938 2893 Pls
+.4228 g 2933 2888 Pls
+.422 g 2928 2884 Pls
+.4221 g 2923 2881 Pls
+.4221 g 2919 2878 Pls
+.422 g 2914 2875 Pls
+.4219 g 2909 2872 Pls
+.4216 g 2904 2869 Pls
+.4213 g 2899 2866 Pls
+.4209 g 2895 2863 Pls
+.4213 g 2890 2860 Pls
+.4215 g 2885 2858 Pls
+.4209 g 2880 2854 Pls
+.4192 g 2875 2849 Pls
+.4174 g 2871 2844 Pls
+.4163 g 2866 2839 Pls
+.4159 g 2861 2836 Pls
+.4162 g 2856 2834 Pls
+.4173 g 2851 2832 Pls
+.4182 g 2846 2831 Pls
+.4181 g 2842 2828 Pls
+.4179 g 2837 2825 Pls
+.4176 g 2832 2822 Pls
+.4171 g 2827 2818 Pls
+.4174 g 2822 2816 Pls
+.4183 g 2818 2815 Pls
+.4192 g 2813 2813 Pls
+.4191 g 2808 2810 Pls
+.4189 g 2803 2807 Pls
+.4186 g 2798 2804 Pls
+.4181 g 2794 2800 Pls
+.4184 g 2789 2798 Pls
+.4195 g 2784 2797 Pls
+.4204 g 2779 2795 Pls
+.4204 g 2774 2793 Pls
+.4194 g 2769 2788 Pls
+.4183 g 2765 2784 Pls
+.4179 g 2760 2781 Pls
+.4182 g 2755 2778 Pls
+.4193 g 2750 2777 Pls
+.4203 g 2745 2776 Pls
+.4203 g 2741 2773 Pls
+.4194 g 2736 2769 Pls
+.4174 g 2731 2763 Pls
+.4153 g 2726 2757 Pls
+.4139 g 2721 2753 Pls
+.4131 g 2717 2749 Pls
+.413 g 2712 2746 Pls
+.4136 g 2707 2744 Pls
+.4148 g 2702 2743 Pls
+.4167 g 2697 2743 Pls
+.4185 g 2692 2743 Pls
+.4194 g 2688 2741 Pls
+.4192 g 2683 2738 Pls
+.4181 g 2678 2734 Pls
+.4169 g 2673 2729 Pls
+.4163 g 2668 2726 Pls
+.4165 g 2664 2723 Pls
+.4165 g 2659 2720 Pls
+.4164 g 2654 2718 Pls
+.417 g 2649 2716 Pls
+.4174 g 2644 2714 Pls
+.4169 g 2640 2710 Pls
+.4162 g 2635 2706 Pls
+.4162 g 2630 2703 Pls
+.417 g 2625 2702 Pls
+.4184 g 2620 2701 Pls
+.4198 g 2615 2700 Pls
+.4202 g 2611 2698 Pls
+.4196 g 2606 2695 Pls
+.4181 g 2601 2690 Pls
+.4164 g 2596 2684 Pls
+.4154 g 2591 2680 Pls
+.415 g 2587 2677 Pls
+.4154 g 2582 2675 Pls
+.4165 g 2577 2673 Pls
+.4183 g 2572 2673 Pls
+.42 g 2567 2673 Pls
+.4208 g 2563 2671 Pls
+.4206 g 2558 2668 Pls
+.4194 g 2553 2664 Pls
+.418 g 2548 2659 Pls
+.4174 g 2543 2655 Pls
+.4176 g 2538 2653 Pls
+.4185 g 2534 2651 Pls
+.4201 g 2529 2651 Pls
+.4225 g 2524 2652 Pls
+.4258 g 2519 2654 Pls
+.4291 g 2514 2656 Pls
+.4316 g 2510 2657 Pls
+.4332 g 2505 2657 Pls
+.4341 g 2500 2655 Pls
+.4341 g 2495 2652 Pls
+.4332 g 2490 2648 Pls
+.4316 g 2486 2643 Pls
+.429 g 2481 2636 Pls
+.4264 g 2476 2630 Pls
+.4247 g 2471 2625 Pls
+.4238 g 2466 2620 Pls
+.4237 g 2461 2618 Pls
+.4244 g 2457 2616 Pls
+.426 g 2452 2615 Pls
+.4285 g 2447 2616 Pls
+.431 g 2442 2617 Pls
+.4327 g 2437 2617 Pls
+.4335 g 2433 2615 Pls
+.4336 g 2428 2613 Pls
+.4328 g 2423 2609 Pls
+.4311 g 2418 2604 Pls
+.4286 g 2413 2597 Pls
+.426 g 2409 2590 Pls
+.4242 g 2404 2585 Pls
+.4233 g 2399 2581 Pls
+.4232 g 2394 2578 Pls
+.4239 g 2389 2576 Pls
+.4255 g 2384 2576 Pls
+.4271 g 2380 2576 Pls
+.4279 g 2375 2574 Pls
+.4277 g 2370 2571 Pls
+.4266 g 2365 2567 Pls
+.4255 g 2360 2562 Pls
+.4253 g 2356 2559 Pls
+.4259 g 2351 2557 Pls
+.4273 g 2346 2556 Pls
+.4288 g 2341 2556 Pls
+.4294 g 2336 2554 Pls
+.4291 g 2332 2551 Pls
+.4279 g 2327 2546 Pls
+.4258 g 2322 2540 Pls
+.4237 g 2317 2534 Pls
+.4223 g 2312 2530 Pls
+.4218 g 2307 2526 Pls
+.422 g 2303 2524 Pls
+.4222 g 2298 2521 Pls
+.4214 g 2293 2517 Pls
+.4196 g 2288 2512 Pls
+.4177 g 2283 2506 Pls
+.4165 g 2279 2502 Pls
+.416 g 2274 2498 Pls
+.4162 g 2269 2496 Pls
+.4171 g 2264 2494 Pls
+.4188 g 2259 2494 Pls
+.4212 g 2255 2495 Pls
+.4245 g 2250 2497 Pls
+.4287 g 2245 2500 Pls
+.4339 g 2240 2505 Pls
+.4391 g 2235 2510 Pls
+.4437 g 2230 2514 Pls
+.4475 g 2226 2517 Pls
+.4508 g 2221 2519 Pls
+.4536 g 2216 2520 Pls
+.4558 g 2211 2521 Pls
+.4577 g 2206 2521 Pls
+.4591 g 2202 2520 Pls
+.4602 g 2197 2519 Pls
+.4609 g 2192 2517 Pls
+.4613 g 2187 2515 Pls
+.4613 g 2182 2512 Pls
+.461 g 2178 2509 Pls
+.4603 g 2173 2505 Pls
+.4592 g 2168 2501 Pls
+.4584 g 2163 2497 Pls
+.4587 g 2158 2495 Pls
+.4599 g 2153 2494 Pls
+.4615 g 2149 2493 Pls
+.4627 g 2144 2492 Pls
+.4636 g 2139 2491 Pls
+.4643 g 2134 2489 Pls
+.4646 g 2129 2487 Pls
+.4646 g 2125 2484 Pls
+.4644 g 2120 2481 Pls
+.4645 g 2115 2478 Pls
+.4649 g 2110 2476 Pls
+.465 g 2105 2474 Pls
+.4649 g 2101 2471 Pls
+.4651 g 2096 2468 Pls
+.4657 g 2091 2466 Pls
+.466 g 2086 2464 Pls
+.466 g 2081 2461 Pls
+.4981 g 2895 3830 Pls
+.4962 g 2890 3824 Pls
+.4951 g 2885 3820 Pls
+.4949 g 2880 3816 Pls
+.4954 g 2876 3814 Pls
+.4967 g 2871 3814 Pls
+.4989 g 2866 3814 Pls
+.502 g 2861 3816 Pls
+.505 g 2856 3818 Pls
+.5071 g 2852 3818 Pls
+.5084 g 2847 3817 Pls
+.5088 g 2842 3815 Pls
+.5084 g 2837 3811 Pls
+.5071 g 2832 3807 Pls
+.5049 g 2828 3801 Pls
+.5018 g 2823 3793 Pls
+.4988 g 2818 3786 Pls
+.4966 g 2813 3780 Pls
+.4953 g 2808 3776 Pls
+.4949 g 2803 3772 Pls
+.4953 g 2799 3770 Pls
+.4965 g 2794 3769 Pls
+.4978 g 2789 3768 Pls
+.4983 g 2784 3766 Pls
+.498 g 2779 3763 Pls
+.4967 g 2775 3758 Pls
+.4954 g 2770 3754 Pls
+.495 g 2765 3750 Pls
+.4955 g 2760 3748 Pls
+.4968 g 2755 3747 Pls
+.4981 g 2751 3746 Pls
+.4985 g 2746 3744 Pls
+.4982 g 2741 3741 Pls
+.4979 g 2736 3738 Pls
+.4984 g 2731 3736 Pls
+.4989 g 2726 3734 Pls
+.4986 g 2722 3731 Pls
+.4984 g 2717 3727 Pls
+.4981 g 2712 3724 Pls
+.4978 g 2707 3721 Pls
+.4976 g 2702 3718 Pls
+.4974 g 2698 3715 Pls
+.4971 g 2693 3712 Pls
+.4961 g 2688 3707 Pls
+.495 g 2683 3703 Pls
+.4949 g 2678 3700 Pls
+.4946 g 2674 3697 Pls
+.4935 g 2669 3693 Pls
+.4915 g 2664 3687 Pls
+.4895 g 2659 3681 Pls
+.4883 g 2654 3677 Pls
+.488 g 2649 3673 Pls
+.4886 g 2645 3671 Pls
+.49 g 2640 3671 Pls
+.4914 g 2635 3670 Pls
+.492 g 2630 3668 Pls
+.4916 g 2625 3665 Pls
+.4903 g 2621 3660 Pls
+.4891 g 2616 3656 Pls
+.4887 g 2611 3652 Pls
+.4892 g 2606 3650 Pls
+.4905 g 2601 3649 Pls
+.4928 g 2597 3650 Pls
+.495 g 2592 3651 Pls
+.4964 g 2587 3650 Pls
+.497 g 2582 3648 Pls
+.4967 g 2577 3645 Pls
+.4955 g 2572 3640 Pls
+.4944 g 2568 3636 Pls
+.4942 g 2563 3633 Pls
+.494 g 2558 3630 Pls
+.4939 g 2553 3627 Pls
+.4946 g 2548 3625 Pls
+.4955 g 2544 3623 Pls
+.4955 g 2539 3621 Pls
+.4946 g 2534 3617 Pls
+.493 g 2529 3611 Pls
+.4913 g 2524 3606 Pls
+.4906 g 2520 3602 Pls
+.49 g 2515 3599 Pls
+.4894 g 2510 3595 Pls
+.4888 g 2505 3592 Pls
+.4875 g 2500 3587 Pls
+.4861 g 2495 3582 Pls
+.4857 g 2491 3579 Pls
+.4853 g 2486 3575 Pls
+.4842 g 2481 3571 Pls
+.4821 g 2476 3565 Pls
+.4793 g 2471 3558 Pls
+.4756 g 2467 3550 Pls
+.4711 g 2462 3540 Pls
+.4665 g 2457 3531 Pls
+.4628 g 2452 3523 Pls
+.4601 g 2447 3516 Pls
+.4581 g 2443 3510 Pls
+.457 g 2438 3506 Pls
+.4568 g 2433 3503 Pls
+.4574 g 2428 3501 Pls
+.458 g 2423 3499 Pls
+.4578 g 2418 3496 Pls
+.4567 g 2414 3491 Pls
+.4547 g 2409 3486 Pls
+.4526 g 2404 3480 Pls
+.4515 g 2399 3475 Pls
+.4512 g 2394 3472 Pls
+.4509 g 2390 3469 Pls
+.4497 g 2385 3464 Pls
+.4485 g 2380 3460 Pls
+.4481 g 2375 3457 Pls
+.4478 g 2370 3453 Pls
+.4467 g 2366 3449 Pls
+.4457 g 2361 3445 Pls
+.4455 g 2356 3442 Pls
+.4462 g 2351 3440 Pls
+.4469 g 2346 3438 Pls
+.4467 g 2341 3435 Pls
+.4457 g 2337 3431 Pls
+.4438 g 2332 3425 Pls
+.442 g 2327 3420 Pls
+.441 g 2322 3416 Pls
+.441 g 2317 3413 Pls
+.441 g 2313 3410 Pls
+.4401 g 2308 3406 Pls
+.4392 g 2303 3402 Pls
+.4393 g 2298 3399 Pls
+.4394 g 2293 3397 Pls
+.4387 g 2289 3393 Pls
+.4372 g 2284 3388 Pls
+.4348 g 2279 3382 Pls
+.4316 g 2274 3374 Pls
+.4276 g 2269 3365 Pls
+.4227 g 2264 3355 Pls
+.4178 g 2260 3345 Pls
+.4138 g 2255 3337 Pls
+.4106 g 2250 3329 Pls
+.4083 g 2245 3323 Pls
+.4069 g 2240 3318 Pls
+.4063 g 2236 3315 Pls
+.4066 g 2231 3312 Pls
+.4077 g 2226 3311 Pls
+.4088 g 2221 3310 Pls
+.4091 g 2216 3308 Pls
+.4084 g 2212 3304 Pls
+.4069 g 2207 3299 Pls
+.4045 g 2202 3293 Pls
+.4013 g 2197 3285 Pls
+.3971 g 2192 3276 Pls
+.3929 g 2187 3267 Pls
+.3896 g 2183 3259 Pls
+.3872 g 2178 3253 Pls
+.3856 g 2173 3248 Pls
+.3848 g 2168 3244 Pls
+.3848 g 2163 3241 Pls
+.3857 g 2159 3240 Pls
+.3875 g 2154 3240 Pls
+.3893 g 2149 3240 Pls
+.3901 g 2144 3238 Pls
+.3901 g 2139 3235 Pls
+.3892 g 2135 3231 Pls
+.3875 g 2130 3226 Pls
+.3849 g 2125 3219 Pls
+.3814 g 2120 3211 Pls
+.378 g 2115 3203 Pls
+.3754 g 2110 3197 Pls
+.3737 g 2106 3192 Pls
+.3728 g 2101 3188 Pls
+.3729 g 2096 3185 Pls
+.3738 g 2091 3183 Pls
+.3747 g 2086 3182 Pls
+.3747 g 2082 3179 Pls
+.3739 g 2077 3175 Pls
+.3721 g 2072 3170 Pls
+.3696 g 2067 3163 Pls
+.367 g 2062 3157 Pls
+.3653 g 2058 3152 Pls
+.3646 g 2053 3148 Pls
+.3638 g 2048 3144 Pls
+.3621 g 2043 3139 Pls
+.3596 g 2038 3132 Pls
+.3571 g 2033 3126 Pls
+.3554 g 2029 3120 Pls
+.3547 g 2024 3116 Pls
+.3539 g 2019 3113 Pls
+.3522 g 2014 3107 Pls
+.3505 g 2009 3102 Pls
+.3497 g 2005 3098 Pls
+.3489 g 2000 3094 Pls
+.3472 g 1995 3089 Pls
+.3455 g 1990 3084 Pls
+.3447 g 1985 3080 Pls
+.3439 g 1981 3076 Pls
+.343 g 1976 3072 Pls
+.3422 g 1971 3068 Pls
+.3414 g 1966 3064 Pls
+.3405 g 1961 3060 Pls
+.3388 g 1956 3054 Pls
+.3371 g 1952 3049 Pls
+.3363 g 1947 3045 Pls
+.3355 g 1942 3041 Pls
+.3337 g 1937 3036 Pls
+.332 g 1932 3030 Pls
+.3312 g 1928 3026 Pls
+.3304 g 1923 3022 Pls
+.3287 g 1918 3017 Pls
+.3269 g 1913 3012 Pls
+.3261 g 1908 3008 Pls
+.3262 g 1904 3005 Pls
+.3263 g 1899 3003 Pls
+.3255 g 1894 2999 Pls
+.3238 g 1889 2993 Pls
+.3212 g 1884 2987 Pls
+.3187 g 1879 2980 Pls
+.3171 g 1875 2975 Pls
+.3163 g 1870 2971 Pls
+.3156 g 1865 2967 Pls
+.3139 g 1860 2962 Pls
+.3114 g 1855 2956 Pls
+.3089 g 1851 2949 Pls
+.3072 g 1846 2944 Pls
+.3064 g 1841 2940 Pls
+.3065 g 1836 2937 Pls
+.3076 g 1831 2936 Pls
+.3086 g 1827 2935 Pls
+.3087 g 1822 2932 Pls
+.308 g 1817 2928 Pls
+.3064 g 1812 2923 Pls
+.3049 g 1807 2918 Pls
+.3035 g 1802 2913 Pls
+.302 g 1798 2909 Pls
+.3006 g 1793 2904 Pls
+.2993 g 1788 2899 Pls
+.298 g 1783 2894 Pls
+.2958 g 1778 2888 Pls
+.2937 g 1774 2882 Pls
+.2925 g 1769 2878 Pls
+.2923 g 1764 2875 Pls
+.2921 g 1759 2872 Pls
+.2911 g 1754 2867 Pls
+.2893 g 1750 2862 Pls
+.2867 g 1745 2855 Pls
+.2833 g 1740 2848 Pls
+.2799 g 1735 2840 Pls
+.2775 g 1730 2834 Pls
+.2752 g 1725 2827 Pls
+.2729 g 1721 2821 Pls
+.2707 g 1716 2815 Pls
+.2677 g 1711 2808 Pls
+.2639 g 1706 2800 Pls
+.2602 g 1701 2791 Pls
+.2573 g 1697 2784 Pls
+.2546 g 1692 2778 Pls
+.2519 g 1687 2771 Pls
+.2492 g 1682 2764 Pls
+.2457 g 1677 2756 Pls
+.2415 g 1673 2747 Pls
+.2372 g 1668 2738 Pls
+.2339 g 1663 2730 Pls
+.2316 g 1658 2724 Pls
+.2293 g 1653 2718 Pls
+.2261 g 1648 2711 Pls
+.2222 g 1644 2702 Pls
+.2174 g 1639 2692 Pls
+.2127 g 1634 2683 Pls
+.209 g 1629 2674 Pls
+.2061 g 1624 2667 Pls
+.2042 g 1620 2662 Pls
+.2023 g 1615 2656 Pls
+.1997 g 1610 2649 Pls
+.1963 g 1605 2642 Pls
+.1921 g 1600 2633 Pls
+.1871 g 1596 2623 Pls
+.1814 g 1591 2611 Pls
+.1749 g 1586 2599 Pls
+.1684 g 1581 2587 Pls
+.1629 g 1576 2576 Pls
+.1583 g 1571 2566 Pls
+.1546 g 1567 2558 Pls
+.151 g 1562 2550 Pls
+.1466 g 1557 2541 Pls
+.1414 g 1552 2530 Pls
+.1363 g 1547 2520 Pls
+.1312 g 1543 2510 Pls
+.1254 g 1538 2498 Pls
+.1196 g 1533 2487 Pls
+.1148 g 1528 2477 Pls
+.11 g 1523 2467 Pls
+.1044 g 1519 2456 Pls
+.098 g 1514 2444 Pls
+.0908 g 1509 2431 Pls
+.0837 g 1504 2417 Pls
+.0775 g 1499 2405 Pls
+.0723 g 1494 2395 Pls
+.7822 g 1490 3441 Pls
+.7779 g 1485 3431 Pls
+.7729 g 1480 3421 Pls
+.767 g 1475 3410 Pls
+.7604 g 1470 3397 Pls
+.7529 g 1466 3383 Pls
+.7447 g 1461 3368 Pls
+.7365 g 1456 3354 Pls
+.7292 g 1451 3340 Pls
+.7229 g 1446 3328 Pls
+.7175 g 1442 3317 Pls
+.7122 g 1437 3307 Pls
+.706 g 1432 3295 Pls
+.699 g 1427 3282 Pls
+.6913 g 1422 3267 Pls
+.6827 g 1417 3252 Pls
+.6732 g 1413 3235 Pls
+.663 g 1408 3217 Pls
+.6527 g 1403 3199 Pls
+.6433 g 1398 3183 Pls
+.6348 g 1393 3167 Pls
+.6271 g 1389 3153 Pls
+.6203 g 1384 3140 Pls
+.6144 g 1379 3129 Pls
+.6093 g 1374 3119 Pls
+.6051 g 1369 3110 Pls
+.6009 g 1365 3101 Pls
+.5958 g 1360 3090 Pls
+.5899 g 1355 3079 Pls
+.583 g 1350 3066 Pls
+.5754 g 1345 3052 Pls
+.5668 g 1340 3037 Pls
+.5574 g 1336 3020 Pls
+.548 g 1331 3003 Pls
+.5394 g 1326 2988 Pls
+.5318 g 1321 2974 Pls
+.525 g 1316 2961 Pls
+.519 g 1312 2949 Pls
+.5139 g 1307 2939 Pls
+.5097 g 1302 2930 Pls
+.5055 g 1297 2921 Pls
+.5004 g 1292 2911 Pls
+.4945 g 1288 2899 Pls
+.4876 g 1283 2886 Pls
+.48 g 1278 2872 Pls
+.4714 g 1273 2857 Pls
+.4629 g 1268 2842 Pls
+.4552 g 1263 2827 Pls
+.4484 g 1259 2815 Pls
+.4425 g 1254 2803 Pls
+.4366 g 1249 2792 Pls
+.4298 g 1244 2779 Pls
+.4222 g 1239 2765 Pls
+.4137 g 1235 2749 Pls
+.4052 g 1230 2734 Pls
+.3975 g 1225 2720 Pls
+.3908 g 1220 2707 Pls
+.385 g 1215 2696 Pls
+.38 g 1211 2686 Pls
+.3751 g 1206 2676 Pls
+.3693 g 1201 2665 Pls
+.3627 g 1196 2652 Pls
+.3552 g 1191 2638 Pls
+.3478 g 1186 2624 Pls
+.3412 g 1182 2612 Pls
+.3357 g 1177 2601 Pls
+.3301 g 1172 2590 Pls
+.3238 g 1167 2578 Pls
+.3166 g 1162 2565 Pls
+.3086 g 1158 2550 Pls
+.2999 g 1153 2534 Pls
+.2903 g 1148 2517 Pls
+.28 g 1143 2499 Pls
+.2687 g 1138 2480 Pls
+.2566 g 1134 2459 Pls
+.2436 g 1129 2437 Pls
+.2306 g 1124 2415 Pls
+.2185 g 1119 2395 Pls
+.2071 g 1114 2375 Pls
+.1966 g 1109 2357 Pls
+.1868 g 1105 2340 Pls
+.1776 g 1100 2323 Pls
+.1692 g 1095 2308 Pls
+.1614 g 1090 2294 Pls
+.1542 g 1085 2280 Pls
+.1477 g 1081 2268 Pls
+.1417 g 1076 2256 Pls
+.1364 g 1071 2246 Pls
+.1316 g 1066 2236 Pls
+.1275 g 1061 2227 Pls
+.124 g 1057 2219 Pls
+.1203 g 1052 2211 Pls
+.1157 g 1047 2201 Pls
+.1103 g 1042 2191 Pls
+.1047 g 1037 2180 Pls
+.0997 g 1032 2169 Pls
+.0953 g 1028 2160 Pls
+.0915 g 1023 2152 Pls
+.0882 g 1018 2144 Pls
+.0856 g 1013 2138 Pls
+.0835 g 1008 2132 Pls
+.0813 g 1004 2126 Pls
+.0789 g 999 2119 Pls
+.0771 g 994 2114 Pls
+.0758 g 989 2109 Pls
+.0744 g 984 2104 Pls
+.0729 g 980 2099 Pls
+.0719 g 975 2095 Pls
+.0715 g 970 2092 Pls
+1.000 UL
+LTb
+6229 1717 M
+4304 609 L
+971 1249 M
+4304 609 L
+0 1378 V
+stroke
+LCb setrgbcolor
+2157 792 M
+(x) Cshow
+LTb
+LCb setrgbcolor
+5597 1003 M
+(t) Cshow
+LTb
+LCb setrgbcolor
+137 2885 M
+() Cshow
+LTb
+stroke gsave	%% draw gray scale smooth box
+maxcolors 0 gt {/imax maxcolors def} {/imax 1024 def} ifelse
+6329 2213 translate 266 1648 scale 0 setlinewidth
+/ystep 1 imax div def /y0 0 def /ii 0 def
+{ y0 g 0 y0 N 1 0 V 0 ystep V -1 0 f
+/y0 y0 ystep add def /ii ii 1 add def
+ii imax ge {exit} if } loop
+grestore 0 setgray
+1.000 UL
+LTb
+6329 2213 N
+266 0 V
+0 1648 V
+-266 0 V
+0 -1648 V
+Z stroke
+1.000 UL
+LTb
+1.000 UL
+LTb
+6595 2213 M
+-63 0 V
+147 0 R
+(-6) Lshow
+1.000 UL
+LTb
+6329 2213 M
+63 0 V
+203 235 R
+-63 0 V
+147 0 R
+(-4) Lshow
+1.000 UL
+LTb
+6329 2448 M
+63 0 V
+203 235 R
+-63 0 V
+147 0 R
+(-2) Lshow
+1.000 UL
+LTb
+6329 2683 M
+63 0 V
+203 236 R
+-63 0 V
+147 0 R
+( 0) Lshow
+1.000 UL
+LTb
+6329 2919 M
+63 0 V
+203 235 R
+-63 0 V
+147 0 R
+( 2) Lshow
+1.000 UL
+LTb
+6329 3154 M
+63 0 V
+203 236 R
+-63 0 V
+147 0 R
+( 4) Lshow
+1.000 UL
+LTb
+6329 3390 M
+63 0 V
+203 235 R
+-63 0 V
+147 0 R
+( 6) Lshow
+1.000 UL
+LTb
+6329 3625 M
+63 0 V
+203 236 R
+-63 0 V
+147 0 R
+( 8) Lshow
+1.000 UL
+LTb
+6329 3861 M
+63 0 V
+stroke
+LCb setrgbcolor
+6973 3037 M
+currentpoint gsave translate 90 rotate 0 0 M
+() Cshow
+grestore
+LTb
+1.000 UP
+grestore % colour palette end
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
+%%Pages: 1
