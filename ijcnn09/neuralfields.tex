@@ -51,17 +51,18 @@
   control problems. We propose a control architecture based on neural
   fields which is suitable to perform the control of a relatively
   complex and unstable system. We test it over the stability problem
-  on a typical inverted-pendulum and compare it against a more
-  traditional recurrent neural network controller, which is
-  parameterized by an evolutionary algorithm. There are presented some
-  relevant requirements for the neural field controller architecture
-  and its parameterization by evolution, and the controller
-  architecture is detailed. Remarkably, the non-evolved neural field
-  controller performs in the simulation as good or better than the
-  evolved recurrent neural network controller. Furthermore, the neural
-  field has a spatial representation which allows interpretation of
-  field potentials. This makes the neural field controller not as
-  black-box as the RNN controller.
+  on a typical inverted-pendulum, used as a simple biped walking
+  model, and compare it against a more traditional recurrent neural
+  network controller, which is parameterized by an evolutionary
+  algorithm. Relevant requirements for the neural field controller
+  architecture and its parameterization by evolution are presented,
+  and the controller architecture is detailed. Remarkably, the
+  non-evolved neural field controller performs in the simulation as
+  good or better than the evolved recurrent neural network
+  controller. Furthermore, the neural field has a spatial
+  representation which allows interpretation of field potentials. This
+  makes the neural field controller not as much of a blackbox as the
+  RNN controller.
 \end{abstract}
 
 \section{Introduction}
@@ -75,8 +76,8 @@ from a very simple or non-functional initialization, in this case
 using a neural control architecture.
 
 In biped robotics, the methods based on computational intelligence for
-planning and control have shown to be able to achieve static
-stability \cite{Kun97Adaptive}, dynamical stability
+planning and control have shown to be able to achieve static stability
+\cite{Kun97Adaptive}, dynamical stability
 \cite{Nakanishi2004b,Komatsu05Dynamic}, achieve simple control
 structures \cite{Huelse04Structure}, and tolerate perturbations
 \cite{Juang02Intelligent}. Nonetheless, those properties have not been
@@ -98,9 +99,21 @@ interested on its capability to solve dynamic control problems.
 
 The control problem set for testing the architectures is the stability
 problem on a inverted pendulum, so that the controller ability to
-perform dynamic control on an unstable plant can be evaluated. To the
-authors' knowledge this is the first time neural fields have been
-evaluated for solving a control problem for an unstable plant.
+perform dynamic control on an unstable plant can be evaluated. The
+inverted pendulum model and extensions of it have been used previously
+to give insight on walking patterns \cite{Lee07Reaction} without all
+the complexities of handling several joints. Using that approach, the
+base of the pendulum is model as the center of pressure (CoP), the
+point mass as the center of mass (CoM), and the link joining both as a
+conceptual line between the CoM and the CoP. Nonetheless, in order to
+develop a more realistic controller of biped walking, the mapping
+between the model and a biped could be detailed
+\cite{Goswami08Kinematic} or, alternatively, a relatively more complex
+model could be used, such a 2-link model \cite{Garcia98simplest} or
+even of higher order.
+
+To the authors' knowledge this is the first time neural fields have
+been evaluated for solving a control problem for an unstable plant.
 
 First, some preliminaries on computational intelligence are presented,
 mainly in the area of neural fields and recurrent neural networks,
@@ -145,20 +158,23 @@ p-by-q matrix of linear combination from the neurons to the outputs.
 Recurrent neural networks present a dynamic behavior because of its
 memory, that is, each state depends of the previous state in such a
 way that a difference equation arises. There is not a notion of
-locality in this model and the interactions between neurons and inputs
-is given by parameter matrices.
+locality in this model. The interaction between neurons and inputs is
+given by matrices of weights and there is no need to embed the neurons
+into a metric space.
 
 Neural fields, on the other hand, arise as a tissue level model of
 neural populations in brain. It has been proposed by Wilson and Cowan
 \cite{Wilson72Excitatory} and detailed by Amari \cite{Amari77Dynamics}
-in the particular case of lateral inhibition. In this model, neural
-population in considered continuum in which exists a dynamical
-evolution equation where the mean activation potential evaluated in
-one place is affected by its neighborhood according to a so-called
-mexican hat function (as noted by Coombes \cite{Coombes05Waves} better
-called wizard hat function) in which close neighbors act as exciters
-and distant ones act as inhibitors. Their mathematical formulation for
-the one-dimensional case is:
+in the particular case of lateral inhibition. In this model, a neural
+population is considered a continuum in which dynamical evolution is
+driven by mean activation potentials evaluated in one place and
+affected by its neighborhood, according to a so-called mexican hat
+function (as noted by Coombes \cite{Coombes05Waves} better called
+wizard hat function) in which close neighbors act as exciters and
+distant ones act as inhibitors. The elements on the field are embedded
+into a metric space, usually a one-dimensional or two-dimensional
+Euclidean space. The mathematical formulation for the one-dimensional
+case is:
 
 \begin{equation}
   \label{eq:neuralfield}
@@ -170,11 +186,12 @@ is the average membrane potential of the neurons located at position
 $\psi$ at time $t$ (where $\psi$ is supposed to be 1-dimensional and
 the time is omitted for readability). The average intensity of
 connection from neurons at $\psi$ to neurons at $x'$ is modeled with
-$w(x,x')$, $f(\cdot)$ is the saturating output function which is
-monotonically nondecreasing. The deviation of the average stimulation
-potential at place $\psi$ at time $t$ is represented by $s(x)$, and
-$h=\bar{s}-r$ is the sum of the average stimulation potential an the
-resting potential.
+$w(x,x')$, which is a kernel (not necessarily positive definite) over
+the space where the field is embedded. The function $f(\cdot)$ is the
+saturating output, which is monotonically nondecreasing. The deviation
+of the average stimulation potential at place $\psi$ at time $t$ is
+represented by $s(x)$, and $h=\bar{s}-r$ is the sum of the average
+stimulation potential and the resting potential.
 
 The main difference between recurrent neural networks and neural
 fields is that, in the first, the relation among the neurons is
@@ -268,7 +285,7 @@ it can be suitable to complex control problem. In order to do that, we
 will consider that the connection kernel $w(y)$ is a symmetric
 function (i.e. $w(y)=w(-y)$), that also is a 2-power Lebesgue
 integrable function so that it also belong to $L^2$. It can be shown
-that, whit that definition, a sum of an arbitrary number of kernel
+that, with that definition, a sum of an arbitrary number of kernel
 functions will also be a kernel function. This way, we have a
 inner-product defined by the Lebesgue measure:
 
@@ -277,7 +294,7 @@ inner-product defined by the Lebesgue measure:
   \langle f,g \rangle_{L^2} = \int_{R}{f\cdot g d\mu}
 \end{equation}
 
-The defined space, whit its measure, conforms a Hilbert space, and
+The defined space, with its measure, conforms a Hilbert space, and
 therefore is complete and metrizable. It also gives a notion of sum,
 and scalar product:
 \begin{eqnarray}
@@ -505,8 +522,8 @@ And for the positioning controller is:
   F_1(\theta ,e_x)=100-\frac{100(\theta ^4+e_x^4)}{(\theta _{max}^4+e_{x,max}^4) T_{total}}
 \end{equation}
 
-The fitness functions used are could be also applied to a evolution of
-the neural field controller.
+The fitness functions used could be also applied to a evolution of the
+neural field controller.
 
 \section{Experimental Results}
 \subsection*{Experimentation Details}
@@ -547,8 +564,8 @@ the base (car) position.
   \\
   \includegraphics[width=7cm]{inestabilidadC.eps}
   \caption{System dynamics with an untrained RNN controller. The first
-  figure shows the pendulum trace and the second the pendulum at a
-  given time.}
+    figure shows the pendulum trace and the second the pendulum at a
+    given time.}
   \label{inestabilidad}
 \end{figure}
 
@@ -561,7 +578,8 @@ population of 100 individuals and 500 iterations.
   \centering
   \includegraphics[width=7cm]{rnnSimulation.eps}
   \caption{System dynamics with a RNN controller trained. The first
-  figure shows the pendulum trace and the second the pendulum at $t=3.5$s.}
+    figure shows the pendulum trace and the second the pendulum at
+    $t=3.5$s.}
   \label{rnnSimulation}
 \end{figure}
 
@@ -634,14 +652,13 @@ On the other hand, the neural field controller is a bit more complex
 notable advantages. The first one is its ability to self-compensate
 or, equivalently, the stability of its natural dynamics, which is
 attained after the setup of few parameters. The second one is its
-suitability to the problem at hand, being able to solve it with a
-good performance for low perturbations. Although
-there was a need for parameter configuration, evolution was not
-required because the small number of parameters to setup: basically
-three parameters of the kernel function and the resting potential of
-the field equation - a number of parameters of constant order in
-relation to the number of nodes (discrete potentials on the neural
-field).
+suitability to the problem at hand, being able to solve it with a good
+performance for low perturbations. Although there was a need for
+parameter configuration, evolution was not required because the small
+number of parameters to setup: basically three parameters of the
+kernel function and the resting potential of the field equation - a
+number of parameters of constant order in relation to the number of
+nodes (discrete potentials on the neural field).
 
 Remarkably, the non-evolved neural field controller performs as good
 or better than the evolved recurrent neural network
@@ -650,7 +667,7 @@ which allows interpretation of field potentials (as shown in
 fig. \ref{fig:nf-controller}). The interpretation or understanding of
 recurrent neural networks is quite difficult and even more with
 increasing states involved. This makes the neural field controller not
-as black-box as the RNN controller.
+as much og a blackbox as the RNN controller.
 
 More complex control problems seem to require an strategy of
 parameterization of the neural field controller. This way, it is left
