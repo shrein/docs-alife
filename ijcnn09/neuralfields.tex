@@ -50,8 +50,8 @@
   which is suitable to perform the control of a relatively complex and
   unstable dynamical system. The neural field model is capable of
   addressing goal-based planning problems and has properties like
-  locality and linear stability that potentially make it well-fitted to
-  dynamic control tasks. The neural field control architecture is
+  locality and linear stability that potentially make it well-fitted
+  to dynamic control tasks. The neural field control architecture is
   tested with the inverted pendulum problem. The cart-and-pole
   inverted pendulum is used as a simple biped walking model, where the
   cart models the center of pressure and the pole models the center of
@@ -77,52 +77,79 @@
 % 8. Outline of contents
 %%
 
+Artificial life aims to devise and study those emergent phenomena that
+give complex attributes to the living beings, like self-organization,
+cooperation, self-reproduction and adaptation, among others
+\cite{Bedau92Philosophical}. It focuses on the generation of behavior
+from a biological, bottom-up perspective that relies on evolution,
+development and learning \cite{Dyer94Toward}.
 
-Artificial life aims to find those emergent phenomena that give
-complex attributes to the existent living beings. In this work,
-efforts are directed towards the study of emergence of motion control
-capabilities and dynamical planning behaviors of biped walking
-agents. Following the artificial life approach
-\cite{Nolfi04Evolutionary}, those capabilities are expected to emerge
-from a very simple or non-functional initialization, in this case
-using a neural control architecture.
+Following a pure artificial life approach to evolutionary robotics
+\cite{Nolfi04Evolutionary}, it is expected that complex behaviors of
+simulated agents emerge by the local interactions of elements. These
+interactions form a complex dynamical system which is the generator of
+behavior and is capable of some form of adaptation or
+evolution. Examples of such dynamical systems are recurrent neural
+networks \cite{Huelse04Structure} and feed-forward neural networks
+\cite{Stanley02Evolving}.
+
+The evolutionary robotics study in this work is focused on the
+emergence of motion control and planning capabilities of biped walking
+agents.
 
 In biped robotics, the methods based on computational intelligence for
 planning and control have shown to be able to achieve static stability
-\cite{Kun97Adaptive}, dynamical stability
-\cite{Nakanishi2004b,Komatsu05Dynamic}, achieve simple control
-structures \cite{Huelse04Structure}, and tolerate perturbations
-\cite{Juang02Intelligent}. Nonetheless, those properties have not been
-extended to an integrated architecture of planning and control capable
-of following goals.
+\cite{Kun97Adaptive} (stability omitting accelerations), dynamical
+stability \cite{Nakanishi2004b,Komatsu05Dynamic} (stability taking
+into consideration accelerations), achieve simple control structures
+\cite{Huelse04Structure}, and tolerate perturbations
+\cite{Juang02Intelligent}. Nonetheless, in order to obtain emergent
+complex behaviors, it is needed an architecture that allows following
+simple behavioral goals, composing them into complex behaviors. This
+approach differs from the normal reference-tracking control, where the
+goal is to follow a reference signal or, similarly, minimizing an
+error signal.
 
-Here, there are compared two control schemes based on neural networks
-in order to observe their advantages and disadvantages as planning and
-control architectures and their suitability as controllers given their
-structure. The first one, uses a simple model of recurrent connections
-between neurons without additional restrictions, i.e. a recurrent
-neural network. The second one, based on neural fields, has a deeper
-biological basis, applies more restrictions and extends the discrete
-model to a continuous one, following the method of planning and
-control by means of neural fields \cite{Bergener99Complex}. The neural
-field model, as noted in the article by Bergener et al., has the
-potential to address goal-based planning problems, so we are here
-interested on its capability to solve dynamic control problems.
+The control architecture applied in this paper to the biped walking
+problem follows the method of planning and control by means of neural
+fields \cite{Bergener99Complex}. The neural field model, as noted in
+the article by Bergener et al., has the potential to address
+goal-based planning problems, so we are here interested on its
+capability to solve dynamic control problems.
 
-The control problem set for testing the architectures is the stability
-problem on a inverted pendulum, so that the controller ability to
-perform dynamic control on an unstable plant can be evaluated. The
-inverted pendulum model and extensions of it have been used previously
-to give insight on walking patterns \cite{Lee07Reaction} without all
-the complexities of handling several joints. Using that approach, the
-base of the pendulum is model as the center of pressure (CoP), the
-point mass as the center of mass (CoM), and the link joining both as a
-conceptual line between the CoM and the CoP. Nonetheless, in order to
-develop a more realistic controller of biped walking, the mapping
-between the model and a biped could be detailed
-\cite{Goswami08Kinematic} or, alternatively, a relatively more complex
-model could be used, such a 2-link model \cite{Garcia98simplest} or
-even of higher order.
+% Here, there are compared two control schemes based on neural
+% networks in order to observe their advantages and disadvantages as
+% planning and control architectures and their suitability as
+% controllers given their structure. The first one, uses a simple
+% model of recurrent connections between neurons without additional
+% restrictions, i.e. a recurrent neural network. The second one, based
+% on neural fields, has a deeper biological basis, applies more
+% restrictions and extends the discrete model to a continuous one,
+% following the method of planning and control by means of neural
+% fields \cite{Bergener99Complex}. The neural field model, as noted in
+% the article by Bergener et al., has the potential to address
+% goal-based planning problems, so we are here interested on its
+% capability to solve dynamic control problems.
+
+The cart-and-pole inverted pendulum model and extensions of it have
+been used previously to give insight on walking patterns without all
+the complexities of handling several joints
+\cite{Kajita91Study,Kajita92Dynamic,Sugihara03Contact}. Using that
+approach, the base of the pendulum is modelled as the center of
+pressure (CoP), the point mass as the center of mass (CoM), and the
+link joining both as a conceptual line between the CoM and the
+CoP. Nonetheless, in order to develop a more realistic controller of
+biped walking, the mapping between the model and a biped could be
+detailed \cite{Goswami08Kinematic}, a relatively more complex model
+could be used, such a 2-link model \cite{Garcia98simplest} or even of
+higher order, or a general but less detailed modelling technique could
+be used, such as the Reaction Mass Pendulum \cite{Lee07Reaction}.
+
+
+% The control problem set for testing the architectures is the stability
+% problem on a inverted pendulum, so that the controller ability to
+% perform dynamic control on an unstable plant can be evaluated.
+
 
 To the authors' knowledge this is the first time neural fields have
 been evaluated for solving a control problem for an unstable plant.
@@ -472,9 +499,9 @@ generality. The neural network topology for the first controller
 
 \subsection*{Evolutionary Algorithm Structure for the RNN Controller}
 It is expected, based on the approach of artificial life to
-evolutionary robotics (Nolfi y Floreano), that the sequential and
-cooperative evolution of elements with biological similarity leads to
-an specialization in the process of stabilization and positioning
+evolutionary robotics \cite{Nolfi04Evolutionary}, that the sequential
+and cooperative evolution of elements with biological similarity leads
+to an specialization in the process of stabilization and positioning
 (despite the antagonistic individual goals of each controller because
 of the interest of the positioning controller to maximize also the
 global performance).
