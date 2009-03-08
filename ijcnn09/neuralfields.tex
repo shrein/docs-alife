@@ -35,49 +35,45 @@
 
 \begin{document}
 
-\title{\ \\ \LARGE\bf Neural Fields Applied to the Stability Problem
-  of a Simple Biped Walking Model \thanks{Juan Figueredo and Jonatan
-    Gómez are with the Department of Systems and Industrial
-    Engineering, National University of Colombia, Bogotá, Colombia
-    (email: jjfigueredou@unal.edu.co).}}
+\title{\ \\ \LARGE\bf Applying Neural Fields to the Stability Problem
+  of an Inverted Pendulum as Simple Biped Walking Model \thanks{Juan
+    Figueredo and Jonatan Gómez are with the Department of Systems and
+    Industrial Engineering, National University of Colombia, Bogotá,
+    Colombia (email: \{jjfigueredou,jgomezpe\}@unal.edu.co).}}
 
 \author{Juan Figueredo and Jonatan Gómez}
 
 \maketitle
 
 \begin{abstract}
-  The neural field model has the potential to address goal-based
-  planning problems but has not been significantly applied to dynamic
-  control problems. We propose a control architecture based on neural
-  fields which is suitable to perform the control of a relatively
-  complex and unstable system. We test it over the stability problem
-  on a typical inverted-pendulum, used as a simple biped walking
-  model, and compare it against a more traditional recurrent neural
-  network controller, which is parameterized by an evolutionary
-  algorithm. Relevant requirements for the neural field controller
-  architecture and its parameterization by evolution are presented,
-  and the controller architecture is detailed. Remarkably, the
-  non-evolved neural field controller performs in the simulation as
-  good or better than the evolved recurrent neural network
-  controller. Furthermore, the neural field has a spatial
-  representation which allows interpretation of field potentials. This
-  makes the neural field controller not as much of a blackbox as the
-  RNN controller.
+  This paper proposes a control architecture based on neural fields
+  which is suitable to perform the control of a relatively complex and
+  unstable dynamical system. The neural field model is capable of
+  addressing goal-based planning problems and has properties like
+  locality and continuity that potentially make it well-fitted to
+  dynamic control tasks. The neural field control architecture is
+  tested with the inverted pendulum problem. The cart-and-pole
+  inverted pendulum is used as a simple biped walking model, where the
+  cart models the center of pressure and the pole models the center of
+  mass. The parameterized (i.e. non-evolved) neural field control
+  architecture is compared against an evolved recurrent neural field
+  controller applied to the same control task. The non-evolved neural
+  field controller performs in the simulation better than the evolved
+  recurrent neural network controller. Furthermore, the neural field
+  has a spatial representation which allows an easy visualization of
+  field potentials.
 \end{abstract}
 
 \section{Introduction}
 %% Intro outline
-% 1. What is artificial life
-% 2. What is the artificial life approach to evolutionary robotics
-% 3. What has been done in biped robotics (detail static and dynamic
-% control)
-% 4. Why goal-oriented control is lacking but desirable
-% 5. Why neural fields for goal-oriented control and (the little)
-% previous work 
-% 6. Why biped walking as inverted-pendulum and previous work. Brief
-% comparison with reference-tracking control.
-% 7. Previous work on inverted pendulum control with computational
-% intelligence methods emphasizing RNNs 
+% 1. What is artificial life 2. What is the artificial life approach
+% to evolutionary robotics 3. What has been done in biped robotics
+% (detail static and dynamic control) 4. Why goal-oriented control is
+% lacking but desirable 5. Why neural fields for goal-oriented control
+% and (the little) previous work 6. Why biped walking as
+% inverted-pendulum and previous work. Brief comparison with
+% reference-tracking control.  7. Previous work on inverted pendulum
+% control with computational intelligence methods emphasizing RNNs
 % 8. Outline of contents
 %%
 Artificial life aims to find those emergent phenomena that give
