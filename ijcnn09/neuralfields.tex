@@ -36,7 +36,7 @@
 \begin{document}
 
 \title{\ \\ \LARGE\bf Applying Neural Fields to the Stability Problem
-  of an Inverted Pendulum as Simple Biped Walking Model \thanks{Juan
+  of an Inverted Pendulum as a Simple Biped Walking Model \thanks{Juan
     Figueredo and Jonatan Gómez are with the Department of Systems and
     Industrial Engineering, National University of Colombia, Bogotá,
     Colombia (email: \{jjfigueredou,jgomezpe\}@unal.edu.co).}}
@@ -93,7 +93,7 @@ evolution. Examples of such dynamical systems are recurrent neural
 networks \cite{Huelse04Structure} and feed-forward neural networks
 \cite{Stanley02Evolving}.
 
-The evolutionary robotics study in this work is focused on the
+The study of evolutionary robotics in this paper is focused on the
 emergence of motion control and planning capabilities of biped walking
 agents.
 
@@ -104,10 +104,10 @@ stability \cite{Nakanishi2004b,Komatsu05Dynamic} (stability taking
 into consideration accelerations), achieve simple control structures
 \cite{Huelse04Structure}, and tolerate perturbations
 \cite{Juang02Intelligent}. Nonetheless, in order to obtain emergent
-complex behaviors, it is needed an architecture that allows following
-simple behavioral goals, composing them into complex behaviors. This
+complex behaviors, it is needed an architecture capable of following
+simple behavioral goals, and compose them into complex behaviors. This
 approach differs from the normal reference-tracking control, where the
-goal is to follow a reference signal or, similarly, minimizing an
+goal is to follow a reference signal or, similarly, to minimize an
 error signal.
 
 The control architecture applied in this paper to the biped walking
@@ -115,54 +115,46 @@ problem follows the method of planning and control by means of neural
 fields \cite{Bergener99Complex}. The neural field model, as noted in
 the article by Bergener et al., has the potential to address
 goal-based planning problems, so we are here interested on its
-capability to solve dynamic control problems.
-
-% Here, there are compared two control schemes based on neural
-% networks in order to observe their advantages and disadvantages as
-% planning and control architectures and their suitability as
-% controllers given their structure. The first one, uses a simple
-% model of recurrent connections between neurons without additional
-% restrictions, i.e. a recurrent neural network. The second one, based
-% on neural fields, has a deeper biological basis, applies more
-% restrictions and extends the discrete model to a continuous one,
-% following the method of planning and control by means of neural
-% fields \cite{Bergener99Complex}. The neural field model, as noted in
-% the article by Bergener et al., has the potential to address
-% goal-based planning problems, so we are here interested on its
-% capability to solve dynamic control problems.
+capability to solve dynamic control problems, and specifically, on its
+capability to address control tasks on unstable systems. The
+parameterized (i.e. non-evolved) neural field control architecture is
+compared against an evolved recurrent neural field controller applied
+to the same cart-and-pole control task
 
 The cart-and-pole inverted pendulum model and extensions of it have
 been used previously to give insight on walking patterns without all
 the complexities of handling several joints
 \cite{Kajita91Study,Kajita92Dynamic,Sugihara03Contact}. Using that
-approach, the base of the pendulum is modelled as the center of
-pressure (CoP), the point mass as the center of mass (CoM), and the
-link joining both as a conceptual line between the CoM and the
-CoP. Nonetheless, in order to develop a more realistic controller of
-biped walking, the mapping between the model and a biped could be
-detailed \cite{Goswami08Kinematic}, a relatively more complex model
-could be used, such a 2-link model \cite{Garcia98simplest} or even of
-higher order, or a general but less detailed modelling technique could
-be used, such as the Reaction Mass Pendulum \cite{Lee07Reaction}.
+approach, the cart base models the center of pressure (CoP), the pole
+mass models the center of mass (CoM), and the link joining both models
+a conceptual line between the CoM and the CoP. Nonetheless, in order
+to develop a more realistic controller of biped walking, the mapping
+between the model and a biped could be detailed
+\cite{Goswami08Kinematic}, a relatively more complex model could be
+used, such a 2-link model \cite{Garcia98simplest} or even of higher
+order, or a general but less detailed modelling technique could be
+used, such as the Reaction Mass Pendulum \cite{Lee07Reaction}.
 
+To the authors' knowledge, this is the first time neural fields have
+been evaluated for solving a control problem for an unstable plant,
+and specifically for solving the inverted pendulum control
+problem. However, there is a wide range of methods that have been
+applied to the inverted pendulum problem both based on computational
+intelligence (e.g. \cite{Anderson89Learning, Bardossy95Fuzzy,
+  Moriarty96Efficient, Zhang02recurrent}) and based on control
+theory techniques (e.g. \cite{Kajiwara99LPV, Huang00Control,
+  Chang02self-tuning}).
 
-% The control problem set for testing the architectures is the stability
-% problem on a inverted pendulum, so that the controller ability to
-% perform dynamic control on an unstable plant can be evaluated.
-
-
-To the authors' knowledge this is the first time neural fields have
-been evaluated for solving a control problem for an unstable plant.
-
-First, some preliminaries on computational intelligence are presented,
-mainly in the area of neural fields and recurrent neural networks,
-which is the main focus of the article, and in the area of
-evolutionary computation. In the remaining sections the control
-problem used as test bed is detailed, the neural field control
-architecture is presented and a strategy for its parameterization by
-evolution is mentioned, the recurrent neural network controller and
-its evolution is shown, the experimental results are presented, and
-finally, a discussion is made.
+In section II, some preliminaries on computational intelligence are
+presented, mainly in the area of neural fields and recurrent neural
+networks, which is the main focus of the article, and in the area of
+evolutionary computation. In section III, the control problem is
+detailed. In section IV, the neural field control architecture is
+presented and a strategy for its parameterization by evolution is
+mentioned. In section V, the recurrent neural network controller and
+its evolution is shown. In section VII, the experimental results are
+presented and discussed. Finally, in section VIII, the
+conclusions and future work are presented.
 
 
 \section{Preliminaries on Computational Intelligence}
@@ -437,40 +429,6 @@ from the elements in the same layer and in the input layer.
   \caption{Neural fields for stability control (feedback with the
     plant not shown).}
 \end{figure}
-
-
-
-% \section{Evolution of Neural Field Controllers for Biped Stability}
-% \subsection*{Evolutionary Algorithm Structure and Parameters}
-% For the evolution process it is used a simple evolutionary algorithm
-% as shown in the preliminaries, with random elimination of
-% individuals inversely proportional with its fitness.
-
-% , but with the addition of niching in the for of Deterministic
-% Crowding (see \cite{referencia-dc}), in order to promote additional
-% diversity and to prevent premature convergence.
-
-% The evolution parameters are the connection kernels between the
-% input layer and the hidden layer, and between the hidden layer and
-% the output layer. The recurrent connections of the hidden layer with
-% itself are left fixed, in the form of a wizard hat function.
-
-% The connection kernels are considered isotropic and homogeneous
-% along the field, so that they can be described as symmetric
-% one-dimensional arrays of values.
-
-% \subsection*{Genotypic Representation and Evolution Operators}
-% Each connection kernel can be represented as an array of $N$ values
-% from $w(0)$ to $w(p)$ with homogeneous spacing, using its
-% symmetry. This way, for an equal boundary radius for all the
-% kernels, and a 3-layered architecture, there are $3N$ real values in
-% the genotype. As can be seen, the number of evolution parameters
-% does not have a direct relation with the simulation size of the
-% neural fields (the number of discrete points used), in
-% contradistinction with recurrent neural networks, where the number
-% of parameters depends on the number $n$ of neurons with a polynomial
-% order $O(n^2)$.
-
 
 \section{The RNN Controller Architecture}
 \label{sec:rnncontroller}
