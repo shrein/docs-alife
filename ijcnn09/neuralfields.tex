@@ -50,18 +50,19 @@
   which is suitable to perform the control of a relatively complex and
   unstable dynamical system. The neural field model is capable of
   addressing goal-based planning problems and has properties like
-  locality and linear stability that potentially make it well-fitted
-  to dynamic control tasks. The neural field control architecture is
-  tested with the inverted pendulum problem. The cart-and-pole
-  inverted pendulum is used as a simple biped walking model, where the
-  cart models the center of pressure and the pole models the center of
-  mass. The parameterized (i.e. non-evolved) neural field control
-  architecture is compared against an evolved recurrent neural field
-  controller applied to the same control task. The non-evolved neural
-  field controller performs in the simulation better than the evolved
-  recurrent neural network controller. Furthermore, the neural field
-  has a spatial representation which allows an easy visualization of
-  field potentials.
+  embedding in an Euclidean space and linear stability that
+  potentially make it well-fitted to dynamic control tasks. The neural
+  field control architecture is tested with the inverted pendulum
+  problem. The cart-and-pole inverted pendulum is used as a simple
+  biped walking model, where the cart models the center of pressure
+  and the pole models the center of mass. The parameterized
+  (i.e. non-evolved) neural field control architecture is compared
+  against an evolved recurrent neural field controller applied to the
+  same control task. The non-evolved neural field controller performs
+  in the simulation better than the evolved recurrent neural network
+  controller. Furthermore, the neural field has a spatial
+  representation which allows an easy visualization of field
+  potentials.
 \end{abstract}
 
 \section{Introduction}
@@ -141,8 +142,8 @@ and specifically for solving the inverted pendulum control
 problem. However, there is a wide range of methods that have been
 applied to the inverted pendulum problem both based on computational
 intelligence (e.g. \cite{Anderson89Learning, Bardossy95Fuzzy,
-  Moriarty96Efficient, Zhang02recurrent}) and based on control
-theory techniques (e.g. \cite{Kajiwara99LPV, Huang00Control,
+  Moriarty96Efficient, Zhang02recurrent}) and based on control theory
+techniques (e.g. \cite{Kajiwara99LPV, Huang00Control,
   Chang02self-tuning}).
 
 In section II, some preliminaries on computational intelligence are
@@ -153,16 +154,16 @@ detailed. In section IV, the neural field control architecture is
 presented and a strategy for its parameterization by evolution is
 mentioned. In section V, the recurrent neural network controller and
 its evolution is shown. In section VII, the experimental results are
-presented and discussed. Finally, in section VIII, the
-conclusions and future work are presented.
+presented and discussed. Finally, in section VIII, the conclusions and
+future work are presented.
 
 
 \section{Preliminaries on Computational Intelligence}
-\subsection*{Recurrent Neural Networks and Neural Fields}
+\subsection*{Recurrent Neural Networks}
 Artificial neural networks are a connectionist computing scheme
 inspired by brain neural layout at cellular level. It is based on
-simple computing structures called neurons which have several inputs
-and a single output.
+simple computing structures, neurons, which have several inputs and a
+single output.
 
 The particular topologies of interest here are recurrent neural
 networks and neural fields.
@@ -172,27 +173,29 @@ For recurrent neural networks the model, as is presented in
 
 \begin{align}
   \begin{split}
-    x_{rnn}(n+1)&=\Psi (W_ax_{rnn}(n)+W_bu_{rnn}(n)) \\
-    y_{rnn}(n)&=Cx_{rnn}(n)
+    x_{r}(n+1)&=\Psi (W_ax_{r}(n)+W_bu_{r}(n)) \\
+    y_{r}(n)&=Cx_{r}(n)
   \end{split}
 \end{align}
 
-Here, $x_{rnn}$ is the 1-by-q system state vector at $n$, $\Psi$ is a
-diagonal function with domain and co-domain $R^q$ corresponding to
-activation function, $u_{rnn}$ is the 1-by-m input vector at $n$, the
-.q-by-q matrix $W_a$ represents the connection weights between
-neurons, and the q-by-m+1 matrix represents the connection weights
-between input nodes and neurons, including a bias term. Also,
-$y_{rnn}$ is the neural output vector of the neural net, and $C$ is a
-p-by-q matrix of linear combination from the neurons to the outputs.
+Here, $x_{r}$ is the $1 \times q$ system state vector at $n$, $\Psi$
+is a diagonal function with domain and co-domain $R^q$ corresponding
+to activation function, $u_{r}$ is the $1 \times m$ input vector at
+$n$, the $q \times q$ matrix $W_a$ represents the connection weights
+between neurons, and the $q \times (m+1)$ matrix represents the
+connection weights between input nodes and neurons, including a bias
+term. Also, $y_{r}$ is the neural output vector of the neural net, and
+$C$ is a $p \times q$ matrix of linear combination from the neurons to
+the outputs.
 
 Recurrent neural networks present a dynamic behavior because of its
 memory, that is, each state depends of the previous state in such a
 way that a difference equation arises. There is not a notion of
-locality in this model. The interaction between neurons and inputs is
-given by matrices of weights and there is no need to embed the neurons
-into a metric space.
+neighborhood in this model. The interaction between neurons and inputs
+is given by matrices of weights and there is no need to embed the
+neurons in a metric space.
 
+\subsection*{Neural Fields}
 Neural fields, on the other hand, arise as a tissue level model of
 neural populations in brain. It has been proposed by Wilson and Cowan
 \cite{Wilson72Excitatory} and detailed by Amari \cite{Amari77Dynamics}
@@ -233,14 +236,15 @@ form.
 
 \subsection*{Evolutionary algorithms}
 Evolutionary algorithms are a set of population-based heuristic search
-and optimization techniques. They maintain a population, and apply a
-set of operators or transformations over its members. Those operators
-are typically inspired on biological evolution and usually include
-selection, reproduction and mutation, among others. The operators are
-dependent of the evaluation of a performance function called fitness
-function. Generally, fitness function evaluation may include, from a
-simple numerical evaluation, to a complex simulation, in order to get
-the performance criterion which its optimization is pursued.
+and optimization techniques \cite{Fogel95Evolutionary}. They maintain
+a population, and apply a set of operators or transformations over its
+members. Those operators are typically inspired on biological
+evolution and usually include selection, reproduction and mutation,
+among others. The operators are dependent of the evaluation of a
+performance function called fitness function. Generally, fitness
+function evaluation may include, from a simple numerical evaluation,
+to a complex simulation, in order to get the performance criterion
+which its optimization is pursued.
 
 The pseudo-code of a general evolutionary algorithm is as follows:
 
@@ -258,24 +262,25 @@ The pseudo-code of a general evolutionary algorithm is as follows:
 \end{algorithm}
 
 The most predominant form of an evolutionary algorithm is embodied by
-genetic algorithms. They most frequent genotypical representation is a
-bit sequence, although other representations can be used. Usually they
-are implemented with a generational replacement of population, but in
-some situations it is useful to conserve a small set of the better
-individuals across generations in a steady-steady replacement.
+genetic algorithms \cite{Holland92Adaptation,
+  Goldberg89Genetic}. Their most frequent genotypical representation
+is a bit sequence, although other representations can be used. Usually
+they are implemented with a generational replacement of population,
+but in some situations it is useful to conserve a small set of the
+better individuals across generations in a steady-state replacement.
 
 \section{The Stability Problem Model}
 \label{sec:model}
 
 The model used consists of an approach to biped walking based on a
-inverted pendulum (car-and-pole) system in which the pendulum
+inverted pendulum (cart-and-pole) system in which the pendulum
 equilibrium is looked for. Nonetheless, supposing that the pendulum
 mass represents the body center of mass, it is proposed that is
 reasonable to expect a system with its sole function being to
 stabilize the body. This way, if we where to devise a navigation
-system, it would have as purpose to carefully perturb the first
-controller in such a way that the stabilizing controller moves the car
-to the desired position.
+system, it could have as purpose to carefully perturb the first
+controller, in such a way that the stabilizing controller moves the
+cart to the desired position.
 
 \subsection*{Dynamic Model}
 The dynamic model used, in mathematical terms, is expressed in the two
@@ -312,13 +317,16 @@ form for the inputs) has shown to be enough for the robot ARNOLD to
 navigate in the plane with obstacles \cite{Bergener99Complex}.
 
 The second one is to be able to modify the connection kernel so that
-it can be suitable to complex control problem. In order to do that, we
-will consider that the connection kernel $w(y)$ is a symmetric
-function (i.e. $w(y)=w(-y)$), that also is a 2-power Lebesgue
-integrable function so that it also belong to $L^2$. It can be shown
-that, with that definition, a sum of an arbitrary number of kernel
-functions will also be a kernel function. This way, we have a
-inner-product defined by the Lebesgue measure:
+it can be suitable to solving complex control problems. While in this
+paper it is not applied a process of adaptation or evolution to the
+neural field, the adaptation capability is essential viewed from the
+perspective of artificial life. In order to do that, we will consider
+that the connection kernel $w(y)$ is a symmetric function
+(i.e. $w(y)=w(-y)$), that also is a 2-power Lebesgue integrable
+function so that it also belongs to $L^2$. It can be shown that, with
+that definition, a sum of an arbitrary number of kernel functions will
+also be a kernel function. This way, we have a inner-product defined
+by the Lebesgue measure:
 
 \begin{equation}
   \label{eq:eq-l2}
@@ -334,10 +342,10 @@ and scalar product:
   (\lambda f)(x)=&\lambda f(x)
 \end{eqnarray}
 Those properties define and space with its operators which can be used
-to apply an evolutionary algorithm, by evolving the kernel function of
+to apply an evolutionary algorithm by evolving the kernel function of
 the neural field.
 
-The evolution parameters are the connection kernels between the input
+The evolution parameters are, in this sense, the connection kernels between the input
 layer and the hidden layer, and between the hidden layer and the
 output layer. The recurrent connections of the hidden layer with
 itself are left fixed, in the form of a wizard hat function.
@@ -477,10 +485,10 @@ connections. Therefore, individual are codified as:
 
 \begin{itemize}
 \item A bit sequence representing a serialization of an activation
-  matrix $A_a$ of dimension $Q$-by-$Q$ which activates/deactivates a
+  matrix $A_a$ of dimension $Q \times Q$ which activates/deactivates a
   recurrent connection.
 \item A sequence of real numbers representing a serialization of
-  matrices $W_a$ and $W_b$, of dimension $Q$-by-$Q$ and $Q$-by-$(m+1)$
+  matrices $W_a$ and $W_b$, of dimension $Q \times Q$ and $Q \times (m+1)$
   respectively.
 \end{itemize}
 
