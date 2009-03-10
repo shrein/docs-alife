@@ -590,29 +590,30 @@ population of 100 individuals and 500 iterations.
 
 On the other hand, the neural field is able to control the stability
 without evolution with a performance similar (or even better) than the
-presented by the evolved RNN controller. The simulation is shown in
-the figure \ref{fieldSimulation}, including the neural field values at
-a given point of time. Different $k_{\omega}$ values affected the
+presented by the evolved RNN controller. % The simulation is shown in
+% the figure \ref{fieldSimulation}, including the neural field values at
+% a given point of time. 
+Different $k_{\omega}$ values affected the
 system response but kept the system stable.
 
 
-\begin{figure}[p]
-  \centering
-  \includegraphics[width=7cm]{neuralfield-panel-1.eps}
-  \caption{System dynamics with a non-trained Neural Field
-    Controller. In order: the input layer at time $t=3.5$, the
-    pendulum trace, the processing layer at time $t$, and the pendulum
-    at time $t$.}
-  \label{fieldSimulation}
-\end{figure}
+% \begin{figure}[p]
+%   \centering
+%   \includegraphics[width=7cm]{neuralfield-panel-1.eps}
+%   \caption{System dynamics with a non-trained Neural Field
+%     Controller. In order: the input layer at time $t=3.5$, the
+%     pendulum trace, the processing layer at time $t$, and the pendulum
+%     at time $t$.}
+%   \label{fieldSimulation}
+% \end{figure}
 
 A detailed evolution of the neural field controller can be seen in the
 figure \ref{fig:nf-controller}.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[angle=-90,width=7cm]{inputPopulation.eps}
-  \includegraphics[angle=-90,width=7cm]{fieldPopulation.eps}
+  \includegraphics[angle=-90,width=7cm]{fieldPopulation_ijcnn_old.eps}
+  \includegraphics[angle=-90,width=7cm]{fieldPopulation_ijcnn.eps}
   \caption{Neural Field simulation between $t=0$s and $t=10$s with
     steps $h=1/40$s and positions between $x_{min}=-10$ and
     $x_{max}=10$. First figure is the input layer activation, with
@@ -627,7 +628,9 @@ controller can be seen in the figure \ref{fig:nf-pendulum}.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[angle=-90,width=7cm]{pendulum.eps}
+  \includegraphics[angle=-90,width=7cm]{pendulum_thetas.eps}
+  \includegraphics[angle=-90,width=7cm]{pendulum_omega.eps}
+  \includegraphics[angle=-90,width=7cm]{pendulum_v.eps}
   \caption{Pendulum simulation with neural field controller between
     $t=0$s and $t=10$. Each state is coded with a position (so that
     the pendulum can be simulated as a field on its own) this way:
@@ -638,9 +641,6 @@ controller can be seen in the figure \ref{fig:nf-pendulum}.
   \label{fig:nf-pendulum}
 \end{figure}
 
-
-
-\section{Conclusions}
 While the recurrent neural network controller is expressive enough to
 solve the problem at hand, the number of parameters to configure (or
 in this case to evolve) is of a quadratic order in relation to the
@@ -664,6 +664,9 @@ number of parameters to setup: basically three parameters of the
 kernel function and the resting potential of the field equation - a
 number of parameters of constant order in relation to the number of
 nodes (discrete potentials on the neural field).
+
+
+\section{Conclusions and Future Work}
 
 Remarkably, the non-evolved neural field controller performs as good
 or better than the evolved recurrent neural network
