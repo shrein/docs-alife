@@ -126,7 +126,7 @@ capability to solve dynamic control problems, and specifically, on its
 capability to address control tasks on unstable systems. The
 parameterized (i.e. non-evolved) neural field control architecture is
 compared against an evolved recurrent neural field controller applied
-to the same cart-and-pole control task
+to the same cart-and-pole control task.
 
 This is a first attempt (to the authors' knowledge) to evaluate neural
 fields for solving a control problem for an unstable plant, and
@@ -307,9 +307,8 @@ wanted equilibrium point is in fact unstable.
 
 
 \section{Neural Fields for Control and Planning}
-
-\subsection*{Properties}
 \label{sec:properties}
+\subsection*{Properties}
 For the purpose of control and planning we need some particular
 requirements on the neural fields. The first one is to have a
 preprocessing over the input obtained from the sensors, so that there
@@ -337,10 +336,11 @@ measure, described in equation \ref{eq:eq-l2}:
 
 The defined space, with its measure, conforms a Hilbert space, and
 therefore is complete and metrizable. It also gives a notion of sum,
-and scalar product, as shown in equations \ref{eq:eq-leb-opers}:
+and scalar product, as shown in equations \ref{eq:eq-leb-opers} and \ref{eq:eq-leb-opers2}:
 \begin{align}
   \label{eq:eq-leb-opers}
   (f+g)(x)=&f(x)+g(x) \\
+  \label{eq:eq-leb-opers2}
   (\lambda f)(x)=&\lambda f(x)
 \end{align}
 Those properties define and space with its operators which can be used
@@ -558,19 +558,20 @@ $H_0=0.1$, $\delta=2.0$ and $k=2.5$. The parameters used for the
 recurrent kernel connecting the processing field with itself were
 $H_0=0.1$, $\delta=2.0$ and $k=0.3$. The neural field time constant
 was taken with value $\tau=1/10$s. Also, the maximum control signal
-energy was equal for all the simulations (and architectures) presented.
+energy was equal for all the simulations (and architectures)
+presented.
 
 \subsection*{Results}
-The first experiment performed, tests the physical model using the
-recurrent neural network controller without evolution. Results are
-presented in the figure \ref{inestabilidad}. The figure shows the
-natural dynamics of the system when the controller is randomly
-parameterized. It can be perceived the need of the evolutionary
-algorithm for the parameterization of the recurrent neural network
-controller, since the inverted pendulum is an unstable system in the
-origin, and a random controller is not able to stabilize it. Red dots
-represent the pole mass location referenced to universal coordinates,
-and blue dots represent the cart position.
+The first experiment is performed using the recurrent neural network
+controller without evolution. Results are presented in the figure
+\ref{inestabilidad}. The figure shows the natural dynamics of the
+system when the controller is randomly parameterized. It can be
+perceived the need for the parameterization made by the evolutionary
+algorithm on the recurrent neural network controller, since the
+inverted pendulum is an unstable system in the origin, and a random
+controller is not able to stabilize it. Red dots represent the pole
+mass location referenced to universal coordinates, and blue dots
+represent the cart position.
 
 
 \begin{figure}[t]
@@ -593,7 +594,7 @@ controller.
 \begin{figure}[t]
   \centering
   \includegraphics[width=7.5cm]{rnnSimulation.eps}
-  \caption{System dynamics with a RNN controller trained. The first
+  \caption{System dynamics with a trained RNN controller. The first
     figure shows the pendulum trace and the second the pendulum at
     $t=3.5$s.}
   \label{rnnSimulation}
@@ -616,13 +617,12 @@ omitting the processing field) and 'processing field architecture'
   \includegraphics[angle=-90,width=7cm]{pendulum_thetas.eps}
   \includegraphics[angle=-90,width=7cm]{pendulum_omega.eps}
   \includegraphics[angle=-90,width=7cm]{pendulum_v.eps}
-  \caption{Pendulum simulation with neural field controller between
-    $t=0$s and $t=10$. Each state is coded with a position (so that
-    the pendulum can be simulated as a field on its own) this way:
-    $x$:0, $\theta$:1, $\dot{x}$:2, $\dot{\theta}$:3. It can be seen
-    the little variation in the angular position ($\theta$). The
-    discontinuity in $x$ is present because position wraps in the
-    simulation so that $x=5$ is equivalent to $x=-5$.}
+  \caption{Pendulum simulations with neural controllers between $t=0$s
+    and $t=10$. The three controllers shown are: a RNN controller, an
+    input field controller and a processing field controller. In the
+    top, the angular position is plotted ($\theta$). In the middle,
+    the angular velocity is plotted ($\omega$). In the bottom, the
+    linear velocity ($v$) is plotted.}
   \label{fig:pendulum-plot}
 \end{figure}
 
@@ -640,19 +640,19 @@ increasing time.
 
 On the other hand, the processing field architecture (marked as
 'processing field') presents the best performance, staying close to
-the reference (with an error $|e_{\theta}|<0.5$) from $t=1.0s$
+the reference (with an error $|e_{\theta}|<0.05$) from $t=1.0s$
 onwards.
 
 The middle and bottom parts of figure \ref{fig:pendulum-plot} show the
 state variables $\omega$ (angular velocity) and $v$ (linear
 velocity). The angular velocity plot reinforces the perceptions given
 by the angular position plot. It also shows that the responses of the
-RNN controller and the input field architecture are softer than the
-response of the processing field controller.
+RNN controller and the input field architecture are smoother than the
+response of the processing field architecture.
 
 The linear velocity plot evidences that all controllers deviate
 significantly from the initial linear position in the
-experiments. This is expected, since the interest was paid only to the
+experiments. This is expected, since attention was paid only to the
 balancing of the inverted pendulum, and not to its linear positioning.
 
 While the results shown by both neural field architectures are not
@@ -669,10 +669,10 @@ represents the position of each element on the one-dimensional field,
 and the oblique axis ($t$) represents the time elapsed. The presence
 of the processing field in the feedback loop appears to act as an
 integrator-like control element. On the contrary, the sole utilization
-of the input field to spatially code the inputs, appears to act as a
+of the input field to spatially code the inputs appears to act as a
 proportional control element, causing the highly oscillating behavior
 in the input field architecture. Consequently, the nonlinear coupling
-between both actions, integral-like and proportional, seem to produce
+between both actions, integral-like and proportional, seems to produce
 the behavior presented by the processing field architecture.
 
 
@@ -680,13 +680,13 @@ the behavior presented by the processing field architecture.
   \centering
   \includegraphics[angle=-90,width=7cm]{fieldPopulation_ijcnn_old.eps}
   \includegraphics[angle=-90,width=7cm]{fieldPopulation_ijcnn.eps}
-  \caption{Processing fields simulation between $t=0$s and $t=10$s
+  \caption{Processing fields simulations between $t=0$s and $t=10$s
     with steps $h=1/40$s and positions between $x_{min}=-10$ and
     $x_{max}=10$. In the top, the input field architecture activation
     is displayed (this activation is shown for comparing purposes but
     it is not actually used by this controller). In the bottom, the
     processing field architecture activation is displayed (actually
-    used by this controller.}
+    used by this controller).}
   \label{fig:nf-activation}
 \end{figure}
 
@@ -694,7 +694,7 @@ The recurrent neural network controller is expressive enough to solve
 the problem at hand, but the number of parameters to configure (or in
 this case to evolve) is of a quadratic order in relation to the number
 of nodes (or neurons). This was not a particular problem for the
-evolutionary algorithm used, but it could be a limitation if an
+evolutionary algorithm used, but it can be a limitation if an
 adaptation scheme is not applied. Furthermore, the evolutionary
 parameterization applied was not able to outperform the manual
 parameterization of the neural field architectures.
@@ -710,8 +710,8 @@ to the problem at hand, being able to solve it with a good
 performance. Although there was a need for parameter configuration,
 evolution was not required because the small number of parameters to
 setup: basically three parameters of the kernel function and the
-resting potential of the field equation - a number of parameters of
-constant order in relation to the number of nodes (discrete potentials
+resting potential of the field equation --- a number of parameters of
+constant order in relation to the number of nodes (discrete elements
 on the neural field).
 
 
@@ -721,25 +721,26 @@ In the experimentation made, the non-evolved neural field controller
 was able to stabilize the inverted pendulum system, and performed
 better than the evolved recurrent neural network
 controller. Furthermore, the neural field has a spatial representation
-which allows an interpretation of field potentials (as shown in
+which allows an easy interpretation of field potentials (as shown in
 fig. \ref{fig:nf-activation}).
 
-Nonetheless, in order to develop a more realistic controller of biped
-walking, the mapping between the model and a biped could be detailed
-\cite{Goswami08Kinematic}, or a relatively more complex model could be
-used, such a 2-link model \cite{Garcia98simplest} or even of higher
-order. Alternatively, a general but less detailed modelling technique
-could be used, such as the Reaction Mass Pendulum
-\cite{Lee07Reaction}.
+Nonetheless, the simple biped model used was a first approach to the
+problem of biped walking. In order to develop a more realistic
+controller of biped walking, the mapping between the model and a biped
+could be detailed \cite{Goswami08Kinematic}, or a relatively more
+complex model could be used, such a 2-link model
+\cite{Garcia98simplest} or even of higher order. Alternatively, a
+general but less detailed modelling technique could be used, such as
+the Reaction Mass Pendulum \cite{Lee07Reaction}.
 
 
 More complex control problems seem to require an strategy for
 parameterization of the neural field controller. This way, it is left
 for future work the task of neural field evolution as it was briefly
-presented in section \label{sec:properties}. Also, the capability of
+presented in section \ref{sec:properties}. Also, the capability of
 neural fields to address goal-based planning problems (shown in
 \cite{Bergener99Complex}), could also be used to solve higher level
-control task that require, for example, multiple operation modes or
+control tasks that require, for example, multiple operation modes or control
 strategies.
 
 
