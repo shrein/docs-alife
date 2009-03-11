@@ -1,8 +1,67 @@
 % This file was created with JabRef 2.3.1.
-% Encoding: Cp1252
+% Encoding: UTF8
+
+@ARTICLE{Amari77Dynamics,
+  author = {Amari, S.},
+  title = {Dynamics of pattern formation in lateral-inhibition type neural fields},
+  journal = {Biological Cybernetics},
+  year = {1977},
+  volume = {Volume 27, Number 2},
+  pages = {77-87},
+  abstract = {The dynamics of pattern formation is studied for lateral-inhibition
+	type homogeneous neural fields with general connections. Neural fields
+	consisting of single layer are first treated, and it is proved that
+	there are five types of pattern dynamics. The type of the dynamics
+	of a field depends not only on the mutual connections within the
+	field but on the level of homogeneous stimulus given to the field.
+	An example of the dynamics is as follows: A fixed size of localized
+	excitation, once evoked by stimulation, can be retained in the field
+	persistently even after the stimulation vanishes. It moves until
+	it finds the position of the maximum of the input stimulus. Fields
+	consisting of an excitatory and an inhibitory layer are next analyzed.
+	In addition to stationary localized excitation, fields have such
+	pattern dynamics as production of oscillatory waves, travelling waves,
+	active and dual active transients, etc.
+	
+	This research was supported in part by a Sloan Foundation grant to
+	the Center for Systems Neuroscience, University of Massachusetts
+	at Amherst
+	
+	On sabbatical leave from the University of Tokyo},
+  owner = {jjfigueredou},
+  timestamp = {2009.01.15}
+}
+
+@ARTICLE{Anderson89Learning,
+  author = {Anderson, C.W.},
+  title = {Learning to control an inverted pendulum using neural networks},
+  journal = {Control Systems Magazine, IEEE},
+  year = {1989},
+  volume = {9},
+  pages = {31-37},
+  number = {3},
+  month = {Apr},
+  __markedentry = {[jjfigueredou]},
+  abstract = {An inverted pendulum is simulated as a control task with the goal
+	of learning to balance the pendulum with no a priori knowledge of
+	the dynamics. In contrast to other applications of neural networks
+	to the inverted pendulum task, performance feedback is assumed to
+	be unavailable on each step, appearing only as a failure signal when
+	the pendulum falls or reaches the bounds of a horizontal track. To
+	solve this task, the controller must deal with issues of delayed
+	performance evaluation, learning under uncertainty, and the learning
+	of nonlinear functions. Reinforcement and temporal-difference learning
+	methods are presented that deal with these issues to avoid unstable
+	conditions and balance the pendulum},
+  doi = {10.1109/37.24809},
+  issn = {0272-1708},
+  keywords = {learning systems, neural nets, pendulumsbalance control, dynamics,
+	inverted pendulum, learning systems, neural networks, performance
+	evaluation, performance feedback}
+}
 
 @ARTICLE{Asami94Robots,
-  author = {Asami, S. },
+  author = {Asami, S.},
   title = {Robots in Japan: present and future},
   journal = {Robotics \& Automation Magazine},
   year = {1994},
@@ -21,7 +80,7 @@
 	generic term covering all robots that are not for industrial use.
 	The author looks at the development of service robots in Japan},
   doi = {10.1109/100.298484},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.14}
 }
 
@@ -52,7 +111,7 @@
 	constraints. This work is validated by simulation results obtained
 	for the Bip and Rabbit biped robots in various walking and standing
 	situations and compared to human data recorded in these same situations.
-	© 2004 Elsevier B.V. All rights reserved.},
+	Â© 2004 Elsevier B.V. All rights reserved.},
   address = {Center for Sensory-Motor Interaction, Aalborg University, F. Bajers
 	Vej 7 D3, 9220 Aalborg, Denmark},
   comment = {Export Date: 30 October 2006
@@ -61,8 +120,51 @@
   keywords = {Artificial walking, Biped robots, Non-linear model predictive control,
 	Optimization under constraints, TF-NMPC},
   owner = {Juan Figueredo},
-  timestamp = {2006.10.30},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-2942718682&partner=40&rel=R5.0.4}
+  timestamp = {2006.10.30}
+}
+
+@BOOK{Back96Evolutionary,
+  title = {Evolutionary algorithms in theory and practice: evolution strategies,
+	evolutionary programming, genetic algorithms},
+  publisher = {Oxford University Press},
+  year = {1996},
+  author = {B\"{a}ck,, Thomas},
+  address = {Oxford, UK},
+  __markedentry = {[jjfigueredou]},
+  isbn = {0-19-509971-0}
+}
+
+@BOOK{Bardossy95Fuzzy,
+  title = {Fuzzy Rule-Based Modeling with Applications to Geophysical, Biological,
+	and Engineering Systems},
+  publisher = {CRC Press, Inc.},
+  year = {1995},
+  author = {Bardossy,, Andras and Duckstein,, Lucien},
+  address = {Boca Raton, FL, USA},
+  __markedentry = {[jjfigueredou]},
+  abstract = {This book presents in a systematic and comprehensive manner themodeling
+	of uncertainty, vagueness, or imprecision, alias "fuzziness," in
+	just about any field of science and engineering. It delivers a usable
+	methodology for modeling in the absence of real-time feedback.
+	
+	
+	The book includes a short introduction to fuzzy logic containing basic
+	definitions of fuzzy set theory and fuzzy rule systems. It describes
+	methods for the assessment of rule systems, systems with discrete
+	response sets, for modeling time series, for exact physical systems,
+	examines verification and redundancy issues, and investigates rule
+	response functions.
+	
+	
+	Definitions and propositions, some of which have not been published
+	elsewhere, are provided; numerous examples as well as references
+	to more elaborate case studies are also given. Fuzzy rule-based modeling
+	has the potential to revolutionize fields such as hydrology because
+	it can handle uncertainty in modeling problems too complex to be
+	approached by a stochastic analysis. There is also excellent potential
+	for handling large-scale systems such as regionalization or highly
+	non-linear problems such as unsaturated groundwater pollution.},
+  isbn = {0849378338}
 }
 
 @INPROCEEDINGS{Basdogan96Nonlinear,
@@ -96,9 +198,19 @@
 	Source: Scopus
 	
 	CODEN: ASMPE},
-  owner = {···Shrein···},
-  timestamp = {2006.12.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0030393757&partnerID=40&rel=R5.6.0}
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
+  timestamp = {2006.12.14}
+}
+
+@MISC{Bedau92Philosophical,
+  author = {M. Bedau},
+  title = {Philosophical aspects of artificial life},
+  year = {1992},
+  __markedentry = {[jjfigueredou]},
+  text = {Mark A. Bedau. Philosophical aspects of artificial life. In Toward
+	a Practice of Autonomous Systems: Proceedings of the First European
+	Conference on Artificial Life, pages 494--503, Paris, France, 1992.},
+  url = {citeseer.ist.psu.edu/bedau96philosophical.html}
 }
 
 @ARTICLE{Benbrahim97Biped,
@@ -138,40 +250,39 @@
 	learning algorithm, Robot learning},
   owner = {Vicepresideencia},
   review = {Benbrahim y Franklin desarrollan un Generador Central de Patrones
-	(CPG) utilizando redes neuronales CMAC y aplicando simultáneamente
+	(CPG) utilizando redes neuronales CMAC y aplicando simultÃ¡neamente
 	aprendizaje por refuerzo y supervisado. Para ello, se usa una red
-	central, el generador, apoyada por un conjunto de redes periféricas
-	de control acompañadas paralelamente por redes de observación, las
-	cuales tienen como entrada parámetros relevantes que actúan como
+	central, el generador, apoyada por un conjunto de redes perifÃ©ricas
+	de control acompaÃ±adas paralelamente por redes de observaciÃ³n, las
+	cuales tienen como entrada parÃ¡metros relevantes que actÃºan como
 	restricciones a la caminata, entre ellos postura corporal y altura
-	corporal. La redes de control periféricas sólo actúan si su correspondiente
-	red de observación detecta que la red central se está desmpeñando
-	incorrectamente para una restricción específica. La salida del sistema
-	de control será determinada por una función gaussiana con media ubicada
-	en la salida del CPG y una desviación estandar que inicia en un nivel
-	elevado y se reduce a medida que se llega a una solución convergente.
-	El control dinámico necesario para seguir la referencia provista
+	corporal. La redes de control perifÃ©ricas sÃ³lo actÃºan si su correspondiente
+	red de observaciÃ³n detecta que la red central se estÃ¡ desmpeÃ±ando
+	incorrectamente para una restricciÃ³n especÃ­fica. La salida del sistema
+	de control serÃ¡ determinada por una funciÃ³n gaussiana con media ubicada
+	en la salida del CPG y una desviaciÃ³n estandar que inicia en un nivel
+	elevado y se reduce a medida que se llega a una soluciÃ³n convergente.
+	El control dinÃ¡mico necesario para seguir la referencia provista
 	por el CPG es implementado con un conjunto de controladores PID.
-	En la aplicación real, el esquema de control fue apoyado por un control
+	En la aplicaciÃ³n real, el esquema de control fue apoyado por un control
 	de postura de encendido-apagado (on/off). Se requiere un entrenamiento
 	previo para obtener tiempos adecuados de entrenamiento de las redes.
 	
 	
 	
-	Es bastante novedosa la implementación simultánea de aprendizaje por
-	refuerzo y supervisado. Particularmente el acompañamiento de las
-	redes de supervisión (críticas) permite obtener un satisfactorio
-	aprendizaje dinámico, mientras las redes de apoyo evitan que un error
-	del generador cause una falla general en la caminata. Sería conveniente
-	trabajar en un control más óptimo y robusto de seguimiento que el
-	PID implementado, así como una técnica para eliminar el control de
+	Es bastante novedosa la implementaciÃ³n simultÃ¡nea de aprendizaje por
+	refuerzo y supervisado. Particularmente el acompaÃ±amiento de las
+	redes de supervisiÃ³n (crÃ­ticas) permite obtener un satisfactorio
+	aprendizaje dinÃ¡mico, mientras las redes de apoyo evitan que un error
+	del generador cause una falla general en la caminata. SerÃ­a conveniente
+	trabajar en un control mÃ¡s Ã³ptimo y robusto de seguimiento que el
+	PID implementado, asÃ­ como una tÃ©cnica para eliminar el control de
 	postura on/off de apoyo. [Destacado] [CPG] [Neuronal]},
-  timestamp = {2006.09.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0031343491&partner=40&rel=R5.0.1}
+  timestamp = {2006.09.14}
 }
 
 @ARTICLE{Bergener99Complex,
-  author = {Bergener, T. and Bruckhoff, C. and Dahm, P. and Janßen, H. and Joublin,
+  author = {Bergener, T. and Bruckhoff, C. and Dahm, P. and Janssen, H. and Joublin,
 	F. and Menzner, R. and Steinhage, A. and Von Seelen, W.},
   title = {Complex behavior by means of dynamical systems for an anthropomorphic
 	robot},
@@ -192,18 +303,7 @@
 	system which is entirely based on dynamical systems in the form of
 	instantiated dynamics and neural fields. We also present a dynamic
 	scheme for the behavioral organization based on competitive dynamics.
-	Copyright (C) 1999 Elsevier Science Ltd. We present an architecture
-	to generate behavior for an anthropomorphic robot. The goal is to
-	equip the robot with the capacity to interact with a human. Motivated
-	by the research on biological systems, our basic assumption is that
-	the behavior to perform determines the external and internal structure
-	of the behaving system. We describe the anthropomorphic design of
-	our robot and present a distributed control system that generates
-	human-like navigation and manipulation behavior. As the mathematical
-	framework for this purpose we have developed a control system which
-	is entirely based on dynamical systems in the form of instantiated
-	dynamics and neural fields. We also present a dynamic scheme for
-	the behavioral organization based on competitive dynamics.},
+	Copyright (C) 1999 Elsevier Science Ltd.},
   comment = {Cited By (since 1996): 7
 	
 	Export Date: 25 September 2006
@@ -223,33 +323,32 @@
   owner = {Vicepresideencia},
   publisher = {Elsevier Science Ltd},
   review = {El trabajo de Bergener et al. describe una arquitectura que permite
-	generar tanto patrones de comportamiento como controlar dinámicamente
-	la ejecución de cada tarea. A diferencia de otros trabajos evaluados,
-	la arquitectura se le aplica a un robot antropomórfico que no es
-	bípedo y cuya similitud con la morfología humana se observa principalmente
+	generar tanto patrones de comportamiento como controlar dinÃ¡micamente
+	la ejecuciÃ³n de cada tarea. A diferencia de otros trabajos evaluados,
+	la arquitectura se le aplica a un robot antropomÃ³rfico que no es
+	bÃ­pedo y cuya similitud con la morfologÃ­a humana se observa principalmente
 	en su brazo, y por tanto los problemas abordados no incluyen la caminata.
 	La arquitectura presentada emplea campos neuronales (neural fields)
 	que realizan el mapeo desde los sensores hacia los actudores utilizando
-	principios de sistemas dinámicos cuyo comportamiento se adapta a
-	las condiciones del entorno a través de fenómenos de bifurcación
-	que responden a lo que los autores llaman dinámica instanciada (un
+	principios de sistemas dinÃ¡micos cuyo comportamiento se adapta a
+	las condiciones del entorno a travÃ©s de fenÃ³menos de bifurcaciÃ³n
+	que responden a lo que los autores llaman dinÃ¡mica instanciada (un
 	comportamiento elemental parametrizado por variables de comportamiento
-	en un ambiente específico). Así mismo, para generar comportamientos
+	en un ambiente especÃ­fico). AsÃ­ mismo, para generar comportamientos
 	complejos se usa un mecanismo de arbitramiento se usa un sistema
-	dinámico competitivo, el cual icluye un conjunto de parámetros que
-	describe los requerimientos lógicos y temporales.
+	dinÃ¡mico competitivo, el cual icluye un conjunto de parÃ¡metros que
+	describe los requerimientos lÃ³gicos y temporales.
 	
 	
-	Su aplicación a robótica evolutiva humanoide consiste en prensión
+	Su aplicaciÃ³n a robÃ³tica evolutiva humanoide consiste en prensiÃ³n
 	de objetos con el brazo y seguimiento de comportamiento de referencia,
-	y se presenta adicionalmente una aplicación interesante a la navegación
-	con obstáculos (posiblemente dinámicos), si bien el sistema es impulsado
+	y se presenta adicionalmente una aplicaciÃ³n interesante a la navegaciÃ³n
+	con obstÃ¡culos (posiblemente dinÃ¡micos), si bien el sistema es impulsado
 	con ruedas. Es destable la perspectiva abordada desde los sistemas
-	dinámicos no-lineales. Permite extender la conceptualización a problemas
-	de navegación y control en la caminata bípeda. [Destacado] [Fuera
-	de Tema Enfocado] [Dinámico][Neuronal]},
-  timestamp = {2006.09.25},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0033213765&partner=40&rel=R5.0.1}
+	dinÃ¡micos no-lineales. Permite extender la conceptualizaciÃ³n a problemas
+	de navegaciÃ³n y control en la caminata bÃ­peda. [Destacado] [Fuera
+	de Tema Enfocado] [DinÃ¡mico][Neuronal]},
+  timestamp = {2006.09.25}
 }
 
 @ARTICLE{Buzzi03Nonlinear,
@@ -293,7 +392,7 @@
 	efforts should attempt to evaluate this hypothesis by making comparisons
 	to pathological subjects (i.e. elderly fallers), and examine the
 	sensitivity and specificity of the nonlinear methods used in this
-	study to aid clinical assessment. © 2003 Elsevier Science Ltd. All
+	study to aid clinical assessment. Â© 2003 Elsevier Science Ltd. All
 	rights reserved.},
   address = {Department of Mathematics, University of Nebraska at Omaha, Omaha,
 	NE 68182, United States},
@@ -304,21 +403,7 @@
 	Source: Scopus},
   keywords = {Chaos, Elderly, Locomotion, Nonlinear dynamics, Variability},
   owner = {Juan Figueredo},
-  timestamp = {2006.10.30},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0038246462&partner=40&rel=R5.0.4}
-}
-
-@BOOK{Baeck96Evolutionary,
-  title = {Evolutionary Algorithms in Theory and PracticeEvolutionary Algorithms
-	in Theory and Practice
-	
-	Evolution Strategies, Evolutionary Programming, Genetic Algorithms},
-  publisher = {Osford University Press},
-  year = {1996},
-  author = {Thomas Bäck},
-  month = {Jan},
-  owner = {···Shrein···},
-  timestamp = {2006.12.14}
+  timestamp = {2006.10.30}
 }
 
 @ARTICLE{Cao98design,
@@ -382,29 +467,28 @@
 	models, Hierarchical evolutionary computation, Neural oscillatory
 	networks, Neural networks},
   owner = {Vicepresideencia},
-  review = {Cao y Kawamura abordan el problema de la caminata bípeda usando como
+  review = {Cao y Kawamura abordan el problema de la caminata bÃ­peda usando como
 	generador de patrones una red neuronal oscilatoria (neural oscillatory
-	network). La composición de la red incluye una neurona para cada
-	articulación, estando todas las neuronas conectadas entre sí. La
-	función de activación de cada neurona es, a diferencia de las funciones
-	algebráicas tradicionales, un sistema dinámico lineal de segundo
-	orden con parámetros que definen su dinámica. Se usa una matriz de
+	network). La composiciÃ³n de la red incluye una neurona para cada
+	articulaciÃ³n, estando todas las neuronas conectadas entre sÃ­. La
+	funciÃ³n de activaciÃ³n de cada neurona es, a diferencia de las funciones
+	algebrÃ¡icas tradicionales, un sistema dinÃ¡mico lineal de segundo
+	orden con parÃ¡metros que definen su dinÃ¡mica. Se usa una matriz de
 	conexiones que pueden ser de tipo inhibitorio o excitatorio, a la
-	cual se le aplica un algoritmo genético para obtener un patrón de
+	cual se le aplica un algoritmo genÃ©tico para obtener un patrÃ³n de
 	marcha. Debido a complicaciones de convergencia del algoritmo, los
-	autores dividen la función de aptitud en dos funciones cualitativas
-	parciales y una tercera función que evalúa reglas de correctitud
-	de la marcha, aplicando tres algoritmos genéticos, cada uno anidado
+	autores dividen la funciÃ³n de aptitud en dos funciones cualitativas
+	parciales y una tercera funciÃ³n que evalÃºa reglas de correctitud
+	de la marcha, aplicando tres algoritmos genÃ©ticos, cada uno anidado
 	en el siguiente (hierarchical evolutionary algorithm).
 	
 	
-	Éste es un artículo importante dentro del conjunto de trabajos que
-	tratan el problema de la evolución de generadores centrales de patrones
-	implementados con redes neuronales oscilatorias, no sólo por la metodología
-	empleada y sus resultados, como por su relativa antigüedad. [Importante
-	en el tópico de CPGs con redes oscilatorias] [CPG] [Neuronal]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-11644251603&partner=40&rel=R5.0.1}
+	Ã‰ste es un artÃ­culo importante dentro del conjunto de trabajos que
+	tratan el problema de la evoluciÃ³n de generadores centrales de patrones
+	implementados con redes neuronales oscilatorias, no sÃ³lo por la metodologÃ­a
+	empleada y sus resultados, como por su relativa antigÃ¼edad. [Importante
+	en el tÃ³pico de CPGs con redes oscilatorias] [CPG] [Neuronal]},
+  timestamp = {2006.09.28}
 }
 
 @BOOK{Capek3R.U.R.,
@@ -413,7 +497,7 @@
   year = {1973 },
   author = {K. Capek},
   address = {New York},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.14}
 }
 
@@ -436,7 +520,7 @@
 	consumed energy walking is stable and the impact of the foot with
 	the ground is very small. Experimental investigations of a prismatic
 	joint biped robot confirmed the predictions concerning the consumed
-	energy and stability. © 2002 Elsevier Science B.V. All rights reserved.},
+	energy and stability. Â© 2002 Elsevier Science B.V. All rights reserved.},
   comment = {Cited By (since 1996): 6
 	
 	Export Date: 29 September 2006
@@ -455,28 +539,27 @@
 	Trajectory planning methods, Robots},
   owner = {Vicepresideencia},
   review = {El trabajo de Capi et al. trata el problema de obtener una caminata
-	estable y con un consumo energético óptimo para un robot bípedo de
-	articulaciones prismáticas. El lazo de control se basa en el principio
+	estable y con un consumo energÃ©tico Ã³ptimo para un robot bÃ­pedo de
+	articulaciones prismÃ¡ticas. El lazo de control se basa en el principio
 	de Punto de Momento Cero (ZMP), el cual recibe una referencia de
-	ubicación del centro de gravedad del robot, genera una señal de control
-	que recibe, simultáneamente con la ubicación del ZMP, el lazo de
-	ZMP. Se usa un algoritmo genético con codificación real (equivalente
+	ubicaciÃ³n del centro de gravedad del robot, genera una seÃ±al de control
+	que recibe, simultÃ¡neamente con la ubicaciÃ³n del ZMP, el lazo de
+	ZMP. Se usa un algoritmo genÃ©tico con codificaciÃ³n real (equivalente
 	a una estrategia evolutiva) para buscar la trayectoria de referencia
-	que genera el consumo mínimo de energía. Se comparan los resultados
-	con la optimización para mínimo torque aplicado y para altura de
-	centro de gravedad constante. El problema de optimización con restricciones
-	es convertido a un problema sin restricciones al cual se le añaden
-	penalizaciones en la función de aptitud cuando las condiciones de
-	restricción son incumplidas.
+	que genera el consumo mÃ­nimo de energÃ­a. Se comparan los resultados
+	con la optimizaciÃ³n para mÃ­nimo torque aplicado y para altura de
+	centro de gravedad constante. El problema de optimizaciÃ³n con restricciones
+	es convertido a un problema sin restricciones al cual se le aÃ±aden
+	penalizaciones en la funciÃ³n de aptitud cuando las condiciones de
+	restricciÃ³n son incumplidas.
 	
 	
 	Este trabajo es innovativo al tratar el control de un robot caminador
-	con articulaciones prismáticas. Es interesante la aproximación dada
-	al problema de minimización del consumo de enrgía, optimizando la
-	trayectoria de referencia. Es importante confrontar estos métodos
-	con los derivado de la caminata bípeda pasiva.[Trayectoria]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0037186475&partner=40&rel=R5.0.1}
+	con articulaciones prismÃ¡ticas. Es interesante la aproximaciÃ³n dada
+	al problema de minimizaciÃ³n del consumo de enrgÃ­a, optimizando la
+	trayectoria de referencia. Es importante confrontar estos mÃ©todos
+	con los derivado de la caminata bÃ­peda pasiva.[Trayectoria]},
+  timestamp = {2006.09.28}
 }
 
 @ARTICLE{Capi01Application,
@@ -526,22 +609,21 @@
 	networks, System stability, Biped robots, Gait synthesis, Minimum
 	torque change, Mobile robots},
   owner = {Vicepresideencia},
-  review = {En este artículo la metodología para optimizar la caminata bípeda
-	usando algoritmos genéticos sigue un procedimiento muy similar al
-	mostrado en [Capi02Optimal]. Se observa como diferencia la aplicación
+  review = {En este artÃ­culo la metodologÃ­a para optimizar la caminata bÃ­peda
+	usando algoritmos genÃ©ticos sigue un procedimiento muy similar al
+	mostrado en [Capi02Optimal]. Se observa como diferencia la aplicaciÃ³n
 	a un robot de articulaciones rotacionales con 5 grados de libertad
-	(5-DOF), así como la obtención tanto de caminata estable como de
-	ascención de escaleras estable. Adicionalmente, se usan los conjuntos
-	de datos generados con el algoritmo genético para entrenar una red
+	(5-DOF), asÃ­ como la obtenciÃ³n tanto de caminata estable como de
+	ascenciÃ³n de escaleras estable. Adicionalmente, se usan los conjuntos
+	de datos generados con el algoritmo genÃ©tico para entrenar una red
 	neuronal hacia adelante de base radial (RBFNN) con una capa oculta,
 	de tal forma que se pudieran generar los patrones de movimiento en
 	tiempo real.
 	
 	
 	Con la diferencia del tipo de articulaciones, los comentarios de [Capi02Optimal]
-	aplican similarmente.[Dinámico] [Neuronal]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0034753527&partner=40&rel=R5.0.1}
+	aplican similarmente.[DinÃ¡mico] [Neuronal]},
+  timestamp = {2006.09.28}
 }
 
 @MISC{Chaisukkosol01Automatic,
@@ -564,30 +646,62 @@
 	Final\\CHAISUKKOSOL01Automatic.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\CHAISUKKOSOL01Automatic.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {Chaisukkosol y Chongstitvatana utlizan un algoritmo genético para
-	generar una secuencia de caminata en equilibrio estático para un
-	robot bípedo con contrapeso. El movimiento del robot se realiza a
+  review = {Chaisukkosol y Chongstitvatana utlizan un algoritmo genÃ©tico para
+	generar una secuencia de caminata en equilibrio estÃ¡tico para un
+	robot bÃ­pedo con contrapeso. El movimiento del robot se realiza a
 	una velocidad de 1 paso cada 40 segundos, por lo que el sistema se
-	encuentra en equilibrio estático y la proyección de su centro de
-	gravedad siempre debe estar dentro del polígono de sustentación.
-	La representación de cada individuo contiene la longitud de la cadena
-	(según parece) y la serie de desplazamientos angulares para los diferentes
-	motores. La evolución se realiza secuencialmente para cada una de
-	las 6 fases que los autores definen, iniciando la evolución de una
-	fase donde terminó el mejor individuo de la evolución de la fase
-	anterior. Se usa una función de aptitud global que evalúa estabilidad
-	sumada con una función particular que evalúa el desempaño para el
+	encuentra en equilibrio estÃ¡tico y la proyecciÃ³n de su centro de
+	gravedad siempre debe estar dentro del polÃ­gono de sustentaciÃ³n.
+	La representaciÃ³n de cada individuo contiene la longitud de la cadena
+	(segÃºn parece) y la serie de desplazamientos angulares para los diferentes
+	motores. La evoluciÃ³n se realiza secuencialmente para cada una de
+	las 6 fases que los autores definen, iniciando la evoluciÃ³n de una
+	fase donde terminÃ³ el mejor individuo de la evoluciÃ³n de la fase
+	anterior. Se usa una funciÃ³n de aptitud global que evalÃºa estabilidad
+	sumada con una funciÃ³n particular que evalÃºa el desempaÃ±o para el
 	objetivo de cada fase. El resultado de cada fase es comprobado con
-	la ejecución en un modelo real.
+	la ejecuciÃ³n en un modelo real.
 	
 	
-	El artículo trata la caminata como un problema de estabilidad pasiva
+	El artÃ­culo trata la caminata como un problema de estabilidad pasiva
 	y, a pesar de que es un modelo poco preciso de la caminata y que
-	ofrece velocidades de desplazamiento muy bajas, muestra una aplicación
-	adicional de la computación evolutiva a la caminata bípeda. Sin embargo,
-	su relevancia es limitada. [No Relevante] [Estático]},
+	ofrece velocidades de desplazamiento muy bajas, muestra una aplicaciÃ³n
+	adicional de la computaciÃ³n evolutiva a la caminata bÃ­peda. Sin embargo,
+	su relevancia es limitada. [No Relevante] [EstÃ¡tico]},
   timestamp = {2006.10.08},
   url = {citeseer.ist.psu.edu/chaisukkosol01automatic.html}
+}
+
+@ARTICLE{Chang02self-tuning,
+  author = {Wei-Der Chang and Rey-Chue Hwang and Jer-Guang Hsie},
+  title = {A self-tuning PID control for a class of nonlinear systems based
+	on the Lyapunov approach},
+  journal = {Journal of Process Control},
+  year = {2002},
+  volume = {12},
+  pages = {233-242},
+  number = {2},
+  month = {February},
+  __markedentry = {[jjfigueredou]},
+  abstract = {In this paper, we will propose a self-tuning method for a class of
+	nonlinear PID control systems based on Lyapunov approach. The three
+	PID control gains are adjustable parameters and will be updated online
+	with a stable adaptation mechanism such that the PID control law
+	tracks certain feedback linearization control, which is previously
+	designed. The stability of closed-loop nonlinear PID control system
+	is analyzed and guaranteed by introducing a supervisory control and
+	a modified adaptation law with projection. Finally, a tracking control
+	of an inverted pendulum system is illustrated to demonstrate the
+	control performance by using the proposed method.}
+}
+
+@BOOK{Chen93Analog,
+  title = {Analog and Digital Control System Design: Transfer-function, State-space,
+	and Algebraic Methods},
+  publisher = {Saunders College Pub},
+  year = {1993},
+  author = {Chi-Tsong Chen},
+  __markedentry = {[jjfigueredou]}
 }
 
 @ARTICLE{Cheng00Dynamic,
@@ -624,10 +738,20 @@
 	
 	doi: 10.1017/S0263574799002076},
   issn = {02635747 (ISSN)},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   publisher = {Cambridge Univ Press},
-  timestamp = {2006.12.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0033904990&partnerID=40&rel=R5.6.0}
+  timestamp = {2006.12.14}
+}
+
+@ARTICLE{Coombes05Waves,
+  author = {Coombes, S.},
+  title = {Waves, bumps, and patterns in neural field theories},
+  journal = {Biological Cybernetics},
+  year = {2005},
+  volume = {Volume 93, Number 2},
+  pages = {91-108},
+  owner = {jjfigueredou},
+  timestamp = {2009.01.15}
 }
 
 @BOOK{Craig89Introduction,
@@ -636,7 +760,7 @@
   year = {1989},
   author = {JJ Craig},
   address = {Boston, MA, USA },
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
 }
 
@@ -684,9 +808,8 @@
 	
 	doi: 10.1002/rob.8106},
   issn = {07412223 (ISSN)},
-  owner = {···Shrein···},
-  timestamp = {2006.12.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0035679317&partnerID=40&rel=R5.6.0}
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
+  timestamp = {2006.12.14}
 }
 
 @ARTICLE{Duysens02walking,
@@ -729,7 +852,7 @@
 	locomotion is thought to use a number of principles which simplify
 	control, just as in other species such as the cat. It is suggested
 	that cat and human locomotion are good models to learn from when
-	designing efficient walking robots. © 2002 Elsevier Science Ltd.
+	designing efficient walking robots. Â© 2002 Elsevier Science Ltd.
 	All rights reserved.},
   comment = {Cited By (since 1996): 1
 	
@@ -749,41 +872,55 @@
 	Robots, Biarticular actuators, Whole limb movements, Biped locomotion,
 	locomotion, neuromodulation, robotics},
   owner = {Juan Figueredo},
-  review = {Duysens et al. hacen una revisión biológica al control neuronal de
+  review = {Duysens et al. hacen una revisiÃ³n biolÃ³gica al control neuronal de
 	la caminata en seres humanos y gatos, la cual proponen como base
-	para desarrollos en robótica articulada bípeda o cuadrúpeda. Se tratan
-	dos puntos fundamentales. En una menor extensión, se menciona a grandes
+	para desarrollos en robÃ³tica articulada bÃ­peda o cuadrÃºpeda. Se tratan
+	dos puntos fundamentales. En una menor extensiÃ³n, se menciona a grandes
 	rasgos la arquitectura neuronal en capas, con una capa de bajo nivel
-	de motoneuronas de flexión/extensión acopladas inhibitoriamente,
+	de motoneuronas de flexiÃ³n/extensiÃ³n acopladas inhibitoriamente,
 	una capa media de interneuronas generadoras de patrones, y una capa
-	alta de control y cordinación de movimiento global. Con mayor detalle
+	alta de control y cordinaciÃ³n de movimiento global. Con mayor detalle
 	los autores destacan el efecto de las entradas sensoriales y sus
-	respuestas por reflejo en la acción de las diferentes capas de la
+	respuestas por reflejo en la acciÃ³n de las diferentes capas de la
 	arquitectura neuronal. A bajo nivel muestran diferentes resultados
-	previos que indican la posible participación de respuestas por reflejo
-	en la intensidad de las señales de las motoneuronas, modificando
-	las curvas de acceleración del movimiento. A nivel medio, destacan
-	la importancia de las entradas sensoriales para mantener un estímulo
-	en la extensión de una pierna cuando ésta soporta carga, así como
-	permitir la flexión cuando no la soporta y estimularla cuando hay
-	una flexión excesiva. Finalmente concluyen que a pesar del poco conocimiento
+	previos que indican la posible participaciÃ³n de respuestas por reflejo
+	en la intensidad de las seÃ±ales de las motoneuronas, modificando
+	las curvas de acceleraciÃ³n del movimiento. A nivel medio, destacan
+	la importancia de las entradas sensoriales para mantener un estÃ­mulo
+	en la extensiÃ³n de una pierna cuando Ã©sta soporta carga, asÃ­ como
+	permitir la flexiÃ³n cuando no la soporta y estimularla cuando hay
+	una flexiÃ³n excesiva. Finalmente concluyen que a pesar del poco conocimiento
 	sobre la capa superior de control, el conocimiento arrojado por estudios
 	sobre las dos capas inferiores es suficientemente valioso como para
-	se aplicado a la robótica.
+	se aplicado a la robÃ³tica.
 	
 	
-	Este es un trabajo que sirve como reseña biológica para la comunidad
-	que trabaja en el área de robótica bípeda, y es de especial interés
+	Este es un trabajo que sirve como reseÃ±a biolÃ³gica para la comunidad
+	que trabaja en el Ã¡rea de robÃ³tica bÃ­peda, y es de especial interÃ©s
 	para aquellos interesados en el control neuronal, particularmente
-	por el uso de generadores de patrones. Se destaca la argumentación
-	a favor de la respuesta por reflejo y la útilidad de las señales
-	sensóricas, yendo en sentido contrario a algunos de los trabajos
-	reseñados, que argumentan la capacidad de un generador de patrones
-	de producir marcha sin realimentación sensorial. [Intersante] [Muestra
-	principios biológicos más no diseño de controladores] [Especial]
+	por el uso de generadores de patrones. Se destaca la argumentaciÃ³n
+	a favor de la respuesta por reflejo y la Ãºtilidad de las seÃ±ales
+	sensÃ³ricas, yendo en sentido contrario a algunos de los trabajos
+	reseÃ±ados, que argumentan la capacidad de un generador de patrones
+	de producir marcha sin realimentaciÃ³n sensorial. [Intersante] [Muestra
+	principios biolÃ³gicos mÃ¡s no diseÃ±o de controladores] [Especial]
 	[Neuronal]},
-  timestamp = {2006.10.09},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0036208161&partner=40&rel=R5.0.1}
+  timestamp = {2006.10.09}
+}
+
+@ARTICLE{Dyer94Toward,
+  author = {Dyer,, Michael G.},
+  title = {Toward synthesizing artificial neural networks that exhibit cooperative
+	intelligent behavior: some open issues in artificial life},
+  journal = {Artif. Life},
+  year = {1994},
+  volume = {1},
+  pages = {111--134},
+  number = {1-2},
+  __markedentry = {[jjfigueredou]},
+  address = {Cambridge, MA, USA},
+  issn = {1064-5462},
+  publisher = {MIT Press}
 }
 
 @BOOK{Fausett94undamentals,
@@ -793,19 +930,16 @@
   year = {1994},
   author = {L Fausett},
   address = {Upper Saddle River, NJ, USA },
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.14}
 }
 
-@BOOK{Fogel95volutionary,
-  title = {volutionary computation: toward a new philosophy of machine intelligenceEvolutionary
-	computation: toward a new philosophy of machine intelligence},
-  publisher = {IEEE Press},
-  year = {1995},
-  author = {DB Fogel},
-  address = {Piscataway, NJ, USA },
-  owner = {···Shrein···},
-  timestamp = {2006.12.14}
+@BOOK{Fogel99Evolutionary,
+  title = {Evolutionary Computation: Towards a New Philosophy of Machine Intelligence},
+  publisher = {Wiley-IEEE Press},
+  year = {1999},
+  author = {Fogel,, David B.},
+  isbn = {078035379X}
 }
 
 @ARTICLE{Funahashi93Approximation,
@@ -891,8 +1025,7 @@
 	
 	Source: Scopus},
   owner = {Juan Figueredo},
-  timestamp = {2006.10.30},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0032054337&partner=40&rel=R5.0.4}
+  timestamp = {2006.10.30}
 }
 
 @INPROCEEDINGS{Garder06Robot,
@@ -912,46 +1045,79 @@
   isbn = {1-59593-186-4},
   location = {Seattle, Washington, USA},
   owner = {Juan Figueredo},
-  review = {Garder y Howin aplican un método híbrido de algorítmos genéticos y
+  review = {Garder y Howin aplican un mÃ©todo hÃ­brido de algorÃ­tmos genÃ©ticos y
 	ascenso de la colina para evolucionar el patron de caminata para
-	un robot bípedo con actuación neumática. En el problema abordado
+	un robot bÃ­pedo con actuaciÃ³n neumÃ¡tica. En el problema abordado
 	por ellos, el movimiento del robot se restringe al plano sagital,
-	de tal forma que solo importa el avance frontal del robot. La codificación
-	genotípica utilizada es binaria, y la secuencia completa es representada
+	de tal forma que solo importa el avance frontal del robot. La codificaciÃ³n
+	genotÃ­pica utilizada es binaria, y la secuencia completa es representada
 	por un individuo, dividida en tres posiciones del mecanismo con tiempos
-	de pausa entre ellas. El método elegido consiste en dejar fijas las
-	duraciones y usar un algoritmo genético tradicional para evolucionar
+	de pausa entre ellas. El mÃ©todo elegido consiste en dejar fijas las
+	duraciones y usar un algoritmo genÃ©tico tradicional para evolucionar
 	las tres posiciones que caracterizan la secuencia de movimiento por
-	8 generaciones, para después realizar una optimización por ascenso
-	de la colina, dejando fijos los bits de posición y generación tras
-	generación optimizando desde los bits más significativos de los tiempos
-	de pausa hasta los menos significativos. Se logra locomoción satisfactoria
-	en la forma de saltos sincronizados. El corto tiempo de ejecución
+	8 generaciones, para despuÃ©s realizar una optimizaciÃ³n por ascenso
+	de la colina, dejando fijos los bits de posiciÃ³n y generaciÃ³n tras
+	generaciÃ³n optimizando desde los bits mÃ¡s significativos de los tiempos
+	de pausa hasta los menos significativos. Se logra locomociÃ³n satisfactoria
+	en la forma de saltos sincronizados. El corto tiempo de ejecuciÃ³n
 	del algoritmo permite implementarlo en tiempo real en el robot.
 	
 	
-	Es relevante de este trabajo el uso conjunto de algoritmos genéticos
-	y ascenso de la colina. Tal situación es posible dado el paisaje
+	Es relevante de este trabajo el uso conjunto de algoritmos genÃ©ticos
+	y ascenso de la colina. Tal situaciÃ³n es posible dado el paisaje
 	de aptitud para el problema tratado. Otro elemento destacable es
-	la implementación en tiempo real del algoritmo sobre un sistema altamente
-	ruidoso. A pesar de ello, la codificación empleada es bastante restrictiva
+	la implementaciÃ³n en tiempo real del algoritmo sobre un sistema altamente
+	ruidoso. A pesar de ello, la codificaciÃ³n empleada es bastante restrictiva
 	y limita considerablemente el tipo de marchas que se pueden conseguir.
-	Así mismo, el problema tal como se aborda es de una dimensionalidad
+	AsÃ­ mismo, el problema tal como se aborda es de una dimensionalidad
 	relativamente baja y los resultados obtenidos no son generalizables
 	a sistemas con mayor dimensionalidad, o paises de aptitud de mayor
 	complejidad.[Trayectoria]},
   timestamp = {2006.10.22}
 }
 
-@BOOK{Goldberg9Genetic,
+@BOOK{Goldberg89Genetic,
   title = {Genetic Algorithms in Search, Optimization and Machine Learning},
-  publisher = {Addison-Wesley Longman Publishing Co.Addison-Wesley Longman Publishing
-	Co., Inc. },
-  year = {1989 },
+  publisher = {Addison-Wesley Longman Publishing Co.},
+  year = {1989},
   author = {DE Goldberg},
   address = {Boston, MA, USA },
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.14}
+}
+
+@CONFERENCE{Goswami08Kinematic,
+  author = {A. Goswami},
+  title = {Kinematic and dynamic analogies between planar biped robots and the
+	reaction mass pendulum (RMP) model},
+  booktitle = {Humanoids 2008},
+  year = {2008},
+  abstract = {In order to simplify dynamic analysis, humanoid robots are often abstracted
+	with various versions of the inverted pendulum model. However, most
+	of these models do not explicitly characterize the robot's rotational
+	inertia, a critical component of its dynamics, and especially of
+	its balance. To remedy this, we have earlier introduced the \textit{Reaction
+	Mass Pendulum (RMP)}, an extension of the inverted pendulum, which
+	models the rotational inertia and angular momentum of a robot through
+	its centroidal composite rigid body (CCRB) inertia. However, we presented
+	only the kinematic mapping between a robot and its corresponding
+	RMP.
+	
+	
+	Focussing in-depth on planar mechanisms, here we derive the dynamic
+	equations of the RMP and explicitly compute the parameters that it
+	must possess in order to establish equivalence with planar compass
+	gait robot. In particular, we show that, a) an angular momentum equality
+	between the robot and RMP does not necessarily guarantee kinetic
+	energy equality, and b) a cyclic robot gait may not result in a cyclic
+	RMP movement.
+	
+	
+	The work raises the broader question of how quantitatively similar
+	the simpler models of humanoid robot must be in order for them to
+	be of practical use.},
+  owner = {jjfigueredou},
+  timestamp = {2009.03.05}
 }
 
 @ARTICLE{Hasegawa00Trajectory,
@@ -994,31 +1160,30 @@
 	Optimization, Biped locomotion robot, Mechatronics},
   owner = {Vicepresideencia},
   publisher = {Elsevier Sci Ltd},
-  review = {Hasegawa et al. presentan un método para desarrollar un generador
+  review = {Hasegawa et al. presentan un mÃ©todo para desarrollar un generador
 	de patrones para la caminata eb superficies inclinadas de un robot
-	bípedo de 13 grados de libertad (13-DOF). El método empleado por
-	ellos para solucionar el problema de optimización con restricciones
-	consiste en un algoritmo evolutivo jerárquico (hybrid evolutionary
-	algorithm) que consta de una capa de generación de puntos en la trayectoria
-	(spline cúbica) usando programación evolutiva (EP), los cuales son
+	bÃ­pedo de 13 grados de libertad (13-DOF). El mÃ©todo empleado por
+	ellos para solucionar el problema de optimizaciÃ³n con restricciones
+	consiste en un algoritmo evolutivo jerÃ¡rquico (hybrid evolutionary
+	algorithm) que consta de una capa de generaciÃ³n de puntos en la trayectoria
+	(spline cÃºbica) usando programaciÃ³n evolutiva (EP), los cuales son
 	agregados en conjuntos interpolados de puntos, los cuales a su vez
-	se optimizan usando un algoritmo genético (GA) para seleccionar los
-	conjuntos efectivos que minimizan la energía utilizada por el robot.
-	Dado que la evaluación de cada punto en la capa de EP depende del
+	se optimizan usando un algoritmo genÃ©tico (GA) para seleccionar los
+	conjuntos efectivos que minimizan la energÃ­a utilizada por el robot.
+	Dado que la evaluaciÃ³n de cada punto en la capa de EP depende del
 	mejor individuo de la capa de GA y a su vez los individuos de la
 	segunda son agregaciones de la primera, se considera el esquema presentado
-	como co-evolución. En la implementación práctica realizada, el control
-	dinámico es efectuado por controladores PD.
+	como co-evoluciÃ³n. En la implementaciÃ³n prÃ¡ctica realizada, el control
+	dinÃ¡mico es efectuado por controladores PD.
 	
 	
-	Este es similar a otros trabajos en la generación de patrones optimizados
-	con computación evolutiva. Según parece no resulta del todo conveniente
-	el método de evolución (llamado por ellos co-evolución) aplcado puediendo
-	posiblemente integrar la acción de los dos algoritmos de una manera
-	más efectiva. De nuevo, como en otros problemas de generación de
+	Este es similar a otros trabajos en la generaciÃ³n de patrones optimizados
+	con computaciÃ³n evolutiva. SegÃºn parece no resulta del todo conveniente
+	el mÃ©todo de evoluciÃ³n (llamado por ellos co-evoluciÃ³n) aplcado puediendo
+	posiblemente integrar la acciÃ³n de los dos algoritmos de una manera
+	mÃ¡s efectiva. De nuevo, como en otros problemas de generaciÃ³n de
 	trayectorias, el control de seguimiento puede ser mejorado. [CPG]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0034135426&partner=40&rel=R5.0.1}
+  timestamp = {2006.09.28}
 }
 
 @BOOK{Haykin98Neural,
@@ -1027,7 +1192,7 @@
   year = {1998},
   author = {S Haykin},
   address = {Upper Saddle River, NJ, USA },
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.14}
 }
 
@@ -1055,9 +1220,54 @@
 	
 	CODEN: KURAA},
   issn = {04549244 (ISSN)},
-  owner = {···Shrein···},
-  timestamp = {2006.12.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0035781558&partnerID=40&rel=R5.6.0}
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
+  timestamp = {2006.12.14}
+}
+
+@BOOK{Holland92Adaptation,
+  title = {Adaptation in natural and artificial systems},
+  publisher = {MIT Press},
+  year = {1992},
+  author = {Holland,, John H.},
+  address = {Cambridge, MA, USA},
+  isbn = {0-262-58111-6}
+}
+
+@ARTICLE{Huang00Control,
+  author = {Shiuh-Jer Huang and Chien-Lo Huang},
+  title = {Control of an inverted pendulum using grey prediction model},
+  journal = {Industry Applications, IEEE Transactions on},
+  year = {2000},
+  volume = {36},
+  pages = {452-458},
+  number = {2},
+  month = {Mar/Apr},
+  __markedentry = {[jjfigueredou]},
+  abstract = {A system with partial unknown structure, parameters, and characteristics
+	is called a grey system. The grey theory can be employed to improve
+	the control performance of a system without sufficient information
+	or with highly nonlinear property. In this paper, a grey prediction
+	model combined with a proportional plus derivative controller is
+	proposed to balance an inverted pendulum, which is a classic example
+	of an inherently nonlinear unstable system. The control objective
+	is to swing up the pendulum from a stable position to an unstable
+	position and bring its slider back to the origin of the track. The
+	overall control algorithm is decomposed into two separate grey model
+	controllers for swinging up and balancing, respectively, based upon
+	the angular and velocity values of the pendulum. The experimental
+	results show that this grey model controller is able to swing up
+	and balance the inverted pendulum and guide its slider to the center
+	of the track. It also has the robustness to balance the inverted
+	pendulum at an upright position in suffering an external impact acting
+	on the pendulum},
+  doi = {10.1109/28.833761},
+  issn = {0093-9994},
+  keywords = {control system analysis, control system synthesis, grey systems, intelligent
+	control, pendulums, position control, robust control, two-term controlcontrol
+	algorithm, control design, control performance, control simulation,
+	grey prediction model, inverted pendulum control, partial unknown
+	characteristics, partial unknown parameters, partial unknown structure,
+	proportional plus derivative controller, robustness}
 }
 
 @ARTICLE{Huelse04Structure,
@@ -1170,37 +1380,36 @@
 	Evolution of morphology, Modular neuro-dynamics, Nonlinear robot
 	control, Perception-action systems, Structure evolution, Robotics},
   owner = {Vicepresideencia},
-  review = {El artículo escrito por Hülse et al., tiene como propósito mostrar
-	que se pueden desarrollar estructuras de control mínimas y robustas
-	empleando el algoritmo ENS3, de evolución de neuro-módulos compuestos
+  review = {El artÃ­culo escrito por HÃ¼lse et al., tiene como propÃ³sito mostrar
+	que se pueden desarrollar estructuras de control mÃ­nimas y robustas
+	empleando el algoritmo ENS3, de evoluciÃ³n de neuro-mÃ³dulos compuestos
 	por neuronas con conexiones realimentadas, es decir, redes neuronales
 	recurrentes. A tales redes se les aplica un algoritmo evolutivo,
-	donde son empleados operadores evolutivos por cada iteración, a saber,
-	reproducción, variación (un tipo de mutación), evaluación y selección.
-	En ese proceso se realizan cambios en el número de neuronas ocultas,
-	su número de conexiones y los pesos de tales conexiones. Una vez
-	alcanzado un desempeño satisfactorio, se procede a reducir el número
-	de elementos de los neuro-módulos, introduciendo costos por neurona
-	y por conexión, para incitar la minimalidad de los controladores.
-	Se muestra la aplicación del procedimiento completo a tres ejemplos:
-	la expansión de un robot móvil para evasión de obstáculos a tropismo
-	lumínico, la evolución morfológica y de control para un robot caminador
-	bípedo con actuación mínima, y la co-evolución de neurocontroladores
-	para un anillo de impulsión gravitacional con cinco brazos actuadores.
-	Existe un ejemplo inicial adicional que corresponde a la evolución
-	del robot para evasión de obstáculos y sirve de guía general para
-	la metodología de desarrollo de controladores según el algoritmo
+	donde son empleados operadores evolutivos por cada iteraciÃ³n, a saber,
+	reproducciÃ³n, variaciÃ³n (un tipo de mutaciÃ³n), evaluaciÃ³n y selecciÃ³n.
+	En ese proceso se realizan cambios en el nÃºmero de neuronas ocultas,
+	su nÃºmero de conexiones y los pesos de tales conexiones. Una vez
+	alcanzado un desempeÃ±o satisfactorio, se procede a reducir el nÃºmero
+	de elementos de los neuro-mÃ³dulos, introduciendo costos por neurona
+	y por conexiÃ³n, para incitar la minimalidad de los controladores.
+	Se muestra la aplicaciÃ³n del procedimiento completo a tres ejemplos:
+	la expansiÃ³n de un robot mÃ³vil para evasiÃ³n de obstÃ¡culos a tropismo
+	lumÃ­nico, la evoluciÃ³n morfolÃ³gica y de control para un robot caminador
+	bÃ­pedo con actuaciÃ³n mÃ­nima, y la co-evoluciÃ³n de neurocontroladores
+	para un anillo de impulsiÃ³n gravitacional con cinco brazos actuadores.
+	Existe un ejemplo inicial adicional que corresponde a la evoluciÃ³n
+	del robot para evasiÃ³n de obstÃ¡culos y sirve de guÃ­a general para
+	la metodologÃ­a de desarrollo de controladores segÃºn el algoritmo
 	propuesto.
 	
 	
-	El método general propuesto aplica la concepción de la vida artificial
-	aplicada a la robótica evolutiva propuesto por Nolfi y Floreano,
-	implementando algunas técnicas muy prometedores de evolución de neurocontroladores
+	El mÃ©todo general propuesto aplica la concepciÃ³n de la vida artificial
+	aplicada a la robÃ³tica evolutiva propuesto por Nolfi y Floreano,
+	implementando algunas tÃ©cnicas muy prometedores de evoluciÃ³n de neurocontroladores
 	que bien puede extenderse tanto en sus operadores, como en sus aplicaciones
-	y el tipo de redes que trata. Resulta una de las líneas de trabajo
-	con mayor potencial observadas [DESTACADO][Dinámico][Neuronal]},
-  timestamp = {2006.09.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-11144343750&partner=40&rel=R5.0.1}
+	y el tipo de redes que trata. Resulta una de las lÃ­neas de trabajo
+	con mayor potencial observadas [DESTACADO][DinÃ¡mico][Neuronal]},
+  timestamp = {2006.09.14}
 }
 
 @ARTICLE{Jha05On-line,
@@ -1226,7 +1435,7 @@
 	of manually constructed FLC. Once optimized, the FLCs will be able
 	to generate dynamically stable gait of the biped. As the CPU-time
 	of the algorithm is found to be only 0.002 s in a P-III PC, the algorithm
-	is suitable for on-line (real-time) implementations. © 2005 Elsevier
+	is suitable for on-line (real-time) implementations. Â© 2005 Elsevier
 	B.V. All rights reserved.},
   comment = {Export Date: 14 September 2006
 	
@@ -1234,30 +1443,30 @@
   file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Jha2005.pdf:C\:\\Documents
 	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Jha2005.pdf:PDF},
   owner = {Vicepresideencia},
-  review = {Jha et al. muestran el diseño de un controlador para ascención de
-	escaleras de un robot bípedo modelado en 2D. Emplean dos controladores
-	por lógica difusa (fuzzy logic controller) para mantener la estabilidad
-	del robot según el criterio de margen de estabilidad dinámico (dinamic
+  review = {Jha et al. muestran el diseÃ±o de un controlador para ascenciÃ³n de
+	escaleras de un robot bÃ­pedo modelado en 2D. Emplean dos controladores
+	por lÃ³gica difusa (fuzzy logic controller) para mantener la estabilidad
+	del robot segÃºn el criterio de margen de estabilidad dinÃ¡mico (dinamic
 	stability margin) basado en el punto de momento cero (ZMP). El primer
 	controlador se encarga de mantener la estabilidad durante la fase
 	de apoyo simple y el segundo de mantenerla en la fase de apoyo doble.
-	Los controladores son, en una primera aproximación, diseñados manualmente,
-	después los controladores obtenidos son optimizados usando algoritmos
-	genéticos (AG), y en una tercera aproximación son diseñados enteramente
-	por el AG. Los bajos tiempos de ejecución de la optimización sugieren
-	su posible aplicación en tiempo real, pero es necesario implementar
+	Los controladores son, en una primera aproximaciÃ³n, diseÃ±ados manualmente,
+	despuÃ©s los controladores obtenidos son optimizados usando algoritmos
+	genÃ©ticos (AG), y en una tercera aproximaciÃ³n son diseÃ±ados enteramente
+	por el AG. Los bajos tiempos de ejecuciÃ³n de la optimizaciÃ³n sugieren
+	su posible aplicaciÃ³n en tiempo real, pero es necesario implementar
 	compensacones por control ZMP cuando el controlador no logra conservar
 	la estabilidad.
 	
 	
-	Constituye una alternativa facil de desarrollar a controladores analíticos
-	ya diseñados para tal fin, y que puede proporcionar respuestas más
-	suaves y naturales. Sería interesante buscar otros métodos por inteligencia
-	computacional para apoyar al sistema en caso de fallo, así como un
-	mecanismo de transición en la acción de los diferentes controladores.
-	[Dinámico][Difuso]},
+	Constituye una alternativa facil de desarrollar a controladores analÃ­ticos
+	ya diseÃ±ados para tal fin, y que puede proporcionar respuestas mÃ¡s
+	suaves y naturales. SerÃ­a interesante buscar otros mÃ©todos por inteligencia
+	computacional para apoyar al sistema en caso de fallo, asÃ­ como un
+	mecanismo de transiciÃ³n en la acciÃ³n de los diferentes controladores.
+	[DinÃ¡mico][Difuso]},
   timestamp = {2006.09.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-25144524228&partner=40&rel=R5.0.1}
+  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-25144524228&partner=40&rel=R5.0.}
 }
 
 @ARTICLE{Juang02Intelligent,
@@ -1280,7 +1489,7 @@
 	the pre-trained controller. The training rule is a backpropogation
 	algorithm with time delay. The proposed technique can generate gaits
 	on different sloping surfaces by following a reference trajectory
-	with desired step length, crossing height and walking speed. © 2002
+	with desired step length, crossing height and walking speed. Â© 2002
 	Elsevier Science Inc. All rights reserved.},
   comment = {Cited By (since 1996): 1
 	
@@ -1299,34 +1508,33 @@
 	Algorithms, Backpropagation, Gait analysis, Motion control, Neural
 	networks, Robot learning, Robotic locomotion, Intelligent control},
   owner = {Juan Figueredo},
-  review = {Juang realiza una aplicación de un sistema de control por redes neuronales
-	para la caminata bípeda en superficies inclinadas. El sistema de
+  review = {Juang realiza una aplicaciÃ³n de un sistema de control por redes neuronales
+	para la caminata bÃ­peda en superficies inclinadas. El sistema de
 	control consta de: un controlador neuronal encarnado por una red
-	neuronal de propagación hacia adelante que genera las señales de
-	torque en los actuadores, un estimador neuronal que consiste también
-	en una red neuronal de propagación hacia adelante, y una tercera
-	red con la misma topología que adiciona una señal de control de compensación
-	cuando hay una inclinación en la superficie. El método de entrenamiento
-	empleado es retropropagación con retardo en el tiempo. El primer
-	paso realizado es la identificación del sistema con el estimador
+	neuronal de propagaciÃ³n hacia adelante que genera las seÃ±ales de
+	torque en los actuadores, un estimador neuronal que consiste tambiÃ©n
+	en una red neuronal de propagaciÃ³n hacia adelante, y una tercera
+	red con la misma topologÃ­a que adiciona una seÃ±al de control de compensaciÃ³n
+	cuando hay una inclinaciÃ³n en la superficie. El mÃ©todo de entrenamiento
+	empleado es retropropagaciÃ³n con retardo en el tiempo. El primer
+	paso realizado es la identificaciÃ³n del sistema con el estimador
 	neuronal. Posteriormente, se entrena el controlador neuronal para
-	que siga una trayectoria prediseñada sobre superficies planas, usando
+	que siga una trayectoria prediseÃ±ada sobre superficies planas, usando
 	el estimador para propagar el error de vuelta hacia la red de control.
 	Finalmente, se dejan fijas las dos redes previas y se entrena el
-	compensador de inclinación acoplado con el sistema de control, usando
-	de nuevo el estimador para propagar el error hacia atrás. El seguimiento
-	de trayectoria obtenido, aún en superficies inclinadas, es satisfactorio.
+	compensador de inclinaciÃ³n acoplado con el sistema de control, usando
+	de nuevo el estimador para propagar el error hacia atrÃ¡s. El seguimiento
+	de trayectoria obtenido, aÃºn en superficies inclinadas, es satisfactorio.
 	
 	
-	Se aborda un método tradicional de control por redes neuronales con
+	Se aborda un mÃ©todo tradicional de control por redes neuronales con
 	estimador del modelo, empleando un algoritmo de entrenamiento para
-	redes neuronales en entornos dinámicos. La aproximación empleada
+	redes neuronales en entornos dinÃ¡micos. La aproximaciÃ³n empleada
 	es relativamente sencilla y demuestra resultados satisfactorios y
-	robustos. Permite la variación de varios parámetros, entre ellos
+	robustos. Permite la variaciÃ³n de varios parÃ¡metros, entre ellos
 	longitud y altura alcanzadas en el paso, y velocidad de la marcha.
-	[Destacado] [Dinámico][Neuronal]},
-  timestamp = {2006.10.09},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0036848753&partner=40&rel=R5.0.1}
+	[Destacado] [DinÃ¡mico][Neuronal]},
+  timestamp = {2006.10.09}
 }
 
 @ARTICLE{Juang01Intelligent,
@@ -1466,29 +1674,129 @@
 	Recurrent neural networks, Robot learning, Recurrent averaging learning,
 	Robotic trajectory control, Walking robot, Artificial intelligence},
   owner = {Vicepresideencia},
-  review = {En su artículo Juang presenta un método de generación de trayectorias
+  review = {En su artÃ­culo Juang presenta un mÃ©todo de generaciÃ³n de trayectorias
 	usando una red neuronal hacia adelante (feed-fordward neural network)
-	como sistema de mapeo no lineal entre el estado cinemático actual
-	y la señal de control. Se parte del principio periódico de la marcha
+	como sistema de mapeo no lineal entre el estado cinemÃ¡tico actual
+	y la seÃ±al de control. Se parte del principio periÃ³dico de la marcha
 	humana, buscando entrenar la red de tal forma que minimice la diferencia
 	entre el estado deseado y el final, aplicando aprendizaje recurrente
 	promediado (recurrent averaging learning) en el cual se repite el
 	experimento consecutivamente iniciando y finalizando en estados determinados
 	por el premedio de los inicios y finalizaciones anteriores, de tal
-	manera que se logre robustez en el sistema. La red se entrena dinámicamente
-	usando retropropagación a través del tiempo (backpropagation trough
+	manera que se logre robustez en el sistema. La red se entrena dinÃ¡micamente
+	usando retropropagaciÃ³n a travÃ©s del tiempo (backpropagation trough
 	time).
 	
 	
-	El artículo muestra una aplicación de una red neuronal sin realimentaciones
-	presuponiendo que el mapeo es suficientemente robusto y bien podría
+	El artÃ­culo muestra una aplicaciÃ³n de una red neuronal sin realimentaciones
+	presuponiendo que el mapeo es suficientemente robusto y bien podrÃ­a
 	requerirse re-entrenar la red para cada conjunto de condiciones particulares,
-	así como para modificaciones relevantes en el patrón de marcha. Requiere
-	una señal de referencia de entrada, por lo cual la trayectoria obtenida
-	no presentará propiedades de optimalidad energética ni flexibilidad
-	ante modificaciones dinámicas del entorno. [Dinámico][Neuronal]},
-  timestamp = {2006.09.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0005644782&partner=40&rel=R5.0.1}
+	asÃ­ como para modificaciones relevantes en el patrÃ³n de marcha. Requiere
+	una seÃ±al de referencia de entrada, por lo cual la trayectoria obtenida
+	no presentarÃ¡ propiedades de optimalidad energÃ©tica ni flexibilidad
+	ante modificaciones dinÃ¡micas del entorno. [DinÃ¡mico][Neuronal]},
+  timestamp = {2006.09.14}
+}
+
+@ARTICLE{Kajita91Study,
+  author = {Kajita, S. and Tani, K.},
+  title = {Study of dynamic biped locomotion on rugged terrain-derivation and
+	application of the linear inverted pendulum mode},
+  journal = {Robotics and Automation, 1991. Proceedings., 1991 IEEE International
+	Conference on},
+  year = {1991},
+  volume = {2},
+  pages = {1405-1411},
+  month = {Apr},
+  __markedentry = {[jjfigueredou]},
+  abstract = {A novel control method for biped locomotion on rugged terrain is introduced,
+	assuming an ideal robot model which has massless legs. By applying
+	constraint control to the robot body so that it moves on a particular
+	straight line and rotates at a constant angular velocity, the dynamics
+	of the center of mass of the body becomes completely linear. Such
+	motion of the ideal model is called the linear inverted pendulum
+	mode, and it is used to develop the control scheme of the biped walking
+	on rugged terrain. Under the control method in the linear inverted
+	pendulum mode, walking on a particular rugged ground is shown to
+	be equivalent to walking on a level ground. It is also shown that
+	the additional use of the ankle torque makes the proposed control
+	scheme robust and applicable to a real biped robot with mass legs.
+	Simulation results are presented},
+  doi = {10.1109/ROBOT.1991.131811},
+  keywords = {dynamics, mobile robots, position controlangular velocity, ankle torque,
+	dynamic biped locomotion, dynamics, linear inverted pendulum mode,
+	mobile robots, rugged terrain}
+}
+
+@ARTICLE{Kajita92Dynamic,
+  author = {Kajita, S. and Yamaura, T. and Kobayashi, A.},
+  title = {Dynamic walking control of a biped robot along a potential energy
+	conserving orbit},
+  journal = {Robotics and Automation, IEEE Transactions on},
+  year = {1992},
+  volume = {8},
+  pages = {431-438},
+  number = {4},
+  month = {Aug},
+  __markedentry = {[jjfigueredou]},
+  abstract = {To reduce the complex walking dynamics of a biped, a particular class
+	of trajectories of an ideal biped model where the center of gravity
+	of the body moves horizontally and the horizontal motion of the center
+	of gravity can be expressed by a simple linear differential equation
+	is introduced. The authors coin the phrase `potential energy conserving
+	orbit' to describe this class of trajectories. Based on these properties,
+	control laws were formulated for walk initiation, walk continuation,
+	and walk termination. The walking motion is controlled by support
+	leg exchange. Robust realization of the walking control is also considered.
+	An experimental walking machine was designed as a nearly ideal biped
+	model. To make the legs lighter, four DC motors were mounted in the
+	body, and the legs are parallel link structures. The results of the
+	experiment describe five steps of dynamic walking including walk
+	initiation},
+  doi = {10.1109/70.149940},
+  issn = {1042-296X},
+  keywords = {dynamics, mobile robots, position controlbiped robot, center of gravity,
+	linear differential equation, mobile robot, motion control, parallel
+	link structures, potential energy conserving orbit, walk continuation,
+	walk initiation, walk termination, walking control, walking dynamics}
+}
+
+@ARTICLE{Kajiwara99LPV,
+  author = {Kajiwara, H. and Apkarian, P. and Gahinet, P.},
+  title = {LPV techniques for control of an inverted pendulum},
+  journal = {Control Systems Magazine, IEEE},
+  year = {1999},
+  volume = {19},
+  pages = {44-54},
+  number = {1},
+  month = {Feb},
+  __markedentry = {[jjfigueredou]},
+  abstract = {The authors present a comprehensive application of linear fractional
+	transformation and polytopic control techniques to the control of
+	an arm-driven inverted pendulum, The particular interest of this
+	application lies in the fact that all ingredients of the design problem
+	have to be taken into account; from the specifications up to the
+	constraints inherent to real-world implementations. In this context,
+	it has been shown that currently available synthesis methodologies,
+	such as Î¼ and LPV techniques, may fail to provide acceptable answers,
+	A major obstacle is undoubtedly the implementation constraint that
+	puts hard limitations on the controller dynamics, These limitations
+	are generally difficult to handle within the usual formulation of
+	LPV control techniques. It has been shown that a suitable extension
+	of these techniques including LMI region constraints on the closed-loop
+	dynamics can overcome this difficulty. When implementable, it has
+	been observed that LPV controllers outperform fixed Î¼ controllers
+	both in robustness and performance. These observations were confirmed
+	by simulations but more importantly by a number of records on the
+	physical experiment},
+  doi = {10.1109/37.745767},
+  issn = {0272-1708},
+  keywords = {closed loop systems, control system synthesis, manipulators, nonlinear
+	control systems, pendulums, robust controlLMI region constraints,
+	LPV techniques, arm-driven inverted pendulum, closed-loop dynamics,
+	control design, control system synthesis, controller dynamics limitations,
+	inverted pendulum, linear fractional transformation control, polytopic
+	control, robustness}
 }
 
 @BOOK{Klir94Fuzzy,
@@ -1497,7 +1805,7 @@
   year = {1994},
   author = {GJ Klir and B Yuan},
   address = {Upper Saddle River, NJ, USA },
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.14}
 }
 
@@ -1517,7 +1825,7 @@
 	CPG models, but was added the force control system that controlled
 	the acting force from a leg to a floor in the vertical and the horizontal
 	directions separately. At this moment, 2D walking and running was
-	realized on level ground and a slope with a speed of 1.6 m/s. © 2005
+	realized on level ground and a slope with a speed of 1.6 m/s. Â© 2005
 	IEEE.},
   comment = {Export Date: 25 September 2006
 	
@@ -1530,34 +1838,33 @@
   issn = {0780390458 (ISBN)},
   keywords = {Bipedal robot, Control, Humanoid, Neural oscillator},
   owner = {Juan Figueredo},
-  review = {Komatsu y Usul muestran el control para diferentes tipos de locomoción
-	bípeda usando generadores centrales de patrones híbridos (H-CPG).
-	La acción total del H-CPG está determinada por la suma de las acciones
+  review = {Komatsu y Usul muestran el control para diferentes tipos de locomociÃ³n
+	bÃ­peda usando generadores centrales de patrones hÃ­bridos (H-CPG).
+	La acciÃ³n total del H-CPG estÃ¡ determinada por la suma de las acciones
 	individuales de cada uno de sus componentes: Un oscilador neuronal
-	que genera los patrones rítmicos en forma de torques, un controlador
+	que genera los patrones rÃ­tmicos en forma de torques, un controlador
 	de fuerza contra el suelo que aplica la matriz jacobiana para mapear
 	las fuerzas del espacio cartesiano al espacio de articulaciones,
 	y un controlador de postura que realiza un control PD para mantener
-	las piernas lo más verticales posible. Los movimientos verticales
+	las piernas lo mÃ¡s verticales posible. Los movimientos verticales
 	y horizontales son procesados por separado por el controlador de
-	fuerza. Muestran que el método propuesto permite, tanto como variar
+	fuerza. Muestran que el mÃ©todo propuesto permite, tanto como variar
 	de un movimiento de caminata a uno de trote o de carrera, como caminar
 	y correr en ambientes modificados, particularmente en pendientes.
 	Se muestran resultados satisfactorios tanto en simulaciones como
-	en una implementación sobre un robot real. 
+	en una implementaciÃ³n sobre un robot real. 
 	
 	
 	Son muy interesantes los resultados obtenidos en cuanto a la versatilidad
-	de movimiento lograda al añadir un control de fuerza y de postura
-	al ya típico control con CPGs. A pesar de que las redes son diseñadas
+	de movimiento lograda al aÃ±adir un control de fuerza y de postura
+	al ya tÃ­pico control con CPGs. A pesar de que las redes son diseÃ±adas
 	para cada movimiento deseado, su complejidad no es muy alta y resulta
-	factible. El trabajo puede ser complementado estudiando cómo integrar
+	factible. El trabajo puede ser complementado estudiando cÃ³mo integrar
 	los controladores y el CPG en una sola arquitectura que sea robusta
-	y adaptable, lo cual incluye emplear posiblemente métodos de aprendizaje
-	o evolución, de tal forma que el sistema puede ser autónomo. [Destacado]
+	y adaptable, lo cual incluye emplear posiblemente mÃ©todos de aprendizaje
+	o evoluciÃ³n, de tal forma que el sistema puede ser autÃ³nomo. [Destacado]
 	[CPG] [Neuronal]},
-  timestamp = {2006.10.23},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-27744550554&partner=40&rel=R5.0.1}
+  timestamp = {2006.10.23}
 }
 
 @BOOK{Kosko92Neural,
@@ -1567,7 +1874,7 @@
   year = {1992},
   author = {B Kosko},
   address = {Upper Saddle River, NJ, USA },
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.14}
 }
 
@@ -1588,35 +1895,35 @@
 	Final\\Kun97Adaptive.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\Kun97Adaptive.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {Kun y Miller tratan de nuevo el problema de la caminata bípeda, pero
-	ahora en equilibrio estático. A diferencia de [Kun96Adaptive], aquí
-	se busca la locomoción bípeda realizando el movimiento cuasi-estáticamente
-	y por tanto el criterio de estabilidad requiere que la proyección
-	del centro de masa se encuentre dentro del polígono de sustentación
-	en todo momento, pudiendo así permanecer el cualquier posición indefinidamente.
-	La generación de trayectorias, como en el otro trabajo anotado, es
+  review = {Kun y Miller tratan de nuevo el problema de la caminata bÃ­peda, pero
+	ahora en equilibrio estÃ¡tico. A diferencia de [Kun96Adaptive], aquÃ­
+	se busca la locomociÃ³n bÃ­peda realizando el movimiento cuasi-estÃ¡ticamente
+	y por tanto el criterio de estabilidad requiere que la proyecciÃ³n
+	del centro de masa se encuentre dentro del polÃ­gono de sustentaciÃ³n
+	en todo momento, pudiendo asÃ­ permanecer el cualquier posiciÃ³n indefinidamente.
+	La generaciÃ³n de trayectorias, como en el otro trabajo anotado, es
 	realizada con redes neuronales CMAC, partiendo de trayectorias pre-calculadas
-	pero adaptables. En este caso se usa una red para la elevación del
-	pié, una para el movimiento frontal y otra para el movimiento lateral.
-	Como el modelo de la cinemática usado es aproximado, se usan otras
+	pero adaptables. En este caso se usa una red para la elevaciÃ³n del
+	piÃ©, una para el movimiento frontal y otra para el movimiento lateral.
+	Como el modelo de la cinemÃ¡tica usado es aproximado, se usan otras
 	dos redes CMAC para realizar correciones al patron de marcha de tal
-	forma que se corrigan las incosistencias del modelo. Se acompaña
+	forma que se corrigan las incosistencias del modelo. Se acompaÃ±a
 	al generador con un control de bajo nivel que se encarga de convertir
 	la postura generada al espacio de articulaciones, hacer el seguimiento
-	de la trayectoria, mantener la posición perpendicular al suelo en
+	de la trayectoria, mantener la posiciÃ³n perpendicular al suelo en
 	la fase de doble apoyo y realizan un control reactivo lateral y frontal.
 	Se logra una marcha satisfactoria en un robot de 10-DOF con una velocidad
 	de 2.2 pasos por minuto.
 	
 	
-	Aunque la caminata estática se ha venido dejando relegada en favor
-	de la caminata dinámica, es un escenario interesante de control en
-	los camindores bípedos y puede resultar relevante en situaciones
-	determinadas. Es destacable que el método de solución propuesto se
-	asemeja bastante al mostrado para la caminata dinámica en [Kun96Adaptive],
+	Aunque la caminata estÃ¡tica se ha venido dejando relegada en favor
+	de la caminata dinÃ¡mica, es un escenario interesante de control en
+	los camindores bÃ­pedos y puede resultar relevante en situaciones
+	determinadas. Es destacable que el mÃ©todo de soluciÃ³n propuesto se
+	asemeja bastante al mostrado para la caminata dinÃ¡mica en [Kun96Adaptive],
 	sugiriendo interesante posibilidad de integrar los dos controles
-	en uno solo. [Interesante -> Posibilidad de integración de caminata
-	estática y dinámica] [Estático] [CPG] [Neuronal]},
+	en uno solo. [Interesante -> Posibilidad de integraciÃ³n de caminata
+	estÃ¡tica y dinÃ¡mica] [EstÃ¡tico] [CPG] [Neuronal]},
   text = {Kun A. L., Miller W. T. (1997), Adaptive Static Balance of a Biped
 	Robot Using Neural Networks, Proc. of the Int.},
   timestamp = {2006.10.08},
@@ -1644,25 +1951,25 @@
 	Final\\Kun96Adaptive.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\Kun96Adaptive.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {Kun y Miller implementan un control para la caminata bípeda de un
+  review = {Kun y Miller implementan un control para la caminata bÃ­peda de un
 	robot de 10 grados de libertad (10-DOF), para el cual usan un generador
-	central de patrones (CPG) que usa heurísticas para generar las secuencias
-	sincronizando la actuación en las articulaciones con la dinámica
-	natural del robot, recibiendo como entradas parámetros de corrección
+	central de patrones (CPG) que usa heurÃ­sticas para generar las secuencias
+	sincronizando la actuaciÃ³n en las articulaciones con la dinÃ¡mica
+	natural del robot, recibiendo como entradas parÃ¡metros de correcciÃ³n
 	en los movimientos lateral y frontal dados por redes neuronales CMAC.
 	Adicionalmente una tercera red CMAC se entrena para ayudar en el
-	control del robot en la fase de doble apoyo. La dinámica natural
+	control del robot en la fase de doble apoyo. La dinÃ¡mica natural
 	del robot es fundamental para el sistema de control dada su dependencia
-	en la oscilación lateral para estabilizar el movimiento. Se usa un
+	en la oscilaciÃ³n lateral para estabilizar el movimiento. Se usa un
 	algoritmo de aprendizaje por diferencias temporales (temporal difference
 	learning) para entrenar las redes.
 	
 	
-	Es muy destacable la solución planteada a la caminata en equilibrio
-	dinámico dada la relativa antigüedad del artículo. Se demuestra la
-	utilidad del método desarrollado aplicándolo a un robot caminador
-	bípedo. Miller es uno de los pioneros de la aplicación de inteligencia
-	computacional a la caminata bípeda con otros como Taga y Vukobratovic.
+	Es muy destacable la soluciÃ³n planteada a la caminata en equilibrio
+	dinÃ¡mico dada la relativa antigÃ¼edad del artÃ­culo. Se demuestra la
+	utilidad del mÃ©todo desarrollado aplicÃ¡ndolo a un robot caminador
+	bÃ­pedo. Miller es uno de los pioneros de la aplicaciÃ³n de inteligencia
+	computacional a la caminata bÃ­peda con otros como Taga y Vukobratovic.
 	[CPG] [Neuronal]},
   text = {A. Kun and W. T. Miller, III, Adaptive Dynamic Balance of a Biped
 	Robot using Neural Networks, Proc. IEEE Int. Conf. on RA, pp. 240--245,
@@ -1705,7 +2012,7 @@
 	overcome unforeseen perturbations. Our simulations provide insight
 	on the advantage of having a chaotic locomotive system and provide
 	evidence as to how chaos can be used as an advantageous control scheme
-	for the nervous system. © Springer-Verlag 2005.},
+	for the nervous system. Â© Springer-Verlag 2005.},
   comment = {Export Date: 14 September 2006
 	
 	Source: Scopus
@@ -1841,38 +2148,80 @@
 	nonlinear system, Computer Simulation, Neural Networks (Computer),
 	Nonlinear Dynamics},
   owner = {Vicepresideencia},
-  review = {La aproximación abordada por Kurz y Stergiou a la caminata bípeda
-	enfatiza las propiedades caóticas, ya resaltadas por otros autores,
-	proponiéndolas como una característica provechosa para el control.
-	Señalan que la capacidad de un sistema caótico de presentar equilibrios
-	con diferentes características periódicas, añadida a la posibilidad
-	de cambiar de uno a otro aplicando una pequeña actuación localizada,
-	facilitan el control robusto del sistema aún en presencia de perturbaciones.
+  review = {La aproximaciÃ³n abordada por Kurz y Stergiou a la caminata bÃ­peda
+	enfatiza las propiedades caÃ³ticas, ya resaltadas por otros autores,
+	proponiÃ©ndolas como una caracterÃ­stica provechosa para el control.
+	SeÃ±alan que la capacidad de un sistema caÃ³tico de presentar equilibrios
+	con diferentes caracterÃ­sticas periÃ³dicas, aÃ±adida a la posibilidad
+	de cambiar de uno a otro aplicando una pequeÃ±a actuaciÃ³n localizada,
+	facilitan el control robusto del sistema aÃºn en presencia de perturbaciones.
 	Implementan una red neuronal cuyas entradas corresponden a las posiciones
 	y velocidades de los estados iniciales para los 8 periodos de marcha
-	anteriores y sus salida es la actuación en la cadera aplicada como
-	control. Conlcuyen que el control biológico de la marcha humana puede
-	responder a fenómenos similares, teniendo en cuenta una estructura
-	jerárquica más compleja en la red neuronal de control.
+	anteriores y sus salida es la actuaciÃ³n en la cadera aplicada como
+	control. Conlcuyen que el control biolÃ³gico de la marcha humana puede
+	responder a fenÃ³menos similares, teniendo en cuenta una estructura
+	jerÃ¡rquica mÃ¡s compleja en la red neuronal de control.
 	
 	
-	Este trabajo es una aproximación interesante a la caminata bípeda
-	que continúa la línea de trabajo de los teóricos de caminata bípeda
-	(McGeer, Garcia, Chaterjee, Ruina, Collins y otros) y no sólo justifica
-	la propiedad caótica de la dinámica robótica bípeda, además buscando
-	obtener provecho de ella. Ésta metodología de control se espera que
-	tenga muy bajos consumos energéticos dada su herencia de la caminata
-	bípeda pasiva y es recomendable compararla con otros métodos (e.
-	g. los evolutivos) que buscan optimizar el consumo de energía. No
-	es claro sin embargo cómo el entendimiento de la caminata como un
-	sistema caótica ayuda a diseñar la red neuronal de control. Sería
-	interesante estudiar la posibilidad de añadir capas superiores que
+	Este trabajo es una aproximaciÃ³n interesante a la caminata bÃ­peda
+	que continÃºa la lÃ­nea de trabajo de los teÃ³ricos de caminata bÃ­peda
+	(McGeer, Garcia, Chaterjee, Ruina, Collins y otros) y no sÃ³lo justifica
+	la propiedad caÃ³tica de la dinÃ¡mica robÃ³tica bÃ­peda, ademÃ¡s buscando
+	obtener provecho de ella. Ã‰sta metodologÃ­a de control se espera que
+	tenga muy bajos consumos energÃ©ticos dada su herencia de la caminata
+	bÃ­peda pasiva y es recomendable compararla con otros mÃ©todos (e.
+	g. los evolutivos) que buscan optimizar el consumo de energÃ­a. No
+	es claro sin embargo cÃ³mo el entendimiento de la caminata como un
+	sistema caÃ³tica ayuda a diseÃ±ar la red neuronal de control. SerÃ­a
+	interesante estudiar la posibilidad de aÃ±adir capas superiores que
 	por medio de perturbaciones controladas dirigan la marcha para generar
-	navegación del caminador bípedo. Se concluye además la importancia
-	tanto de morfología como de control para obtener una caminata bípeda
-	robusta y flexible [Destacado] [Dinámico][Neuronal]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-24944439932&partner=40&rel=R5.0.1}
+	navegaciÃ³n del caminador bÃ­pedo. Se concluye ademÃ¡s la importancia
+	tanto de morfologÃ­a como de control para obtener una caminata bÃ­peda
+	robusta y flexible [Destacado] [DinÃ¡mico][Neuronal]},
+  timestamp = {2006.09.28}
+}
+
+@BOOK{Langton96Artificial,
+  title = {Artificial Life},
+  publisher = {Addison-Wesley Longman Publishing Co., Inc.},
+  year = {1996},
+  author = {Langton,, Christopher G.},
+  address = {Boston, MA, USA},
+  abstract = {Artificial Life is the study of synthetic systems that exhibit behaviors
+	characteristic of natural living systems.It complements the tarditional
+	biological sciences concerned with the analysis of living organisms
+	by attempting to synthesize lifelike behavior within computers and
+	other artrificial media. by extending the empirical foundation upon
+	which biology is based beyond the carbon-chain life that evolved
+	on Earth, Artificial Life can contribute to theoretical biology by
+	locating "life as we know it" within the larger picture of "life
+	as it could be."},
+  isbn = {0201608081}
+}
+
+@INPROCEEDINGS{Lee07Reaction,
+  author = {Sung-hee Lee and Ambarish Goswami},
+  title = {Reaction mass pendulum (RMP): An explicit model for centroidal angular
+	momentum of humanoid robots},
+  booktitle = {in Proceedings of the IEEE International Conference on Robotics \&
+	Automation},
+  year = {2007},
+  __markedentry = {[jjfigueredou]},
+  abstract = {A number of conceptually simple but behaviorrich â€œinverted pendulumâ€
+	humanoid models have greatly enhanced the understanding and analytical
+	insight of humanoid dynamics. However, these models do not incorporate
+	the robotâ€™s angular momentum properties, a critical component of
+	its dynamics. We introduce the Reaction Mass Pendulum (RMP) model,
+	a 3D generalization of the better-known reaction wheel pendulum.
+	The RMP model augments the existing models by compactly capturing
+	the robotâ€™s centroidal momenta through its composite rigid body (CRB)
+	inertia. This model provides additional analytical insights into
+	legged robot dynamics, especially for motions involving dominant
+	rotation, and leads to a simpler class of control laws. In this paper
+	we show how a humanoid robot of general geometry and dynamics can
+	be mapped into its equivalent RMP model. A movement is subsequently
+	mapped to the time evolution of the RMP. We also show how an â€œinertia
+	shapingâ€ control law can be designed based on the RMP.}
 }
 
 @ARTICLE{Liu03Hybrid,
@@ -1912,41 +2261,40 @@
   keywords = {Computer simulation, Constraint theory, Fuzzy sets, Neural networks,
 	Robots, Biped robots, Hybrid controls, Biped locomotion},
   owner = {Vicepresideencia},
-  review = {El algoritmo híbrido propuesto por Liu et al. implementa un controlador
-	para la fase de doble apoyo en la caminata bípeda divido en tres
+  review = {El algoritmo hÃ­brido propuesto por Liu et al. implementa un controlador
+	para la fase de doble apoyo en la caminata bÃ­peda divido en tres
 	componentes. La primera utiliza una red neuronal CMAC para la cual
 	se generan los conjuntos difusos, identificados como conjuntos de
-	generalización de la red, cons los cuales son mapeadas las variables
-	de entrada a un espacio de generalización, a partir del cual se obtiene
-	la salida como una combinación lineal entre la representación generalizada
+	generalizaciÃ³n de la red, cons los cuales son mapeadas las variables
+	de entrada a un espacio de generalizaciÃ³n, a partir del cual se obtiene
+	la salida como una combinaciÃ³n lineal entre la representaciÃ³n generalizada
 	para el conjunto de entradas y la matriz de pesos de la red neuronal
 	difusa (Fuzzy Neural Network) de tipo CMAC. Posteriormente se deriva
-	un modelo híbrido posición/fuerza para el sistema incluyendo restricciones,
-	con el cual posteriormente se haya un modelo para el sistema híbrido
+	un modelo hÃ­brido posiciÃ³n/fuerza para el sistema incluyendo restricciones,
+	con el cual posteriormente se haya un modelo para el sistema hÃ­brido
 	aplicando un esquema de control que incluye el uso de la FNN. Se
-	implementa un parámetro de optimización H-infinito para el modelo
+	implementa un parÃ¡metro de optimizaciÃ³n H-infinito para el modelo
 	conjunto, el cual se optimiza. Se obtiene finalmente un controlador
-	híbrido robusto el cual se vale de la FNN para el control del sistema
-	inverso y de control de estructura variable. Se obtiene así un método
+	hÃ­brido robusto el cual se vale de la FNN para el control del sistema
+	inverso y de control de estructura variable. Se obtiene asÃ­ un mÃ©todo
 	robusto para seguimiento de una trayectoria deseada en doble apoyo.
-	Se sugiere el estudio de tecnicas de teoría de sistemas interruptores
-	(switching system theory) para, acoplándolas con la técnica de control
+	Se sugiere el estudio de tecnicas de teorÃ­a de sistemas interruptores
+	(switching system theory) para, acoplÃ¡ndolas con la tÃ©cnica de control
 	propuesta, controlar integradamente las diferentes fases de la marcha.
 	
 	
-	El artículo es valioso en cuanto aborda el problema de control en
+	El artÃ­culo es valioso en cuanto aborda el problema de control en
 	la fase de doble apoyo no suficientemente tratado, y propone un sistema
-	híbrido de control donde se articulan métodos de inteligencia computaiconal
-	(una red neuronal difusa implementada como una red CMAC) con técnicas
+	hÃ­brido de control donde se articulan mÃ©todos de inteligencia computaiconal
+	(una red neuronal difusa implementada como una red CMAC) con tÃ©cnicas
 	de control robusto (control H-infinito). En general presenta un plantamento
-	matemático complejo, en el cual se representan adecuadamente las
-	restricciones del sistema integrándolas en un modelo híbrido del
-	sistema. Sin embargo, esto causa una dificil lectura del artículo
-	y se requiere un conocimiento amplio de las bases teorícas de las
+	matemÃ¡tico complejo, en el cual se representan adecuadamente las
+	restricciones del sistema integrÃ¡ndolas en un modelo hÃ­brido del
+	sistema. Sin embargo, esto causa una dificil lectura del artÃ­culo
+	y se requiere un conocimiento amplio de las bases teorÃ­cas de las
 	que se fundamenta. [Interesante] [Alta complejidad -> Ha de ser releido
-	a la luz de una conceptualización más profunda] [Dinámico][Neuronal][Difuso]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0141522799&partner=40&rel=R5.0.1}
+	a la luz de una conceptualizaciÃ³n mÃ¡s profunda] [DinÃ¡mico][Neuronal][Difuso]},
+  timestamp = {2006.09.28}
 }
 
 @ARTICLE{Magdalena97fuzzy,
@@ -1970,7 +2318,7 @@
 	and optimization procedures based on natural genetics. This paper
 	proposes a way to apply (with a learning purpose) genetic algorithms
 	to FLCs, and presents an application designed to control the synthesis
-	of the biped walk of a simulated 2-D biped robot. © 1997 Elsevier
+	of the biped walk of a simulated 2-D biped robot. Â© 1997 Elsevier
 	Science Inc.},
   comment = {Cited By (since 1996): 31
 	
@@ -1990,35 +2338,34 @@
 	logic controllers, Genetic fuzzy systems, Probabilistic search, Fuzzy
 	control},
   owner = {Vicepresideencia},
-  review = {El artículo de Magdalena y Monasterio-Huelin trata la evolución por
-	algoritmos genéticos de un controlador por lógica difusa y presenta
-	su aplicación a la generación de patrones de marcha en un caminador
-	bípedo. Particularmente, se usa un algoritmo genético con codificacación
+  review = {El artÃ­culo de Magdalena y Monasterio-Huelin trata la evoluciÃ³n por
+	algoritmos genÃ©ticos de un controlador por lÃ³gica difusa y presenta
+	su aplicaciÃ³n a la generaciÃ³n de patrones de marcha en un caminador
+	bÃ­pedo. Particularmente, se usa un algoritmo genÃ©tico con codificacaciÃ³n
 	binaria para evolucionar tanto las reglas difusas como los rangos
-	de normalización para cada una de las variables involucradas, si
-	bien se codifica toda la información relevante a la base de conocimiento,
-	entre ella el número de conjuntos difusos por variable de entrada
-	y de salida y la definición de las funciones de pertenencia. Se aplica
-	cruce entre reglas difusas, mutación a nivel de bit de las reglas
-	y mutación de los rangos de normalización. Se utiliza la metodología
-	expusta para diseñar un controlador difuso para un caminador bípedo,
+	de normalizaciÃ³n para cada una de las variables involucradas, si
+	bien se codifica toda la informaciÃ³n relevante a la base de conocimiento,
+	entre ella el nÃºmero de conjuntos difusos por variable de entrada
+	y de salida y la definiciÃ³n de las funciones de pertenencia. Se aplica
+	cruce entre reglas difusas, mutaciÃ³n a nivel de bit de las reglas
+	y mutaciÃ³n de los rangos de normalizaciÃ³n. Se utiliza la metodologÃ­a
+	expusta para diseÃ±ar un controlador difuso para un caminador bÃ­pedo,
 	el cual considera las diferentes fases de la marcha. Se obtiene como
-	resultado no solo un conjunto de caminatas exitosas, sino también
-	reglas con mejor desempeño que las provistas inicialmente al sistema.
+	resultado no solo un conjunto de caminatas exitosas, sino tambiÃ©n
+	reglas con mejor desempeÃ±o que las provistas inicialmente al sistema.
 	
 	
 	
-	La metodología presentada por los autores permite desarrollar de manera
+	La metodologÃ­a presentada por los autores permite desarrollar de manera
 	sencilla controladores satisfactorios que pueden ser aplicados al
-	problema de la marcha. Algunos de los procedimientos empleados podrían
-	ser mejorados a la luz de desarrollos teóricos y experiencias de
-	aplicaciones posteriores a 1997, pero en general sigue siendo válido
-	el planteamiento. Sin embargo, la aproximación puede estar limitada
+	problema de la marcha. Algunos de los procedimientos empleados podrÃ­an
+	ser mejorados a la luz de desarrollos teÃ³ricos y experiencias de
+	aplicaciones posteriores a 1997, pero en general sigue siendo vÃ¡lido
+	el planteamiento. Sin embargo, la aproximaciÃ³n puede estar limitada
 	en la complejidad de los problemas que puede abordar, en la rigueza
 	de los comportamientos que puede generar y en la robustez de los
-	controladores a cambios en el sistema o el entorno. [Dinámico][Difuso]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0031118272&partner=40&rel=R5.0.1}
+	controladores a cambios en el sistema o el entorno. [DinÃ¡mico][Difuso]},
+  timestamp = {2006.09.28}
 }
 
 @BOOK{McCulloch88logical,
@@ -2027,7 +2374,7 @@
   year = {1988},
   author = {WS McCulloch and W Pitts},
   address = {Cambridge, MA, USA },
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
 }
 
@@ -2046,7 +2393,7 @@
 	The physics is much the same as in straight-legged walking, but the
 	knee-jointed form has two advantages: it offers },
   doi = {10.1109/ROBOT.1990.126245},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
 }
 
@@ -2068,25 +2415,25 @@
 	Final\\MIYAKOSHI00Stabilization.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\MIYAKOSHI00Stabilization.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {Miyakoshi et al. tratan el problema de estabilización en lazo abierto
-	de movimientos periódicos utilizando osciladores neuronales (neural
-	network oscillators). Muestran la aplicación satisfactoria a un problema
-	de malabarismo, así como a la caminata bípeda con equilibrio estático
-	(stepping). En ésta última, se utiliza un generador de patrones con
+  review = {Miyakoshi et al. tratan el problema de estabilizaciÃ³n en lazo abierto
+	de movimientos periÃ³dicos utilizando osciladores neuronales (neural
+	network oscillators). Muestran la aplicaciÃ³n satisfactoria a un problema
+	de malabarismo, asÃ­ como a la caminata bÃ­peda con equilibrio estÃ¡tico
+	(stepping). En Ã©sta Ãºltima, se utiliza un generador de patrones con
 	un oscilador para el plano frontal y dos acoplados para el sagital,
-	así como un control PD de postura con inhibición desde los osciladores
-	del plano sagital. Así mismo aplican el método a la caminata en equilibrio
-	dinámico (walking) pero logran sólo algunos pasos, ya que el método
+	asÃ­ como un control PD de postura con inhibiciÃ³n desde los osciladores
+	del plano sagital. AsÃ­ mismo aplican el mÃ©todo a la caminata en equilibrio
+	dinÃ¡mico (walking) pero logran sÃ³lo algunos pasos, ya que el mÃ©todo
 	se torna inestable. Proponen profundizar el estudio del control en
-	lazo abierto de la caminata bípeda dinámica.
+	lazo abierto de la caminata bÃ­peda dinÃ¡mica.
 	
 	
-	Es interesante desde la perspectiva de control, ya que propone explícitamente
-	como objetivo la estabilización de la marcha en lazo abierto, divergiendo
+	Es interesante desde la perspectiva de control, ya que propone explÃ­citamente
+	como objetivo la estabilizaciÃ³n de la marcha en lazo abierto, divergiendo
 	de la mayoria de los trabajos observados cuyo objetivo final es realizar
 	control en lazo cerrado. Presenta como deficiencia la incapacidad
-	de mostrar resultados estables para la caminata bípeda dinámica,
-	haciendo dudar de la utilidad de la aproximación planteada. [Estático][CPG][Neuronal]},
+	de mostrar resultados estables para la caminata bÃ­peda dinÃ¡mica,
+	haciendo dudar de la utilidad de la aproximaciÃ³n planteada. [EstÃ¡tico][CPG][Neuronal]},
   timestamp = {2006.10.08}
 }
 
@@ -2114,7 +2461,7 @@
 	to induce the model of the nervous system automatically and showed
 	its effectiveness by simulating a human bipedal gait with the obtained
 	model. Our experimental results show some promising evidences for
-	evolutionary generation of the human-like bipedal locomotion. © 2003
+	evolutionary generation of the human-like bipedal locomotion. Â© 2003
 	Elsevier Science Ltd. All rights reserved.},
   comment = {Export Date: 29 September 2006
 	
@@ -2131,37 +2478,51 @@
 	programming (GP), Neural oscillator, Biped locomotion, Mathematical
 	programming, Robotics, Genetic programming (GP), Mechatronics},
   owner = {Vicepresideencia},
-  review = {Miyashita et al. retoman la conceptualización de autores previos como
+  review = {Miyashita et al. retoman la conceptualizaciÃ³n de autores previos como
 	Taga, destacando la importancia del comportamiento oscilatorio en
 	el sistema nervioso en forma de generador central de patrones (CPG).
 	El controlador propuesto se basa en neuronas artificiales oscilatorias,
 	llamadas osciladores, las cuales son conectadas mutuamente en parejas
-	para obtener un comportamiento acoplado periódico. Se muestra la
-	evolución usando programación genética (GP) de la estructura de la
-	red neuronal en términos de las interconexiones entre osciladores,
-	suponiendo la estructura interna de los osciladores fija. La implementación
+	para obtener un comportamiento acoplado periÃ³dico. Se muestra la
+	evoluciÃ³n usando programaciÃ³n genÃ©tica (GP) de la estructura de la
+	red neuronal en tÃ©rminos de las interconexiones entre osciladores,
+	suponiendo la estructura interna de los osciladores fija. La implementaciÃ³n
 	de la GP para solucionar el problema se realiza representando la
-	red local a cada oscilador como una expresión S, haciendo una co-evolución
-	donde se evoluciona una subpoblación para cada oscilador, pero la
-	evaluación de la función de aptitud así como la aplicación de operadores
-	genéticos se aplican sobre un grupo de osciladores, cada uno de una
-	población distinta. Son presentados resultados de caminatas generadas
-	con el método, hasta un máximo de 10 pasos estables.
+	red local a cada oscilador como una expresiÃ³n S, haciendo una co-evoluciÃ³n
+	donde se evoluciona una subpoblaciÃ³n para cada oscilador, pero la
+	evaluaciÃ³n de la funciÃ³n de aptitud asÃ­ como la aplicaciÃ³n de operadores
+	genÃ©ticos se aplican sobre un grupo de osciladores, cada uno de una
+	poblaciÃ³n distinta. Son presentados resultados de caminatas generadas
+	con el mÃ©todo, hasta un mÃ¡ximo de 10 pasos estables.
 	
 	
-	Si bien el método planteado resulta práctico para ambientes cercanos
-	al ambiente de diseño, puede no presentar robustez ante cambios mayores.
-	Así mismo, utilizando un cluster de computadores sólo se obtuvo una
+	Si bien el mÃ©todo planteado resulta prÃ¡ctico para ambientes cercanos
+	al ambiente de diseÃ±o, puede no presentar robustez ante cambios mayores.
+	AsÃ­ mismo, utilizando un cluster de computadores sÃ³lo se obtuvo una
 	caminata estable de 10 pasos, lo cual hace dudar de la capacidad
-	del método frente a su complejidad computacional. Por otra parte,
-	según ellos afirman no hay un intento previo de generar un controlador
-	bípedo configurado sin intervención humana, lo cual es fácilmente
-	desmentible pues se encuentran trabajos previos aún muy similares
+	del mÃ©todo frente a su complejidad computacional. Por otra parte,
+	segÃºn ellos afirman no hay un intento previo de generar un controlador
+	bÃ­pedo configurado sin intervenciÃ³n humana, lo cual es fÃ¡cilmente
+	desmentible pues se encuentran trabajos previos aÃºn muy similares
 	al presentado por Miyashita et al. en fechas anteriores (e. g. ver
 	'Design of central pattern generator for humanoid robot walking based
 	on multi-objective GA', Jiang et al, 2000). [CPG]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0038348342&partner=40&rel=R5.0.1}
+  timestamp = {2006.09.28}
+}
+
+@ARTICLE{Moriarty96Efficient,
+  author = {Moriarty,, David E. and Mikkulainen,, Risto},
+  title = {Efficient reinforcement learning through symbiotic evolution},
+  journal = {Mach. Learn.},
+  year = {1996},
+  volume = {22},
+  pages = {11--32},
+  number = {1-3},
+  __markedentry = {[jjfigueredou]},
+  address = {Hingham, MA, USA},
+  doi = {http://dx.doi.org/10.1007/BF00114722},
+  issn = {0885-6125},
+  publisher = {Kluwer Academic Publishers}
 }
 
 @INPROCEEDINGS{Nakada2003,
@@ -2196,9 +2557,8 @@
   keywords = {Computer simulation, Degrees of freedom (mechanics), Digital signal
 	processing, Mathematical models, Neural networks, Numerical analysis,
 	Robots, Locomotion controller, Robotics},
-  owner = {···Shrein···},
-  timestamp = {2006.11.20},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0141482358&partner=40&rel=R5.0.4}
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
+  timestamp = {2006.11.20}
 }
 
 @INPROCEEDINGS{Nakanishi2004b,
@@ -2225,7 +2585,7 @@
 	on a physical robot demonstrate the effectiveness of the proposed
 	locomotion controller. Furthermore, we demonstrate that phase resetting
 	contributes to robustness against external perturbations and environmental
-	changes by numerical simulations and experiments. © 2004 IEEE.},
+	changes by numerical simulations and experiments. Â© 2004 IEEE.},
   comment = {Export Date: 14 September 2006
 	
 	Source: Scopus
@@ -2315,41 +2675,50 @@
 	pimitives, Frequency adaptation, Learning from demonstration, Phase
 	resetting, Biped locomotion},
   owner = {Juan Figueredo},
-  review = {Nakanishi et al. presentan una aproximación poco tradicional a la
-	generación de patrones de caminata bípeda con algunas similaridades
-	a los generadores centrales de patrones. La idea consiste en diseñar
+  review = {Nakanishi et al. presentan una aproximaciÃ³n poco tradicional a la
+	generaciÃ³n de patrones de caminata bÃ­peda con algunas similaridades
+	a los generadores centrales de patrones. La idea consiste en diseÃ±ar
 	osciladores representados como sistemas de ecuaciones diferenciales
 	no lineales acoplados en fase, de tal forma que el elemento fundamental
-	de la dinámica no es la frecuencia de oscilación de cada elemento,
-	sino sus relaciones de fase para obtener un patrón de movimiento
-	deseado. Se plantea como esquema de entrenamiento una regresión con
-	ponderación local (LWR) para adaptar las fases de los elementos,
-	así como la frecuencia global de oscilación del sistema dinámico.
-	Adicionalmente, se aplica el concepto de reinicialización de fase,
-	provocándose ésta en el momento de contacto del talón con el suelo.
-	Se muestra que el principio de reincialización de fase resulta ventajoso
+	de la dinÃ¡mica no es la frecuencia de oscilaciÃ³n de cada elemento,
+	sino sus relaciones de fase para obtener un patrÃ³n de movimiento
+	deseado. Se plantea como esquema de entrenamiento una regresiÃ³n con
+	ponderaciÃ³n local (LWR) para adaptar las fases de los elementos,
+	asÃ­ como la frecuencia global de oscilaciÃ³n del sistema dinÃ¡mico.
+	Adicionalmente, se aplica el concepto de reinicializaciÃ³n de fase,
+	provocÃ¡ndose Ã©sta en el momento de contacto del talÃ³n con el suelo.
+	Se muestra que el principio de reincializaciÃ³n de fase resulta ventajoso
 	cuando se presentan perturbaciones en la caminata de un robot real.
-	Así mismo, se argumenta que el controlador por fase es mucho más
+	AsÃ­ mismo, se argumenta que el controlador por fase es mucho mÃ¡s
 	sencillo de entrenar que los generadores por neuronas oscilatorias.
 	Finlmente se afirma la superioridad del controlador presenado frente
 	a un controlador por automatas de estado finito. 
 	
 	
-	Esta es una aproximación relacionada con los métodos tradicionales
+	Esta es una aproximaciÃ³n relacionada con los mÃ©todos tradicionales
 	usando neuronas oscilatorias para generar los patrones, pero en forma
-	innovativa trata la generación de patrones directamente sobre las
-	ecuaciones dinámicas de un sistema de osciladores acoplados por fase.
-	Así mismo, aprovecha el principio de reinicialización de fase, el
-	cual ya ha sido soportado por investigaciones biológicas y modelos
-	dinámicos no lineales. Una desventaja del sistema mostrado es su
+	innovativa trata la generaciÃ³n de patrones directamente sobre las
+	ecuaciones dinÃ¡micas de un sistema de osciladores acoplados por fase.
+	AsÃ­ mismo, aprovecha el principio de reinicializaciÃ³n de fase, el
+	cual ya ha sido soportado por investigaciones biolÃ³gicas y modelos
+	dinÃ¡micos no lineales. Una desventaja del sistema mostrado es su
 	alta sensibilidad a las condiciones iniciales, pues el generador
 	requiere que el punto de inicio del movimiento corresponda con la
-	generación de oscilaciones. Sin embargo, posiblemente al generalizar
-	el uso del principio de reinicialización de fase, tal problema pueda
+	generaciÃ³n de oscilaciones. Sin embargo, posiblemente al generalizar
+	el uso del principio de reinicializaciÃ³n de fase, tal problema pueda
 	ser superado. [Destacado] [Ligeramente fuera de tema enfocado pero
-	útil para estado del arte] [CPG]},
-  timestamp = {2006.10.23},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-17144380103&partner=40&rel=R5.0.1}
+	Ãºtil para estado del arte] [CPG]},
+  timestamp = {2006.10.23}
+}
+
+@BOOK{Nolfi04Evolutionary,
+  title = {Evolutionary Robotics: The Biology, Intelligence, and Technology
+	of Self-Organizing Machines},
+  publisher = {Bradford Book},
+  year = {2004},
+  author = {Stefano Nolfi and Dario Floreano},
+  owner = {jjfigueredou},
+  timestamp = {2009.01.15}
 }
 
 @ARTICLE{Orin9Kinematic,
@@ -2360,7 +2729,7 @@
   year = {1979 },
   volume = {43},
   pages = {107-130},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
 }
 
@@ -2389,7 +2758,7 @@
 	a 7-DOF biped robot in the sagittal plane. The simulation results
 	show that the ZMP trajectory generated by the proposed fuzzy-logic
 	generator increases the stability of the locomotion and thus reduces
-	the motion range of the trunk significantly. © 2002 Elsevier Science
+	the motion range of the trunk significantly. Â© 2002 Elsevier Science
 	B.V. All rights reserved.},
   comment = {Cited By (since 1996): 5
 	
@@ -2408,29 +2777,28 @@
 	Computer simulation, Differential equations, Fuzzy sets, Trajectories,
 	Biped robots, Robots},
   owner = {Vicepresideencia},
-  review = {Park aplica la conceptualización de la marcha desde el punto de momento
+  review = {Park aplica la conceptualizaciÃ³n de la marcha desde el punto de momento
 	zero (ZMP), buscando, en vez de generar movimientos para cada una
-	de las articulaciones del caminador bípedo, generar las trayectorias
-	del ZMP dinámicamente de acuerdo al estado de las articulaciones
-	de la cadera y la pierna en balanceo, usando un sistema de lógica
-	difusa de generación de trayectoria del tronco. Así, genera un movimiento
-	mucho más natural y con desplazamientos de cadera reducidos. Para
+	de las articulaciones del caminador bÃ­pedo, generar las trayectorias
+	del ZMP dinÃ¡micamente de acuerdo al estado de las articulaciones
+	de la cadera y la pierna en balanceo, usando un sistema de lÃ³gica
+	difusa de generaciÃ³n de trayectoria del tronco. AsÃ­, genera un movimiento
+	mucho mÃ¡s natural y con desplazamientos de cadera reducidos. Para
 	calcular los movimientos de las articulaciones una vez hallada la
-	ubicación del ZMP se utiliza la cinemática inversa del mecanismo
+	ubicaciÃ³n del ZMP se utiliza la cinemÃ¡tica inversa del mecanismo
 	y se aplica un control por par calculado (computed torque controller).
 	Las trayectorias de las piernas son recibidas como entrada al sistema
-	de generación de trayectorias.
+	de generaciÃ³n de trayectorias.
 	
 	
-	Es interesante observar la posibilidad de hacer modificaciones dinámicas
-	de la marcha partiendo de conceptos generales aplicados con lógica
-	difusa. El concepto podría ser extendido usando métodos más elaborados
-	para generar también las trayectorias de las piernas dada una directiva
-	general de movimiento. El control por par calculado podría ser remplazado
-	por una técnica más robusta que se adapte a variaciones en el sistema.
-	[Dinámico][Difuso]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0037448735&partner=40&rel=R5.0.1}
+	Es interesante observar la posibilidad de hacer modificaciones dinÃ¡micas
+	de la marcha partiendo de conceptos generales aplicados con lÃ³gica
+	difusa. El concepto podrÃ­a ser extendido usando mÃ©todos mÃ¡s elaborados
+	para generar tambiÃ©n las trayectorias de las piernas dada una directiva
+	general de movimiento. El control por par calculado podrÃ­a ser remplazado
+	por una tÃ©cnica mÃ¡s robusta que se adapte a variaciones en el sistema.
+	[DinÃ¡mico][Difuso]},
+  timestamp = {2006.09.28}
 }
 
 @ARTICLE{Park91Universal,
@@ -2440,8 +2808,27 @@
   year = {1991},
   volume = {3:22},
   pages = {246-257},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
+}
+
+@INPROCEEDINGS{Pasemann98Evolving,
+  author = {Frank Pasemann},
+  title = {Evolving neurocontrollers for balancing an inverted pendulum},
+  booktitle = {Network: Computation in Neural Systems},
+  year = {1998},
+  pages = {495--511},
+  __markedentry = {[jjfigueredou]},
+  abstract = {The paper introduces an evolutionary algorithm that is tailored to
+	generate recurrent neural networks functioning as nonlinear controllers.
+	Network size and architecture as well as network parameters like
+	weights and bias terms are developed simultaneously. There is no
+	quantization of inputs, outputs or internal parameters. Dierent kinds
+	of evolved networks are presented that solve the pole-balancing problem,
+	i.e. balancing an inverted pendulum. Especially controllers solving
+	the problem for reduced phase space information (only angle and cart
+	position) use a recurrent connectivity structure. Evolved controllers
+	of \minimal &quot; size still have a very good benchmark performance.}
 }
 
 @MISC{Paul04Sensorimotor,
@@ -2471,28 +2858,28 @@
 	Final\\Paul04Sensorimotor.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\Paul04Sensorimotor.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {En el este artículo Paul busca continuar el trabajo orientado a la
-	simplificación de controladores para la caminata basados en redes
+  review = {En el este artÃ­culo Paul busca continuar el trabajo orientado a la
+	simplificaciÃ³n de controladores para la caminata basados en redes
 	neuronales, esta vez mostrando que redes simples independientes para
 	el control de cada pierna pueden generar un caminata estable, usando
-	sólo conexiones hacia adelante (feed-fordward neural network) sin
-	capa oculta. Las redes utilizadas sólo reciben como entrada el contacto
-	con su respectiva pierna y una señal de bias común para los dos controladores.
-	De numerosas configuraciones evolucionadas con algoritmos genéticos,
-	sólo dos lograron la caminata satisfactoria, pero en forma destacable,
+	sÃ³lo conexiones hacia adelante (feed-fordward neural network) sin
+	capa oculta. Las redes utilizadas sÃ³lo reciben como entrada el contacto
+	con su respectiva pierna y una seÃ±al de bias comÃºn para los dos controladores.
+	De numerosas configuraciones evolucionadas con algoritmos genÃ©ticos,
+	sÃ³lo dos lograron la caminata satisfactoria, pero en forma destacable,
 	ambas resultaron ser estables indefinidamente. Se usa, como en previos
-	trabajos de Paul, coevolución de algunos pocos parámetros morfológicos.
+	trabajos de Paul, coevoluciÃ³n de algunos pocos parÃ¡metros morfolÃ³gicos.
 	
 	
 	El trabajo es destacable en cuanto muestra una de las alternativas
-	más simples para el control de la caminata bípeda, realizando un
-	simple mapeo entre la entrada sensórica de cada pierna y su movimiento,
+	mÃ¡s simples para el control de la caminata bÃ­peda, realizando un
+	simple mapeo entre la entrada sensÃ³rica de cada pierna y su movimiento,
 	adicionalmente exhibiento completo desacople contralateral. Esto
-	lleva a Paul a conjeturar que el control bípedo en los humanos en
-	las extremidades inferiores es efectuado enteramente por coordinación
+	lleva a Paul a conjeturar que el control bÃ­pedo en los humanos en
+	las extremidades inferiores es efectuado enteramente por coordinaciÃ³n
 	sensoriomotriz, mientras que el CPG se usa para alterar las condiciones
 	de la marcha actuando sobre el tronco y brazos. Tal conjetura ha
-	de ser probada más cuidadosamente. [CPG]},
+	de ser probada mÃ¡s cuidadosamente. [CPG]},
   timestamp = {2006.10.08}
 }
 
@@ -2510,26 +2897,26 @@
   owner = {Juan Figueredo},
   review = {En este trabajo Paul busca mostrar que, a diferencia de los controladores
 	que usan un generador central de patrones (CPG) cuyas conexiones
-	entre los osciladores en los lados izquierdo y derecho están acoplados,
+	entre los osciladores en los lados izquierdo y derecho estÃ¡n acoplados,
 	es posible obtener una caminata satisfactoria con dos generadores
 	desacoplados. Se tratan dos casos: el primero desacopla tanto las
-	conexiones como la sensórica, teniéndose dos CPGs independientes,
-	sin ninguna conexión entre sí y con entradas de sensores ubicados
-	estríctamente en su lado parcial; mientras el segundo desacopla las
+	conexiones como la sensÃ³rica, teniÃ©ndose dos CPGs independientes,
+	sin ninguna conexiÃ³n entre sÃ­ y con entradas de sensores ubicados
+	estrÃ­ctamente en su lado parcial; mientras el segundo desacopla las
 	conexiones pero se permiten entradas comunes a ambos sensores referentes
 	a la postura global. Ambos controladores son evolucionados con algoritmos
-	genéticos y en paralelo a tres parámetros morfológicos. Se muestra
+	genÃ©ticos y en paralelo a tres parÃ¡metros morfolÃ³gicos. Se muestra
 	que para el primer caso se logran caminatas satisfactorias en la
-	mayoría de los casos pero hay problemas para seguir la línea recta.
+	mayorÃ­a de los casos pero hay problemas para seguir la lÃ­nea recta.
 	En el segundo, se demuestra que el desacople de los CPGs con entradas
-	globales es una técnica igualmente satisfactoria que el caso enteramente
+	globales es una tÃ©cnica igualmente satisfactoria que el caso enteramente
 	acoplado.
 	
 	
-	Es interesante la prueba práctica que da el autor a favor de la posibilidad
-	de que el control en la caminata bípeda humana se encuentre desacoplado
-	lateralmente. Así mismo, se destaca que la estructura de control,
-	así como los pocos parámetros morfológicos escogidos, resultaron
+	Es interesante la prueba prÃ¡ctica que da el autor a favor de la posibilidad
+	de que el control en la caminata bÃ­peda humana se encuentre desacoplado
+	lateralmente. AsÃ­ mismo, se destaca que la estructura de control,
+	asÃ­ como los pocos parÃ¡metros morfolÃ³gicos escogidos, resultaron
 	en un conjunto de caminadores bastante exitosos y es un prograe considerable
 	frente al trabajo previo [Paul01road]. [Especia] [CPG]},
   timestamp = {2006.10.08},
@@ -2560,29 +2947,29 @@
 	Final\\Paul01road.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\Paul01road.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {En el trabajo de Paul y Bongard se propone novedosamente la evolución
-	acoplada de morfología y control, destacándose la relativa poca profundidad
-	con la que se ha tratado la evolución (y en general la configuración)
-	morfológica para la obtención de patrones de marcha. La metodología
-	utilizada consiste en evolucionar simultáneamente la morfología,
-	en términos de la distribución de bloques discretos de masa en una
-	configuración articular fija, y el control, en términos de los pesos
+  review = {En el trabajo de Paul y Bongard se propone novedosamente la evoluciÃ³n
+	acoplada de morfologÃ­a y control, destacÃ¡ndose la relativa poca profundidad
+	con la que se ha tratado la evoluciÃ³n (y en general la configuraciÃ³n)
+	morfolÃ³gica para la obtenciÃ³n de patrones de marcha. La metodologÃ­a
+	utilizada consiste en evolucionar simultÃ¡neamente la morfologÃ­a,
+	en tÃ©rminos de la distribuciÃ³n de bloques discretos de masa en una
+	configuraciÃ³n articular fija, y el control, en tÃ©rminos de los pesos
 	de una red neuronal recurrente. Se realizan varios experimentos,
-	variando la proporción de masa que puede ser redistribuida, con el
-	fin de evaluar las modificaciones morfológicas en escalas micro,
+	variando la proporciÃ³n de masa que puede ser redistribuida, con el
+	fin de evaluar las modificaciones morfolÃ³gicas en escalas micro,
 	meso y macro.
 	
 	
-	Es muy importante recuperar la temática de estudio del trabajo como
-	una de las áreas fundamentales en el diseño de robots bípedos en
+	Es muy importante recuperar la temÃ¡tica de estudio del trabajo como
+	una de las Ã¡reas fundamentales en el diseÃ±o de robots bÃ­pedos en
 	la cual la inteligencia computacional puede jugar un papel importante
-	(ver también el trabajo de [Huelse04Structure]). Hay múltiples elementos
+	(ver tambiÃ©n el trabajo de [Huelse04Structure]). Hay mÃºltiples elementos
 	en los cuales se puede trabajar para optimizar el proceso, entre
-	ellos los operadores y la representación en el algoritmo evolutivo
-	(pueden estar restringiendo el espacio de búsqueda o la movilidad
-	a través de este), así como en las técnicas de control. [Interesante
-	-> Destaca la importancia de modificación morfológica paralela al
-	control] [Dinámico][Neuronal]},
+	ellos los operadores y la representaciÃ³n en el algoritmo evolutivo
+	(pueden estar restringiendo el espacio de bÃºsqueda o la movilidad
+	a travÃ©s de este), asÃ­ como en las tÃ©cnicas de control. [Interesante
+	-> Destaca la importancia de modificaciÃ³n morfolÃ³gica paralela al
+	control] [DinÃ¡mico][Neuronal]},
   text = {Chandana Paul and Josh C. Bongard. The road less travelled: Morphology
 	in the optimization of biped robot locomotion. In Proceedings of
 	the IEEE/RSJ International Conference on Intelligent Robots and Systems,
@@ -2630,45 +3017,44 @@
 	Optimization, Recurrent neural networks, Pattern generators, Robotics},
   owner = {Juan Figueredo},
   review = {Reil y Husbands emplean un algoritmo evolutivo para optimizar los
-	parámetros de una red neuronal recurrente totalmente conectada. El
-	modelo de cada neurona es un modelo dinámico que atenúa su respuesta
-	en ausencia de estimulación, y depende de un conjunto de pesos, un
-	factor de sesgo (bias) y una constante de tiempo dinámica. Los tres
-	tipos de parámetros para la totalidad de neuronas de la red son representados
+	parÃ¡metros de una red neuronal recurrente totalmente conectada. El
+	modelo de cada neurona es un modelo dinÃ¡mico que atenÃºa su respuesta
+	en ausencia de estimulaciÃ³n, y depende de un conjunto de pesos, un
+	factor de sesgo (bias) y una constante de tiempo dinÃ¡mica. Los tres
+	tipos de parÃ¡metros para la totalidad de neuronas de la red son representados
 	linealmente en el genotipo de los individuos del algoritmo evolutivo.
-	La función de aptitud empleada favorece el movimiento que maximize
-	el desplazamiento en dirección frontal y penaliza el movimiento en
-	dirección vertical. Los autores logran con tal regla de evaluación
+	La funciÃ³n de aptitud empleada favorece el movimiento que maximize
+	el desplazamiento en direcciÃ³n frontal y penaliza el movimiento en
+	direcciÃ³n vertical. Los autores logran con tal regla de evaluaciÃ³n
 	sencilla generar patrones de marcha satisfactorios sin necesidad
-	de ninguna realimentación sensorial. Posteriormente, adicionan una
+	de ninguna realimentaciÃ³n sensorial. Posteriormente, adicionan una
 	entrada sensorial de tipo 'auditivo' y, dejando fijas las conexiones
-	recurrentes, evolucionan los pesos de conexión de las neuronas recurrentes
+	recurrentes, evolucionan los pesos de conexiÃ³n de las neuronas recurrentes
 	con la entrada sensorial. Logran de esta forma que el robot navegue
-	hacia una fuente de emisión de sonido. El controlador neuronal genera
-	referencias de posición que son llevadas a fuerzas en los motores
-	por un control PD de torque. Una adición a la eficiencia del algoritmo
+	hacia una fuente de emisiÃ³n de sonido. El controlador neuronal genera
+	referencias de posiciÃ³n que son llevadas a fuerzas en los motores
+	por un control PD de torque. Una adiciÃ³n a la eficiencia del algoritmo
 	es el abandono prematura de marchas que se desplazan demaisado en
-	dirección vertical.
+	direcciÃ³n vertical.
 	
 	
 	Este trabajo se puede considerar dentro del grupo de generadores centrales
-	patrones, con la diferencia que aquí no se uitlizan osciladores acoplados,
+	patrones, con la diferencia que aquÃ­ no se uitlizan osciladores acoplados,
 	sino una red completamente realimentada. Sin embargo, los autores
 	propones usar subredes acopladas en posteriores trabajos. Es importante
 	mencionar dos puntos adicionales: logran caminata sin necesidad de
-	una entrada sensorial y empleando una función de aptitud sencilla,
-	y el método es extensible a situaciones con realimentación sensorial
-	simple. Dado que sólo un 10% de las ejecuciones del algoritmo fueron
+	una entrada sensorial y empleando una funciÃ³n de aptitud sencilla,
+	y el mÃ©todo es extensible a situaciones con realimentaciÃ³n sensorial
+	simple. Dado que sÃ³lo un 10% de las ejecuciones del algoritmo fueron
 	satisfactorias en sus resultados, puede ser requerido mayor trabajo,
-	tanto en la optimización del controlador (aumentando probablemente
-	la expresividad de la representación), como en la evaluación de la
-	función de aptitud. Ellos muestran un intento al respecto, premiando
+	tanto en la optimizaciÃ³n del controlador (aumentando probablemente
+	la expresividad de la representaciÃ³n), como en la evaluaciÃ³n de la
+	funciÃ³n de aptitud. Ellos muestran un intento al respecto, premiando
 	el movimiento oscilatorio, con lo cual obtienen un 80% de intentos
 	exitosos, aunque no obtienen una mejora en el tiempo global empleado
-	en relación con el número de caminatas exitosas obtenidas. [CPG]
+	en relaciÃ³n con el nÃºmero de caminatas exitosas obtenidas. [CPG]
 	[Neuronal]},
-  timestamp = {2006.10.23},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0036530980&partner=40&rel=R5.0.1}
+  timestamp = {2006.10.23}
 }
 
 @ARTICLE{ROSENBLATT58perceptron:,
@@ -2679,7 +3065,7 @@
   year = {1958},
   volume = {65(6)},
   pages = {386-408},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
 }
 
@@ -2705,7 +3091,7 @@
 	The goal of the use of these neural networks is to increase the robustness
 	of the control of the dynamic walking gait of this robot in the case
 	of external disturbances. The first experimental results are also
-	presented. © 2005 Elsevier B.V. All rights resrved.},
+	presented. Â© 2005 Elsevier B.V. All rights resrved.},
   comment = {Cited By (since 1996): 1
 	
 	Export Date: 29 September 2006
@@ -2726,34 +3112,63 @@
 	biped robot, Robots},
   owner = {Vicepresideencia},
   review = {Sabourin y Bruneau aplican un control basado en seguimiento de trayectorias
-	generadas por una red neuronal CMAC para controlar la caminata bípeda.
+	generadas por una red neuronal CMAC para controlar la caminata bÃ­peda.
 	Inicialmente calculan un conjunto de reglas o fases, de tipo activo
 	y pasivo, las cuales generan actuaciones parciales en las diferentes
-	articulaciones de acuerdo a la configuración geométrica en la que
+	articulaciones de acuerdo a la configuraciÃ³n geomÃ©trica en la que
 	se encuentra el robot caminador. Posteriormente entrenan una red
 	CMAC para que generalice las trayectorias necesarias para generar
 	la marcha, particularmente en lo que se refiere a la pierna en balanceo.
-	La rodilla de la pierna de apoyo se bloquea y su ángulo es determinado
-	por un control de alto nivel que, recibiendo una velocidad como parámetro,
-	modifica el ángulo para obtener una caminata con la velocidad deseada.
+	La rodilla de la pierna de apoyo se bloquea y su Ã¡ngulo es determinado
+	por un control de alto nivel que, recibiendo una velocidad como parÃ¡metro,
+	modifica el Ã¡ngulo para obtener una caminata con la velocidad deseada.
 	El seguimiento de las trayectorias generadas por el control de alto
 	nivel (pierna de apoyo) y la red CMAC (pierna en balanceo) es implementado
-	con un control PD. Se muestra la robustez del método sometiéndolo
+	con un control PD. Se muestra la robustez del mÃ©todo sometiÃ©ndolo
 	a perturbaciones en el terreno, cargas aplicadas y deslizamiento.
 	
 	
-	La metodología de control es bastante simple y no requiere cálculos
-	particularmente complejos. Sin embargo, se requiere primero diseñar
+	La metodologÃ­a de control es bastante simple y no requiere cÃ¡lculos
+	particularmente complejos. Sin embargo, se requiere primero diseÃ±ar
 	un conjunto de fases activas y pasivas para caracterizar la marcha
-	y de tal forma se introduce, primero, elementos subóptimos al patron
-	de marcha, y segundo, esquemas relativamente rígidos de marcha que
+	y de tal forma se introduce, primero, elementos subÃ³ptimos al patron
+	de marcha, y segundo, esquemas relativamente rÃ­gidos de marcha que
 	han de ser reconfigurados para obtener distintos comportamientos.
 	El entrenamiento de la red CMAC parece ser bastante costoso y no
-	puede ser realizado en tiempo real, lo cual hace dudar también de
-	la utilidad del método para sistemas con mayor complejidad.[Dinámico]
+	puede ser realizado en tiempo real, lo cual hace dudar tambiÃ©n de
+	la utilidad del mÃ©todo para sistemas con mayor complejidad.[DinÃ¡mico]
 	[Neuronal]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-16644388425&partner=40&rel=R5.0.1}
+  timestamp = {2006.09.28}
+}
+
+@ARTICLE{Stanley02Evolving,
+  author = {Stanley,, Kenneth O. and Miikkulainen,, Risto},
+  title = {Evolving neural networks through augmenting topologies},
+  journal = {Evol. Comput.},
+  year = {2002},
+  volume = {10},
+  pages = {99--127},
+  number = {2},
+  __markedentry = {[jjfigueredou]},
+  abstract = {An important question in neuroevolution is how to gain an advantage
+	from evolving neural network topologies along with weights. We present
+	a method, NeuroEvolution of Augmenting Topologies (NEAT), which outperforms
+	the best fixed-topology method on a challenging benchmark reinforcement
+	learning task. We claim that the increased efficiency is due to (1)
+	employing a principled method of crossover of different topologies,
+	(2) protecting structural innovation using speciation, and (3) incrementally
+	growing from minimal structure. We test this claim through a series
+	of ablation studies that demonstrate that each component is necessary
+	to the system as a whole and to each other. What results is significantly
+	faster learning. NEAT is also an important contribution to GAs because
+	it shows how it is possible for evolution to both optimize and complexify
+	solutions simultaneously, offering the possibility of evolving increasingly
+	complex solutions over generations, and strengthening the analogy
+	with biological evolution.},
+  address = {Cambridge, MA, USA},
+  doi = {http://dx.doi.org/10.1162/106365602320169811},
+  issn = {1063-6560},
+  publisher = {MIT Press}
 }
 
 @ARTICLE{Stepanenko6Dynamics,
@@ -2763,8 +3178,66 @@
   year = {1976 },
   volume = {28},
   pages = {137-170},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
+}
+
+@ARTICLE{Sugihara03Contact,
+  author = {Sugihara, T. and Nakamura, Y.},
+  title = {Contact phase invariant control for humanoid robot based on variable
+	impedant inverted pendulum model},
+  journal = {Robotics and Automation, 2003. Proceedings. ICRA '03. IEEE International
+	Conference on},
+  year = {2003},
+  volume = {1},
+  pages = { 51-56 vol.1},
+  month = {Sept.},
+  __markedentry = {[jjfigueredou]},
+  abstract = { Being expected as the utilities in the future, humanoid robots should
+	be given much higher mobility. A seamless transition between contact
+	and aerial phase is essential to behave robustly against disturbance
+	in the real environment, and to expand the range of their activities
+	and perform a variety of motion. Manipulation of both the contact
+	condition and the external force is the key issue to enhance the
+	mobility of humanoids since they are driven by the external force
+	converted from the inner force through the interaction with the environment.
+	The difficulty lies on the complexity of their dynamics so that they
+	consist of number of degrees of freedom and their structures vary
+	in accordance with contact phase transition. We propose variable
+	impedant inverted pendulum (VIIP) model control, which allows one
+	to handle the external force rather easily. The advantage of the
+	proposed is that it is invariant on contact phase so that both cases
+	in contact and in aerial are treated in the unified way. It also
+	reduces the amount of computation. Thus, quick responsive motion
+	of the robot can be practically achieved. We verified the effect
+	of the controller in computer simulation, using a small humanoid
+	robot model.},
+  issn = {1050-4729 },
+  keywords = { mobile robots, motion control, nonlinear control systems, path planning,
+	robot dynamics aerial phase, contact condition, contact phase, external
+	force, higher mobility, humanoid robots, invariant control, variable
+	impedant inverted pendulum}
+}
+
+@ARTICLE{Suykens94Static,
+  author = {Suykens,, Johan A. K. and De Moor,, Bart L. R. and Vandewalle,, Joos},
+  title = {Static and dynamic stabilizing neural controllers, applicable to
+	transition between equilibrium points},
+  journal = {Neural Netw.},
+  year = {1994},
+  volume = {7},
+  pages = {819--831},
+  number = {5},
+  __markedentry = {[jjfigueredou]},
+  abstract = {A design method for stabilization of nonlinear systems by feedforward
+	and recurrent neural networks is proposed, applicable to transition
+	between equilibrium points with local stabilization at the endpoint.
+	Both static and dynamic state and output feedback stabilizing neural
+	control are discussed. [...]},
+  address = {Oxford, UK, UK},
+  doi = {http://dx.doi.org/10.1016/0893-6080(94)90103-1},
+  issn = {0893-6080},
+  publisher = {Elsevier Science Ltd.}
 }
 
 @ARTICLE{Taga98model,
@@ -2808,8 +3281,7 @@
 	Source: Scopus},
   owner = {Juan Figueredo},
   review = {[CPG]},
-  timestamp = {2006.10.30},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0031600954&partner=40&rel=R5.0.4}
+  timestamp = {2006.10.30}
 }
 
 @ARTICLE{Taga1991,
@@ -2850,10 +3322,9 @@
 	Correspondence Address: Taga, G.},
   issn = {03401200 (ISSN)},
   keywords = {biological model, Models, Biological, Models, Neurological},
-  owner = {···Shrein···},
-  review = {[CPG][Clásico][No hay artículo disponible]},
-  timestamp = {2006.11.20},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0026045478&partner=40&rel=R5.0.4}
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
+  review = {[CPG][ClÃ¡sico][No hay artÃ­culo disponible]},
+  timestamp = {2006.11.20}
 }
 
 @ARTICLE{Vaughan03Theories,
@@ -2887,7 +3358,7 @@
 	of locomotion which have not been covered in this review. Despite
 	such omissions, this odyssey has explored the wide spectrum of bipedal
 	walking, from its origins through to the integration of the nervous,
-	muscular and skeletal systems. © 2003 Published by Elsevier Science
+	muscular and skeletal systems. Â© 2003 Published by Elsevier Science
 	Ltd.},
   address = {Department of Human Biology, Faculty of Health Sciences, University
 	of Cape Town, Observatory 7925, South Africa},
@@ -2898,8 +3369,7 @@
 	Source: Scopus},
   keywords = {Bipedal walking, Gait theories},
   owner = {Juan Figueredo},
-  timestamp = {2006.10.30},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0037397170&partner=40&rel=R5.0.4}
+  timestamp = {2006.10.30}
 }
 
 @MISC{Vaughan03Flight,
@@ -2943,7 +3413,7 @@
 	years of active research, and are capable of walking on sloped surfaces
 	and climbing
 	
-	stairs. However, they don’t appear to have many of the attributes
+	stairs. However, they donâ€™t appear to have many of the attributes
 	advertised by legged
 	
 	locomotion. They are very inefficient at walking, requiring over 20
@@ -2961,7 +3431,7 @@
 	created to mimic the trajectories and motion of their legs. However,
 	this is analogous to
 	
-	modeling the flapping motions of a bird’s wings, in order to understand
+	modeling the flapping motions of a birdâ€™s wings, in order to understand
 	flight. Building a
 	
 	model of a bird and mechanically playing back wing gaits was not instrumental
@@ -2970,7 +3440,7 @@
 	Wright bothers approach to flight [Hep03]. Instead they studied the
 	interaction between a
 	
-	bird’s wings and the air, to understand the dynamics of lift. With
+	birdâ€™s wings and the air, to understand the dynamics of lift. With
 	this knowledge they
 	
 	built an un-powered glider, and later added a small amount of propulsion.
@@ -2986,36 +3456,36 @@
 	be constructed
 	
 	and perfected. Then the control system should be co-evolved with the
-	biped’s
+	bipedâ€™s
 	
 	morphology to achieve fast, efficient, natural walking.},
   file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\Vaughan03Flight.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\Vaughan03Flight.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {Vaughan realiza una revisión general de algunos de los métodos para
-	el control de caminata bípeda. Primero, hace una referencia a los
-	métodos de seguimiento de trayectorias predefinidas que fueron usados
-	en un principio. A continuación, presenta el concepto de caminata
-	bípeda pasiva (PDW) y la considera como una alternativa promisoria
+  review = {Vaughan realiza una revisiÃ³n general de algunos de los mÃ©todos para
+	el control de caminata bÃ­peda. Primero, hace una referencia a los
+	mÃ©todos de seguimiento de trayectorias predefinidas que fueron usados
+	en un principio. A continuaciÃ³n, presenta el concepto de caminata
+	bÃ­peda pasiva (PDW) y la considera como una alternativa promisoria
 	frente al control por ZMP encontrado en robots comerciales, el cual
-	presenta muy altos costos energéticos y patrones de marcha poco naturales.
-	Depues aborda algunos de los métodos de control no tradicionales
-	(i.e. fuera de la teoría de control), entre ellos el método de control
-	por modelo virtual (VMC) que simula la presencia de elementos mecánicos
+	presenta muy altos costos energÃ©ticos y patrones de marcha poco naturales.
+	Depues aborda algunos de los mÃ©todos de control no tradicionales
+	(i.e. fuera de la teorÃ­a de control), entre ellos el mÃ©todo de control
+	por modelo virtual (VMC) que simula la presencia de elementos mecÃ¡nicos
 	como resortes y amortiguadores, y el control por redes neuronales.
-	Respecto a este último hace referencia al entrenamiento de las redes
-	neuronales usando algoritmos evolutivos de tal forma que actúen sinérgicamente
-	con la dinámica del sistema físico.
+	Respecto a este Ãºltimo hace referencia al entrenamiento de las redes
+	neuronales usando algoritmos evolutivos de tal forma que actÃºen sinÃ©rgicamente
+	con la dinÃ¡mica del sistema fÃ­sico.
 	
 	
-	Esta es una revisión general de algunos de los métodos de caminata
-	bípeda por métodos no tradicionales. Si bien destaca algunos elementos
-	importantes, sólo sirve para dar una idea general de la temática
-	y no constituye una evaluación rigurosa del trabajo en el área ni
-	propone una organización conceptual integral. Así mismo, carece de
-	una conceptualización teoríca de los principios físicos, matemáticos,
-	biológicos y computacionales aplicados en el área. [Revisión de trabajos
+	Esta es una revisiÃ³n general de algunos de los mÃ©todos de caminata
+	bÃ­peda por mÃ©todos no tradicionales. Si bien destaca algunos elementos
+	importantes, sÃ³lo sirve para dar una idea general de la temÃ¡tica
+	y no constituye una evaluaciÃ³n rigurosa del trabajo en el Ã¡rea ni
+	propone una organizaciÃ³n conceptual integral. AsÃ­ mismo, carece de
+	una conceptualizaciÃ³n teorÃ­ca de los principios fÃ­sicos, matemÃ¡ticos,
+	biolÃ³gicos y computacionales aplicados en el Ã¡rea. [RevisiÃ³n de trabajos
 	previos]},
   timestamp = {2006.10.08}
 }
@@ -3060,15 +3530,15 @@
 	Gait analysis, Mathematical models, Servomechanisms, Central pattern
 	generators, Gait model, Neural pathways, Mobile robots},
   owner = {Vicepresideencia},
-  review = {Venkataraman hace una completa recopoilación de los elementos importantes
+  review = {Venkataraman hace una completa recopoilaciÃ³n de los elementos importantes
 	en los generadores centrales de patrones (CPGs) tanto en el campo
-	de la biología como de la robótica, y propone un método alternativo
-	para la generación de patrones para la caminata bípeda, cuadrúpeda
-	y hexápoda. El método tiene relación con la implementación general
-	usando redes neuronales oscilatorias, pero a diferencia de éstas,
-	se plantea usar un simple y único generador lineal de patrones, con
+	de la biologÃ­a como de la robÃ³tica, y propone un mÃ©todo alternativo
+	para la generaciÃ³n de patrones para la caminata bÃ­peda, cuadrÃºpeda
+	y hexÃ¡poda. El mÃ©todo tiene relaciÃ³n con la implementaciÃ³n general
+	usando redes neuronales oscilatorias, pero a diferencia de Ã©stas,
+	se plantea usar un simple y Ãºnico generador lineal de patrones, con
 	el cual se generan los movimientos en cada extremidad usando filtros
-	de dimensión finita (arreglos de filtros de adelanto y atraso de
+	de dimensiÃ³n finita (arreglos de filtros de adelanto y atraso de
 	fase) para simular los retardos que causan el movimiento coordinado
 	necesario para la marcha. El oscilador se modela incluyendo elementos
 	del oscilador de Van der Pool para obtener un sistema no lineal con
@@ -3078,14 +3548,13 @@
 	
 	
 	La relevancia del articulo se concentra en dos puntos: el primero,
-	hace una revisión de los métodos de generación de patrones en los
-	campos de biología y robótica, destacando los problemas que es necesario
+	hace una revisiÃ³n de los mÃ©todos de generaciÃ³n de patrones en los
+	campos de biologÃ­a y robÃ³tica, destacando los problemas que es necesario
 	abordar, y segundo, muestra una arquitectura muy simple para generar
-	patrones de marcha comparativamente con la metodología de osciladores
+	patrones de marcha comparativamente con la metodologÃ­a de osciladores
 	neuronales acoplados. Por otra parte, no aborda detalles del control,
-	problemas de estabilidad ni estudio de la robustez del método. [CPG]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0031276962&partner=40&rel=R5.0.1}
+	problemas de estabilidad ni estudio de la robustez del mÃ©todo. [CPG]},
+  timestamp = {2006.09.28}
 }
 
 @BOOK{Vukobratovic90Biped,
@@ -3094,8 +3563,20 @@
   year = {1990},
   author = {M Vukobratovic},
   address = {ecaucus, NJ, USA},
-  owner = {···Shrein···},
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
   timestamp = {2006.12.16}
+}
+
+@ARTICLE{Wilson72Excitatory,
+  author = {Wilson, H. and Cowan, J.},
+  title = {Excitatory and Inhibitory Interactions in Localized Populations of
+	Model Neurons},
+  journal = {Biophys J},
+  year = {1972},
+  volume = {January; 12(1)},
+  pages = {1-24},
+  owner = {jjfigueredou},
+  timestamp = {2009.01.15}
 }
 
 @MISC{Wolff01Evolution,
@@ -3122,25 +3603,25 @@
 	Final\\Wolff01Evolution.pdf:PDF},
   owner = {Juan Figueredo},
   pages = {482--489},
-  review = {Wolff y Nordin presentan la evolución con estrategias evolutivas de
-	una secuencia de control para obtener caminata bípeda con estabilidad
-	estática en un robot. La evaluación de la función de aptitud es realizada
-	directamente en el sistema físico usando una cámara para medir orientación
-	y un sensor infrarrojo para medir distancia al objetivo. La evolución
+  review = {Wolff y Nordin presentan la evoluciÃ³n con estrategias evolutivas de
+	una secuencia de control para obtener caminata bÃ­peda con estabilidad
+	estÃ¡tica en un robot. La evaluaciÃ³n de la funciÃ³n de aptitud es realizada
+	directamente en el sistema fÃ­sico usando una cÃ¡mara para medir orientaciÃ³n
+	y un sensor infrarrojo para medir distancia al objetivo. La evoluciÃ³n
 	se realiza usando un algoritmo de estado estacionario (steady state)
-	que elimina algunos de los individuos de una iteración a otra, y
-	realiza la búsqueda en una zona definida por la distancia Euclideana
+	que elimina algunos de los individuos de una iteraciÃ³n a otra, y
+	realiza la bÃºsqueda en una zona definida por la distancia Euclideana
 	a un cierto gen en la secuencia generada manualmente. Se muestra
-	que los controladores evolucionados se desempeñaron mejor que los
-	diseñados manualmente.
+	que los controladores evolucionados se desempeÃ±aron mejor que los
+	diseÃ±ados manualmente.
 	
 	
-	El mayor atractivo del presente trabajo consiste en la evolución directa
-	realizada sobre la plataforma física, una tarea intensiva en el consumo
-	de tiempo y que exige un muy buen sistema de control, sensórica y
-	procesamiento. Su aplicación está limitada dada la poca versatilidad
-	de la caminada en equilibrio estático y la tendencia general de la
-	comunidad a privilegiar la caminata dinámica. [Estático]},
+	El mayor atractivo del presente trabajo consiste en la evoluciÃ³n directa
+	realizada sobre la plataforma fÃ­sica, una tarea intensiva en el consumo
+	de tiempo y que exige un muy buen sistema de control, sensÃ³rica y
+	procesamiento. Su aplicaciÃ³n estÃ¡ limitada dada la poca versatilidad
+	de la caminada en equilibrio estÃ¡tico y la tendencia general de la
+	comunidad a privilegiar la caminata dinÃ¡mica. [EstÃ¡tico]},
   timestamp = {2006.10.08},
   url = {citeseer.ist.psu.edu/wolff02evolution.html}
 }
@@ -3163,26 +3644,26 @@
 	Final\\Wolff03Learning.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
 	Final\\Wolff03Learning.pdf:PDF},
   owner = {Juan Figueredo},
-  review = {En este trabajo Wolff y Nordin buscan generar una caminata seudo-dinámica,
-	evolucionando puntos que sean estáticamente estables en la fase de
+  review = {En este trabajo Wolff y Nordin buscan generar una caminata seudo-dinÃ¡mica,
+	evolucionando puntos que sean estÃ¡ticamente estables en la fase de
 	doble apoyo e interpolando en la fase de balanceo. Para ello realizan
-	una evolución usando programación evolutiva representando el controlador
-	como una serie de instrucciones con operadores aritméticos básicos
+	una evoluciÃ³n usando programaciÃ³n evolutiva representando el controlador
+	como una serie de instrucciones con operadores aritmÃ©ticos bÃ¡sicos
 	y operador senoidal, todos ellos representados como cadenas de enteros.
-	Las secuencias así evolucionadas se transfieren posteriormente al
-	robot, el cual puede realizar ajustes finos o recuperación de fallos
-	en una segunda fase de la evolución. La plataforma robótica es la
+	Las secuencias asÃ­ evolucionadas se transfieren posteriormente al
+	robot, el cual puede realizar ajustes finos o recuperaciÃ³n de fallos
+	en una segunda fase de la evoluciÃ³n. La plataforma robÃ³tica es la
 	misma usada en [Wolff01Evolution].
 	
 	
-	Es llamativa la forma en que buscan obtener caminata seudo-dinámica
-	a partir de interpolación de puntos estáticamente estables, pero
-	aún este método está límitado a bajas velocidades y aceleraciones,
-	así como a secuencias lineales de movimiento. Así mismo, se destaca
-	la evolución en dos fases del controlador, generando una versión
-	simulada que reduzca el costo de la evolución in situ, pero proveyendo
-	un mecanismo adaptativo de recuperación de fallas. Sin embargo la
-	utilidad es aún limitada dado el tipo de caminata estudiado. [Estático]},
+	Es llamativa la forma en que buscan obtener caminata seudo-dinÃ¡mica
+	a partir de interpolaciÃ³n de puntos estÃ¡ticamente estables, pero
+	aÃºn este mÃ©todo estÃ¡ lÃ­mitado a bajas velocidades y aceleraciones,
+	asÃ­ como a secuencias lineales de movimiento. AsÃ­ mismo, se destaca
+	la evoluciÃ³n en dos fases del controlador, generando una versiÃ³n
+	simulada que reduzca el costo de la evoluciÃ³n in situ, pero proveyendo
+	un mecanismo adaptativo de recuperaciÃ³n de fallas. Sin embargo la
+	utilidad es aÃºn limitada dado el tipo de caminata estudiado. [EstÃ¡tico]},
   timestamp = {2006.10.08},
   url = {citeseer.ist.psu.edu/wolff03learning.html}
 }
@@ -3220,7 +3701,7 @@
 	The research summarized here is multidisciplinary and cutting edge
 	that will ultimately help improve the treatment of ligament injuries.
 	The material presented should serve as an inspiration to future investigators.
-	© 2004 Elsevier Ltd. All rights reserved.},
+	Â© 2004 Elsevier Ltd. All rights reserved.},
   comment = {Cited By (since 1996): 1
 	
 	Export Date: 14 December 2006
@@ -3231,9 +3712,8 @@
 	
 	doi: 10.1016/j.jbiomech.2004.10.025},
   issn = {00219290 (ISSN)},
-  owner = {···Shrein···},
-  timestamp = {2006.12.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-27744484398&partnerID=40&rel=R5.6.0}
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
+  timestamp = {2006.12.14}
 }
 
 @ARTICLE{Wu02Neural,
@@ -3265,7 +3745,7 @@
 	does not require measurement of the base-point accelerations, which
 	are difficult to obtain. The work presented here benefits practical
 	problems such as the study of stable locomotion of human upper body
-	and bipedal locomotion. © 2002 Elsevier Science Ltd. All rights reserved.},
+	and bipedal locomotion. Â© 2002 Elsevier Science Ltd. All rights reserved.},
   comment = {Export Date: 14 September 2006
 	
 	Source: Scopus
@@ -3327,34 +3807,33 @@
 	systems, Computer simulation, Degrees of freedom (mechanics), Pendulums,
 	Torque control, Neural inverse modeling, Multilayer neural networks},
   owner = {Vicepresideencia},
-  review = {Wu et al. tratan el problema de controlar un péndulo excitado en la
+  review = {Wu et al. tratan el problema de controlar un pÃ©ndulo excitado en la
 	base con dos grados rotacionales de libertad y con movimiento no
-	actuado en la base. Hay una relación de tal problema con el control
-	del tronco en la caminata bípeda, donde se modela el tronco por un
-	péndulo invertido con tal configuración. Para lograr su objetivo,
+	actuado en la base. Hay una relaciÃ³n de tal problema con el control
+	del tronco en la caminata bÃ­peda, donde se modela el tronco por un
+	pÃ©ndulo invertido con tal configuraciÃ³n. Para lograr su objetivo,
 	emplean un conjunto de redes neuronales hacia adelante (feedforward
 	neural networks) con una capa oculta, las cules generan diferentes
-	funciones que son acopladas en una configuración simple de lazo cerrado.
+	funciones que son acopladas en una configuraciÃ³n simple de lazo cerrado.
 	Se usa una red neuronal adicional para modelar inversamente el sistema
-	de tal forma que no se requiera medir la posición de la base y se
-	use en cambio una estimación. Los controladores son preentrenados
-	fuera de linea (offline) pero su ajuste se realiza dinámicamente
-	en línea (online) proveyendo adaptabilidad al controlador. Se demuestra
-	que el sistema de control propuesto se desempeña mejor que sistemas
-	novedosos por metodologías de teoría de control y además no requiere
-	un modelo del sistema ni medición directa de la posición de la base.
+	de tal forma que no se requiera medir la posiciÃ³n de la base y se
+	use en cambio una estimaciÃ³n. Los controladores son preentrenados
+	fuera de linea (offline) pero su ajuste se realiza dinÃ¡micamente
+	en lÃ­nea (online) proveyendo adaptabilidad al controlador. Se demuestra
+	que el sistema de control propuesto se desempeÃ±a mejor que sistemas
+	novedosos por metodologÃ­as de teorÃ­a de control y ademÃ¡s no requiere
+	un modelo del sistema ni mediciÃ³n directa de la posiciÃ³n de la base.
 	
 	
-	El trabajo provee una demostración explícita de un método de control
-	por inteligencia computacional que se desempeña mejor que métodos
-	analíticos y que puede ser aplicado al problema de la caminata bípeda.
+	El trabajo provee una demostraciÃ³n explÃ­cita de un mÃ©todo de control
+	por inteligencia computacional que se desempeÃ±a mejor que mÃ©todos
+	analÃ­ticos y que puede ser aplicado al problema de la caminata bÃ­peda.
 	Aunque se muestra que existen menores desplazamientos que con el
-	método analítico, aún es importante observar cual es su optimalidad
-	energética y cómo se puede acoplar con otros estudios como los de
-	dinámica pasiva de caminadores. Así mismo, es interesante estudiar
-	cómo vincularlo óptimamente a políticas de planificación [Dinámico][Neuronal]},
-  timestamp = {2006.09.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0036625510&partner=40&rel=R5.0.1}
+	mÃ©todo analÃ­tico, aÃºn es importante observar cual es su optimalidad
+	energÃ©tica y cÃ³mo se puede acoplar con otros estudios como los de
+	dinÃ¡mica pasiva de caminadores. AsÃ­ mismo, es interesante estudiar
+	cÃ³mo vincularlo Ã³ptimamente a polÃ­ticas de planificaciÃ³n [DinÃ¡mico][Neuronal]},
+  timestamp = {2006.09.14}
 }
 
 @ARTICLE{Wu02Neural-based,
@@ -3397,20 +3876,19 @@
 	inverted pendulums, Nonlinear control systems},
   owner = {Vicepresideencia},
   review = {En el mismo sentido de otros trabajos realizados por los mismos autores,
-	Wu et al. se refieren al problema de control de un péndulo invertido
-	con excitación angular en la base y traslación de la base libre en
-	el espacio tridimensional. Como se dice en otra anotación (Wu02Neural)
-	hay una relación de tal problema con el control del tronco en la
-	caminata bípeda. Usan cuatro redes neuronales para modelar inversamente
-	el sistema. Así mismo se usa un control hacia adelante con una re
+	Wu et al. se refieren al problema de control de un pÃ©ndulo invertido
+	con excitaciÃ³n angular en la base y traslaciÃ³n de la base libre en
+	el espacio tridimensional. Como se dice en otra anotaciÃ³n (Wu02Neural)
+	hay una relaciÃ³n de tal problema con el control del tronco en la
+	caminata bÃ­peda. Usan cuatro redes neuronales para modelar inversamente
+	el sistema. AsÃ­ mismo se usa un control hacia adelante con una re
 	neuronal y se realimenta el circuito. El modelo inverso es utilizado
 	para entrenar la red del controlador.
 	
 	
 	Los mismos comentarios de (Wu02Neural) aplican similarmente a este
-	artículo. [Dinámico][Neuronal][Difuso]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0036454690&partner=40&rel=R5.0.1}
+	artÃ­culo. [DinÃ¡mico][Neuronal][Difuso]},
+  timestamp = {2006.09.28}
 }
 
 @ARTICLE{Yamasaki03Control,
@@ -3448,35 +3926,34 @@
 	Torque, Energy-efficient walking, Inverted pendulum model, Low-cost
 	humanoid, Straight knee posture, Anthropomorphic robots},
   owner = {Vicepresideencia},
-  review = {Yamasaki et al. aplican la evolución por algoritmos genéticos (AGs)
-	para diseñar un controlador para un robot caminador bípedo con bajo
-	consumo de torque. Para ello plantean la optimización de las secuencias
-	de marcha generadas en dos fases. Las secuencias de marcha en términos
+  review = {Yamasaki et al. aplican la evoluciÃ³n por algoritmos genÃ©ticos (AGs)
+	para diseÃ±ar un controlador para un robot caminador bÃ­pedo con bajo
+	consumo de torque. Para ello plantean la optimizaciÃ³n de las secuencias
+	de marcha generadas en dos fases. Las secuencias de marcha en tÃ©rminos
 	de las velocidades son descritas como un conjunto de funciones sinusoidales
-	con amplitudes y fases como parámetros, dependientes de las posiciones
-	angulares de ambas piernas. Se optimizan los parámetros descritos
+	con amplitudes y fases como parÃ¡metros, dependientes de las posiciones
+	angulares de ambas piernas. Se optimizan los parÃ¡metros descritos
 	junto a la velocidad angular global de las funciones. Se usa una
-	representación binaria, aplicando operadores de cruce y mutación.
-	El algoritmo se divide en dos fases, la primera con una función de
+	representaciÃ³n binaria, aplicando operadores de cruce y mutaciÃ³n.
+	El algoritmo se divide en dos fases, la primera con una funciÃ³n de
 	aptitud proporcional a la distancia total recorrida por el robot
-	durante el tiempo simulación (o antes de caer), y la segunda proporcional
-	a la distancia recorrida e inversamente proporcional a la energía
+	durante el tiempo simulaciÃ³n (o antes de caer), y la segunda proporcional
+	a la distancia recorrida e inversamente proporcional a la energÃ­a
 	empleada. 
 	
 	
-	Ésta es una muestra de la aplicación de simples conjuntos de secuencias
-	para generar caminata bípeda, en la presente ocación, usando algoritmos
-	genéticos para optimizar directamente las funciones generadoras de
-	la secuencia. Es necesario destacar, sin embargo, que no se logró
-	ningún patrón que alcanzara a completar los 2 segundos de simulación
+	Ã‰sta es una muestra de la aplicaciÃ³n de simples conjuntos de secuencias
+	para generar caminata bÃ­peda, en la presente ocaciÃ³n, usando algoritmos
+	genÃ©ticos para optimizar directamente las funciones generadoras de
+	la secuencia. Es necesario destacar, sin embargo, que no se logrÃ³
+	ningÃºn patrÃ³n que alcanzara a completar los 2 segundos de simulaciÃ³n
 	antes de caer, sugiriendo la inestabilidad del controlador generado.
-	Esto, teniendo en cuenta que el ambiente no se modifica dinámicamente
-	y que no hay perturbaciones para el sistema. Por otra parte, la modificación
-	repentina de la función de aptitud no es justificada ni analizada
-	desde la teoría o la práctica y bien podría estar restringiendo la
+	Esto, teniendo en cuenta que el ambiente no se modifica dinÃ¡micamente
+	y que no hay perturbaciones para el sistema. Por otra parte, la modificaciÃ³n
+	repentina de la funciÃ³n de aptitud no es justificada ni analizada
+	desde la teorÃ­a o la prÃ¡ctica y bien podrÃ­a estar restringiendo la
 	respuesta obtenida. [Dudosa utilidad][Trayectoria]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0142091582&partner=40&rel=R5.0.1}
+  timestamp = {2006.09.28}
 }
 
 @ARTICLE{Yamasaki03Possible,
@@ -3750,33 +4227,32 @@
 	engineering, biological model, motor activity, walking, Models, Neurological,
 	Motor Activity, Walking},
   owner = {Vicepresideencia},
-  review = {Yamasaki, Nomura y Sato destacan la importancia de la modificación
-	(reinicialización) dinámica de la fase como medio para obtener estabilidad
-	en la caminata bípeda, la cual ha de ser aplicada en el generador
+  review = {Yamasaki, Nomura y Sato destacan la importancia de la modificaciÃ³n
+	(reinicializaciÃ³n) dinÃ¡mica de la fase como medio para obtener estabilidad
+	en la caminata bÃ­peda, la cual ha de ser aplicada en el generador
 	central de patrones (CPG) implementado como una red neuronal, por
-	motivaciones biológicas. Para ello abordan dos tipos de sistemas
-	mecánicos: el primero, un péndulo doble y el segundo un caminador
-	de 5 eslabones, para los cuales plantean las ecuaciones de la dinámica.
-	Así mismo plantean la dinámica del controlador neuronal en términos
+	motivaciones biolÃ³gicas. Para ello abordan dos tipos de sistemas
+	mecÃ¡nicos: el primero, un pÃ©ndulo doble y el segundo un caminador
+	de 5 eslabones, para los cuales plantean las ecuaciones de la dinÃ¡mica.
+	AsÃ­ mismo plantean la dinÃ¡mica del controlador neuronal en tÃ©rminos
 	generales y muestran los resultados en el espacio de fase de los
-	sistemas cuando se aplica reinicialización de fase y cuando no se
-	hace. Se comprueban dos efectos: 1. La reinicialización de fase en
+	sistemas cuando se aplica reinicializaciÃ³n de fase y cuando no se
+	hace. Se comprueban dos efectos: 1. La reinicializaciÃ³n de fase en
 	una magnitud adecuada puede reubicar el sistema dentro de la cuenca
-	del atractor después de que se le ha sometido a una perturbación,
-	consiguiendo la estabilidad; y 2. Puede llegar a ser útil para disminuir
+	del atractor despuÃ©s de que se le ha sometido a una perturbaciÃ³n,
+	consiguiendo la estabilidad; y 2. Puede llegar a ser Ãºtil para disminuir
 	los tiempos de convergencia al estado estable.
 	
 	
 	Es muy relevante el resultado y ha de ser tenido en cuenta como estrategia
-	de control, particularmente cuando la implementación se realiza por
-	analogía biológica (i. e. redes neuronales). El análisis es detallado
-	y sugiere la generalidad del método para sistemas diversos, aún diferentes
-	a la caminata bípeda. Se destaca además la novedad de la aproximación
-	al análisis general de controladores aplicados al sistema de marcha.
+	de control, particularmente cuando la implementaciÃ³n se realiza por
+	analogÃ­a biolÃ³gica (i. e. redes neuronales). El anÃ¡lisis es detallado
+	y sugiere la generalidad del mÃ©todo para sistemas diversos, aÃºn diferentes
+	a la caminata bÃ­peda. Se destaca ademÃ¡s la novedad de la aproximaciÃ³n
+	al anÃ¡lisis general de controladores aplicados al sistema de marcha.
 	[Interesante] [Alta complejidad -> Ha de ser releido a la luz de
-	una conceptualización más profunda][Especial] [Dinámico][CPG] [Neuronal]},
-  timestamp = {2006.09.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0142103170&partner=40&rel=R5.0.1}
+	una conceptualizaciÃ³n mÃ¡s profunda][Especial] [DinÃ¡mico][CPG] [Neuronal]},
+  timestamp = {2006.09.14}
 }
 
 @INPROCEEDINGS{Yanase06Evolutionary,
@@ -3794,30 +4270,30 @@
 	IC.pdf:PDF},
   isbn = {1-59593-186-4},
   location = {Seattle, Washington, USA},
-  review = {Yanase e Iba muestran una implementación de un algoritmo evolutivo
-	con interacción con el usuario para determinar secuencias de movimiento,
-	así como otras implementaciones con funciones de aptitud específicas
+  review = {Yanase e Iba muestran una implementaciÃ³n de un algoritmo evolutivo
+	con interacciÃ³n con el usuario para determinar secuencias de movimiento,
+	asÃ­ como otras implementaciones con funciones de aptitud especÃ­ficas
 	para alcanzar cietos objetivos. En el primer caso se presenta la
-	optimización de una secuencia de movimiento por computación evolutiva
+	optimizaciÃ³n de una secuencia de movimiento por computaciÃ³n evolutiva
 	interactiva (IEC), para la cual se genera un conjunto de alternativas
 	para cada cuadro de movimiento (keyframe), siendo estas evaluadas
-	por el usuario gráficamente y, aplicando operadores evolutivos en
-	sucesivas iteraciones junto con el mecanismo de evaluación, se obtiene
+	por el usuario grÃ¡ficamente y, aplicando operadores evolutivos en
+	sucesivas iteraciones junto con el mecanismo de evaluaciÃ³n, se obtiene
 	cada uno de los cuadros que ha de formar la secuencia. Posteriormente
-	muestran como se pueden usar funciones de aptitud especialmente diseñadas,
-	en conjunto con un simulador dinámico, para optimizar tanto el movimiento
-	para sentarse como para patear un balón. Así mismo, hacen una breve
-	referencia a la implementación de un algoritmo genético multiobjetivo
-	(MOGA) para la solución de tales problemas.
+	muestran como se pueden usar funciones de aptitud especialmente diseÃ±adas,
+	en conjunto con un simulador dinÃ¡mico, para optimizar tanto el movimiento
+	para sentarse como para patear un balÃ³n. AsÃ­ mismo, hacen una breve
+	referencia a la implementaciÃ³n de un algoritmo genÃ©tico multiobjetivo
+	(MOGA) para la soluciÃ³n de tales problemas.
 	
 	
-	El detalle novedoso de este trabajo es la implementación interactiva
-	de la función de aptitud, si bien puede presentar problemas de escalabilidad.
-	También introduce versatilidad a la programación de robots bípedos,
-	haciéndola accesible para personas sin conocimientos de robótica
-	o programación. Los métodos de análisis de estabilidad son límitados
-	y la incorporación de las restricciones del problema al algoritmo
-	no son aún datisfactorias.[Trayectoria]}
+	El detalle novedoso de este trabajo es la implementaciÃ³n interactiva
+	de la funciÃ³n de aptitud, si bien puede presentar problemas de escalabilidad.
+	TambiÃ©n introduce versatilidad a la programaciÃ³n de robots bÃ­pedos,
+	haciÃ©ndola accesible para personas sin conocimientos de robÃ³tica
+	o programaciÃ³n. Los mÃ©todos de anÃ¡lisis de estabilidad son lÃ­mitados
+	y la incorporaciÃ³n de las restricciones del problema al algoritmo
+	no son aÃºn datisfactorias.[Trayectoria]}
 }
 
 @INPROCEEDINGS{Yonemoto85TECHNOLOGY,
@@ -3843,9 +4319,41 @@
   comment = {Export Date: 14 December 2006
 	
 	Source: Scopus},
-  owner = {···Shrein···},
-  timestamp = {2006.12.14},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0022281081&partnerID=40&rel=R5.6.0}
+  owner = {Â·Â·Â·ShreinÂ·Â·Â·},
+  timestamp = {2006.12.14}
+}
+
+@ARTICLE{Zhang02recurrent,
+  author = {Yunong Zhang and Danchi Jiang and Jun Wang},
+  title = {A recurrent neural network for solving Sylvester equation with time-varying
+	coefficients},
+  journal = {Neural Networks, IEEE Transactions on},
+  year = {2002},
+  volume = {13},
+  pages = { 1053-1063},
+  number = {5},
+  month = {Sep},
+  __markedentry = {[jjfigueredou]},
+  abstract = { Presents a recurrent neural network for solving the Sylvester equation
+	with time-varying coefficient matrices. The recurrent neural network
+	with implicit dynamics is deliberately developed in the way that
+	its trajectory is guaranteed to converge exponentially to the time-varying
+	solution of a given Sylvester equation. Theoretical results of convergence
+	and sensitivity analysis are presented to show the desirable properties
+	of the recurrent neural network. Simulation results of time-varying
+	matrix inversion and online nonlinear output regulation via pole
+	assignment for the ball and beam system and the inverted pendulum
+	on a cart system are also included to demonstrate the effectiveness
+	and performance of the proposed neural network.},
+  doi = {10.1109/TNN.2002.1031938},
+  issn = {1045-9227},
+  keywords = { convergence, matrix inversion, nonlinear control systems, pendulums,
+	pole assignment, recurrent neural nets Sylvester equation, ball and
+	beam system, cart system, global exponential convergence, implicit
+	dynamics, inverted pendulum, linear matrix equation, online nonlinear
+	output regulation, pole assignment, recurrent neural network, sensitivity
+	analysis, time-varying coefficient matrices, time-varying matrix
+	inversion}
 }
 
 @ARTICLE{Zhou02Robot,
@@ -3875,7 +4383,7 @@
 	feedback from the environment. This can guide GAs to perform a more
 	effective global search. Finally, different types of GAFRL agents
 	are constructed and verified using the simulation model of a physical
-	biped robot. © 2002 Elsevier Science Inc. All rights reserved.},
+	biped robot. Â© 2002 Elsevier Science Inc. All rights reserved.},
   comment = {Cited By (since 1996): 8
 	
 	Export Date: 29 September 2006
@@ -3896,34 +4404,33 @@
 	learning, Robot learning},
   owner = {Vicepresideencia},
   review = {Zhou desarrolla un agente de aprendizaje por refuerzo difuso con algoritmos
-	genéticos (GAFLR). Se muestran la conceptualización previa y varias
-	versiones del agente GAFLR y su aplicación al control de la caminata
-	bípeda de un robot. Las características principales del agente son:
-	1. Parte de una base de conocimiento difusa diseñada por un experto;
-	2. Se actualiza dinámicamente (online) utilizando como señal de refuerzo
-	algún parámetro calculado con la fuzzyficación de mediciones del
-	estado del sistema y estimaciones internas de las señales de refuerzo
-	futuras; 3. La estimación de las señales de refuerzo difusas es realizada
+	genÃ©ticos (GAFLR). Se muestran la conceptualizaciÃ³n previa y varias
+	versiones del agente GAFLR y su aplicaciÃ³n al control de la caminata
+	bÃ­peda de un robot. Las caracterÃ­sticas principales del agente son:
+	1. Parte de una base de conocimiento difusa diseÃ±ada por un experto;
+	2. Se actualiza dinÃ¡micamente (online) utilizando como seÃ±al de refuerzo
+	algÃºn parÃ¡metro calculado con la fuzzyficaciÃ³n de mediciones del
+	estado del sistema y estimaciones internas de las seÃ±ales de refuerzo
+	futuras; 3. La estimaciÃ³n de las seÃ±ales de refuerzo difusas es realizada
 	por una red neurodifusa de 5 capas que se entrena por refuerzo usando
-	una técnica de diferencia temporal (temporal difference); 4. Las
+	una tÃ©cnica de diferencia temporal (temporal difference); 4. Las
 	acciones son sugeridas por una red neurodifusa de 5-capas entrenada
-	con un algoritmo genético cuya representación genotípica consiste
-	en las reglas difusas que serán usadas para entreran directamente
-	la red; 5. Un modificador estocástico de acciones toma tanto la señal
-	de refuerzo compuesta como la acción sugerido y genera la salida
-	del sistema. Se exhibe una rápida convergencia hacia la caminata
+	con un algoritmo genÃ©tico cuya representaciÃ³n genotÃ­pica consiste
+	en las reglas difusas que serÃ¡n usadas para entreran directamente
+	la red; 5. Un modificador estocÃ¡stico de acciones toma tanto la seÃ±al
+	de refuerzo compuesta como la acciÃ³n sugerido y genera la salida
+	del sistema. Se exhibe una rÃ¡pida convergencia hacia la caminata
 	exitosa del robot.
 	
 	
-	Valiéndose de variadas técnicas, Zhou logra contruir un agente que
-	muestra múltiples ventajas de diferentes acercamientos al aprendizaje
-	por refuerzo, entre ellos aprendizaje dinámico, evasión de mínimos
-	locales, evolución de reglas de lógica difusa y generalización por
-	redes neuronales. Es una de las más notables interacciones de herramientas
-	de la inteligencia computacional que encuentran aplicación en la
-	robótica evolutiva bípeda. [Destacado][Dinámico][Difuso]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0036696369&partner=40&rel=R5.0.1}
+	ValiÃ©ndose de variadas tÃ©cnicas, Zhou logra contruir un agente que
+	muestra mÃºltiples ventajas de diferentes acercamientos al aprendizaje
+	por refuerzo, entre ellos aprendizaje dinÃ¡mico, evasiÃ³n de mÃ­nimos
+	locales, evoluciÃ³n de reglas de lÃ³gica difusa y generalizaciÃ³n por
+	redes neuronales. Es una de las mÃ¡s notables interacciones de herramientas
+	de la inteligencia computacional que encuentran aplicaciÃ³n en la
+	robÃ³tica evolutiva bÃ­peda. [Destacado][DinÃ¡mico][Difuso]},
+  timestamp = {2006.09.28}
 }
 
 @ARTICLE{Zhou03Dynamic,
@@ -3949,7 +4456,7 @@
 	of the simulated biped can be improved. We also demonstrate that
 	it is possible for a biped robot to start its walking with a priori
 	knowledge and then learn to improve its behaviour with the FRL agents.
-	© 2002 Elsevier Science B.V. All rights reserved.},
+	Â© 2002 Elsevier Science B.V. All rights reserved.},
   comment = {Cited By (since 1996): 10
 	
 	Export Date: 28 September 2006
@@ -3967,27 +4474,21 @@
   owner = {Vicepresideencia},
   review = {Similarmente a otra referencia anotada [Zhou02Robot] Zhou desarrolla
 	un agente de aprendizaje por refuerzo difuso pero esta vez sin aprendizaje
-	por algoritmos genéticos. Se muestran la conceptualización previa
-	y varias versiones del agente FLR y su aplicación al control de la
-	caminata bípeda de un robot. Las características principales del
-	agente son compartidas con la versión GAFLR descontando el entrenamiento
+	por algoritmos genÃ©ticos. Se muestran la conceptualizaciÃ³n previa
+	y varias versiones del agente FLR y su aplicaciÃ³n al control de la
+	caminata bÃ­peda de un robot. Las caracterÃ­sticas principales del
+	agente son compartidas con la versiÃ³n GAFLR descontando el entrenamiento
 	con GAs (se mantiene el entrenamiento por diferencias temporales).
-	En éste artículo se expone mejor el funcionamiento del módulo modificador
-	estocástico de acciones (SAM). como un generador de acciones con
-	una distribución normal con media en la salida del agente FLR, y
-	distribución estándar dada por la señal de refuerzo de la iteración
+	En Ã©ste artÃ­culo se expone mejor el funcionamiento del mÃ³dulo modificador
+	estocÃ¡stico de acciones (SAM). como un generador de acciones con
+	una distribuciÃ³n normal con media en la salida del agente FLR, y
+	distribuciÃ³n estÃ¡ndar dada por la seÃ±al de refuerzo de la iteraciÃ³n
 	anterior.
 	
 	
 	Los comentarios de [Zhou02Robot] aplican similarmente, descontando
-	la acción del algoritmo genético. [Dinámico][Difuso]},
-  timestamp = {2006.09.28},
-  url = {http://www.scopus.com/scopus/inward/record.url?eid=2-s2.0-0037448733&partner=40&rel=R5.0.1}
-}
-
-@ARTICLE{,
-  owner = {jjfigueredou},
-  timestamp = {2008.12.08}
+	la acciÃ³n del algoritmo genÃ©tico. [DinÃ¡mico][Difuso]},
+  timestamp = {2006.09.28}
 }
 
 @comment{jabref-meta: selector_publisher:}
