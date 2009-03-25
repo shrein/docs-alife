@@ -120,13 +120,13 @@ a conceptual line between the CoM and the CoP.
 The control architecture applied in this paper to the biped walking
 problem follows the method of planning and control by means of neural
 fields \cite{Bergener99Complex}. The neural field model, as noted in
-the article by Bergener et al., has the potential to address
-goal-based planning problems, so we are here interested on its
-capability to solve dynamic control problems, and specifically, on its
-capability to address control tasks on unstable systems. The
-parameterized (i.e. non-evolved) neural field control architecture is
-compared against an evolved recurrent neural field controller applied
-to the same cart-and-pole control task.
+the article by Bergener et al. (\cite{Bergener99Complex}), has the
+potential to address goal-based planning problems, so we are here
+interested on its capability to solve dynamic control problems, and
+specifically, on its capability to address control tasks on unstable
+systems. The parameterized (i.e. non-evolved) neural field control
+architecture is compared against an evolved recurrent neural field
+controller applied to the same cart-and-pole control task.
 
 This is a first attempt (to the authors' knowledge) to evaluate neural
 fields for solving a control problem for an unstable plant, and
@@ -336,7 +336,8 @@ measure, described in equation \ref{eq:eq-l2}:
 
 The defined space, with its measure, conforms a Hilbert space, and
 therefore is complete and metrizable. It also gives a notion of sum,
-and scalar product, as shown in equations \ref{eq:eq-leb-opers} and \ref{eq:eq-leb-opers2}:
+and scalar product, as shown in equations \ref{eq:eq-leb-opers} and
+\ref{eq:eq-leb-opers2}:
 \begin{align}
   \label{eq:eq-leb-opers}
   (f+g)(x)=&f(x)+g(x) \\
@@ -708,8 +709,8 @@ equivalently, the stability of its natural dynamics, which is attained
 after the setup of few parameters. The second one is its suitability
 to the problem at hand, being able to solve it with a good
 performance. Although there was a need for parameter configuration,
-evolution was not required because the small number of parameters to
-setup: basically three parameters of the kernel function and the
+evolution was not required because the number of parameters to setup
+is small: basically three parameters of the kernel function and the
 resting potential of the field equation --- a number of parameters of
 constant order in relation to the number of nodes (discrete elements
 on the neural field).
@@ -724,24 +725,24 @@ controller. Furthermore, the neural field has a spatial representation
 which allows an easy interpretation of field potentials (as shown in
 fig. \ref{fig:nf-activation}).
 
-Nonetheless, the simple biped model used was a first approach to the
-problem of biped walking. In order to develop a more realistic
-controller of biped walking, the mapping between the model and a biped
-could be detailed \cite{Goswami08Kinematic}, or a relatively more
-complex model could be used, such a 2-link model
+However, while the cart-and-pole simple biped walking model is useful
+as a first approach to the problem of locomotion, in order to
+develop a more realistic controller of biped walking, other
+models can be explored. For this purpose, the mapping between the
+model and a biped could be detailed \cite{Goswami08Kinematic}, or a
+relatively more complex model could be used, such a 2-link model
 \cite{Garcia98simplest} or even of higher order. Alternatively, a
 general but less detailed modelling technique could be used, such as
 the Reaction Mass Pendulum \cite{Lee07Reaction}.
 
-
-More complex control problems seem to require an strategy for
-parameterization of the neural field controller. This way, it is left
-for future work the task of neural field evolution as it was briefly
+More complex control problems seem to require an strategy for non-manual
+parameterization of the neural field controller. Our future work will
+concentrate on the neural field evolution as it was briefly
 presented in section \ref{sec:properties}. Also, the capability of
 neural fields to address goal-based planning problems (shown in
 \cite{Bergener99Complex}), could also be used to solve higher level
-control tasks that require, for example, multiple operation modes or control
-strategies.
+control tasks that require, for example, multiple operation modes or
+control strategies.
 
 
 
