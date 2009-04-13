@@ -10,7 +10,7 @@
 
 \documentclass{sig-alternate}
 
-\usepackage{algorithm}
+\usepackage{algorithm}<
 \usepackage{algorithmic}
 
 \begin{document}
@@ -27,25 +27,42 @@
 
 \numberofauthors{2}
 
-% \author{
-% %   1st. author
-%   \alignauthor
-%   Juan Figueredo\\
-%   \affaddr{Universidad Nacional de Colombia}\\
-%   \affaddr{Ciudad Universitaria}\\
-%   \affaddr{Bogotá, Colombia}\\
-%   \email{jjfigueredou@unal.edu.co}
-% %   2nd. author
-%   \alignauthor
-%   Jonatan Gómez\\
-%   \affaddr{Universidad Nacional de Colombia}\\
-%   \affaddr{Ciudad Universitaria}\\
-%   \affaddr{Bogotá, Colombia}\\
-%   \email{jgomezpe@unal.edu.co} }
+\author{
+%   1st. author
+  \alignauthor
+  Juan Figueredo\\
+  \affaddr{Universidad Nacional de Colombia}\\
+  \affaddr{Ciudad Universitaria}\\
+  \affaddr{Bogotá, Colombia}\\
+  \email{jjfigueredou@unal.edu.co}
+%   2nd. author
+  \alignauthor
+  Jonatan Gómez\\
+  \affaddr{Universidad Nacional de Colombia}\\
+  \affaddr{Ciudad Universitaria}\\
+  \affaddr{Bogotá, Colombia}\\
+  \email{jgomezpe@unal.edu.co} }
 
 \maketitle
 
 \begin{abstract}
+  This paper proposes an evolved control architecture based on neural fields
+  for a relatively complex and unstable dynamical system. The neural
+  field model is capable of addressing goal-based planning problems
+  and has properties, like embedding in an Euclidean space and linear
+  stability, that potentially make it well-fitted for dynamic control
+  tasks. The neural field control architecture is tested with the
+  inverted pendulum problem. The cart-and-pole inverted pendulum is
+  used as a simple biped walking model, where the cart models the
+  center of pressure and the pole models the center of mass. The
+  parameterized (i.e. non-evolved) neural field control architecture
+  is compared against an evolved recurrent neural field controller
+  applied to the same control task. The non-evolved neural field
+  controller performs, in the simulation, better than the evolved
+  recurrent neural network controller. Furthermore, the neural field
+  has a spatial representation which allows an easy visualization of
+  its field potentials.  
+
   The neural field model has the potential to address goal-based
   planning problems but has not been significantly applied to dynamic
   control problems. We propose a control architecture based on neural
