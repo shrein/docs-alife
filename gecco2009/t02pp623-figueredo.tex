@@ -51,31 +51,34 @@
   field is compared. The neural field controller performs well in the
   simulation and has a spatial representation which allows
   interpretation of field potentials. Also, the evolved neural field
-  performs better than the non-evolved one, uses a different strategy
-  to control the plant, and is able to recover faster from worst-case
-  initial conditions.
+  performs almost as good as the non-evolved one, is more general, and
+  uses a different strategy to control the plant.
 \end{abstract}
 
 \vspace{1mm}
 \noindent {\bf Categories and Subject Descriptors:} I.2.8 {Artificial
-  Intelligence}: {Problem Solving, Control Methods, and Search}
+  Intelligence}: {Problem Solving, Control Methods, and
+  Search} 
 
 \vspace{1mm}
 \noindent {\bf General Terms:} Algorithms, Design.
 
 \vspace{1mm}
 \noindent {\bf Keywords:} Neural fields, neurocontrol, evolutionary
-robotics, artificial life.
+robotics.
 
 \section{Introduction}
 In biped robotics, the methods based on computational intelligence for
-planning and control have shown to be able to achieve static stability
-\cite{Kun97Adaptive}, dynamical stability
-\cite{Nakanishi2004b,Komatsu05Dynamic}, achieve simple control
-structures \cite{Huelse04Structure}, and tolerate perturbations
-\cite{Juang02Intelligent}. Nonetheless, those properties have not been
-extended to an integrated architecture of planning and control capable
-of following goals.
+planning and control have shown to be able to achieve static stability,
+% \cite{Kun97Adaptive}
+ dynamical stability
+% \cite{Nakanishi2004b,Komatsu05Dynamic}
+, and achieve simple control structures
+% \cite{Huelse04Structure} , and tolerate perturbations
+% \cite{Juang02Intelligent}
+(e.g \cite{Kun97Adaptive, Huelse04Structure}). Nonetheless, those properties have not
+been extended to an integrated architecture of planning and control
+capable of following goals.
 
 Here a control scheme based on neural fields is proposed and a
 comparison, on the stability problem of an inverted pendulum, is made
@@ -97,11 +100,10 @@ in the particular case of lateral inhibition. In this model, a neural
 population is considered a continuum in which dynamical evolution is
 driven by mean activation potentials. The field potential is evaluated
 in each place and affected by the neighborhood of that place,
-according to a so-called mexican hat function (as noted by Coombes
-\cite{Coombes05Waves} better called wizard hat function), in which
-close neighbors act as exciters and distant ones act as
+according to a mexican hat function, in which
+close neighbors act as exciters and distant ones as
 inhibitors. The elements on the field are embedded into a metric
-space, usually a one-dimensional or two-dimensional Euclidean space.
+space, usually a one or two-dimensional Euclidean space.
 \subsection{The Stability Problem Model}
 \label{sec:model}
 
@@ -121,62 +123,36 @@ the cart mass, $l$ is the pendulum length and $g$ is the gravity
 acceleration. It is included in the model a viscous friction for the
 rotation.
 
-\section{Neural Fields for Control and Planning}
+\section{Controller Architecture}
 
 The proposed control architecture based on the neural fields has three
-basic elements: A sensor which reads the states from the plant and
-also their derivatives (computed from the dynamical equation of the
-plant). In particular, the sensor used for the neural field controller
-is rather simple, taking the values of the angular-related states
-(i.e. angular position and angular velocity) as feedback. An input
-layer that consists of a simple neural field without natural dynamics
-and produces a spatial codification of the sensed values. For the
-problem at hand, we use a finite one-dimensional neural field, where a
-sensed input with value zero maps to the center point of the field,
-and other values are correspondingly coded in other (positive or
-negative) positions. Angular position values are coded as local
-potentials with value $u(x)=1$ and angular velocities as local
-potentials with value $u(x)=k_\omega$, where $0 \le k_\omega < 1$. It
-is worth noting that the sum between input states is performed
-directly by the neural field dynamics. A processing layer which is a
-more typical neural field which has inner dynamics given by the
-equation \ref{eq:nf-disc}. Each position of the processing field takes
-as input, both the field potentials of the processing field, and the
-field potentials of the input field. Therefore, besides its natural
-dynamics, the processing layer receives the inputs from the input
-field filtered by the kernel operator. The kernel operator used here
-is a Wizard Hat Function with the expression shown in equation
-\ref{eq:wizard-hat}:
+basic elements: A sensor which reads the states from the pendulum
+(angular position and angular velocity). An input layer that consists
+of a simple neural field without natural dynamics which produces a
+spatial codification of the sensed values. We use a finite
+one-dimensional neural field, where a sensed input with value zero
+maps to the center point of the field, and other values are
+correspondingly coded in other positions. Angular position values are
+coded as local potentials with value $u(x)=1$ and angular velocities
+as local potentials with value $u(x)=0.5$. A processing layer, which
+has the form of the simplest model
+proposed in \cite{Amari77Dynamics}. Each position of the processing
+field takes as input, both the field potentials of the processing
+field, and the field potentials of the input field. Therefore, besides
+its natural dynamics, the processing layer receives the inputs from
+the input field filtered by the kernel operator.
 
-\begin{equation}
-  \label{eq:wizard-hat}
-  w(x_i,x_j)=ke^{-(x_i-x_j)^2/\delta^2}-H_0
-\end{equation}
-
-The additional term on the eq. \ref{eq:nf-disc} $S(x_i,t)$ is used
-only as the uniform and static resting potential, that is
-$S(x_i,t)=-r_p$.  The firing rate function $f(u_i)$ is simulated as a
-simple Heaviside function. The kernel operator for the
-evolutionary-tuned case is evaluated with the expression:
-
-\begin{equation}
-  w(x_i,x_j)=\mathtt{kernelArray}[|x_i-x_j|]
-\end{equation}
-
-Where \texttt{kernelArray} is the array of parameters modified by the
-evolutionary algorithm. The kernel value is evaluated by accessing the
-array at position $|x_i-x_j|$.
-
-The additional term on the eq. \ref{eq:nf-disc} $S(x_i,t)$ is used
-only as the uniform and static resting potential, that is
-$S(x_i,t)=-r_p$.  The firing rate function $f(u_i)$ is simulated as a
-simple Heaviside function.
+The kernel operator used here for the hand-tuned controller is a
+Wizard Hat Function \cite{Coombes05Waves}, while the kernel operator
+for the evolved controller is given by an array of values. The kernel
+value $k_{i,j}$ is evaluated by accessing the array at position
+$|x_i-x_j|$.
 
 The output is processed taking the position with highest activation on
 the processing filtered by another wizard-hat function, and decoding
-it to a value.
+it to a value (for both controllers).
 
-\section{Evolution of Neural Field Controllers}
+\section{Controller Evolution}
 We used a simple evolutionary algorithm, with random elimination of
 individuals inversely proportional with their fitness. The evolution
 parameters are the connection kernels between the input layer and the
@@ -185,9 +161,7 @@ layer with itself. The connection kernels are considered isotropic and
 homogeneous along the field, so that they can be described as
 symmetric one-dimensional arrays of values. Each connection kernel can
 be represented as an array of $N$ values from $w(0)$ to $w(n)$ with
-homogeneous spacing, using their symmetry. Therefore, for an equal
-boundary radius for all the kernels, and a 2-layered architecture,
-there are $2N$ real values in the genotype. The evolution operations
+homogeneous spacing, using their symmetry. The evolution operations
 used in both steps are:
 \begin{itemize}
 \item Gaussian modification of real codified array values, which
@@ -198,13 +172,13 @@ used in both steps are:
 \item Selection with elitism and culling (5\% of both).
 \end{itemize}
 
-The fitness function was tuned experimentally to attain a convergence
+The fitness function \ref{eq:fitness} was tuned experimentally to attain a convergence
 velocity suitable for the experiment. It aims to minimize the
 orientation error, but also has as a minor second goal to minimize the
-total horizontal displacement. The fitness function for the stability
-controller is:
+total horizontal displacement.
 
 \begin{equation}
+  \label{eq:fitness}
   F_1=100-\frac{100}{(\pi^4+2)T_{total}}\sum_t{\left(\theta(t) ^4+\frac{|x(t)|}{10}\right)}
 \end{equation}
 
@@ -216,13 +190,12 @@ kernel arrays.
 \section{Experimental Results} 
 The differential equation system was solved by a fixed step numerical
 method, a 4th Order Runge-Kutta. The iteration step and sampling time
-selected was $h=0.025s$ for each $10$s test.
+selected was $h=0.025s$ for each $20$s test.
 
 Here are shown the results for the proposed neural field architecture
-with and without evolution (with an appropriate selection of
+with and without evolution (with a careful selection of
 parameters for the non-evolved case). Also, for reference, it is
-included the simulation of a controller omitting the processing layer
-(direct controller), which is roughly equivalent to a simple state
+included the simulation of a controller omitting the processing layer, which is roughly equivalent to a simple state
 space controller.
 
 The direct controller can by itself attain stability for the initial
@@ -232,44 +205,78 @@ $\theta=\pi/3$ or higher.
 
 The hand-tuned controller is able to control the stability without
 evolution with a better performance than the presented by the direct
-controller. It can stabilize in the 10s time those instances with an
-initial value of $\theta=\pi/3$ or higher. Nonetheless, it causes big
-displacements and tends to keep a small but persistent orientation
-error.
+controller. It can stabilize in the 20s for any initial
+orientation. Nonetheless, it causes big displacements and tends to
+keep a small but persistent orientation error.
 
-Finally, the evolved controller has the best performance of the three,
-performs a fast stabilization of the pendulum even with an initial
-value of $\theta=\pi$ (worst-case scenario for the initial
-orientation), which is shown in figure \ref{fig:theta-pi}. It is the
-only one that stays for long periods of time on the reference
-orientation and it causes the least displacements. Despite its
-parameterization being carried out by evolution, its strategy can be
-understood by looking at processing field activation values, and this
-controller seems to apply short burst of switching maximum values in a
-close-to-optimal manner.
+Finally, the evolved controller has a performance almost as good as
+the hand-tuned controller. It seems to present dynamical stability
+and, while it does not converge to zero error, stays in its
+neighborhood, and it does not present a persistent orientation error.
+Despite its parameterization being carried out by evolution, its
+strategy can be understood by looking at processing field activation
+values, and this controller seems to apply fast switching from
+extremal values in a close-to-optimal manner.
 
-\begin{figure*}
-  \centering \epsfig{file=neuralfield-panel-2.eps, width=14cm}
-  \caption{System dynamics with an evolved Neural Field Controller, at
-    time $t=4$. Left: trace of the pendulum (cart in blue and pole tip
-    in red). Right: snapshot of the animation at time $t$.}
-  \label{fig:theta-pi}
-\end{figure*}
+
+\begin{figure}[t!]
+  \centering
+  \includegraphics[angle=-90,width=8cm]{pendulum_gecco_new.eps}
+  \caption{Orientation of pendulum simulations with neural controllers
+    between $t=0$s and $t=20$ for the tree controllers}
+  \label{fig:pendulum-plot}
+\end{figure}
 
 \section{Conclusions}
-The neural field controller architecture is a bit complex (in its
-implementation) and its simulation slightly costly, but has some
-notable advantages. The first one is its ability to self-compensate
-or, equivalently, the stability of its natural dynamics, which is
-attained after the setup of few parameters. The second one is its
-suitability to the problem at hand, being able to solve it with a good
-performance for low and mid perturbations without evolution.
+The neural field controller has some notable advantages. The first one
+is its ability to self-compensate or, equivalently, the stability of
+its natural dynamics. The second one is its suitability to the problem
+at hand, being able to solve it with a good performance without
+evolution.
 
-The evolved controller performed better than the other two, is more
-general because eliminates the need for manual conscious
-parameterization and allows the designer to specify more precisely the
-performance measure desired.
+The evolved controller performed better almost as good as the
+hand-tunes controller, is more general because eliminates the need for
+manual conscious parameterization and allows the designer to specify
+more precisely the performance measure desired.
 
-\bibliographystyle{abbrv} \bibliography{bibanot}
+\bibliographystyle{abbrv} \scriptsize %\bibliography{bibanot}
+\vspace*{0.5mm}
+\begin{thebibliography}{50}
+
+\bibitem{Amari77Dynamics}
+S.~Amari.
+\newblock Dynamics of pattern formation in lateral-inhibition type neural
+  fields.
+\newblock {\em Biological Cybernetics}, Volume 27, Number 2:77--87, 1977.
+
+\bibitem{Bergener99Complex}
+T.~Bergener, C.~Bruckhoff, P.~Dahm, H.~Janssen, F.~Joublin, R.~Menzner,
+  A.~Steinhage, and W.~Von~Seelen.
+\newblock Complex behavior by means of dynamical systems for an anthropomorphic
+  robot.
+\newblock {\em Neural Networks}, 12(7-8):1087--1099, 1999.
+
+\bibitem{Coombes05Waves}
+S.~Coombes.
+\newblock Waves, bumps, and patterns in neural field theories.
+\newblock {\em Biological Cybernetics}, Volume 93, Number 2:91--108, 2005.
+
+\bibitem{Huelse04Structure}
+M.~Huelse, S.~Wischmann, and F.~Pasemann.
+\newblock Structure and function of evolved neuro-controllers for autonomous
+  robots.
+\newblock {\em Connection Science}, 16(4):249--266, 2004.
+
+\bibitem{Kun97Adaptive}
+A.~Kun and W.~Miller.
+\newblock Adaptive static balance of a biped robot using neural networks, 1997.
+
+\bibitem{Wilson72Excitatory}
+H.~Wilson and J.~Cowan.
+\newblock Excitatory and inhibitory interactions in localized populations of
+  model neurons.
+\newblock {\em Biophys J}, January; 12(1):1--24, 1972.
+
+\end{thebibliography}
 
 \end{document}
