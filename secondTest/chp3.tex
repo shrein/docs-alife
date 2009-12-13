@@ -1,13 +1,59 @@
-%\chapter{Evolution and Adaptation of Neural Fields} \label{ch:chp3}
-\section{Introduction} 
+%\chapter{A topology for multi-goal  Neural Fields} \label{ch:chp3}
+\section{Introduction}
+In previous chapters it has been shown how a neural field can be used to perform as a controller for a unstable system. Neural fields have performed good enough (compared to the RNN approach) when applied to a simple control problem, a cart-and-poe (inverted pendulum) system. The particular configuration tested was composed by:
+
+\begin{itemize}
+  \item Two input variables: angular position and angular speed.
+  \item One control goal: to minimize the angular position.
+  \item One control action: lateral force at the pendulum base.
+\end{itemize}
+
+The corresponding controler architecture was devised as a two layer neural field. Each so-called layer of the field is actually a neural population modeled after a subset of the real line: $x | x \in (-1,1)$. Those layers have following roles:
+
+\begin{itemize}
+  \item A first layer, without inner dynamics (i.e. not governed by a differential equation) which merely maps the input variables to activation potentials on a field, using the vector coding technique.
+  \item A second layer, with prototypical dynamics of neural fields. The kernel function was used as the tunning/evolution parameter from which the control behaviour emerged. The actual output was obtained by finding a weighted average of the activation potentials and mapping the resulting centroid to a single value (an inverse process to vector coding).
+\end{itemize}
+
+While this approch yields favorable results, there are some aspects worth improving. The first one is the rather naive topological structure of the populations, as they are modeled as close as posible to the control action space, but present singularities at the extreme points of the real line segment. Those singularities are not present in the model developed by Amari, and can be expected to alter the behaviour of the population as the points drift away from the origin. 
+
+The second one is the parameterization scheme applied. The variation of the kernel function, represented as a value list, preclude the analysis of the inner workings of the control architecture. As the resulting function gives no guaranties about its structure (not even continuity or differentiability). Also they somehow water down the spatial structure: there is no standard interpretation about the relationship between close or distant elements in the population.
+
+A third aspect is the scalability of the architecture. Having only an input layer and an action layer, the control architecture has no room for separation between the control goals and the control actions. A first consequence of that is the lack of flexibility to have a scheme with two control goals and two control actions (where each control goal is supossed to act on each one of the control actions). 
+
+In what remains of this chapter, we will present changes to the control architecture and the topology of the population specifically aimed to address these limitations.
 \label{sec:chp3-introduction}
 
-\section{Evolution of Neural Fields}
-\label{sec:chp3-evolution}
+% \section{Evolution of Neural Fields}
+% \label{sec:chp3-evolution}
 
 \section{Topological Structures for Multiple Goals}
 \label{sec:chp3-topological}
+\subsection{Topology of Neural Populations}
+As said previously, each neural population was previously modeled after a segment of the real line. The obtained topology has two extremal point not so well behaved. Particularly, those elements laying at the extremal point will only have neigbors at one side. Also, the number of neighboring elements located on each side will be different, with exception to the middle element. Therefore, we lose the translational symmetry present in the model of Amary, to get only a reflexive symmetry at the middle element. To recover the translational symmetry and have still a finite number of elements to be simulated, we will model the neural population after a unitary circle embeded in $\mathbb{R}^2$. It is defined as the codomain of a map $f: (-\pi,\pi]\rightarrow \mathbb{R}^2$, $f:\theta \mapsto r=(x_1,x_2)$ where:  
 
+\begin{align}
+ x_1 &= cos(\theta)\\
+ x_2 &= sin(\theta)
+\end{align}
+
+In order to evaluate the kernel function, it is needed a metric over the above defined space. Given the Euclidean metric on $\mathbb{R}^2$, the distance between two points located on the circle, parameterized by $\theta_1$ y $\theta_2$, will be evaluated as the lower valued path integral over the circle. 
+
+\begin{equation}
+ \int_{\theta_1}^{\theta_2}\sqrt{\left(\frac{dx_1}{d\theta}\right)^2 + \left(\frac{dx_2}{d\theta}\right)^2}d\theta
+\end{equation}
+
+Nonetheless, we also intend to modify the parameterization scheme used previously, where the kernel function was used directly as the set of parameters. Instead, we will provide each population with its own metric. Consequently, using a positive definite symetric matrix, a metric tensor $g$, the actual expresion used to evaluate the distance is:
+
+\begin{equation}
+ s(\theta_1,\theta_2)=\min\left(\int_{\theta_1}^{\theta_2}\sqrt{\dot{r}(\theta)^TG\dot{r}(\theta)}d\theta,\int_{\theta_2}^{\theta_1}\sqrt{\dot{r}(\theta)^TG\dot{r}(\theta)}d\theta\right)
+\end{equation}
+
+One remaining issue to be solved is how to evaluate the distance between two elements in different popultations. In that case, we will employ the metric tensor of the recieving population, so that a given population has no need to access topologic information other than its own.
+ 
+\subsection{Neural Field Controller Architecture}
+
+\subsection{Mapping Between Circle Fields and Real Values}
 
 \section{Co-evolution and Complexification}
 \label{sec:chp3-coevolution}
