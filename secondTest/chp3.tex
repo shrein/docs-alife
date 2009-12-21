@@ -223,7 +223,7 @@ points in the space. The normalized connection kernel is thus:
 
 \begin{align}
 \label{eq:norm-kernel}
-  W(s)&=ke^{-(s)^2/(delta \cdot D)^2}-H_0\\
+  W(s)&=ke^{-(s)^2/(\delta \cdot D)^2}-H_0\\
   w(s)&=\frac{W(s)}{\int_0^1W(s)ds}
 \end{align}
 
@@ -242,7 +242,7 @@ $Z$ is calculated as:
 
 \begin{equation}
   \label{eq:eqn-outlayer}
-  u_Z(\theta)=\sum_{Y \in \mathrm{Pr}}\alpha_{Y}f(u_Y(T_{Y,Z}^{-1}(\theta))
+  u_Z(\theta)=\sum_{Y \in \mathrm{Pr}}\alpha_{Y,Z}f(u_Y(T_{Y,Z}^{-1}(\theta))
 \end{equation}
 Where $\alpha_Y \in [0,1]$ is a coefficient for each processing
 population, $Y \in$Pr is a population in the processing layer, and
@@ -251,6 +251,8 @@ $T_{Y,Z}^{-1}$ is the inverse of the mapping $T_{Y,Z} \in O(2)$.
 The chosen output position $\Theta_Z \in [-\pi,\pi)$ for each output
 population is then calculated as an the centroid of the above defined
 population potential:
+
+%TODO: alpha y la sumatoria pueden bajarse a esta eq
 
 \begin{equation}
   \label{eq:eqn-outpos}
@@ -290,6 +292,19 @@ of the evolutionary algorithm as follows:
 \end{itemize}
 
 \subsection{Genotypic Representation and Evolution Operators}
+
+In-Pr: $T_{X,Y}$ (boolean, double)
+Pr: $L_y$ (double, double), $\delta_y$, $k_y$, $H_y$
+Pr-Out: $T_{Y,Z}}$ (boolean, double), $\alpha_{Y,Z}$
+
+CARD(X)=4
+CARD(Y)=2
+CARD(Z)=1
+
+CARD(X*Y)=8
+CARD(Y*Z)=2
+
+TOTAL PARAMS= 32 (10 boolean, 22 double)
 % \section{Co-evolution and Complexification}
 % \label{sec:chp3-coevolution}
 
