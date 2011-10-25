@@ -2,7 +2,7 @@
 \section{Introduction}
 \label{sec:chp3-introduction}
 In previous chapters it has been shown how a neural field can be used
-as a controller for a unstable system. Neural fields have performed
+as a controller for an unstable system. Neural fields have performed
 good enough (compared to the RNN approach) when applied to a simple
 control problem, a cart-and-pole (inverted pendulum) system. The
 particular configuration tested was composed by:
@@ -14,7 +14,7 @@ particular configuration tested was composed by:
 \end{itemize}
 
 The corresponding controller architecture was devised as a two layer
-neural field. Each so-called layer of the field is actually a neural
+neural field. Each layer of the field is actually a neural
 population modeled after a subset of the real line: $x | x \in
 (-1,1)$. 
 Those layers have the following roles:
@@ -32,12 +32,12 @@ Those layers have the following roles:
 \end{itemize}
 
 While this approach yields favorable results, there are some
-properties of neural fields that are worth exploring. This chapter
-focuses on the way information is stored and processed on neural
+properties of neural fields that are worth exploring. Of those, this chapter
+focuses  on the way information is stored and processed on neural
 fields, and how several strategies in this respect produce different
 controllers.
 
-In the following sections this initial approach of storing and
+In the following sections the initial approach of storing and
 proccesing information will be modelled, detailed and modified, to get
 3 different controller structures: Proportional-like controllers,
 fuzzy-like controllers and wavelet-like controllers. Next, these

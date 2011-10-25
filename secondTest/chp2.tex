@@ -39,7 +39,7 @@ inner-product defined by the Lebesgue measure:
   \langle f,g \rangle_{L^2} = \int_{\mathbb{R}}{f\cdot g d\mu}
 \end{equation}
 
-The defined space, whit its measure, conforms a Hilbert space, and
+The defined space, with its measure, conforms a Hilbert space, and
 therefore is complete and metrizable. It also gives a notion of sum,
 and scalar product:
 \begin{eqnarray}
@@ -47,14 +47,13 @@ and scalar product:
   (f+g)(x)=&f(x)+g(x) \\
   (\lambda f)(x)=&\lambda f(x)
 \end{eqnarray}
-Those properties will be used shortly when arises the problem
+Those properties will be used shortly, when arises the problem of
 kernel evolution.
 
 The third one consists of its suitability to simulation. This is not an
 inherent restriction for it to be physically (or biologically)
 plausible, but to be implementable on a computer. We will take a
 discrete form of the equation \ref{eq:nf-simp}:
-
 
 \begin{equation}
   \label{eq:nf-disc}
@@ -109,12 +108,12 @@ the potential of a single element in the processing layer from the
 elements in the same layer and in the input layer.
 
 
-\begin{figure}[t]
-\label{fig:nf-controller}
-\centering
-\includegraphics[width=7cm]{fieldsGaussians.png}
-\caption{Neural fields for stability control}
-\end{figure}
+% \begin{figure}[t]
+% \label{fig:nf-controller}
+% \centering
+% \includegraphics[width=7cm]{fieldsGaussians.png}
+% \caption{Neural fields for stability control}
+% \end{figure}
 
 
 \section{Evolution of Neural Fields}
@@ -224,13 +223,13 @@ first one of them is selected as output without loss of
 generality. The neural network topology for the first controller
 (stability) is shown in the figure \ref{fig:rnn-arch}.
 
-\begin{figure}[t]
-\label{rnn-arch}
-\centering
-\includegraphics[width=7cm]{rnn.png}
-\caption{Neural net for stability control including fuzzy mapping}
-\label{rnn}
-\end{figure}
+% \begin{figure}[t]
+% \label{rnn-arch}
+% \centering
+% \includegraphics[width=7cm]{rnn.png}
+% \caption{Neural net for stability control including fuzzy mapping}
+% \label{rnn}
+% \end{figure}
 
 \subsection{Evolutionary Algorithm Structure for the RNN Controller}
 It is expected, based on the approach of artificial life to
@@ -336,53 +335,53 @@ universal coordinates, and blue dots represent the base (car)
 position.
 
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=7cm]{inestabilidadG.png}
-\\
-\includegraphics[width=7cm]{inestabilidadC.png}
-\caption{System dynamics with an untrained controller}
-\label{inestabilidad}
-\end{figure}
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=7cm]{inestabilidadG.png}
+% \\
+% \includegraphics[width=7cm]{inestabilidadC.png}
+% \caption{System dynamics with an untrained controller}
+% \label{inestabilidad}
+% \end{figure}
 
 After the first step of the algorithm, and once done the stability
 controller evolution, it is shown the behavior withdrawing the
 positioning controller in the figure \ref{final}. The evolution was performed with a population
 of 50 individuals and 300 iterations.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=7cm]{finalG.png}
-\\
-\includegraphics[width=7cm]{finalC.png}
-\caption{System dynamics with a RNN controller trained.}
-\label{final}
-\end{figure}
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=7cm]{finalG.png}
+% \\
+% \includegraphics[width=7cm]{finalC.png}
+% \caption{System dynamics with a RNN controller trained.}
+% \label{final}
+% \end{figure}
 
 On the other hand, when the initial angular perturbation is small, the
 neural field is able to control the stability without evolution. The
 simulation is shown in the figure \ref{estabilidad}.
 
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=7cm]{estabilidadG.png}
-\\
-\includegraphics[width=7cm]{estabilidadC.png}
-\caption{System dynamics with a non-trained Neural Field Controller.}
-\label{estabilidad}
-\end{figure}
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=7cm]{estabilidadG.png}
+% \\
+% \includegraphics[width=7cm]{estabilidadC.png}
+% \caption{System dynamics with a non-trained Neural Field Controller.}
+% \label{estabilidad}
+% \end{figure}
 
 The output from the processing field can be seen in the figure
 \ref{fig:nf-result}.
 
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=7cm]{camposC.png}
-\caption{Processing Neural Field simulation.}
-\label{estabilidad}
-\end{figure}
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=7cm]{camposC.png}
+% \caption{Processing Neural Field simulation.}
+% \label{estabilidad}
+% \end{figure}
 
 
 
