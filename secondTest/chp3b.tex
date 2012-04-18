@@ -2,17 +2,17 @@
 \section{Introduction}
 \label{sec:chp3-introduction}
 This chapter introduces the Simplest Biped Walking problem, which will
-be used onwards as the reference control problem. Optimal linear
-state-feedback controllers for the Simplest Biped Walking problem are
-found using numerical methods (genetic algorithms), one controller for
-each sub-region on a delimited state-space region. A general
-architecture for the neural field controllers is presented, and an
-structured strategy to implement non-linear (sliding-mode) state-space
-controllers using the neural field controller architecture is
-shown. Finally, an specific controller for biped walking is developed
-and tested using the collected data, its behaviour is shown using a
-Poincarè section for the controlled biped dynamics, and an stability
-analysis is provided.
+be used onwards as the reference control problem. Approximations to
+optimal linear state-feedback controllers for the Simplest Biped
+Walking problem are found using numerical methods (genetic
+algorithms), for each sub-region on a delimited state-space region. A
+general architecture for the neural field controllers is presented,
+and an structured strategy to implement non-linear (sliding-mode)
+state-space controllers using the neuralfield-like controller
+architecture is shown. Finally, an specific controller for biped
+walking is developed and tested using the collected data, its behavior
+is shown using a Poincaré section for the controlled biped dynamics,
+and an stability analysis is provided.
 
 \section{The Simplest Biped Walking Model}
 \label{sec:chp3-simplest}
@@ -30,19 +30,19 @@ walking with an upper body \cite{Wisse04Passive}.
 Here is shown the model of Garcia et al., modified to allow control
 torques \ref{fig:chp3-simplest}.
 
-The 2D Biped Walking (yet to be simplified) model asumes a biped with
+The 2D Biped Walking (yet to be simplified) model assumes a biped with
 a hip connected to two feet through rigid legs with no knees. It has a
 point mass $M$ located at the hip, and two point masses $m$ located at
 the feet, with ratio $\beta = m/M$. This model has a swing phase,
 where there is a leg in contact with the ground (stance leg), and
-another one in pendular motion (swing leg). The colission of the
-swinging foot with the ground at heelstrike is plastic (no-slip,
+another one in pendular motion (swing leg). The collision of the
+swinging foot with the ground at heel-strike is plastic (no-slip,
 no-bounce), and causes its velocity to jump to zero. Also, the double
 support is instantaneous, so only one leg is in contact with the
-ground at any time. For simplicity, it is asumed that the swing leg is
+ground at any time. For simplicity, it is assumed that the swing leg is
 allowed to pass through the floor surface an be below floor level once
 on each step, and only its second crossing will be detected as a
-colission (otherwise the foot-scuffing problems inevitable for a
+collision (otherwise the foot-scuffing problems inevitable for a
 walker with straight legs would appear).
 
 The equations of motion for the swing phase have the form $T =
@@ -65,7 +65,7 @@ $q=[\theta\;\phi]^T$, where:
 \end{align*}
 
 The Simplest Biped Walking model is achieved simplifying the previous
-model, by asuming that the point masses located at the feet are
+model, by assuming that the point masses located at the feet are
 infinitesimal in comparison to the point mass at the hip (i.e. when
 $\beta \rightarrow 0$). In the first row $\beta$ is set to $0$, and in
 the second row we divide by $\beta$, effectively isolating the stance
@@ -84,7 +84,7 @@ $\phi$. Therefore:
       (g/l)\sin(\theta-\phi-\gamma) \end{array} \right]
 \end{align}
 
-Furthemore, we now define the action torque vector as:
+Furthermore, we now define the action torque vector as:
 
 \begin{equation}
   T = \left[ \begin{array}{c}
@@ -94,8 +94,8 @@ Furthemore, we now define the action torque vector as:
 
 Where we scale the torque on $\phi$: $\beta T'_{\phi} =
 T_{\phi}$. Also, it is required a transition mapping for the state
-vector before and after colission. As shown by Garcia et al., there is
-a phase reduction in the colission, from four dimensions to two
+vector before and after collision. As shown by Garcia et al., there is
+a phase reduction in the collision, from four dimensions to two
 dimensions, which is seen as a rank reduction in the mapping equation:
 
 \begin{equation}
@@ -116,7 +116,7 @@ dimensions, which is seen as a rank reduction in the mapping equation:
       \dot{\phi} \end{array} \right]^-
 \end{equation}
 
-To complete the model, it is introduced the heelstrike event condition
+To complete the model, it is introduced the heel-strike event condition
 (also from Garcia et. al), that provides a geometric condition in
 terms of the state vector, that has to be satisfied for the swing foot
 to cross the ramp surface:
@@ -125,15 +125,15 @@ to cross the ramp surface:
   \phi^+ - 2\theta^- = 0
 \end{equation}
 
-Given that there is a model reduction on each heelstrike, each step is
-uniquely determined by the initial state after heelstrike
+Given that there is a model reduction on each heel-strike, each step is
+uniquely determined by the initial state after heel-strike
 $v^+=[\theta^+ \dot{\theta^+}]^T$. The stability of a given controller
-can be analysed through the evolution of the Poincaré section $v^+_n$
-after the $n$-th heelstrike. This is analogous to analysing the
+can be analyzed through the evolution of the Poincaré section $v^+_n$
+after the $n$-th heel-strike. This is analogous to analyzing the
 stability of the 'stride function' $v_{n+1}=S(v_n)$ in terms of McGeer
 \cite{?}. In general, stability in this chapter is understood in the
 sense of Lyapunov, where the stride function is taken as a discrete
-sytem. As there are some $v$ values for which the stride function
+system. As there are some $v$ values for which the stride function
 $S(v)$ has no output, it is assumed that stability is not attained
 when, for a given $v_0$, there is a $n$ for which $v_n=S^n(v_0)$ is
 not defined.
@@ -150,13 +150,13 @@ the swing leg that substantially widens the basin of attraction
 mechanical configuration (aided by some switching mechanism when the
 swing leg becomes the stance leg), or as a state-feedback
 control. This controller is based on the intuition that a rimless
-wheel attains asympotically stable steady 2D motions, given the proper
-ground slope and angle between legs \cite{Coleman97Motions}. Also, it
-has the advantage that, for sufficiently small mass ratio $\beta$, the
-energy cost of the required control action is negligible. Such control
-strategy can be stated as
+wheel attains asymptotically stable steady 2D motions, given the
+proper ground slope and angle between legs
+\cite{Coleman97Motions}. Also, it has the advantage that, for
+sufficiently small mass ratio $\beta$, the energy cost of the required
+control action is negligible. Such control strategy can be stated as
 $T'_{\phi}=k_{\phi}(\phi_r-\phi)+\sqrt{k_{\phi}}\dot{\phi}$, where the
-reference swing leg angle is set to a convinient value $\phi_r=0.3$.
+reference swing leg angle is set to a convenient value $\phi_r=0.3$.
 
 The aforementioned control strategy provides a wider basin of
 attraction as $k_{\phi}$ grows. Therefore, for each initial
@@ -170,22 +170,23 @@ given discretrization of the configuration space.
 
 For the purpose of comparison, the system with $\gamma=0.004$, and $M
 = g = l = 1$ will be explored. The initial configuration space will
-have the bounds $\theta_0 = [0, 0.4]$ and $\dot{\theta}_0 = [-0.4:0]$,
-with step size $\delta v=0.025$, for a 17x17 nodes grid. For each node
-in the grid, a search with an evolutionary algorithm is performed,
-using $k_{\phi}$ as the genotype. The fitness function evaluation
-implies running a simulation of the model with the state-feedback
-controller using the $k_{\phi}$ given, for a fixed time interval. The
-simulation may abort before the fixed time, if state variable (not the
-Poincaré section) $\theta(t)$ leaves the interval $[-\pi/2, \pi/2]$,
-and the lowest fitness value is assigned. Otherwise, the fitness value
-is $k_{\phi}^2$.
+have the bounds $\theta_0 = [0, 0.4]$ and $\dot{\theta}_0 = [-0.4,
+0]$, with step size $\delta v=0.025$, for a 17x17 nodes grid. For each
+node in the grid, a search with an evolutionary algorithm is
+performed, using $k_{\phi}$ as the genotype. The fitness function
+evaluation implies running a simulation of the model with the
+state-feedback controller using the $k_{\phi}$ given, for a fixed time
+interval. The simulation may abort before the fixed time, if state
+variable (not the Poincaré section) $\theta(t)$ leaves the interval
+$[-\pi/2, \pi/2]$, and the lowest fitness value is
+assigned. Otherwise, the fitness value is $k_{\phi}^2$.
 
 \begin{figure}[ht]
   \label{fig:figure1}
   \centering
   \includegraphics[scale=0.9]{K_values_17x17}
-  \caption{Search result for the mapping $k_{\phi}=M(\theta_0,\dot{\theta_0})$.}
+  \caption{Search result for the mapping
+    $k_{\phi}=M(\theta_0,\dot{\theta_0})$.}
 \end{figure}
 
 
@@ -195,8 +196,9 @@ seen, the mapping is monotonically increasing both as $\theta_0$
 increases and as $\dot{\theta}_0$ decreases.
 
 Before applying this mapping to an extended control policy for the
-Simplest Biped Walking model implemented with neural fields, a general
-architecture for neural field controllers is presented.
+Simplest Biped Walking model implemented with a neuralfields-like
+structure, a general architecture for neural field controllers is
+presented.
 
 \section{A Neural Field Controller Architecture}
 \label{sec:chp3-neural}
@@ -206,6 +208,8 @@ as a controller for an unstable system. Neural fields have performed
 good enough (compared to the RNN approach) when applied to a simple
 control problem, a cart-and-pole (inverted pendulum) system. The
 particular configuration tested was composed by:
+
+*** This belongs to chp2 ***
 
 \begin{itemize}
 \item Two input variables: angular position and angular speed.
@@ -231,51 +235,57 @@ layers have the following roles:
   inverse process to vector coding).
 \end{itemize}
 
+******
+
 To generalize this approach, here is introduced a simple architecture
-neural field controllers to help the understanding of commonalities
+of neural field controllers to help the understanding of commonalities
 and variations of the several controller structures developed next. It
 is not meant as a global framework for control with neural fields, as
 other architectures may be fruitfully developed. It is instead, an
 specific model for the description of controllers based on layered
 neural fields, able to describe the controller developed in this
 chapter. The controller architecture that will be used here onwards is
-described with an enfasis in how information is processed in the
+described with an emphasis in how information is processed in the
 controller.
 
 The neural field controller architecture will be generally structured
-as follows. It will have three layers: one input layer, one processing
-layer and one output layer. As a strongly layered architecture, the
-connections are only allowed from contiguous layers, in one
-direction. Thus, elements in one layer cannot receive inputs from
-other elements except those in the immediately preceding layer (with
-\emph{output} receiving from \emph{processing}, and \emph{processing}
-receiving from \emph{input}). From them, only the processing layer is
-composed of neural populations, in terms of structure and behavior
+as follows. It will have three layers: one input layer, one
+representation layer and one action layer. As a strongly layered
+architecture, the connections are only allowed from contiguous layers,
+in one direction. Thus, elements in one layer cannot receive inputs
+from other elements except those in the immediately preceding layer
+(with \emph{action layer} receiving from \emph{representation layer},
+and \emph{representation layer} receiving from \emph{input layer}).
+
+For the controller used in this chapter, only the representation layer
+is composed of neural populations, in terms of structure and behavior
 (i.e. is governed by the dynamic equations of neural fields). The
 elements in the input layer have the structure, but not the behavior,
-of neural populations, and include a mapping function from an input
-variable (usually measured as an output of the controlled system) to
-the activation potential of its neural population. Finally, each
-element in the output layer consist only of a mapping function
-from the activation potential of a processing layer population to the
-value of an output variable. The layers are further described below:
+of neural populations, and include a mapping function from input
+variables (here the state-variables of the controlled system) to the
+activation potential of its neural population. Finally, each element
+in the action layer consist only of a mapping function from the
+activation potential of a processing layer population to the value of
+an output variable.
+
+The layers are further described below:
 
 \paragraph{Input Layer}
 Each population on this layer is used as a spacial representation of a
 function of the inputs. The values stored in the population act only
-as a buffer to feed the inputs to the processing layer populations,
-and correspond in each iteration to the mapping of an input
-variable. While the mapping function can be general, here it will be
-simplified. As a result, it is used one input layer population for
-each relevant state of the controlled system (where relevant means
-related to the control goal). It should be noted that this layer is
-not governed by a differential equation and therefore does not follow
-Amari's definition of a neural field.
+as a buffer to feed the inputs to the representation layer
+populations, and correspond in each iteration to the mapping of an
+input variable. While the mapping function can be general, here it
+will be simplified. As a result, the input layer is a direct
+representation of the relevant state of the controlled system (where
+relevant means related to the control goal). It should be noted that
+this layer is not governed by a differential equation and therefore
+does not follow Amari's definition of a neural field.
 
-For an input variable $e_i(t') \in \mathbb{R}$, the input mapping
+For an input variable $e_i(t') \in \mathbb{R}^N$, the input mapping
 function of input layer population $i$, assigns a potential
-$u_i(\theta,t) \in \mathbb{R}$ to each position $x$ in the input layer
-population, at the current time $t$.
+$u_i(\theta,t) \in \mathbb{R}$ to each position $x \in \mathbb{R}^N$
+in the input layer population, at the current time $t$.
 
 \begin{equation}
   \label{eq:eqn-inpos}
@@ -284,9 +294,10 @@ population, at the current time $t$.
 
 Note that the instantaneous value of $u_i(x,t)$ is a function of the
 input variable $e_i(t')$ for $t' \in [0,t]$, and therefore the mapping
-function has access to the entire history of $e_i$. In the simplest
-case, the mapping function will depend only on the current value
-$e_i(t)$, as the case in the controller developed in this chapter.
+function may have access to the entire history of $e_i$. In the
+simplest case, the mapping function will depend only on the current
+value $e_i(t)$, as the case in the controller developed in this
+chapter.
 
 \paragraph{Processing Layer}
 Neural populations in this layer behave according to a differential
@@ -317,12 +328,12 @@ population $j$, $u_j$ is the activation potential of elements in the
 population, $w_{i,j}$ is the connection kernel for connections from
 population $i$ towards population $j$, which is a function of $s$, the
 distance between two positions (on the same population $j$, or in
-different poopulations $i$ and $j$), $X \in $In is a population in the
+different populations $i$ and $j$), $X \in $In is a population in the
 Input Layer, and $\psi$ is the activation function (usually a
-heaviside function, or a sigmoid).
+Heaviside function, or a sigmoid).
 
 The connection kernel $w_{i,j}$ may take any form, but the form of a
-Mexican-hat function will be prefered.
+Mexican-hat function will be preferred.
 
 In general, $x$ may be a position in any space (usually in
 $\mathbb{R}$ or $\mathbb{R}^2$).
@@ -387,7 +398,7 @@ element of an input population (e.g the one corresponding to
 $\theta_n$) causes an activation that is reaches its maximum at some
 row of elements in the processing layer, and decreases as the row are
 father away. Likewise, an activation of an element in the other input
-population, casus an activation peaking at some column. This
+population, causes an activation peaking at some column. This
 configuration gives the processing population an structure that
 resembles the Poincaré section space. In the steady-state response,
 the centroid of the population activation should correspond to the
@@ -396,7 +407,7 @@ an equal number than that of the mapping found in the section
 \ref{sec:chp3-searching}.
 
 The output layer has also one population, actually with only one
-element, which activation provides de output value $k_{\phi}$. Each
+element, which activation provides the output value $k_{\phi}$. Each
 element in the processing population contributes with a value given by
 the product of the activation and the optimal $k_{\phi}$ value for
 that position in the Poincaré section. The total output is calculated
@@ -419,13 +430,13 @@ experiment shown is run for $t=[0, 100]$ with initial configuration
 $v_n=[0.02 -0.39]^T$, which is near the most unstable point in the
 region studied.
 
-While the SF controller. keeps constant de $k_{\phi}=100$ value in
+While the SF controller. keeps constant the $k_{\phi}=100$ value in
 order to attain stability, the SMNF controller proposed recalculates
 the $k_{\phi}$ on each step using the current Poincaré section and the
-embedded mapping $k_{\phi}=M(v_n)$. As the ouput value of the neural
+embedded mapping $k_{\phi}=M(v_n)$. As the output value of the neural
 field uses a centroid policy, it interpolates between the values on
 the 17x17 mapping grid. This interpolation could potentially cause the
-loss of stability (because the linear interpolation could understimate
+loss of stability (because the linear interpolation could underestimate
 the required $k_{\phi}$, therefore a displacement
 $k_{\phi}=M(v_n+[0.5h -0.5h]^T)$ in the mapping is applied,
 guaranteeing stability given the monotonically increasing nature of
@@ -450,7 +461,7 @@ The overall performance of the SMNF controller is better than the SF
 in terms of energy consumption and actuator strain, progressively
 diminishing its $k_{\phi}$ value and thus the control action (see the
 figure \ref{} where the K values vs time are plotted). The SF
-controller converges faster to its fixed point (as would be spected
+controller converges faster to its fixed point (as would be expected
 for a greater control action), but even in steady-state the control
 action stays almost unaltered.
 
@@ -492,12 +503,12 @@ remains unused.
 \end{figure}
 
 The time simulation (see figure \ref{}) shows how the SMNF changes the
-control policy (as parameterized by $k_{\phi}$) softly enough to
+control policy (as parametrized by $k_{\phi}$) softly enough to
 provide a qualitatively natural gait for the biped. It should be noted
-that sudden changes of behaviour are common in Sliding-mode
+that sudden changes of behavior are common in Sliding-mode
 controllers, but that is mitigated in this case by three facts: 1) The
 neural field applies an interpolation using the centroid of activation
-to calculate te output $k_{\phi}$. 2) The neural field has natural
+to calculate the output $k_{\phi}$. 2) The neural field has natural
 dynamics qualitatively equal to a low-band filter. 3) The change in
 the $k_{\phi}$ occur at a non-linear point in the biped dynamics that
 anyway would cause a jump in its state.
