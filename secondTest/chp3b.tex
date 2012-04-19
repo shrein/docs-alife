@@ -8,14 +8,14 @@ Walking problem are found using numerical methods (genetic
 algorithms), for each sub-region on a delimited state-space region. A
 general architecture for the neural field controllers is presented,
 and an structured strategy to implement non-linear (sliding-mode)
-state-space controllers using the neuralfield-like controller
+state-space controllers using the neural field-like controller
 architecture is shown. Finally, an specific controller for biped
 walking is developed and tested using the collected data, its behavior
 is shown using a Poincaré section for the controlled biped dynamics,
 and an stability analysis is provided.
 
 \section{The Simplest Biped Walking Model}
-\label{sec:chp3-simplest}
+\label{}
 
 The Simplest Walking Model, presented by Garcia et
 al. \cite{Garcia98Simplest}, is an attempt to create the simplest
@@ -39,9 +39,9 @@ another one in pendular motion (swing leg). The collision of the
 swinging foot with the ground at heel-strike is plastic (no-slip,
 no-bounce), and causes its velocity to jump to zero. Also, the double
 support is instantaneous, so only one leg is in contact with the
-ground at any time. For simplicity, it is assumed that the swing leg is
-allowed to pass through the floor surface an be below floor level once
-on each step, and only its second crossing will be detected as a
+ground at any time. For simplicity, it is assumed that the swing leg
+is allowed to pass through the floor surface an be below floor level
+once on each step, and only its second crossing will be detected as a
 collision (otherwise the foot-scuffing problems inevitable for a
 walker with straight legs would appear).
 
@@ -116,27 +116,28 @@ dimensions, which is seen as a rank reduction in the mapping equation:
       \dot{\phi} \end{array} \right]^-
 \end{equation}
 
-To complete the model, it is introduced the heel-strike event condition
-(also from Garcia et. al), that provides a geometric condition in
-terms of the state vector, that has to be satisfied for the swing foot
-to cross the ramp surface:
+To complete the model, it is introduced the heel-strike event
+condition (also from Garcia et. al), that provides a geometric
+condition in terms of the state vector, that has to be satisfied for
+the swing foot to cross the ramp surface:
 
 \begin{equation}
   \phi^+ - 2\theta^- = 0
 \end{equation}
 
-Given that there is a model reduction on each heel-strike, each step is
-uniquely determined by the initial state after heel-strike
-$v^+=[\theta^+ \dot{\theta^+}]^T$. The stability of a given controller
-can be analyzed through the evolution of the Poincaré section $v^+_n$
-after the $n$-th heel-strike. This is analogous to analyzing the
-stability of the 'stride function' $v_{n+1}=S(v_n)$ in terms of McGeer
-\cite{?}. In general, stability in this chapter is understood in the
-sense of Lyapunov, where the stride function is taken as a discrete
-system. As there are some $v$ values for which the stride function
-$S(v)$ has no output, it is assumed that stability is not attained
-when, for a given $v_0$, there is a $n$ for which $v_n=S^n(v_0)$ is
-not defined.
+Given that there is a model dimension reduction on each heel-strike,
+each step is uniquely determined by the initial state after
+heel-strike \( v^+=\big[\begin{smallmatrix}\theta^+ \\
+  \dot{\theta^+} \end{smallmatrix} \big]\). The stability of a given
+controller can be analyzed through the evolution of the Poincaré
+section $v^+_n$ after the $n$-th heel-strike. This is analogous to
+analyzing the stability of the 'stride function' $v_{n+1}=S(v_n)$ in
+terms of McGeer \cite{?}. In general, stability in this chapter is
+understood in the sense of Lyapunov, where the stride function is
+taken as a discrete system. As there are some $v$ values for which the
+stride function $S(v)$ has no output, it is assumed that stability is
+not attained when, for a given $v_0$, there is a $n$ for which
+$v_n=S^n(v_0)$ is not defined.
 
 \section{Searching for Optimal Linear State-Feedback Controllers}
 \label{sec:chp3-searching}
@@ -154,14 +155,17 @@ wheel attains asymptotically stable steady 2D motions, given the
 proper ground slope and angle between legs
 \cite{Coleman97Motions}. Also, it has the advantage that, for
 sufficiently small mass ratio $\beta$, the energy cost of the required
-control action is negligible. Such control strategy can be stated as
-$T'_{\phi}=k_{\phi}(\phi_r-\phi)+\sqrt{k_{\phi}}\dot{\phi}$, where the
-reference swing leg angle is set to a convenient value $\phi_r=0.3$.
+control action is negligible. Such control strategy can be stated as:
+\begin{equation} \label{eq:chp3-control-action}
+  T'_{\phi}=k_{\phi}(\phi_r-\phi)+\sqrt{k_{\phi}}\dot{\phi}
+\end{equation}
+Where the reference swing leg angle is set to a convenient value
+$\phi_r=0.3$.
 
 The aforementioned control strategy provides a wider basin of
 attraction as $k_{\phi}$ grows. Therefore, for each initial
 configuration, there is a minimum $k_{\phi}$ that attains stable
-walking.
+walking \cite{Wisse05How}.
 
 As a first step to extending the static control policy of Wisse et
 al., in this section there will be found a set of minimal $k_{phi}$
@@ -196,9 +200,8 @@ seen, the mapping is monotonically increasing both as $\theta_0$
 increases and as $\dot{\theta}_0$ decreases.
 
 Before applying this mapping to an extended control policy for the
-Simplest Biped Walking model implemented with a neuralfields-like
-structure, a general architecture for neural field controllers is
-presented.
+Simplest Biped Walking model implemented with a neural fields-like
+structure, an architecture for neural field controllers is required.
 
 \section{A Neural Field Controller Architecture}
 \label{sec:chp3-neural}
@@ -206,10 +209,8 @@ presented.
 In previous chapters it has been shown how a neural field can be used
 as a controller for an unstable system. Neural fields have performed
 good enough (compared to the RNN approach) when applied to a simple
-control problem, a cart-and-pole (inverted pendulum) system. The
+control problem: a cart-and-pole (inverted pendulum) system. The
 particular configuration tested was composed by:
-
-*** This belongs to chp2 ***
 
 \begin{itemize}
 \item Two input variables: angular position and angular speed.
@@ -235,8 +236,6 @@ layers have the following roles:
   inverse process to vector coding).
 \end{itemize}
 
-******
-
 To generalize this approach, here is introduced a simple architecture
 of neural field controllers to help the understanding of commonalities
 and variations of the several controller structures developed next. It
@@ -249,162 +248,196 @@ described with an emphasis in how information is processed in the
 controller.
 
 The neural field controller architecture will be generally structured
-as follows. It will have three layers: one input layer, one
-representation layer and one action layer. As a strongly layered
-architecture, the connections are only allowed from contiguous layers,
-in one direction. Thus, elements in one layer cannot receive inputs
-from other elements except those in the immediately preceding layer
-(with \emph{action layer} receiving from \emph{representation layer},
-and \emph{representation layer} receiving from \emph{input layer}).
+as follows. It will have three layers:
+\begin{itemize}
+\item[Input:] Vector-coded represention of relevant input values
+  (e.g. a subset or linear combination of controlled system
+  state-variables).
+\item[Representation:] Inner state representation of the controller
+  architecture. Could be interpreted as the probability of being on
+  each state $p(s=s_x)$ from the viewpoint of the controller.
+\item[Action:] Representation of the preferred actions of the
+  controller. May be interpreted as vector-coded (when using a
+  complete neuron population), or directly coded (when using a single
+  node for each controlled variable).
+\end{itemize}
+ 
+As a strongly layered architecture, the connections are only allowed
+from contiguous layers, in one direction. Thus, elements in one layer
+cannot receive inputs from other elements except those in the
+immediately preceding layer (with \emph{action layer} receiving from
+\emph{representation layer}, and \emph{representation layer} receiving
+from \emph{input layer}).
 
-For the controller used in this chapter, only the representation layer
-is composed of neural populations, in terms of structure and behavior
-(i.e. is governed by the dynamic equations of neural fields). The
-elements in the input layer have the structure, but not the behavior,
-of neural populations, and include a mapping function from input
-variables (here the state-variables of the controlled system) to the
-activation potential of its neural population. Finally, each element
-in the action layer consist only of a mapping function from the
-activation potential of a processing layer population to the value of
-an output variable.
+Each of these layers may or may not have a dynamic behaviour, and
+furthermore, if it does, may have the form of a neural field, in terms
+of structure and behavior (i.e. governed by the dynamic equations of
+neural fields).
 
-The layers are further described below:
+For those layers that do have a dynamic behavior (as is the case of
+the representation layer in this chapter, as will be shown next), the
+derivative of the layer potential at each position $\dot{u}_i(x)$ is
+fed with the output of function from the previous layer activation
+potential $f_{i,i-1}(u_{i-1})$ (and may have also a recurrent
+component, function of $u_i$).
 
-\paragraph{Input Layer}
-Each population on this layer is used as a spacial representation of a
-function of the inputs. The values stored in the population act only
-as a buffer to feed the inputs to the representation layer
-populations, and correspond in each iteration to the mapping of an
-input variable. While the mapping function can be general, here it
-will be simplified. As a result, the input layer is a direct
-representation of the relevant state of the controlled system (where
-relevant means related to the control goal). It should be noted that
-this layer is not governed by a differential equation and therefore
-does not follow Amari's definition of a neural field.
+Those layers that do not have a dynamic behavior, have their input
+directly defined as a function of the previous layer activation
+potential $u_i=f_{i,i-1}(u_{i-1})$. They also can be thought of as a
+reference-tracking dynamical system with zero reference position
+error, which is fast enough for its transient behavior to be
+ignored. The input layer may be a particular case of this, where there
+is no previous layer, and its activation potential is a function of
+the controlled system state-variables $u_1=f_1(X)$.
 
-For an input variable $e_i(t') \in \mathbb{R}^N$, the input mapping
-function of input layer population $i$, assigns a potential
-$u_i(\theta,t) \in \mathbb{R}$ to each position $x \in \mathbb{R}^N$
-in the input layer population, at the current time $t$.
-
-\begin{equation}
-  \label{eq:eqn-inpos}
-  u_i(x,t)=f_i(e_i(t'))
-\end{equation}
-
-Note that the instantaneous value of $u_i(x,t)$ is a function of the
-input variable $e_i(t')$ for $t' \in [0,t]$, and therefore the mapping
-function may have access to the entire history of $e_i$. In the
-simplest case, the mapping function will depend only on the current
-value $e_i(t)$, as the case in the controller developed in this
-chapter.
-
-\paragraph{Processing Layer}
-Neural populations in this layer behave according to a differential
-equation where the inputs are the functions of the potentials of
-populations (for simplicity it will be assumed that only one
-population in the preceding layer is an input to a given population,
-and that input layer population is not shared among processing layer
-populations). Therefore, those populations in this layer follow the
-definition given by Amari for neural fields \cite{Amari}, but with an
-specific structure for the interconnection between input layer and
-processing layer populations.
-
-The differential equation for the potential at position $x$ in a
-population $j$ of the processing layer is:
-
-\begin{align}
-  \label{eq:lnf-oned}
-  \tau_j\dot{u}_j(x,t)&=-u_j(x,t) +\int_{x' \in
-    \Omega_j}{w_{j,j}\left( s_j(x,x') \right)
-    \psi \left(u_j(x',t) \right) dx'} + S_j(x,t) \\
-  S_j(x,t)&=\sum_{i \in \mathrm{In}}\int_{x' \in
-    \Omega_i}{w_{i,j}\left(s_{i,j}(x,x') \right) \psi \left(u_i(x',t)
-    \right) dx'}
-\end{align}
-
-Where as in previous chapters $\tau_j$ is a time constant for the
-population $j$, $u_j$ is the activation potential of elements in the
-population, $w_{i,j}$ is the connection kernel for connections from
-population $i$ towards population $j$, which is a function of $s$, the
-distance between two positions (on the same population $j$, or in
-different populations $i$ and $j$), $X \in $In is a population in the
-Input Layer, and $\psi$ is the activation function (usually a
-Heaviside function, or a sigmoid).
-
-The connection kernel $w_{i,j}$ may take any form, but the form of a
-Mexican-hat function will be preferred.
-
-In general, $x$ may be a position in any space (usually in
-$\mathbb{R}$ or $\mathbb{R}^2$).
-
-\paragraph{Output Layer}
-This layer is used as a representation of the output values of the
-controller architecture. As such, there will be one output population
-for each output expected (or actuator controlled).
-
-Similarly as it was done between the Input Layer and the Processing
-Layer, the mapping between the Processing Layer and the Output Layer
-is evaluated, for each output population, as the summation of the
-transformation of each processing population. In other words, the
-activation of an element located at $x$ in the output population $k$
-is calculated as:
-
-\begin{equation}
-  \label{eq:eqn-outlayer}
-  u_k(x,t)=\sum_{j \in \mathrm{Pr}}\alpha_{j,k}g_{j,k}(u_j(x',t))
-\end{equation}
-
-Where $\alpha_{j,k} \in [0,1]$ is a coefficient for the contribution
-of each processing population on the output population, $j \in$ Pr is
-a population in the processing layer, and $g_{j,Z}$ is the function
-from the action potentials in the population $j$ to the resulting
-contribution to the output population $k$ (before applying the
-coefficient $\alpha$).
-
-The function $g_{j,k}$ may take several forms. One possibility is to
-perform a vector decoding (a reverse process that of the input
-populations), calculated as an the centroid of the above defined
-population potential. A more general function will be used for the
-controller that is developed in this chapter.
 
 \section{An Sliding-mode Neural Field Controller}
 \label{sec:chp3-sliding}
 
-The actual controller that is presented in this chapter, is an
-instance of the neural field controller architecture defined above. It
-is most closely related to Sliding-mode controllers, and works (in
-general terms) selecting a control policy for each step (providing as
-output the parameter $k_{\phi}$), using as input the Poincaré section
-$v_n=[\theta_n \dot{\theta}_n]^T$. The mapping $k_{\phi}=M([\theta_n
-\dot{\theta_n}]^T$ is embedded in the structure of the neural
-field. The controller structure is detailed next.
+\subsection{Controller Structure}
 
-The input layer contains two populations, one for $\theta_n$ and
-another for $\dot{\theta_n}$, the elements in the Poincaré section
-$v_n$. For these populations, the function $f$ in the equation
-$u_i(x,t)=f(e_i(t'))$ performs a vector coding, i.e. an specific value
-of the input variable $e_i$ causes an activation $u_i(x)$ with
+\begin{figure}[ht]
+  \label{fig:chp3-cont-arch}
+  \centering
+  \includegraphics[scale=0.55]{controller_arch_chp4}
+  \caption{Neural field controller architecture for Chapter 3.}
+\end{figure}
+
+The layers, depicted in figure \ref{fig:chp3-cont-arch} are further
+described below:
+
+\paragraph{Input Layer}
+This layer is used as a spacial representation of a function of the
+inputs, without a dynamic behavior (it does not add state-variables to
+the bundled system-controller differential equation). The values
+stored in this layer act only as a buffer to feed the inputs to the
+representation layer, and correspond in each iteration to a mapping of
+the system state-variables. It should be noted that this layer is not
+governed by a differential equation and therefore does not follow
+Amari's definition of a neural field.
+
+While the mapping function can be general, here it will be
+simplified. As a result, the input layer is a direct, vector-coded,
+representation of the relevant state of the controlled system after
+heel-strike. More specifically, for the input layer population
+($i=1$):
+
+\begin{align}
+  u_1(x,t) &= f_I(x,v^+) \\
+  f_1(x,v^+) &=
+  \begin{cases}
+    \text{const.} & \text{if v.c\,}(v_n^+) = x. \\
+    0 & \text{otherwise.}
+  \end{cases} \\
+  x &= \big[\begin{smallmatrix} x_1 \\ x_2 \end{smallmatrix} \big] \in [0,1] \times [0,1] \\
+  v_n^+ &= \big[\begin{smallmatrix}
+    \theta_n^+ \\
+    \dot{\theta_n}^+ \end{smallmatrix}\big] \in [0,0.4] \times
+  [-0.4,0]
+\end{align}
+
+Note that the activation potential of the input layer $u_1(x,t)$ is a
+function of the reduced system state-vector $v_n^+$ for the $n$-th
+heel-strike (the last ocurred at time $t$), and is constant up to the
+next heel-strike.
+
+\paragraph{Representation Layer}
+The neural population in this layer behaves according to a
+differential equation where the input if functions of the activation
+potential of the input layer. Therefore, the population in this layer
+resembles the definition given by Amari for neural fields
+\cite{Amari}, but with an specific structure for the interconnection
+between input layer and representation layer populations, and also, a
+minor role of recurrency.
+
+The differential equation for the potential at position $x \in
+\Omega_2=[0,1] \times [0,1]$ in the representation layer ($i=2$)
+population is:
+
+\begin{align}
+  \label{eq:lnf-oned}
+  \tau_2\dot{u}_2(x,t) &= -u_2(x,t) + \int_{x' \in
+    \Omega_2}{w_{2,2}\left( s_{2,2}(x,x') \right)
+    \psi \left(u_2(x',t) \right) dx'} + f_{2,1}(x,t) \\
+  f_{2,1}(x,t)&=\int_{x' \in \Omega_1}{w_{2,1}\left(s_{2,1}(x,x')
+    \right) \psi \left(u_1(x',t) \right) dx'}
+\end{align}
+
+Where as in previous chapters $\tau_i$ is a time constant for the
+population $i$, $u_i$ is the activation potential of elements in the
+population, $w_{j,i}$ is the connection kernel for connections from
+population $i$ towards population $j$, which is a function of
+$s_{j,i}$, the distance between two positions (on the same population
+$j$, or in different populations $i$ and $j$), $Omega_i$ is the set of
+positions $x$ in the layer $i$, and $\psi$ is the activation function
+(here a Heaviside function).
+
+The connection kernel $w_{j,i}$ could take any form, but the form of a
+Mexican-hat function will be used.
+
+\paragraph{Action Layer}
+Similarly as it was done between the input layer, the action layer is
+non-differential in nature (so it also does not add state variables to
+the bundled system-controller differential equation). The mapping
+between the representation layer and the action layer ($i=3$) is
+evaluated using a weighting matrix, calculated as:
+
+\begin{equation}
+  \label{eq:eqn-outlayer}
+  u_3(t) = W_{3,2}(x')u_2(x',t)
+\end{equation}
+
+Where $W_{3,2}(x')$ is the estimated control action if the current
+state where located in the cell with center at position $x'$. The
+actual values for $W_{3,2}$ are assigned to the resulting $K$ of the
+search performed in section \ref{sec:chp3-searching}.
+
+In the controller presented in this chapter, the action layer contains
+only one node, and its activation corresponds to the controller
+output, $k_{\phi}$, the proportional constant shown in section
+\ref{sec:chp3-simplest}.
+
+\subsection{Insights on the Controller Behavior}
+
+The actual controller that is presented in this chapter may be
+understood as a biologically implementation of a Sliding-mode
+controller, and works (in general terms) selecting a control policy
+for each step (providing as output the parameter $k_{\phi}$), using as
+input the Poincaré section \( v_n^+=\big[\begin{smallmatrix}\theta_n^+ \\
+  \dot{\theta_n^+} \end{smallmatrix} \big]\). The mapping
+$k_{\phi}=M([\theta_n^+ \dot{\theta_n^+}]^T$ is embedded in the
+structure of the neural field. An interpretation of the controller
+structure is detailed next.
+
+The input layer a two dimensional neural population, with one
+dimension for $\theta_n^+$ and another for $\dot{\theta_n^+}$, the
+elements in the Poincaré section $v_n^+$ (just after heel-strike), but
+rescaled to be in the set $[0,1] \times [0,1]$. For these populations,
+the function $f$ in the equation $u_1(x,t)=f(v_n^+)$ (shown in the
+previous subsection) performs a vector coding, i.e. an specific value
+of the input variable $v_n^+$ causes an activation $u_1(x)$ with
 amplitude 1 at some position $x$, and an activation of 0 at any other
-position. For implementation purposes, there is a finite number of
-elements, so the vector coding performed contributes to the two most
-closely matched positions $x_a$ and $x_b$, so that
-$u(x_a)x_a+u(x_b)x_b=e_i$.
+position. For implementation purposes, note that this value does not
+need discretization, as the input layer is not explicitly modeled,
+given that it does not add state variables to the bundled
+system-controller differential equation.
 
-The processing layer has one population, where the position $x$
-resides in a two-dimensional euclidean space, defined as the subset of
-$\mathbb{R}^2$ delimited by [0,0.4] x [-0.4,0]. An activation of an
-element of an input population (e.g the one corresponding to
-$\theta_n$) causes an activation that is reaches its maximum at some
-row of elements in the processing layer, and decreases as the row are
-father away. Likewise, an activation of an element in the other input
-population, causes an activation peaking at some column. This
-configuration gives the processing population an structure that
-resembles the Poincaré section space. In the steady-state response,
-the centroid of the population activation should correspond to the
-Poincaré section vector $v_n$. The implementation has 17x17 elements,
-an equal number than that of the mapping found in the section
-\ref{sec:chp3-searching}.
+The representation layer has one neural population, where the position
+$x$ resides in the same two-dimensional space of the input layer
+population. An activation of an element of the input layer population
+(e.g the one corresponding to $v_n^+$) causes an activation bump that
+reaches its maximum at some position in the representation layer, and
+decreases as the row are farther away. This configuration gives the
+representation population an structure that resembles the Poincaré
+section space. The implementation has 17x17 elements, an equal number
+than that of the mapping found in the section
+\ref{sec:chp3-searching}, but it should be noted that the actual
+points are different, given that in the representation and input
+layers position grid, each node is located at the center of each cell
+(and in the section \ref{sec:chp3-searching} were located at the cell
+boundaries.
+
+***
 
 The output layer has also one population, actually with only one
 element, which activation provides the output value $k_{\phi}$. Each
@@ -416,7 +449,8 @@ as the weighted average:
 \begin{align}
   u_{out}(x,t)&=g(u_{proc}(x',t)) \\
   g(u_{proc}) &= \frac{u_{proc}(x,t)M([\hat{\theta_n}
-    \hat{\dot{\theta}_n}]^T=x)}{\int_{x' \in \Omega_{proc}}u_{proc}(x',t)dx'}
+    \hat{\dot{\theta}_n}]^T=x)}{\int_{x' \in
+      \Omega_{proc}}u_{proc}(x',t)dx'}
 \end{align}
 
 
