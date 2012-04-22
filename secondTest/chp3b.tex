@@ -15,7 +15,7 @@ is shown using a Poincaré section for the controlled biped dynamics,
 and an stability analysis is provided.
 
 \section{The Simplest Biped Walking Model}
-\label{}
+\label{sec:chp3-simplest}
 
 The Simplest Walking Model, presented by Garcia et
 al. \cite{Garcia98Simplest}, is an attempt to create the simplest
@@ -186,18 +186,26 @@ $[-\pi/2, \pi/2]$, and the lowest fitness value is
 assigned. Otherwise, the fitness value is $k_{\phi}^2$.
 
 \begin{figure}[ht]
-  \label{fig:figure1}
   \centering
   \includegraphics[scale=0.9]{K_values_17x17}
   \caption{Search result for the mapping
     $k_{\phi}=M(\theta_0,\dot{\theta_0})$.}
+  \label{fig:chp3-kvalues}
 \end{figure}
-
 
 The resulting mapping $k_{\phi}=M(\theta_0,\dot{\theta_0})$ is shown
 in the figure \ref{fig:chp3-kvalues} for $\gamma=0.004$. As can be
 seen, the mapping is monotonically increasing both as $\theta_0$
 increases and as $\dot{\theta}_0$ decreases.
+
+
+A displacement on the values found
+\(k_{\phi}=M(v_n+\big[\begin{smallmatrix}0.5h \\
+  -0.5h \end{smallmatrix}\big])\) (where $h$ is the mapping grid step)
+in the mapping is applied, with the purpose to guarantee stability in
+of the controller, when using interpolation for the $k_{\phi}$
+values. This can be done, given the monotonically increasing nature of
+the mapping.
 
 Before applying this mapping to an extended control policy for the
 Simplest Biped Walking model implemented with a neural fields-like
@@ -297,10 +305,10 @@ the controlled system state-variables $u_1=f_1(X)$.
 \subsection{Controller Structure}
 
 \begin{figure}[ht]
-  \label{fig:chp3-cont-arch}
   \centering
   \includegraphics[scale=0.55]{controller_arch_chp4}
   \caption{Neural field controller architecture for Chapter 3.}
+\label{fig:chp3-cont-arch}
 \end{figure}
 
 The layers, depicted in figure \ref{fig:chp3-cont-arch} are further
@@ -323,16 +331,17 @@ heel-strike. More specifically, for the input layer population
 ($i=1$):
 
 \begin{align}
-  u_1(x,t) &= f_I(x,v^+) \\
-  f_1(x,v^+) &=
+  u_1(x,t) &= f_I(x,v_n^+) \\
+  f_1(x,v_n^+) &=
   \begin{cases}
     \text{const.} & \text{if v.c\,}(v_n^+) = x. \\
     0 & \text{otherwise.}
   \end{cases} \\
-  x &= \big[\begin{smallmatrix} x_1 \\ x_2 \end{smallmatrix} \big] \in [0,1] \times [0,1] \\
+  x &= \big[\begin{smallmatrix} x_1 \\ x_2 \end{smallmatrix}
+  \big] \in [0,1] \times [0,1] \\
   v_n^+ &= \big[\begin{smallmatrix}
     \theta_n^+ \\
-    \dot{\theta_n}^+ \end{smallmatrix}\big] \in [0,0.4] \times
+    \dot{\theta_n}^+ \end{smallmatrix} \big] \in [0,0.4] \times
   [-0.4,0]
 \end{align}
 
@@ -378,36 +387,38 @@ Mexican-hat function will be used.
 \paragraph{Action Layer}
 Similarly as it was done between the input layer, the action layer is
 non-differential in nature (so it also does not add state variables to
-the bundled system-controller differential equation). The mapping
-between the representation layer and the action layer ($i=3$) is
-evaluated using a weighting matrix, calculated as:
+the bundled system-controller differential equation). Also, it
+contains only one node, and its activation corresponds to the
+controller output, $k_{\phi}$, the proportional controller constant
+defined in section \ref{sec:chp3-simplest}. The mapping between the
+representation layer and the action layer ($i=3$) is evaluated using a
+weighting matrix, calculated as:
 
 \begin{equation}
   \label{eq:eqn-outlayer}
-  u_3(t) = W_{3,2}(x')u_2(x',t)
+  u_3(t) = \frac{\sum_{x'}W_{3,2}(x')u_2(x',t)}{\sum_{x'}u_2(x',t)}
 \end{equation}
 
 Where $W_{3,2}(x')$ is the estimated control action if the current
 state where located in the cell with center at position $x'$. The
-actual values for $W_{3,2}$ are assigned to the resulting $K$ of the
-search performed in section \ref{sec:chp3-searching}.
-
-In the controller presented in this chapter, the action layer contains
-only one node, and its activation corresponds to the controller
-output, $k_{\phi}$, the proportional constant shown in section
-\ref{sec:chp3-simplest}.
+actual values for $W_{3,2}$ are assigned to the resulting
+$M(\theta_0,\dot{\theta}_0$ of the search performed in section
+\ref{sec:chp3-searching} (which was then assigned directly to
+$k_{\phi}$.
 
 \subsection{Insights on the Controller Behavior}
 
 The actual controller that is presented in this chapter may be
 understood as a biologically implementation of a Sliding-mode
 controller, and works (in general terms) selecting a control policy
-for each step (providing as output the parameter $k_{\phi}$), using as
+for each step, using as
 input the Poincaré section \( v_n^+=\big[\begin{smallmatrix}\theta_n^+ \\
   \dot{\theta_n^+} \end{smallmatrix} \big]\). The mapping
 $k_{\phi}=M([\theta_n^+ \dot{\theta_n^+}]^T$ is embedded in the
-structure of the neural field. An interpretation of the controller
-structure is detailed next.
+structure of the neural field. The control policy provided as output
+by the neural field is the parameter $k_{\phi}$, used as constant for
+the locally linear critically-damped PD controller. An interpretation
+of the neural field controller structure is detailed next.
 
 The input layer a two dimensional neural population, with one
 dimension for $\theta_n^+$ and another for $\dot{\theta_n^+}$, the
@@ -432,49 +443,78 @@ representation population an structure that resembles the Poincaré
 section space. The implementation has 17x17 elements, an equal number
 than that of the mapping found in the section
 \ref{sec:chp3-searching}, but it should be noted that the actual
-points are different, given that in the representation and input
-layers position grid, each node is located at the center of each cell
-(and in the section \ref{sec:chp3-searching} were located at the cell
-boundaries.
-
-***
+points are different, given that in the position grid of the
+representation and input layers each node is located at the center of
+each cell, but in the section \ref{sec:chp3-searching} were located at
+the cell boundaries.
 
 The output layer has also one population, actually with only one
 element, which activation provides the output value $k_{\phi}$. Each
-element in the processing population contributes with a value given by
-the product of the activation and the optimal $k_{\phi}$ value for
-that position in the Poincaré section. The total output is calculated
-as the weighted average:
-
-\begin{align}
-  u_{out}(x,t)&=g(u_{proc}(x',t)) \\
-  g(u_{proc}) &= \frac{u_{proc}(x,t)M([\hat{\theta_n}
-    \hat{\dot{\theta}_n}]^T=x)}{\int_{x' \in
-      \Omega_{proc}}u_{proc}(x',t)dx'}
-\end{align}
-
+element in the representation layer population contributes with a
+value given by the product of its activation potential and the optimal
+$k_{\phi}$ value for that position in the approximated Poincaré
+section in the representation layer. The total output is calculated as
+the average of $W_{3,2}(x')$ wighted by the activation of the
+representation layer $u_2(x')$. If $W_{3,2}(x')$ is an approximation
+to the optimal control action for state $x'$, and the fraction
+$u_2(x',t)/\sum_{x'}u_2(x',t)$ is an approximation to the probability
+of being in the state $x'$ at the current time $t$, then this average
+provides an approximated expected value for the optimal control action
+\(\text{E}_{u_2}\{k_{\phi}\}\).
 
 \section{Experimental Results}
 \label{sec:chp3-results}
-The experimental results are shown in the figures. For comparison
-purposes, the State-feedback (SF) control strategy proposed by Wisse
-et al. is implemented, and put side to side to the Sliding-mode(-like)
-Neural Field controller (SMNF), as proposed in this chapter. The
-experiment shown is run for $t=[0, 100]$ with initial configuration
-$v_n=[0.02 -0.39]^T$, which is near the most unstable point in the
-region studied.
+The experimental results are shown in the following figures. For
+comparison purposes, the State-feedback (SF) control strategy proposed
+by Wisse et al. is implemented, and compared to the Optimized
+Sliding-mode (OSM) controller developed using search on section
+\ref{sec:chp3-searching}, and to the Sliding-mode(-like) Neural Field
+(SMNF) controller proposed in the previous section. The experiment
+shown is run for $t=[0, 100]$
+with the initial configuration \(v_n= \big[ \begin{smallmatrix} 0.02 \\
+  -0.39 \end{smallmatrix} \big]\), which is near the most unstable
+point in the region studied.
 
-While the SF controller. keeps constant the $k_{\phi}=100$ value in
-order to attain stability, the SMNF controller proposed recalculates
-the $k_{\phi}$ on each step using the current Poincaré section and the
-embedded mapping $k_{\phi}=M(v_n)$. As the output value of the neural
-field uses a centroid policy, it interpolates between the values on
-the 17x17 mapping grid. This interpolation could potentially cause the
-loss of stability (because the linear interpolation could underestimate
-the required $k_{\phi}$, therefore a displacement
-$k_{\phi}=M(v_n+[0.5h -0.5h]^T)$ in the mapping is applied,
-guaranteeing stability given the monotonically increasing nature of
-the mapping (where $h$ is the mapping grid step).
+While the SF controller keeps constant the $k_{\phi}=100$ value in
+order to attain stability, both the OSM and SMNF controller proposed
+recalculate the $k_{\phi}$ on each step using the current Poincaré
+section and the embedded mapping $k_{\phi}=M(v_n^+)$, directly for the
+OSM, and indirectly for the SMNF.
+
+The output values of the OSM take the form of a Sliding-mode
+controller in the following sense:
+\begin{itemize}
+\item A subset of Poincaré section at heel-strike defines the section
+  of state-space where the system ``slides'' along.
+\item At each heelstrike the parameter $k_{\phi}$ is re-evaluated,
+  effectively changing the structure of the controller in a
+  discontinous fashion.
+\item The matrix of control values $M(v_n^+)$ is built so that the
+  system always stays in the subset of the Poincaré section, and
+  furthermore, approache the sliding surface in finite time.
+\item Once reaches the siling surface (fixed point in the Poincaré
+  section), the system stays there.
+\end{itemize}
+
+On the other hand, the output function of the SMNF uses a weighted
+average (analogous to a centroid policy). It interpolates between the
+values on the 17x17 mapping grid, but also has a dynamic estimation of
+the system state, implemented in the representation layer. The
+dynamics of the representation layer could cause the loss of
+stability, as it may lag or underestimate the required
+$k_{\phi}$. Nonetheless, as is shown in the figures in this section,
+the SMNF (with the kernel function parameters used) approaches quite
+closely the behavior of the OSM controller, but with a soft and
+continuous change in the control parameter $k_{\phi}$.
+
+*********
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.7]{chp3-ALL-K-0to100}
+  \caption{Controller $k_{\phi}$ vs time for the three controllers
+    presented in this chapter: a) Constant $k_{\phi}$ }
+  \label{fig:figure1}
+\end{figure}
 
 \begin{figure}[ht]
   \label{fig:figure1}
