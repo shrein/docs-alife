@@ -1,10 +1,10 @@
 \documentclass[letterpaper]{report}
 
-%\usepackage{epsfig}
 \usepackage[latin1]{inputenc}
 \usepackage[numbers]{natbib}
 \usepackage[english]{babel}
 \usepackage[left=4.2cm,top=3cm,right=4.2cm,bottom=3cm]{geometry}
+%\usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -12,20 +12,23 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsmath}   
-\usepackage{setspace}
+%\usepackage{setspace}
 \usepackage{mparhack}
 \usepackage{phdthesis}
 \usepackage{titlepage_nat_uni}
+\usepackage{subfig}
+%\usepackage{ifpdf}
+\usepackage[section]{placeins}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{claim}{Claim}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{observation}[theorem]{Observation}
-\newtheorem{problem}[theorem]{Problem}
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{claim}{Claim}
+% \newtheorem{conjecture}[theorem]{Conjecture}
+% \newtheorem{observation}[theorem]{Observation}
+% \newtheorem{problem}[theorem]{Problem}
 
 \graphicspath{{./images/}}
 
@@ -38,39 +41,39 @@
 \maketitle
 \tableofcontents
 
-% \fancychapqi{Introduction}{intro}{
+\fancychapqi{Introduction}{intro}{}
 % Heaven's just a scab a away. \\
 % I'd like to see you after just one taste.  } {The Mars Volta
 % (2001-)}
 
-% \fancychapqi{Preliminaries}{chp1}{
-% Sink your teeth into flesh of midnight. \\
-% Night forever more.  } {The Mars Volta (2001-)}
+\fancychapqi{Preliminaries}{chp1}{}
+% Sink your teeth into flesh of midnight. \\} Night forever more.  }
+% {The Mars Volta (2001-)}
 
-%\fancychapqi{Neural Fields as Control and Planning Systems}{chp2}{
-%  The owls they were watching. \\
-%  The owls didn't care. \\
-%  Then the owls came a knocking.  } {The Mars Volta (2001-)}
+\fancychapqi{Neural Fields as Control and Planning Systems}{chp2}{}
+% The owls they were watching. \\
+% The owls didn't care. \\
+% Then the owls came a knocking.  } {The Mars Volta (2001-)}
 
-
-\fancychapqi{A Sliding-mode Controller for Biped Walking Using Neural
-  Fields}{chp3b}{
-  % Exosqueletal junction at the\\
-  % railroad delayed. \\
-  % } {The Mars Volta (2001-)
-}
-
-% \fancychapqi{Adquisition of Goals by Evolution of Neural
-% Fields}{chp3}{ Exosqueletal junction at the\\
+\fancychapqi{An Sliding-mode Controller for Biped Walking Using Neural
+  Fields}{chp3b}{}
+% Exosqueletal junction at the\\
 % railroad delayed. \\
+% } {The Mars Volta (2001-)
+% }
+
+%   \fancychapqi{Adquisition of Goals by Evolution of Neural
+%   Fields}{chp3}{}
+%   Exosqueletal junction at the\\
+%   railroad delayed. \\
 % } {The Mars Volta (2001-)}
 
 %   \fancychapqi{Goal-Based Control and Planning in Biped
 %   Locomotion}{chp4}{ Will those shadows glare?  } {The Mars Volta
 %   (2001-)}
 
-%\fancychapqi{Conclusions}{concl}{ Falling Wormholes.  } {The Mars
-%  Volta (2001-)}
+\fancychapqi{Conclusions}{concl}{}
+% Falling Wormholes.  } {The Mars Volta (2001-)}
 
 
 \bibliographystyle{natbib} \bibliography{bibanot}

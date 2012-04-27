@@ -1,4 +1,5 @@
-% \chapter{On information processing in neural field controllers} \label{ch:chp3}
+% \chapter{On information processing in neural field controllers} 
+\label{ch:chp3}
 \section{Introduction}
 \label{sec:chp3-introduction}
 This chapter introduces the Simplest Biped Walking problem, which will
@@ -18,17 +19,18 @@ and an stability analysis is provided.
 \label{sec:chp3-simplest}
 
 The Simplest Walking Model, presented by Garcia et
-al. \cite{Garcia98Simplest}, is an attempt to create the simplest
+al. \cite{Garcia98simplest}, is an attempt to create the simplest
 model that is capable of mimicking bipedal gait. It provides a
 reference model to study the phenomena that allows walking in two
 dimensions, and it has been further studied in terms of stability
 \cite{Schwab01Basin} \cite{Das02Alternative}, swing-leg control
 \cite{Wisse05How}, energy consumption in active walking
-\cite{Kuo02Energetics}, walking on stairs \cite{Tehrani07Stairs}, and
+\cite{Kuo02Energetics}, walking on stairs \cite{Safa07Passive}, and
 walking with an upper body \cite{Wisse04Passive}.
 
-Here is shown the model of Garcia et al., modified to allow control
-torques \ref{fig:chp3-simplest}.
+Here is used the model of Garcia et al., as modified by Wisse et
+al. to allow control torques. 
+%\ref{fig:chp3-simplest}.
 
 The 2D Biped Walking (yet to be simplified) model assumes a biped with
 a hip connected to two feet through rigid legs with no knees. It has a
@@ -72,25 +74,28 @@ the second row we divide by $\beta$, effectively isolating the stance
 leg acceleration $\ddot{\theta}$ from the swing leg angle
 $\phi$. Therefore:
 
-\begin{align}
-  H &= \left[ \begin{array}{cc}
-      1 & 0 \\
-      1-\cos\phi & -1 \end{array} \right] \\
-  C &= \left[ \begin{array}{cc}
-      0 & 0 \\
-      \dot{\theta}\sin\phi & 0 \end{array} \right] \\
-  \tau_g &= \left[ \begin{array}{c}
-      -(g/l)\sin(\theta-\gamma) \\
-      (g/l)\sin(\theta-\phi-\gamma) \end{array} \right]
-\end{align}
+\begin{subequations}
+  \begin{align}
+    T &= H(q)\ddot{q}+C(q,\dot{q})\dot{q} + \tau_g(q) \\
+    H &= \left[ \begin{array}{cc}
+        1 & 0 \\
+        1-\cos\phi & -1 \end{array} \right] \\
+    C &= \left[ \begin{array}{cc}
+        0 & 0 \\
+        \dot{\theta}\sin\phi & 0 \end{array} \right] \\
+    \tau_g &= \left[ \begin{array}{c}
+        -(g/l)\sin(\theta-\gamma) \\
+        (g/l)\sin(\theta-\phi-\gamma) \end{array} \right]
+  \end{align}
 
-Furthermore, we now define the action torque vector as:
+  Furthermore, we now define the action torque vector as:
 
 \begin{equation}
   T = \left[ \begin{array}{c}
       T_{\theta} \\
       T'_{\phi} \end{array} \right]
 \end{equation}
+\end{subequations}
 
 Where we scale the torque on $\phi$: $\beta T'_{\phi} =
 T_{\phi}$. Also, it is required a transition mapping for the state
@@ -132,12 +137,12 @@ heel-strike \( v^+=\big[\begin{smallmatrix}\theta^+ \\
 controller can be analyzed through the evolution of the Poincaré
 section $v^+_n$ after the $n$-th heel-strike. This is analogous to
 analyzing the stability of the 'stride function' $v_{n+1}=S(v_n)$ in
-terms of McGeer \cite{?}. In general, stability in this chapter is
-understood in the sense of Lyapunov, where the stride function is
-taken as a discrete system. As there are some $v$ values for which the
-stride function $S(v)$ has no output, it is assumed that stability is
-not attained when, for a given $v_0$, there is a $n$ for which
-$v_n=S^n(v_0)$ is not defined.
+terms of McGeer \cite{McGeer90Passive}. In general, stability in this
+chapter is understood in the sense of Lyapunov, where the stride
+function is taken as a discrete system. As there are some $v$ values
+for which the stride function $S(v)$ has no output, it is assumed that
+stability is not attained when, for a given $v_0$, there is a $n$ for
+which $v_n=S^n(v_0)$ is not defined.
 
 \section{Searching for Optimal Linear State-Feedback Controllers}
 \label{sec:chp3-searching}
@@ -175,9 +180,12 @@ given discretrization of the configuration space.
 For the purpose of comparison, the system with $\gamma=0.004$, and $M
 = g = l = 1$ will be explored. The initial configuration space will
 have the bounds $\theta_0 = [0, 0.4]$ and $\dot{\theta}_0 = [-0.4,
-0]$, with step size $\delta v=0.025$, for a 17x17 nodes grid. For each
-node in the grid, a search with an evolutionary algorithm is
-performed, using $k_{\phi}$ as the genotype. The fitness function
+0]$, with step size $\delta v=0.025$, for a 17x17 nodes grid.
+
+For each node in the grid, a search with an evolutionary algorithm is
+performed, using $k_{\phi}$ as the genotype. The actual evolutionary
+algorithm implementation used is HAEA (see \cite{Gomez04Self}), as
+implemented in the library JML by Gomez.  The fitness function
 evaluation implies running a simulation of the model with the
 state-feedback controller using the $k_{\phi}$ given, for a fixed time
 interval. The simulation may abort before the fixed time, if state
@@ -258,7 +266,7 @@ controller.
 The neural field controller architecture will be generally structured
 as follows. It will have three layers:
 \begin{itemize}
-\item[Input:] Vector-coded represention of relevant input values
+\item[Input:] Vector-coded representation of relevant input values
   (e.g. a subset or linear combination of controlled system
   state-variables).
 \item[Representation:] Inner state representation of the controller
@@ -277,7 +285,7 @@ immediately preceding layer (with \emph{action layer} receiving from
 \emph{representation layer}, and \emph{representation layer} receiving
 from \emph{input layer}).
 
-Each of these layers may or may not have a dynamic behaviour, and
+Each of these layers may or may not have a dynamic behavior, and
 furthermore, if it does, may have the form of a neural field, in terms
 of structure and behavior (i.e. governed by the dynamic equations of
 neural fields).
@@ -304,9 +312,9 @@ the controlled system state-variables $u_1=f_1(X)$.
 
 \subsection{Controller Structure}
 
-\begin{figure}[ht]
+\begin{figure}[t]
   \centering
-  \includegraphics[scale=0.55]{controller_arch_chp4}
+  \includegraphics[scale=0.55]{controller_arch_chp3}
   \caption{Neural field controller architecture for Chapter 3.}
 \label{fig:chp3-cont-arch}
 \end{figure}
@@ -330,6 +338,7 @@ representation of the relevant state of the controlled system after
 heel-strike. More specifically, for the input layer population
 ($i=1$):
 
+\begin{subequations}
 \begin{align}
   u_1(x,t) &= f_I(x,v_n^+) \\
   f_1(x,v_n^+) &=
@@ -344,10 +353,12 @@ heel-strike. More specifically, for the input layer population
     \dot{\theta_n}^+ \end{smallmatrix} \big] \in [0,0.4] \times
   [-0.4,0]
 \end{align}
+  \label{eq:chp3-input}
+\end{subequations}
 
 Note that the activation potential of the input layer $u_1(x,t)$ is a
 function of the reduced system state-vector $v_n^+$ for the $n$-th
-heel-strike (the last ocurred at time $t$), and is constant up to the
+heel-strike (the last occurred at time $t$), and is constant up to the
 next heel-strike.
 
 \paragraph{Representation Layer}
@@ -355,22 +366,24 @@ The neural population in this layer behaves according to a
 differential equation where the input if functions of the activation
 potential of the input layer. Therefore, the population in this layer
 resembles the definition given by Amari for neural fields
-\cite{Amari}, but with an specific structure for the interconnection
+\cite{Amari77Dynamics}, but with an specific structure for the interconnection
 between input layer and representation layer populations, and also, a
-minor role of recurrency.
+minor role of recurrence.
 
 The differential equation for the potential at position $x \in
 \Omega_2=[0,1] \times [0,1]$ in the representation layer ($i=2$)
 population is:
 
-\begin{align}
-  \label{eq:lnf-oned}
-  \tau_2\dot{u}_2(x,t) &= -u_2(x,t) + \int_{x' \in
-    \Omega_2}{w_{2,2}\left( s_{2,2}(x,x') \right)
-    \psi \left(u_2(x',t) \right) dx'} + f_{2,1}(x,t) \\
-  f_{2,1}(x,t)&=\int_{x' \in \Omega_1}{w_{2,1}\left(s_{2,1}(x,x')
-    \right) \psi \left(u_1(x',t) \right) dx'}
-\end{align}
+\begin{subequations}
+  \begin{align}
+    \tau_2\dot{u}_2(x,t) &= -u_2(x,t) + \int_{x' \in
+      \Omega_2}{w_{2,2}\left( s_{2,2}(x,x') \right)
+      \psi \left(u_2(x',t) \right) dx'} + f_{2,1}(x,t) \\
+    f_{2,1}(x,t)&=\int_{x' \in \Omega_1}{w_{2,1}\left(s_{2,1}(x,x')
+      \right) \psi \left(u_1(x',t) \right) dx'}
+  \end{align}
+  \label{eq:chp3-representation}
+\end{subequations}
 
 Where as in previous chapters $\tau_i$ is a time constant for the
 population $i$, $u_i$ is the activation potential of elements in the
@@ -395,15 +408,15 @@ representation layer and the action layer ($i=3$) is evaluated using a
 weighting matrix, calculated as:
 
 \begin{equation}
-  \label{eq:eqn-outlayer}
   u_3(t) = \frac{\sum_{x'}W_{3,2}(x')u_2(x',t)}{\sum_{x'}u_2(x',t)}
+  \label{eq:chp3-action}
 \end{equation}
 
 Where $W_{3,2}(x')$ is the estimated control action if the current
 state where located in the cell with center at position $x'$. The
 actual values for $W_{3,2}$ are assigned to the resulting
-$M(\theta_0,\dot{\theta}_0$ of the search performed in section
-\ref{sec:chp3-searching} (which was then assigned directly to
+$M(\theta_0,\dot{\theta}_0)$ of the search performed in section
+\ref{sec:chp3-searching}, which was then assigned directly to
 $k_{\phi}$.
 
 \subsection{Insights on the Controller Behavior}
@@ -462,7 +475,7 @@ of being in the state $x'$ at the current time $t$, then this average
 provides an approximated expected value for the optimal control action
 \(\text{E}_{u_2}\{k_{\phi}\}\).
 
-\section{Experimental Results}
+\section{Results and Discussion}
 \label{sec:chp3-results}
 The experimental results are shown in the following figures. For
 comparison purposes, the State-feedback (SF) control strategy proposed
@@ -470,29 +483,28 @@ by Wisse et al. is implemented, and compared to the Optimized
 Sliding-mode (OSM) controller developed using search on section
 \ref{sec:chp3-searching}, and to the Sliding-mode(-like) Neural Field
 (SMNF) controller proposed in the previous section. The experiment
-shown is run for $t=[0, 100]$
-with the initial configuration \(v_n= \big[ \begin{smallmatrix} 0.02 \\
-  -0.39 \end{smallmatrix} \big]\), which is near the most unstable
-point in the region studied.
+shown is run for $t=[0, 100]$ with the initial configuration \(v_n=
+\big[ \begin{smallmatrix} 0.02 \\ -0.39 \end{smallmatrix} \big]\),
+which is near the most unstable point in the region studied.
 
 While the SF controller keeps constant the $k_{\phi}=100$ value in
 order to attain stability, both the OSM and SMNF controller proposed
-recalculate the $k_{\phi}$ on each step using the current Poincaré
-section and the embedded mapping $k_{\phi}=M(v_n^+)$, directly for the
-OSM, and indirectly for the SMNF.
+recalculate the $k_{\phi}$ (at least) on each step using the current
+Poincaré section and the embedded mapping $k_{\phi}=M(v_n^+)$,
+directly for the OSM, and indirectly for the SMNF.
 
 The output values of the OSM take the form of a Sliding-mode
 controller in the following sense:
 \begin{itemize}
 \item A subset of Poincaré section at heel-strike defines the section
   of state-space where the system ``slides'' along.
-\item At each heelstrike the parameter $k_{\phi}$ is re-evaluated,
+\item At each heel-strike the parameter $k_{\phi}$ is re-evaluated,
   effectively changing the structure of the controller in a
-  discontinous fashion.
+  discontinuous fashion.
 \item The matrix of control values $M(v_n^+)$ is built so that the
   system always stays in the subset of the Poincaré section, and
-  furthermore, approache the sliding surface in finite time.
-\item Once reaches the siling surface (fixed point in the Poincaré
+  furthermore, approaches the sliding surface in finite time.
+\item Once reaches the sliding surface (fixed point in the Poincaré
   section), the system stays there.
 \end{itemize}
 
@@ -501,96 +513,97 @@ average (analogous to a centroid policy). It interpolates between the
 values on the 17x17 mapping grid, but also has a dynamic estimation of
 the system state, implemented in the representation layer. The
 dynamics of the representation layer could cause the loss of
-stability, as it may lag or underestimate the required
+stability, as it may lag or otherwise underestimate the required
 $k_{\phi}$. Nonetheless, as is shown in the figures in this section,
 the SMNF (with the kernel function parameters used) approaches quite
-closely the behavior of the OSM controller, but with a soft and
-continuous change in the control parameter $k_{\phi}$.
+closely the behavior in the long term of the OSM controller, but with
+a soft and continuous change in the control parameter $k_{\phi}$.
 
-*********
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.7]{chp3-ALL-K-0to100}
-  \caption{Controller $k_{\phi}$ vs time for the three controllers
-    presented in this chapter: a) Constant $k_{\phi}$ }
-  \label{fig:figure1}
-\end{figure}
-
-\begin{figure}[ht]
-  \label{fig:figure1}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[scale=0.4]{SF_K}
-    \caption{SF controller: $k_{\phi}$ vs time.}
-  \end{minipage}
-  \hspace{0.5cm}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[scale=0.4]{SMNF2_K}
-    \caption{SMNF controller: $k_{\phi}$ vs time.}
-  \end{minipage}
+\begin{figure}[p]
+  \centering \subfloat[$k_{\phi}$ parameter values for the
+  controllers.]
+  {\includegraphics[width=1\textwidth]{chp3-ALL-K-0to100}}  \\
+  \subfloat[Integral of squared control action
+  ($\int{\tau_{\phi}^2\;dt}$) for the controllers.]
+  {\includegraphics[width=1\textwidth]{chp3-ALL-intTau-0to100}}
+  \caption{Controller action vs. time, for $t \in [0,100]$ (s), for
+    the three controllers presented in this chapter: Constant
+    $k_{\phi}$ for SF controller, step-wise adaptation of $k_{\phi}$
+    for OSM controller, and continuous variation of $k_{\phi}$ for
+    SMNF controller.}
+  \label{fig:chp3-control-action}
 \end{figure}
 
 The overall performance of the SMNF controller is better than the SF
 in terms of energy consumption and actuator strain, progressively
-diminishing its $k_{\phi}$ value and thus the control action (see the
-figure \ref{} where the K values vs time are plotted). The SF
-controller converges faster to its fixed point (as would be expected
-for a greater control action), but even in steady-state the control
-action stays almost unaltered.
+diminishing its $k_{\phi}$ value and thus the cumulative control
+action (see the figure \ref{fig:chp3-control-action} where the
+$k_{\phi}$ and $\int{\tau_{\phi}^2\;dt}$ values vs time are
+plotted). The SF controller converges faster to its fixed point (as
+would be expected for a greater control action), but even in
+steady-state the control action stays almost unaltered. On the other
+hand, the OSM controller has an slightly higher cumulative control
+action than the SMNF controller, but it provides a monotonic
+decrease in $k_{\phi}$ across time, behaving more properly as an
+Sliding-mode controller.
 
-\begin{figure}[ht]
-  \label{fig:figure1}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[scale=0.4]{SF_PS}
-    \caption{SF controller: Poincaré Section.}
-  \end{minipage}
-  \hspace{0.5cm}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[scale=0.4]{SMNF2_PS}
-    \caption{SMNF cont..: Poincaré Section.}
-  \end{minipage}
+\begin{figure}[h]
+  \centering \subfloat[SF Controller]
+  {\includegraphics[width=0.6\textwidth]{chp3-SF-PS-0to100}}  \\
+  \subfloat[OSM Controller]
+  {\includegraphics[width=0.6\textwidth]{chp3-OSM-PS-0to100}}\\
+  \subfloat[SMNF
+  Controller]{\includegraphics[width=0.6\textwidth]{chp3-SMNF-PS-0to100}}
+  \caption{Poincaré Section for the reduced-dimensionality system
+    after heel-strike, for $t \in [0,100]$ (s), for each controller
+    evaluated.}
+  \label{fig:chp3-poincare-section}
 \end{figure}
 
-The Poincaré Section (see figure \ref{}) of the biped using the SMNF
-controller shows how the system moves from a configuration that
-requires higher $k_{\phi}$ values to configurations that require lower
-ones, and that fact is exploited by the controller. The SF controller
-also moves to configuration that require lower $k_{\phi}$ values (even
-closer to the natural attraction basin of the biped), but that fact
-remains unused.
+The Poincaré Sections (see figure \ref{fig:chp3-poincare-section}) of
+the biped using both the SMNF controller and the OSM controller show
+how the system moves from a configuration that requires higher
+$k_{\phi}$ values to configurations that require lower ones, and that
+fact is exploited by the controllers. The SF controller also moves to
+configuration that require lower $k_{\phi}$ values (even closer to the
+natural attraction basin of the biped), but that fact remains
+unused. This is the main factor of improvement in the controllers
+proposed in this chapter compared to the solution of Wisse et al.
 
-\begin{figure}[ht]
-  \label{fig:figure1}
-  \centering
-  \includegraphics[scale=0.4]{SF_T}
-  \caption{SF controller: Time simulation.}
+\begin{figure}[h]
+  \centering \subfloat[SF Controller]
+  {\includegraphics[width=1\textwidth]{chp3-SF-T-0to10}}  \\
+  \subfloat[OSM Controller]
+  {\includegraphics[width=1\textwidth]{chp3-OSM-T-0to10}} \\
+  \subfloat[SMNF Controller]
+  {\includegraphics[width=1\textwidth]{chp3-SMNF-T-0to10}}
+  \caption{System evolution (state variables after heel-strike
+    vs. time) for $t \in [0,10]$ (s), for each controller evaluated.}
+  \label{fig:chp3-system-evolution}
 \end{figure}
 
-\begin{figure}[ht]
-  \label{fig:figure1}
-  \centering
-  \includegraphics[scale=0.4]{SMNF2_T}
-  \caption{SMNF controller: Time simulation.}
-\end{figure}
+The time simulation (see figure \ref{fig:chp3-system-evolution}) shows
+how the SMNF changes the control policy (as parametrized by
+$k_{\phi}$) softly enough to provide a qualitatively natural gait for
+the biped. It should be noted that sudden changes of behavior are
+common in Sliding-mode controllers, but that is mitigated in this case
+by three facts: 1) The neural field applies an interpolation using the
+centroid of activation to calculate the output $k_{\phi}$. 2) The
+neural field has natural dynamics qualitatively equal to a low-band
+filter. 3) The change in the $k_{\phi}$ occur at a non-linear point in
+the biped dynamics that anyway would cause a jump in its state.
 
-The time simulation (see figure \ref{}) shows how the SMNF changes the
-control policy (as parametrized by $k_{\phi}$) softly enough to
-provide a qualitatively natural gait for the biped. It should be noted
-that sudden changes of behavior are common in Sliding-mode
-controllers, but that is mitigated in this case by three facts: 1) The
-neural field applies an interpolation using the centroid of activation
-to calculate the output $k_{\phi}$. 2) The neural field has natural
-dynamics qualitatively equal to a low-band filter. 3) The change in
-the $k_{\phi}$ occur at a non-linear point in the biped dynamics that
-anyway would cause a jump in its state.
-
-\section{Discussion}
-\label{sec:chp3-discussion}
-**TBD**
-
+In conclusion, in this chapter we presented two controllers which
+improve the controller of Wisse et al. over the Simplest Biped Walking
+(SBW) model, using a mapping from regions of the Poincaré Section just
+after heel-strike \(v_n= \big[ \begin{smallmatrix} \theta_n^+ \\
+  \dot{\theta}_n^+ \end{smallmatrix} \big]\) to $k_{\phi}$ values, in
+a manner similar to Sliding-mode controllers. Those controllers, while
+being active, approach more closely Passive Dynamic Walking (PDW) by
+diminishing the cumulative control action. One of the two controllers
+proposed is implemented using a control architecture based on neural
+fields, which extends and formalizes the structure of the controller
+for the inverted pendulum shown in the previous chapter.
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "thesis"

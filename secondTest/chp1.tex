@@ -35,7 +35,7 @@ computing and control techniques applicable to diverse areas.
 Among the different problems faced in anthropomorphic motion, biped
 walking is one of the most difficult because its intrinsic
 instability. In contradistinction to wheeled mobile robotics and
-stable legged robotics, biped robotics must allow locally instable
+stable legged robotics, biped robotics must allow locally unstable
 motion in order to attain a fluid locomotion. Additionally, there are
 several problems in biped locomotion other than stability. A bipedal
 walker must be in capacity of choose the best path to reach an
@@ -59,7 +59,7 @@ Flexion-Extension; and in the ankle: Plantarflexion-Dorsiflexion,
 Pronation-Supination) for a total of 12-DOF in the lower
 extremities. Though, a biologically complete description of joint
 states would need a lot more degrees of freedom: there are about 650
-skeletal muscles in human body, each one composed of sev eral muscle
+skeletal muscles in human body, each one composed of several muscle
 fibers (myocytes) independently innervated. This way proper selection
 of model body and joint properties is crucial in modeling walking.
 
@@ -86,14 +86,14 @@ because the support area is wider and the stability is less sensible
 to dynamic forces.
 
 
-% \begin{figure}
-%   \begin{center}
-%     \includegraphics[scale=0.3]{FigRobotCoM}
-%   \end{center}
-%   \caption{Static Equilibrium by CoM vertical projection over
-%     support polygon.}
-%   \label{fig:FigRobotCoM}
-% \end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.3]{FigRobotCoM}
+  \end{center}
+  \caption{Static Equilibrium by CoM vertical projection over support
+    polygon.}
+  \label{fig:FigRobotCoM}
+\end{figure}
 
 The second method, takes in account the inertial forces due to
 dynamical motion, and its general definition is still and open problem
@@ -102,7 +102,7 @@ dynamic equilibrium is given by the projection of the dynamical
 equivalent to CoM: the Zero Moment Point (ZMP). The Zero Moment Point
 is the point where the reaction force with the supporting element
 would produce a zero moment. If the ZMP is located inside the
-supporting polygon, unstabilizing moments due to dynamic locomotion
+supporting polygon, destabilizing moments due to dynamic locomotion
 would be compensated by the support reaction. An illustration of a
 robot which is not in equilibrium is shown in
 Fig. \ref{fig:FigRobotZMP}. The ZMP is the projection over the floor
@@ -115,15 +115,14 @@ projection over the floor of the total force must coincide with the
 floor reaction point, that is, the point where the equivalent reaction
 force is applied.
 
-
-% \begin{figure}
-%   \begin{center}
-%     \includegraphics[scale=0.3]{FigRobotZmp}
-%   \end{center}
-%   \caption{Dynamic Equilibrium not attained because of ZMP and floor
-%     reaction point not coincident. The robot is falling backwards.}
-%   \label{fig:FigRobotZMP}
-% \end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.3]{FigRobotZmp}
+  \end{center}
+  \caption{Dynamic Equilibrium not attained because of ZMP and floor
+  reaction point not coincident. The robot is falling backwards.}
+  \label{fig:FigRobotZMP}
+\end{figure}
 
 Biped locomotion can be thought as a rhythmic and symmetric
 progression of trunk and limbs movement. In a complete gait cycle each
@@ -157,8 +156,8 @@ biped locomotion models can be found in
 walking: Bipedal walking as an evolutionary adaptation of hominids,
 minimization of energy consumption by displacing the CoM along an
 optimal path, progressive learning with risk of falling minimization,
-spinal cord interneurons acting as rhythmic central pattern
-generators, neural system training along with biomechanical system and
+spinal cord inter-neurons acting as rhythmic central pattern
+generators, neural system training along with bio-mechanical system and
 environment adaptation, and feedback control in powered dynamic
 locomotion. The neurobiological aspects of motion control have been
 examined in \cite{Duysens02walking}. Duysens remarks the reflex
@@ -184,14 +183,14 @@ human with transected spinal cord).
 
 
 \section{Neural Fields}
-Neural fields arise as a tissue level model of neural populations in
-brain. It has been proposed by Wilson and Cowan
+\sidecomm{Neural fields} arise as a tissue level model of neural
+populations in brain. It has been proposed by Wilson and Cowan
 \cite{Wilson72Excitatory} and detailed by Amari \cite{Amari77Dynamics}
 in the particular case of lateral inhibition. In this model, neural
 population in considered continuum in which exists a dynamical
 evolution equation where the mean activation potential evaluated in
 one place is affected by its neighborhood according to a so-called
-mexican hat function (as noted by Coombes \cite{Coombes05Waves} better
+Mexican hat function (as noted by Coombes \cite{Coombes05Waves} better
 called wizard hat function) in which close neighbors act as exciters
 and distant ones act as inhibitors.
 
@@ -199,10 +198,10 @@ The base model, as presented by Amari \cite{Amari77Dynamics} for the
 multiple layer case is:
 
 \begin{equation}
-  \label{eq:nf-base}
   \tau_i\frac{\delta u_i(x,t)}{\delta
     t}=-u_i+\sum_{j=1}^{m}{\int{w_{i,j}(x,x';t-t')f_j\left(
-        u_j(x',t')\right) dx' dt'}+h_i+s_i(x,t)}
+        u_j(x',t')\right) dx' dt'}+h_i+s_i(x,t)} 
+  \label{eq:nf-base}
 \end{equation}
 
 Where $\tau$ is a temporal constant of synaptic decay rate, $u_i(x,t)$
@@ -211,8 +210,8 @@ $x$ at time $t$ on layer $i$ (where $x$ can be 1-dimensional,
 2-dimensional or even of higher dimension). The average intensity of
 connection from neurons on layer $j$ at $y$ to neurons on layer $i$ at
 $x$ is modeled with $w_{i,j}(x,y)$, $f_j(\cdot)$ is the saturating
-output function which is monotonically nondecreasing. The deviation of
-the average stimulation potential at place $x$ at time $y$ of layer
+output function which is monotonically non decreasing. The deviation
+of the average stimulation potential at place $x$ at time $y$ of layer
 $i$ is represented by $s_i(x,t)$, and $h_i=\bar{s_i}-r_i$ is the sum
 of the average stimulation potential an the resting potential of layer
 $i$.
@@ -229,10 +228,10 @@ $S(x,t)=h+s(x,t)$. This way, the resulting equation takes the form
 (for $x$ $n$-dimensional):
 
 \begin{equation}
-  \label{eq:nf-simp}
   \tau \frac{\delta u(x,t)}{\delta
     t}=-u+\int_{\mathbb{R}^{n}}{w(x,x')f\left(
       u(x')\right) dx'}+S(x,t)
+  \label{eq:nf-simp}
 \end{equation}
 
 For further simplification, temporarily we will consider the
@@ -243,30 +242,30 @@ stable-state solutions for the one-dimensional case (isotropic and
 homogeneous), where the model is:
 
 \begin{equation}
-  \label{eq:nf-oned}
   \tau \frac{\delta u(x,t)} {\delta
     t}=-u+\int_{-\infty}^{\infty} {w\left( \lvert x-x'\rvert \right)
     f\left( u(x') \right) dx'}+S(x,t)
+  \label{eq:nf-oned}
 \end{equation}
 
-The typical form for the connection kernel (for which Amari obtained
-his results) can be seen in figure \ref{fig:wiz-hat}.
+% The typical form for the connection kernel (for which Amari obtained
+% his results) can be seen in figure \ref{fig:wiz-hat}.
 
-\begin{figure}[h]
-  \centering
-  \caption{Wizard hat function used as connection kernel.}
-  \label{fig:wiz-hat}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \caption{Wizard hat function used as connection kernel.}
+%   \label{fig:wiz-hat}
+% \end{figure}
 
-Also, the typical sigmoid saturation function, as well as its maximum
-gain limit case (the Heaviside function), are shown in the figure
-\ref{fig:sat-fun}.
+% Also, the typical sigmoid saturation function, as well as its
+% maximum gain limit case (the Heaviside function), are shown in the
+% figure \ref{fig:sat-fun}.
 
-\begin{figure}[h]
-  \centering
-  \caption{Sigmoid and Heaviside saturation functions.}
-  \label{fig:sat-fun}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \caption{Sigmoid and Heaviside saturation functions.}
+%   \label{fig:sat-fun}
+% \end{figure}
 
 
 % \section{Neural Fields}
@@ -277,16 +276,17 @@ gain limit case (the Heaviside function), are shown in the figure
 
 
 \section{Evolution and Adaptation}
-\subsection{Evolutionary Algorithms}
-Evolutionary algorithms are a set of population-based heuristic search
-and optimization techniques. They maintain a population, and apply a
-set of operators or transformations over its members. Those operators
-are typically inspired on biological evolution and usually include
-selection, reproduction and mutation, among others. The operators are
-dependent of the evaluation of a performance function called fitness
-function. Generally, fitness function evaluation may include, from a
-simple numerical evaluation, to a complex simulation, in order to get
-the performance criterion which its optimization is pursued.
+% \subsection{Evolutionary Algorithms}
+\sidecomm{Evolutionary algorithms} are a set of population-based
+heuristic search and optimization techniques. They maintain a
+population, and apply a set of operators or transformations over its
+members. Those operators are typically inspired on biological
+evolution and usually include selection, reproduction and mutation,
+among others. The operators are dependent of the evaluation of a
+performance function called fitness function. Generally, fitness
+function evaluation may include, from a simple numerical evaluation,
+to a complex simulation, in order to get the performance criterion
+which its optimization is pursued.
 
 The pseudo-code of a general evolutionary algorithm is as follows:
 
@@ -316,14 +316,14 @@ individuals across generations in a steady-steady replacement.
 
 \section{Computational Intelligence Applied to Biped Robotics: A
   Survey}
-% \begin{figure}
-%   \begin{center}
-%     \includegraphics[scale=0.7]{FigTaxonomyTree}
-%   \end{center}
-%   \caption{A taxonomy tree of motion planning and control methods in
-%     biped walking}
-%   \label{fig:FigTaxonomyTree}
-% \end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=1\textwidth]{FigTaxonomyTree}
+  \end{center}
+  \caption{A taxonomy tree of motion planning and control methods in
+    biped walking}
+  \label{fig:FigTaxonomyTree}
+\end{figure}
 
 Here is presented a tentative taxonomy of the previous works made in
 the area of motion planning and control methods in biped
@@ -363,7 +363,7 @@ conjunction with its natural dynamics, must achieve stable gait
 patterns. This is attained by using passive elements as springs and
 dampers and a careful mechanical design guided by a detailed analysis
 by dynamic systems theory, including state space modeling, phase
-transitions, and probably other techniques such as Poincarè maps and
+transitions, and probably other techniques such as Poincar� maps and
 Lyapunov stability analysis and, mostly, dynamic simulation. In order
 to obtain gait pattern in flat surfaces it can be applied
 reinforcement learning in a control system so as to learn how to
@@ -377,7 +377,7 @@ Next, each one of the three major approaches to the problem that apply
 computational intelligence are examined. These are Central Pattern
 Generator methods, Dynamic Walking Control methods, Static Walking
 Control methods, and Trajectory Tracking methods. This classification
-emphasizes the way in which the problem is solved and not the subfield
+emphasizes the way in which the problem is solved and not the sub-field
 of computational intelligence used.
 
 \subsection{Central Pattern Generator (CPG) Methods}
@@ -394,33 +394,35 @@ of the individual neuron, and the type of coupling between
 neurons. Each neuron has its dynamics described by a set of
 differential equations.
 
-
-% \begin{figure}
-%   \begin{center}
-%     \includegraphics[scale=0.4]{FigNeuralOscillator}
-%   \end{center}
-%   \caption{Topology of an Amari-Hopfield neural oscillator}
-%   \label{fig:FigNeuralOscillator}
-% \end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.4]{FigNeuralOscillator}
+  \end{center}
+  \caption{Topology of an Amari-Hopfield neural oscillator}
+  \label{fig:FigNeuralOscillator}
+\end{figure}
 
 A more specific model of neural oscillators couples neurons in
 pairs. It is based in the fact that most muscle fibers have one
 excitatory center for flexion and another for extension, and them are
 inhibiting between them. This way, the two coupled neurons can be
 represented by a set of differential equations. An example of this
-arrangement is the Amari-Hopfield model, for which a grafical
+arrangement is the Amari-Hopfield model, for which a graphical
 representation is shown in Fig. presented here as shown in
 \cite{Nakada2003}:
-\begin{eqnarray}
-  \tau\dot{u}=-u+af(u)-cf(v)+S_u(t) \\
-  \tau\dot{v}=-v+bf(u)-df(v)+S_v(t)
-\end{eqnarray}
+
+\begin{align*}
+  \tau\dot{u}&=-u+af(u)-cf(v)+S_u(t) \\
+  \tau\dot{v}&=-v+bf(u)-df(v)+S_v(t)
+\end{align*}
+
 In which $u$ and $v$ are the neuron potentials, $S_u(t)$ and $S_v(t)$
 are the respective neuron inputs as function of time, and $f(u)$ and
 $f(v)$ are neuron outputs after applying the transfer function:
-\begin{equation}
+
+\begin{equation*}
   f(x)=\frac{1+tanh(\mu x)}{2}
-\end{equation}
+\end{equation*}
 
 
 The parameters $a$, $b$, $c$ and $d$ characterize the neural
@@ -448,15 +450,16 @@ current fatigue and its current output. A general expression for the
 system of differential equations that rule the dynamics of a
 individual neuron is \cite{Cao98design}:
 
-\begin{eqnarray}
+\begin{align*}
   \tau_r\dot{x_i}=-x_i+\displaystyle\sum_{j=1,j\neq i}^n a_{ij}y_j-bf_i+s_i \\
   \tau_a\dot{f_i}=-f_i+y_i \\
   y_i=H_1(x_i)x_i \\
-  H_1(x)=\displaystyle\left\{ \begin{array}{cc}
+  H_1(x)=\displaystyle\left\{
+    \begin{array}{cc}
       1 & x\geq 0, \\
-      0 & x < 0, 
+      0 & x < 0,
     \end{array} \right.
-\end{eqnarray}
+\end{align*}
 
 
 Here, $x_i$ denotes the activation potential of the $i$th neuron,
@@ -573,7 +576,7 @@ used in the evolutionary algorithm. The fitness function used favors
 movement that maximizes displacement in frontal direction and
 penalizes movement in vertical direction. The authors manage with such
 simple evaluation rule to generate satisfactory patterns of march
-without any sensory feedback. Later, they add a sensorial entrance of
+without any sensory feedback. Later, they add a sensory entrance of
 auditive type and, leaving the recurrent connections fixed, they
 evolve the recurrent neurons connection weights with the sensory
 input. This way, they attain that the robot navigate towards a source
@@ -597,7 +600,7 @@ of the interconnections between oscillators, supposing the internal
 structure of the oscillators fixed (i.e. the parameters $a$, $b$, $c$,
 $d$ an $\tau$). The GP implementation for solving the problem is made
 representing the local network from each oscillator like an
-S-expression, doing a co-evolution where a subpopulation for each
+S-expression, doing a co-evolution where a sub-population for each
 oscillator is evolved, but the evaluation of the aptitude function as
 well as the application of genetic operators are applied over an
 oscillator group, each one of a different population. Results of walks
@@ -618,7 +621,7 @@ independent CPG, without any connection to each other and with
 entrances of sensors strictly located in his partial side; while the
 second one decouples connections but allows common entrances to both
 global position sensors. Both controllers are evolved in parallel with
-genetic algorithms (GA) to three morphologic parameters. It is shown
+genetic algorithms (GA) to three morphological parameters. It is shown
 that for the first case successful biped walking is achieved in most
 of cases but there are problems to follow a straight line. In the
 second, it is shown that the CPGs decoupling with global entrances is
@@ -641,8 +644,8 @@ with their respective leg and a common bias signal for both
 controller. Of numerous configurations evolved with genetic
 algorithms, only two obtained the satisfactory long walk, but in a
 remarkable form, both indefinitely turned out to be stable. It is
-used, like in previous works of Paul, coevolution of some few
-morphologic parameters. This is probably the simpler solution to this
+used, like in previous works of Paul, co-evolution of some few
+morphological parameters. This is probably the simpler solution to this
 problem proposed to the time.
 
 
@@ -672,7 +675,7 @@ Generators (H-CPG). The total action of the H-CPG proposed is
 determined by the sum of the individual actions of each one of its
 components: A neural oscillator that generates the rhythmical patterns
 in form of torques, a support force controller that applies the
-Jacobian matrix to map forces from cartesian space to joint space, and
+Jacobian matrix to map forces from Cartesian space to joint space, and
 a position controller that implements a PD control to maintain legs as
 vertically as possible. The vertical and horizontal movements are
 separately processed by the force controller. They shown that proposed
@@ -690,6 +693,7 @@ Computational intelligence methods used are:
 \item Rhythmical Dynamic Systems: An alternative to oscillatory neural
   networks for building CPGs.
 \end{itemize}
+
 \subsection{Trajectory Tracking Methods}
 Methods included in this category largely vary in implementation, but
 its main methodology consists of generating a kinematic pattern or
@@ -746,7 +750,7 @@ this should be regarded only as a partial success.
 Garder and Howin \cite{Garder06Robot} recently applied a hybrid method
 of genetic algorithms (GA) and hill climbing to evolve walking
 patterns for a biped robot with pneumatic actuation. In the problem
-faced by them, the movement of the robot is restricted to sagittal
+faced by them, the movement of the robot is restricted to sagital
 plane, as to it is of concern only the robot frontal advance. The
 genotypical codification used is binary, and the complete sequence is
 represented by an individual, divided in three mechanism positions
@@ -804,18 +808,20 @@ as a fully connected network without layered structure
 \cite{Haykin98Neural}, in which the output can be expressed in
 vectorial notation as a linear combination of neuron states:
 
-\begin{equation}
+\begin{equation*}
   y_{rnn}(n)=C x_{rnn}
-\end{equation}
-\newline And neuron states in $n+1$ are a function of recurrent
+\end{equation*}
+
+And neuron states in $n+1$ are a function of recurrent
 potentials and input potentials in $n$, each of them multiplied by
 weight matrices.
 
-\begin{equation}
+\begin{equation*}
   x_{rnn}(n+1)=\varphi(W_a x_{rnn}(n)+W_b u_{rnn}(n))
-\end{equation}
-\newline The function $\varphi()$ is a diagonal activation function,
-usually of sigmoidal shape. This way, a recurrent neural network is a
+\end{equation*}
+
+The function $\varphi()$ is a diagonal activation function,
+usually of sigmoid shape. This way, a recurrent neural network is a
 dynamical system determined by its weight matrices $W_a$ and $W_a$,
 its activation function $\varphi()$, and the linear combination of
 states used as output $C$. The relevant capability so obtained is that
@@ -856,7 +862,7 @@ biped walking. The displayed architecture uses neural fields that map
 from sensor space to actuator space using principles of dynamic
 systems whose behavior adapts to conditions of the surroundings
 through bifurcation phenomena which respond to the so-called instanced
-dynamics (an elementary behavior parameterized by behavior variables
+dynamics (an elementary behavior parametrized by behavior variables
 in a specific environment). Also, to generate complex behaviors it is
 used a competitive dynamic system as arbiter mechanism, which includes
 a set of parameters that describes the logical and temporal
@@ -876,14 +882,14 @@ locomotion patterns could be generated in real time.
 
 In the novel work of Paul and Bongard \cite{Paul01road} it is proposed
 a coupled evolution of morphology and control, since they emphasized
-the relative little depth with which the morphologic evolution (and in
-general the morphologic configuration) for obtaining gait patterns has
+the relative little depth with which the morphological evolution (and in
+general the morphological configuration) for obtaining gait patterns has
 been studied. The methodology applied consists of evolving
 simultaneously the morphology, in terms of the distribution of
 discrete mass blocks in a fixed joint configuration, and the control,
 in terms of the weights of a recurrent neural network. They made
 several experiments, varying the mass proportion that can be
-redistributed, with the purpose of evaluating the morphologic
+redistributed, with the purpose of evaluating the morphological
 modifications in micro, meso and macro scales.
 
 
@@ -896,20 +902,20 @@ between the wished state and the end state, applying recurrent
 averaging learning in which the experiment is repeated consecutively
 initiating and finalizing in states determined by the average of the
 previous beginnings and ending, so that robustness in the system is
-obtained. The network is dynamically trained using backpropagation
+obtained. The network is dynamically trained using back-propagation
 trough time.
 
 
 Juang \cite{Juang01Intelligent} also made an application of a neural
 control system for biped walking in slopes. The control system
-consists of: a neural controller incarnated by a feedforward neural
+consists of: a neural controller incarnated by a feed-forward neural
 network that generates torque signals in the actuators, a neural
-estimator that also consist of a feedforward neural network, and a
+estimator that also consist of a feed-forward neural network, and a
 third network with the same topology that adds a compensation control
 signal when there is an inclination in the surface. The method of
-training used is delayed backpropagation. The first step made is the
+training used is delayed back-propagation. The first step made is the
 identification of the system with the neural estimator. Later, the
-neural controller trains so that it follows a predesigned trajectory
+neural controller trains so that it follows a preassigned trajectory
 on flat surfaces, using the estimator to propagate the return error
 towards the control network. Finally, the two previous networks are
 left fixed and the inclination compensator, coupled with the control
@@ -923,24 +929,24 @@ pendulum control excited in the base with two rotational degrees of
 freedom and non-acted movement in the base. There is a relation of
 such problem with the control of the trunk in biped walking, where the
 trunk is modeled as an inverted pendulum with such configuration. In
-order to obtain its objective, they use a set of feedforward neural
+order to obtain its objective, they use a set of feed-forward neural
 networks with a hidden layer, which generate different functions that
 are connected in a simple closed loop configuration. An additional
 neural network is used to inversely model the system of such form that
 it is not required to measure the base position and an estimate is
 used instead. The controllers are pre-trained offline but its
-adjustment is dynamically made online providing adaptability to the
+adjustment is dynamically made on-line providing adaptability to the
 controller. It is shown that the proposed control system evolves
 better than novel systems designed by control theory methodologies and
 in addition it does not require a model of the system nor a direct
 measurement of the position of the base.
 
 
-Previously, un the same sense of previous work made by them, Wu el
+Previously, on the same sense of previous work made by them, Wu et
 al. \cite{Wu02Neural} studied the problem of inverted pendulum control
 with angular excitation in the base and free base translation in the
 three-dimensional space. They used then four neural networks to
-inversely model the system. Also a feedforward control with one neural
+inversely model the system. Also a feed-forward control with one neural
 network is used, and its output is feed back to the circuit. The
 inverse model is used to train the controller network.
 
@@ -950,7 +956,7 @@ reinforcement learning (GAFLR). He had previously conceptualized
 several versions of agent GAFLR and its application the control of the
 biped long walk of a robot. The basic characteristics of the agent
 are: 1, Parts of a fuzzy knowledge base designed by an expert; 2. It
-is updated dynamically (online) using as reinforcement signal some
+is updated dynamically (on-line) using as reinforcement signal some
 parameter calculated with the fuzzyfication of system state
 measurements and internal estimations of future reinforcement signals;
 3. The estimation of fuzzy reinforcement signals is made by a
@@ -1002,7 +1008,7 @@ with which later a model for the hybrid system is found applying a
 control scheme that includes the use of the neural fuzzy network. It
 was implemented an H$_\infty$ optimization parameter for the joint
 model, which is optimized. Finally a robust hybrid controller was
-obtained which uses the neural fuzzy netowrks for the control of the
+obtained which uses the neural fuzzy networks for the control of the
 inverse system and control of variable structure.  Therefore, a robust
 method for desired trajectory tacking in double support is
 obtained. The study of techniques of switching system theory is
@@ -1025,8 +1031,8 @@ after it has been put under a disturbance, obtaining stability; and
 2. It can be useful to diminish convergence times to stable state.
 
 
-Hülse et al. \cite{Huelse04Structure}, aimed to show that minimum and
-robust control structures can be developed using algorithm ENS3
+H\"{u}lse et al. \cite{Huelse04Structure}, aimed to show that minimum
+and robust control structures can be developed using algorithm ENS3
 presented by them, of evolution of neuro-modules made up of neurons
 with feedback connections , i. e. recurrent neural networks. To such
 networks an evolutionary algorithm is applied, where evolutionary
@@ -1038,7 +1044,7 @@ performance, there are reduced the number of neuro-modules elements,
 introducing costs by neuron and by connection, to urge the minimalism
 of controllers. The application of the complete procedure is shown in
 three examples: the expansion of a mobile robot for obstacle evasion
-to luminance tropism, the morphologic and control evolution for a
+to luminance tropism, the morphological and control evolution for a
 biped walker robot with minimum actuation, and the co-evolution of
 neuro-controllers for a ring of gravitational impulsion with five
 actuator arms. An additional initial example is shown which
@@ -1049,7 +1055,7 @@ proposed algorithm.
 
 Jha et al. \cite{Jha05On-line} made the controller design for stairs
 ascension of a biped robot modeled in 2D. They use two fuzzy logic
-controllers to conserve robot stability according to dinamic stability
+controllers to conserve robot stability according to dynamic stability
 margin criterion based on zero moment point (ZMP). The first
 controller is in charge to maintain stability during single support
 phase and the second to maintain it in double support phase. The
@@ -1142,8 +1148,8 @@ oscillators. They showed the satisfactory application to a juggling
 problem, and also to the biped walking with static balance
 (stepping). In this last one, it is used a pattern generator with an
 oscillator for the frontal plane and two coupled oscillators for the
-sagittal plane, as well as a PD position control with inhibition from
-the sagittal plane oscillators. Also they applied the method to biped
+sagital plane, as well as a PD position control with inhibition from
+the sagital plane oscillators. Also they applied the method to biped
 walking in dynamic balance but obtain only some steps, since the
 method becomes unstable. They propose to deepen the study of the open
 loop control of the dynamic biped walking. This work exposes a
@@ -1151,22 +1157,22 @@ divergence from the mainstream of walking control methods in that it
 emphasizes the role of open loop control and argues to its favor.
 
 
-Chaisukkosol and Chongstitvatana \cite{Chaisukkosol01Automatic} used a
-genetic algorithm (GA) to generate a walking sequence in static
-balance for a biped robot with counterbalance. The movement of the
-robot is made at a speed of 1 step every 40 seconds, reason why the
-system must be in static balance. The representation of each
-individual of the genetic algorithm contains the length of the chain
-and the series of angular displacements for the different
-actuators. The evolution was made sequentially for each one of the 6
-phases that the authors define, initiating the evolution from a phase
-where the best individual of the previous phase evolution ended. A
-global fitness function is used which evaluates stability added with a
-particular function that evaluates the performance for the objective
-of each phase. The result of each phase is verified with the execution
-in a real model. This particular application is illustrative of the
-work enclosed by this global walking control methodology, but provides
-little general contribution to the field.
+% Chaisukkosol and Chongstitvatana \cite{Chaisukkosol01Automatic} used a
+% genetic algorithm (GA) to generate a walking sequence in static
+% balance for a biped robot with counterbalance. The movement of the
+% robot is made at a speed of 1 step every 40 seconds, reason why the
+% system must be in static balance. The representation of each
+% individual of the genetic algorithm contains the length of the chain
+% and the series of angular displacements for the different
+% actuators. The evolution was made sequentially for each one of the 6
+% phases that the authors define, initiating the evolution from a phase
+% where the best individual of the previous phase evolution ended. A
+% global fitness function is used which evaluates stability added with a
+% particular function that evaluates the performance for the objective
+% of each phase. The result of each phase is verified with the execution
+% in a real model. This particular application is illustrative of the
+% work enclosed by this global walking control methodology, but provides
+% little general contribution to the field.
 
 
 Wolff and Nordin \cite{Wolff01Evolution} presented the evolution with
@@ -1190,16 +1196,17 @@ phase. For it they make a evolution using evolutionary programming
 (EP) and representing the controller as a series of instructions with
 basic arithmetic operators and trigonometric operators, all of them
 represented like chains of integer numbers. The sequences thus evolved
-later are transfered to the robot, which can make fine adjustments or
+later are transferred to the robot, which can make fine adjustments or
 recovery of failures in a evolution second phase. The robotic platform
 used was the same one used in \cite{Wolff01Evolution}. This last
 method is a hybrid method between dynamic and static walking control,
-in which an notable online failure recovery strategy is implemented,
+in which an notable on-line failure recovery strategy is implemented,
 but the general characteristics are still in disadvantage with dynamic
 walking control methods.
 
 The two mayor computational intelligence methods used in static
 walking are:
+
 \begin{itemize}
 \item Neural Networks: To compensate and map trajectories.
 \item Genetic Algorithms: To optimize motion sequences.

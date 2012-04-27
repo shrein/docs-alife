@@ -1,4 +1,4 @@
-% This file was created with JabRef 2.3.1.
+% This file was created with JabRef 2.7b.
 % Encoding: UTF8
 
 @ARTICLE{Amari77Dynamics,
@@ -241,8 +241,7 @@
 	Source: Scopus
 	
 	CODEN: RASOE},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Benbrahim1997.pdf:C\:\\Documents
-	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Benbrahim1997.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Benbrahim1997.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Benbrahim1997.pdf:PDF},
   issn = {09218890 (ISSN)},
   keywords = {Biped robot, Biped walking, Legged robot, Reinforcement learning,
 	Robot learning, Control theory, Dynamics, Learning algorithms, Neural
@@ -311,8 +310,7 @@
 	Source: Scopus
 	
 	CODEN: NNETE},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Bergener1999.pdf:C\:\\Documents
-	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Bergener1999.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Bergener1999.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Bergener1999.pdf:PDF},
   issn = {08936080 (ISSN)},
   keywords = {Anthropomorphic robot, Behavior organization, Dynamic approach, Robot
 	human interaction, Anthropomorphic robots, Control system synthesis,
@@ -458,9 +456,7 @@
 	of Japan, pp. 155-156; Cao, M., Kawamura, A., Generation of humanoid
 	biped walking pattern using neural oscillatory network (1997) AIM
 	'97, p. 81. , and on CD ROM.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Cao98design.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Cao98design.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Cao98design.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Cao98design.pdf:PDF},
   issn = {01691864 (ISSN)},
   keywords = {Biped walking pattern, Hierarchical evolutionary calculation, Neural
 	oscillatory network, Biomechanics, Computer simulation, Mathematical
@@ -530,9 +526,7 @@
 	CODEN: RASOE
 	
 	doi: 10.1016/S0921-8890(01)00177-4},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Capi02Optimal.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Capi02Optimal.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Capi02Optimal.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Capi02Optimal.pdf:PDF},
   issn = {09218890 (ISSN)},
   keywords = {Biped robots, Genetic algorithm, Minimum energy, ZMP, Energy utilization,
 	Genetic algorithms, Optimization, Torque, Trajectories, Biped robots,
@@ -599,9 +593,7 @@
 	CODEN: ADROE
 	
 	doi: 10.1163/156855301317035197},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Capi01Application.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Capi01Application.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Capi01Application.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Capi01Application.pdf:PDF},
   issn = {01691864 (ISSN)},
   keywords = {Biped robots, Consumed energy, Gait synthesis, Genetic algorithms,
 	Neural networks, Torque change, Computer simulation, Gait analysis,
@@ -642,9 +634,7 @@
 	and the experiment with a real robot. The result of the experiment
 	shows that various types of gaits are achievable and the biped walking
 	is stable.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\CHAISUKKOSOL01Automatic.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\CHAISUKKOSOL01Automatic.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\CHAISUKKOSOL01Automatic.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\CHAISUKKOSOL01Automatic.pdf:PDF},
   owner = {Juan Figueredo},
   review = {Chaisukkosol y Chongstitvatana utlizan un algoritmo genético para
 	generar una secuencia de caminata en equilibrio estático para un
@@ -743,6 +733,41 @@
   timestamp = {2006.12.14}
 }
 
+@ARTICLE{Coleman97Motions,
+  author = {Coleman, Michael J. and Chatterjee, Anindya and Ruina, Andy},
+  title = {Motions of a rimless spoked wheel: a simple three-dimensional system
+	with impacts},
+  journal = {Dynamics and Stability of Systems},
+  year = {1997},
+  volume = {12},
+  pages = {139-159},
+  number = {3},
+  abstract = {This paper discusses the mechanics of a rigid rimless spoked wheel,
+	or regular polygon, ‘rolling’ downhill. By ‘rolling’, we mean motions
+	in which the wheel pivots on one ‘support’ spoke until another spoke
+	collides with the ground, followed by transfer of support to that
+	spoke, and so on. We carry out three-dimensional (3D) numerical and
+	analytical stability studies of steady motions of this system. At
+	any fixed, large enough slope, the system has a one-parameter family
+	of stable steady rolling motions. We find analytic approximations
+	for the minimum required slope at a given heading for stable rolling
+	in three dimensions, for the case of many spokes and small slope.
+	The rimless wheel shares some qualitative features with passive–dynamic
+	walking machines; it is a passive 3D system with intermittent impacts
+	and periodic motions. In terms of complexity, it lies between one-dimensional
+	impact oscillators and 3D walking machines. In contrast to a rolling
+	disk on a flat surface which has steady rolling motions that are
+	only neutrally stable at best, the rimless wheel can have asymptotic
+	stability. In the limit as the number of spokes approaches infinity,
+	the behavior of the rimless wheel approaches that of a rolling disk
+	in an averaged sense and becomes neutrally stable. Also, in this
+	averaged sense, the piecewise holonomic system (rimless wheel) approaches
+	a non-holonomic system (disk).},
+  doi = {10.1080/02681119708806242},
+  eprint = {http://www.tandfonline.com/doi/pdf/10.1080/02681119708806242},
+  url = {http://www.tandfonline.com/doi/abs/10.1080/02681119708806242}
+}
+
 @ARTICLE{Coombes05Waves,
   author = {Coombes, S.},
   title = {Waves, bumps, and patterns in neural field theories},
@@ -812,6 +837,29 @@
   timestamp = {2006.12.14}
 }
 
+@ARTICLE{Das02Alternative,
+  author = {Das, S. L. and Chatterjee, A.},
+  title = {An Alternative Stability Analysis Technique for the Simplest Walker},
+  journal = {Nonlinear Dynamics},
+  year = {2002},
+  volume = {28},
+  pages = {273-284},
+  note = {10.1023/A:1015685325992},
+  abstract = {We revisit the simplest walker studiedearlier by Garcia and co-workers.
+	We extend the small-slope stability analysis to second order, substantially
+	improving accuracy, andalso provide some details left out of the
+	earlier work.We develop an alternative (reverse) approach for the
+	stabilityanalysis, which involves shorter calculations: for stability
+	analysis upto any given order, the new procedure requires calculations
+	to one order less than the previous (forward) procedure. The stabilityresults
+	obtained by the two methods are, nevertheless, equivalent.},
+  issn = {0924-090X},
+  issue = {3},
+  keyword = {Engineering},
+  publisher = {Springer Netherlands},
+  url = {http://dx.doi.org/10.1023/A:1015685325992}
+}
+
 @ARTICLE{Duysens02walking,
   author = {Duysens, J. and Van de Crommert, H.W.A.A. and Smits-Engelsman, B.C.M.
 	and Van der Helm, F.C.T.},
@@ -863,9 +911,7 @@
 	CODEN: JBMCB
 	
 	doi: 10.1016/S0021-9290(01)00187-7},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Duysens00walking.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Duysens00walking.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Duysens00walking.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Duysens00walking.pdf:PDF},
   issn = {00219290 (ISSN)},
   keywords = {Exteroceptive reflexes, Human gait, Phase-dependent reflex modulation,
 	Proprioceptive reflexes, Human engineering, Load limits, Neurology,
@@ -1039,9 +1085,7 @@
   address = {New York, NY, USA},
   publisher = {ACM Press},
   doi = {http://www.sinab.unal.edu.co:2335/10.1145/1143997.1144182},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Garder06Robot.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Garder06Robot.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Garder06Robot.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Garder06Robot.pdf:PDF},
   isbn = {1-59593-186-4},
   location = {Seattle, Washington, USA},
   owner = {Juan Figueredo},
@@ -1084,6 +1128,32 @@
   address = {Boston, MA, USA },
   owner = {···Shrein···},
   timestamp = {2006.12.14}
+}
+
+@INCOLLECTION{Gomez04Self,
+  author = {Gomez, Jonatan},
+  title = {Self Adaptation of Operator Rates in Evolutionary Algorithms},
+  booktitle = {Genetic and Evolutionary Computation GECCO '04},
+  publisher = {Springer Berlin / Heidelberg},
+  year = {2004},
+  editor = {Deb, Kalyanmoy},
+  volume = {3102},
+  series = {Lecture Notes in Computer Science},
+  pages = {1162-1173},
+  note = {10.1007/978-3-540-24854-5_113},
+  abstract = {This work introduces a new evolutionary algorithm that adapts the
+	operator probabilities (rates) while evolves the solution of the
+	problem. Each individual encodes its genetic rates. In every generation,
+	each individual is modified by only one operator that is selected
+	according to the encoded rates. Such rates are updated according
+	to the performance achieved by the offspring (compared to its parent)
+	and a random learning rate. The proposed approach is augmented with
+	a simple transposition operator and tested on a number of benchmark
+	functions.},
+  affiliation = {Universidad Nacional de Colombia and The University of Memphis},
+  isbn = {978-3-540-22344-3},
+  keyword = {Computer Science},
+  url = {http://dx.doi.org/10.1007/978-3-540-24854-5_113}
 }
 
 @CONFERENCE{Goswami08Kinematic,
@@ -1152,9 +1222,7 @@
 	CODEN: MECHE
 	
 	doi: 10.1016/S0957-4158(99)00052-5},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Hasegawa00Trajectory.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Hasegawa00Trajectory.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Hasegawa00Trajectory.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Hasegawa00Trajectory.pdf:PDF},
   issn = {09574158 (ISSN)},
   keywords = {Actuators, Algorithms, Genetic algorithms, Mobile robots, Motion planning,
 	Optimization, Biped locomotion robot, Mechatronics},
@@ -1371,8 +1439,7 @@
 	evolutionary approach (2004) Proceedings of 7th International Conference
 	on Climbing and Walking Robots, , CLAWAR2004 (Berlin: Springer),
 	Madrid, Spain, in press.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Hulse2004.pdf:C\:\\Documents
-	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Hulse2004.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Hulse2004.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Hulse2004.pdf:PDF},
   issn = {09540091 (ISSN)},
   keywords = {Evolution of morphology, Modular neuro-dynamics, Nonlinear robot control,
 	Perception-action systems, Structure evolution, Artificial intelligence,
@@ -1440,8 +1507,7 @@
   comment = {Export Date: 14 September 2006
 	
 	Source: Scopus},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Jha2005.pdf:C\:\\Documents
-	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Jha2005.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Jha2005.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Jha2005.pdf:PDF},
   owner = {Vicepresideencia},
   review = {Jha et al. muestran el diseño de un controlador para ascención de
 	escaleras de un robot bípedo modelado en 2D. Emplean dos controladores
@@ -1500,9 +1566,7 @@
 	CODEN: ISIJB
 	
 	doi: 10.1016/S0020-0255(02)00266-9},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Juang02Intelligent.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Juang02Intelligent.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Juang02Intelligent.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Juang02Intelligent.pdf:PDF},
   issn = {00200255 (ISSN)},
   keywords = {Gait synthesis, Intelligent control, Neural networks, Robotic locomotion,
 	Algorithms, Backpropagation, Gait analysis, Motion control, Neural
@@ -1665,9 +1729,7 @@
 	(1985) Journal of Robotic Systems, 3, pp. 289-307; Zheng, Y.F., Shen,
 	J., Gait synthesis for the SD-2 biped robot to climb sloping surface
 	(1990) IEEE Trans. on Robotics and Automation, 6, pp. 86-96.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Juang01Intelligent.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Juang01Intelligent.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Juang01Intelligent.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Juang01Intelligent.pdf:PDF},
   issn = {08839514 (ISSN)},
   keywords = {Backpropagation, Biped locomotion, Computer simulation, Control system
 	synthesis, Intelligent control, Mathematical models, Mobile robots,
@@ -1830,11 +1892,7 @@
   comment = {Export Date: 25 September 2006
 	
 	Source: Scopus},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Dynamic
-	walking and running of a bipedal robot using hybrid central pattern
-	generator method.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Dynamic
-	walking and running of a bipedal robot using hybrid central pattern
-	generator method.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Dynamic walking and running of a bipedal robot using hybrid central pattern generator method.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Dynamic walking and running of a bipedal robot using hybrid central pattern generator method.pdf:PDF},
   issn = {0780390458 (ISBN)},
   keywords = {Bipedal robot, Control, Humanoid, Neural oscillator},
   owner = {Juan Figueredo},
@@ -1891,9 +1949,7 @@
 	by Raibert [1] and others. A recent implementation of static biped
 	walking is the work of Zheng and Shen in which they devised, and
 	experimentally verified, a ...},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Kun97Adaptive.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Kun97Adaptive.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Kun97Adaptive.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Kun97Adaptive.pdf:PDF},
   owner = {Juan Figueredo},
   review = {Kun y Miller tratan de nuevo el problema de la caminata bípeda, pero
 	ahora en equilibrio estático. A diferencia de [Kun96Adaptive], aquí
@@ -1947,9 +2003,7 @@
 	
 	and stop on demand, and to walk with continuous motion on flat surfaces
 	at a rate of up to 100 steps per minute, with up to 6 cm long step.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Kun96Adaptive.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Kun96Adaptive.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Kun96Adaptive.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Kun96Adaptive.pdf:PDF},
   owner = {Juan Figueredo},
   review = {Kun y Miller implementan un control para la caminata bípeda de un
 	robot de 10 grados de libertad (10-DOF), para el cual usan un generador
@@ -1976,6 +2030,37 @@
 	1996.},
   timestamp = {2006.10.08},
   url = {citeseer.ist.psu.edu/kun96adaptive.html}
+}
+
+@ARTICLE{Kuo02Energetics,
+  author = {Arthur D. Kuo},
+  title = {Energetics of Actively Powered Locomotion Using the Simplest Walking
+	Model},
+  journal = {Journal of Biomechanical Engineering},
+  year = {2002},
+  volume = {124},
+  pages = {113-120},
+  number = {1},
+  abstract = {We modified an irreducibly simple model of passive dynamic walking
+	to walk on level ground, and used it to study the energetics of walking
+	and the preferred relationship between speed and step length in humans.
+	Powered walking was explored using an impulse applied at toe-off
+	immediately before heel strike, and a torque applied on the stance
+	leg. Although both methods can supply energy through mechanical work
+	on the center of mass, the toe-off impulse is four times less costly
+	because it decreases the collision loss at heel strike. We also studied
+	the use of a hip torque on the swing leg that tunes its frequency
+	but adds no propulsive energy to gait. This spring-like actuation
+	can further reduce the collision loss at heel strike, improving walking
+	energetics. An idealized model yields a set of simple power laws
+	relating the toe-off impulses and effective spring constant to the
+	speed and step length of the corresponding gait. Simulations incorporating
+	nonlinear equations of motion and more realistic inertial parameters
+	show that these power laws apply to more complex models as well.},
+  doi = {10.1115/1.1427703},
+  keywords = {biomechanics; gait analysis; physiological models; kinematics; muscle},
+  publisher = {ASME},
+  url = {http://link.aip.org/link/?JBY/124/113/1}
 }
 
 @ARTICLE{Kurz05artificial,
@@ -2135,9 +2220,7 @@
 	(1990) Phys Ther, 70, pp. 340-347; Winter, D.A., (1991) The Biomechanics
 	and Motor Control of Human Gait: Normal, Elderly, and Pathological,
 	, University of Waterloo Press, Waterloo.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Kurz05artificial.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Kurz05artificial.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Kurz05artificial.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Kurz05artificial.pdf:PDF},
   issn = {03401200 (ISSN)},
   keywords = {Artificial neural network, Chaos, Connectionism, Gait, Locomotion,
 	Variability, Walking, Bifurcation (mathematics), Biped locomotion,
@@ -2254,9 +2337,7 @@
 	CODEN: ICTAE
 	
 	doi: 10.1049/ip-cta:20030631},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Liu03Hybrid.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Liu03Hybrid.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Liu03Hybrid.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Liu03Hybrid.pdf:PDF},
   issn = {13502379 (ISSN)},
   keywords = {Computer simulation, Constraint theory, Fuzzy sets, Neural networks,
 	Robots, Biped robots, Hybrid controls, Biped locomotion},
@@ -2327,9 +2408,7 @@
 	Source: Scopus
 	
 	CODEN: IJARE},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Magdalena97fuzzy.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Magdalena97fuzzy.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Magdalena97fuzzy.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Magdalena97fuzzy.pdf:PDF},
   issn = {0888613X (ISSN)},
   keywords = {Fuzzy logic control, Genetic algorithms learning, Genetic fuzzy systems,
 	Computer simulation, Control system synthesis, Fuzzy sets, Genetic
@@ -2379,7 +2458,7 @@
 }
 
 @INPROCEEDINGS{McGeer90Passive,
-  author = {McGeer, T. },
+  author = {McGeer, T.},
   title = {Passive walking with knees},
   booktitle = {Robotics and Automation, 1990. Proceedings.},
   year = {1990},
@@ -2411,9 +2490,7 @@
 	a simple compass like model is mentioned with relation to
 	
 	juggling.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\MIYAKOSHI00Stabilization.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\MIYAKOSHI00Stabilization.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\MIYAKOSHI00Stabilization.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\MIYAKOSHI00Stabilization.pdf:PDF},
   owner = {Juan Figueredo},
   review = {Miyakoshi et al. tratan el problema de estabilización en lazo abierto
 	de movimientos periódicos utilizando osciladores neuronales (neural
@@ -2470,9 +2547,7 @@
 	CODEN: MECHE
 	
 	doi: 10.1016/S0957-4158(03)00003-5},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Miyashita03Evolutionary.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Miyashita03Evolutionary.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Miyashita03Evolutionary.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Miyashita03Evolutionary.pdf:PDF},
   issn = {09574158 (ISSN)},
   keywords = {Bipedal locomotion, Central pattern generator (CPG), Evolution, Genetic
 	programming (GP), Neural oscillator, Biped locomotion, Mathematical
@@ -2663,10 +2738,7 @@
 	of Gait and Gait Initiation, , Ishiyaku Publishers. in Japanese;
 	Hodgins, J.K., Biped gait transitions (1991) Proceedings of the IEEE
 	International Conference on Robotics and Automation, pp. 2092-2097.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\A
-	framework for learning biped locomotion with dynamical movement primitives.pdf:C\:\\Documents
-	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\A
-	framework for learning biped locomotion with dynamical movement primitives.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\A framework for learning biped locomotion with dynamical movement primitives.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\A framework for learning biped locomotion with dynamical movement primitives.pdf:PDF},
   issn = {0780388631 (ISBN)},
   keywords = {Biped locomotion, Dynamical movement primitives, Frequency Adaptation,
 	Learning from demonstration, Phase resetting, Algorithms, Computer
@@ -2769,9 +2841,7 @@
 	CODEN: FSSYD
 	
 	doi: 10.1016/S0165-0114(02)00237-3},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Park03Fuzzy-logic.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Park03Fuzzy-logic.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Park03Fuzzy-logic.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Park03Fuzzy-logic.pdf:PDF},
   issn = {01650114 (ISSN)},
   keywords = {Biped robot, Locomotion, Zero-moment-point, Algorithms, Biped locomotion,
 	Computer simulation, Differential equations, Fuzzy sets, Trajectories,
@@ -2854,9 +2924,7 @@
 	of movement. They also lead to new insight into the integration of
 	central movement commands with adaptive reflexes using the dynamics
 	of the body.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Paul04Sensorimotor.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Paul04Sensorimotor.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Paul04Sensorimotor.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Paul04Sensorimotor.pdf:PDF},
   owner = {Juan Figueredo},
   review = {En el este artículo Paul busca continuar el trabajo orientado a la
 	simplificación de controladores para la caminata basados en redes
@@ -2891,9 +2959,7 @@
   abstract = {In this paper, a bilaterally decoupled neural controller was used
 	to achieve stable locomotion in a 6 DOF biped robot with 5 links,
 	implemented in a virtual physics-based simulation environment.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Chandana03Bilateral.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Chandana03Bilateral.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Chandana03Bilateral.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Chandana03Bilateral.pdf:PDF},
   owner = {Juan Figueredo},
   review = {En este trabajo Paul busca mostrar que, a diferencia de los controladores
 	que usan un generador central de patrones (CPG) cuyas conexiones
@@ -2943,9 +3009,7 @@
 	design and controller optimization were reduced to a single process,
 	and more mutually optimized designs resulted. This work points to
 	alternative routes for efficient automated and manual biped optimization.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Paul01road.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Paul01road.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Paul01road.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Paul01road.pdf:PDF},
   owner = {Juan Figueredo},
   review = {En el trabajo de Paul y Bongard se propone novedosamente la evolución
 	acoplada de morfología y control, destacándose la relativa poca profundidad
@@ -3006,11 +3070,7 @@
 	CODEN: ITEVF
 	
 	doi: 10.1109/4235.996015},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Evolution
-	of central pattern generators for bipedal walking in a real-time
-	physics environment.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Evolution
-	of central pattern generators for bipedal walking in a real-time
-	physics environment.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Evolution of central pattern generators for bipedal walking in a real-time physics environment.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Evolution of central pattern generators for bipedal walking in a real-time physics environment.pdf:PDF},
   issn = {1089778X (ISSN)},
   keywords = {Bipedal walking, Evolutionary algorithms, Evolutionary robotics, Physics,
 	Recurrent neural networks, Biped locomotion, Evolutionary algorithms,
@@ -3101,9 +3161,7 @@
 	CODEN: RASOE
 	
 	doi: 10.1016/j.robot.2005.02.001},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Sabourin05Robustness.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Sabourin05Robustness.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Sabourin05Robustness.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Sabourin05Robustness.pdf:PDF},
   issn = {09218890 (ISSN)},
   keywords = {CMAC neural networks, Dynamic walking gait, Robustness, Under-actuated
 	biped robot, Asymptotic stability, Biped locomotion, Learning systems,
@@ -3139,6 +3197,32 @@
 	la utilidad del método para sistemas con mayor complejidad.[Dinámico]
 	[Neuronal]},
   timestamp = {2006.09.28}
+}
+
+@ARTICLE{Safa07Passive,
+  author = {Ali Tehrani Safa and Mohammad Ghaffari Saadat and Mahyar Naraghi},
+  title = {Passive dynamic of the simplest walking model: Replacing ramps with
+	stairs},
+  journal = {Mechanism and Machine Theory},
+  year = {2007},
+  volume = {42},
+  pages = {1314 - 1325},
+  number = {10},
+  doi = {10.1016/j.mechmachtheory.2006.11.001},
+  issn = {0094-114X},
+  keywords = {Passive},
+  url = {http://www.sciencedirect.com/science/article/pii/S0094114X06002084}
+}
+
+@INPROCEEDINGS{Schwab01Basin,
+  author = {Schwab, A L and Wisse, M},
+  title = {Basin of Attraction of the Simplest Walking Model},
+  booktitle = {International Conference on Noise and Vibration},
+  year = {2001},
+  volume = {21363},
+  number = {9},
+  pages = {2186--208},
+  url = {http://audiophile.tam.cornell.edu/~als93/Publications/vib21363.pdf}
 }
 
 @ARTICLE{Stanley02Evolving,
@@ -3180,6 +3264,29 @@
   pages = {137-170},
   owner = {···Shrein···},
   timestamp = {2006.12.16}
+}
+
+@INPROCEEDINGS{Stroesslin03Reinforcement,
+  author = {Thomas Strösslin and Wulfram Gerstner},
+  title = { Reinforcement learning in continuous state and action space},
+  booktitle = { ARTIFICIAL NEURAL NETWORKS - ICANN},
+  year = {2003},
+  abstract = {To solve complex navigation tasks, autonomous agents such as rats
+	or mobile robots often employ spatial representations. These “maps”
+	can be used for localisation and navigation. We propose a model for
+	spatial learning and navigation based on reinforcement learning.
+	The state space is represented by a population of hippocampal place
+	cells whereas a large number of locomotor neurons in nucleus accumbens
+	forms the action space. Using overlapping receptive fields for both
+	populations, state/action mappings rapidly generalise during learning.
+	The population vector allows a continuous interpretation of both
+	state and action spaces. An eligibility trace is used to propagate
+	reward information back in time. It enables the modification of behaviours
+	for recent states. We propose a biologically plausible mechanism
+	for this trace of events where spike timing dependent plasticity
+	triggers the storing of recent state/action pairs. These pairs, however,
+	are forgotten in the absence of a reward-related signal such as dopamine.
+	The model is validated on a simulated robot platform.}
 }
 
 @ARTICLE{Sugihara03Contact,
@@ -3459,9 +3566,7 @@
 	biped’s
 	
 	morphology to achieve fast, efficient, natural walking.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Vaughan03Flight.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Vaughan03Flight.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Vaughan03Flight.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Vaughan03Flight.pdf:PDF},
   owner = {Juan Figueredo},
   review = {Vaughan realiza una revisión general de algunos de los métodos para
 	el control de caminata bípeda. Primero, hace una referencia a los
@@ -3522,9 +3627,7 @@
 	Source: Scopus
 	
 	CODEN: RASOE},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Venkataraman97simple.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Venkataraman97simple.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Venkataraman97simple.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Venkataraman97simple.pdf:PDF},
   issn = {09218890 (ISSN)},
   keywords = {Gait model, Legged robots, Neural pathways, Algorithms, Encoding (symbols),
 	Gait analysis, Mathematical models, Servomechanisms, Central pattern
@@ -3579,6 +3682,51 @@
   timestamp = {2009.01.15}
 }
 
+@ARTICLE{Wisse04Passive,
+  author = {Wisse,M. and Schwab,A. L. and van der Helm,F. C. T.},
+  title = {Passive dynamic walking model with upper body},
+  journal = {Robotica},
+  year = {2004},
+  volume = {22},
+  pages = {681-688},
+  number = {06},
+  abstract = { ABSTRACT This paper presents the simplest walking model with an upper
+	body. The model is a passive dynamic walker, i.e. it walks down a
+	slope without motor input or control. The upper body is confined
+	to the midway angle of the two legs. With this kinematic constraint,
+	the model has only two degrees of freedom. The model achieves surprisingly
+	successful walking results: it can handle disturbances of 8% of the
+	initial conditions and it has a specific resistance of only 0.0725(−).
+	},
+  doi = {10.1017/S0263574704000475},
+  eprint = {http://journals.cambridge.org/article_S0263574704000475},
+  url = {http://dx.doi.org/10.1017/S0263574704000475}
+}
+
+@ARTICLE{Wisse05How,
+  author = {Wisse, M and Schwab, A L and Linde, R Q Van Der and Helm, F C T Van
+	Der},
+  title = {How to keep from falling forward: elementary swing leg action for
+	passive dynamic walkers},
+  journal = {IEEE Transactions on Robotics},
+  year = {2005},
+  volume = {21},
+  pages = {393--401},
+  number = {3},
+  abstract = {Passive dynamic wlaking is an important development for walking robots,
+	supplying natural, energy-efficient motions. In practice, the cyclic
+	gait of passive dynamic prototypes appears to be stable, only for
+	small distrubances. Therefore, in this paper we research the basin
+	og attraction of the cyclic walking motion fo rhte simplest walking
+	model. Furthermore, we present a general method for deriving the
+	equations of motion and impact equations for the anlaysis of multibody
+	systems, as in walking models. Application of the cell mapping method
+	shows the basin of attraction to be a small, thin area. I tis hown
+	that he basin of attraction is not directly realted to the stability
+	of hte cyclic motion.},
+  url = {http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=1435483}
+}
+
 @MISC{Wolff01Evolution,
   author = {Krister Wolff and Peter Nordin},
   title = {Evolution of Efficient Gait with Autonomous Biped Robot Using Visual
@@ -3598,9 +3746,7 @@
   booktitle = {2001 Genetic and Evolutionary Computation Conference Late Breaking
 	Papers},
   editor = {Erik D. Goodman},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Wolff01Evolution.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Wolff01Evolution.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Wolff01Evolution.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Wolff01Evolution.pdf:PDF},
   owner = {Juan Figueredo},
   pages = {482--489},
   review = {Wolff y Nordin presentan la evolución con estrategias evolutivas de
@@ -3640,9 +3786,7 @@
 	from first principles on a simulated robot, transfer the resulting
 	programs to the real robot and continue to evolve on the robot. The
 	Genetic...},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Wolff03Learning.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Wolff03Learning.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Wolff03Learning.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Wolff03Learning.pdf:PDF},
   owner = {Juan Figueredo},
   review = {En este trabajo Wolff y Nordin buscan generar una caminata seudo-dinámica,
 	evolucionando puntos que sean estáticamente estables en la fase de
@@ -3799,8 +3943,7 @@
 	Engineering, 1, pp. 247-259; Wu, Q., Sepehri, N., He, S., On control
 	of a base-excited of inverted pendulum using neural networks (2000)
 	Journal of the Franklin Institute, 337, pp. 267-286.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Wu2002.pdf:C\:\\Documents
-	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Wu2002.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Wu2002.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Wu2002.pdf:PDF},
   issn = {09521976 (ISSN)},
   keywords = {Biped locomotion, Control, Inverse modeling, Inverted pendulums, Neural
 	networks, Stability, Algorithms, Biped locomotion, Closed loop control
@@ -3868,9 +4011,7 @@
   comment = {Export Date: 14 September 2006
 	
 	Source: Scopus},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Wu02Neural-based.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Wu02Neural-based.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Wu02Neural-based.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Wu02Neural-based.pdf:PDF},
   issn = {10641246 (ISSN)},
   keywords = {Lyapunov methods, Neural networks, Pendulums, Torque, Base-excited
 	inverted pendulums, Nonlinear control systems},
@@ -3916,9 +4057,7 @@
 	CODEN: ADROE
 	
 	doi: 10.1163/156855303322395208},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Yamasaki03Control.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Yamasaki03Control.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Yamasaki03Control.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Yamasaki03Control.pdf:PDF},
   issn = {01691864 (ISSN)},
   keywords = {Genetic algorithm, Inverted pendulum model, Low-cost humanoid, Straight
 	knee posture, Actuators, Computer simulation, Control system synthesis,
@@ -4218,9 +4357,7 @@
 	natural gait to paraplegics via functional neuromuscular stimulation:
 	A computer simulation study (1990) IEEE Transactions on Biomedical
 	Engineering, 37 (9), pp. 886-902.},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Yamasaki03Possible.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Yamasaki03Possible.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Yamasaki03Possible.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Yamasaki03Possible.pdf:PDF},
   issn = {03401200 (ISSN)},
   keywords = {Brain, Cybernetics, Neural networks, Neurology, Pendulums, Perturbation
 	techniques, Neural control, Phase resetting curve, Walking, Biomedical
@@ -4265,9 +4402,7 @@
   address = {New York, NY, USA},
   publisher = {ACM Press},
   doi = {http://www.sinab.unal.edu.co:2335/10.1145/1143997.1144291},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\Papers\\ACM\\biped\\p1825-yanase
-	IC.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\Papers\\ACM\\biped\\p1825-yanase
-	IC.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\Papers\\ACM\\biped\\p1825-yanase IC.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\Papers\\ACM\\biped\\p1825-yanase IC.pdf:PDF},
   isbn = {1-59593-186-4},
   location = {Seattle, Washington, USA},
   review = {Yanase e Iba muestran una implementación de un algoritmo evolutivo
@@ -4393,9 +4528,7 @@
 	CODEN: ISIJB
 	
 	doi: 10.1016/S0020-0255(02)00223-2},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Zhou02Robot.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista
-	Final\\Zhou02Robot.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Zhou02Robot.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Lista Final\\Zhou02Robot.pdf:PDF},
   issn = {00200255 (ISSN)},
   keywords = {Biped robot, Genetic algorithms, Learning agents, Neural fuzzy systems,
 	Reinforcement learning, Robot learning, Autonomous agents, Computer
@@ -4464,8 +4597,7 @@
 	Source: Scopus
 	
 	CODEN: FSSYD},
-  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Zhou2003.pdf:C\:\\Documents
-	and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Zhou2003.pdf:PDF},
+  file = {C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Zhou2003.pdf:C\:\\Documents and Settings\\Vicepresideencia\\Escritorio\\jj\\MISC\\SemInves1\\Zhou2003.pdf:PDF},
   issn = {01650114 (ISSN)},
   keywords = {Biped locomotion, Fuzzy control, Neuro-fuzzy systems, Reinforcement
 	learning, Robotics, Biped locomotion, Computer simulation, Expert

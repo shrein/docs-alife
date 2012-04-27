@@ -1,5 +1,5 @@
 %\chapter{Introduction} \label{ch:intro}
-\section{Goals}
+\section{Motivation}
 Dynamical bipedal walking has been a key objective in robotics since
 its origins, due to the human curiosity about artificial
 anthropomorphic beings which gave rise to the robot concept itself
@@ -13,7 +13,7 @@ human daily tasks.
 
 But, in order to accompany humans, the robot must be able to fluidly
 move through all the environments in which the human can, and those
-environments are  devised to adapt well to anthropomorphic beings:
+environments are devised to adapt well to anthropomorphic beings:
 factories, vehicles, houses, sidewalks, and shopping malls, among
 others. This way, a robot made to perform well in arbitrary
 environments will have a great advantage if it is anthropomorphic, so
@@ -21,14 +21,14 @@ that it could serve well as an personal assistant
 \cite{Dario01Humanoids}.
 
 
-The interest on biped robotics is not only for biorobotics
+The interest on biped robotics is not only for bio-robotics
 itself. Another reason to research anthropomorphic motion is the
 understanding of human morphology, mechanics and control, from a
 medical point of view, where robotics could serve as a testing
 scenario to both theories and technologies concerning human motion
 (for an example see \cite{Woo06Biomechanics}) and, probably, provide
 technological aids and substitutes to body parts when an impairment is
-present \cite{Hermini01Proposal}. 
+present \cite{Hermini01Proposal}.
 
 
 Another motivation to the research of biped walking is related to the
@@ -47,21 +47,22 @@ while working in biped walking problems.
 Among the different problems faced in anthropomorphic motion, biped
 walking is one of the most difficult because its intrinsic
 instability. In contradistinction to wheeled mobile robotics and
-stable legged robotics, biped robotics must allow locally instable
+stable legged robotics, biped robotics must allow locally unstable
 motion in order to attain a fluid locomotion. Additionally, there are
 several problems in biped locomotion other than stability. A bipedal
-walker must be in capacity of choose the best path to reach an
-objective, avoid obstacles, tolerate high perturbations, perform well
-in unstructured environments, and move with an optimal energy
+walker must be capable to choose the best path to reach an objective,
+avoid obstacles, tolerate high perturbations, perform well in
+unstructured environments, and move with an optimal energy
 consumption.
 
+\section{Goals}
 
-This way, while already a problem broadly studied, the problem of
-biped walking is still open for several key goals not currently
-attained, such as optimal energy consumption, objective-based planning
-and walking in less structured environments. However, there are
-recent, and not so recent, notable contributions in this field given
-by diverse methods: active control, passive dynamic walking, and
+While already a problem broadly studied, the problem of biped walking
+is still open for several key goals not currently entirely satisfied,
+such as optimal energy consumption, objective-based planning and
+walking in less structured environments. However, there are recent,
+and not so recent, notable contributions in this field obtained by
+diverse methods: active control, passive dynamic walking, and
 computational intelligence; which are giving a stronger basis for
 major advances in the field, fueled by a strong academic and
 commercial motivation.
@@ -69,15 +70,15 @@ commercial motivation.
 Nonetheless, here we study a narrower problem, in which biped robotics
 combines with dynamical neural neurons and evolutionary robotics to
 pursue biped walking control by emergence, i.e. without the explicit
-specification those parameters required in order to achieve the
+specification of those parameters required in order to achieve the
 desired behavior with the control scheme chosen.
 
 In a intuitive way, the problem studied can be broadly described as to
 provide a biped robot with an optimal locomotion. Nonetheless, since
 the optimality referred can be thought as a performance measure, it is
 convenient to be more specific in its definition. Based on the
-preliminaries in previous sections, the relevant goals to be
-accomplished by biped locomotion proposed are:
+preliminaries in previous sections, some possible relevant goals to be
+accomplished by biped locomotion are:
 
 \begin{itemize}
 
@@ -85,10 +86,10 @@ accomplished by biped locomotion proposed are:
   equilibrium while in static state or in quasi-static motion.
 
 \item To walk conserving dynamic stability: The ability to walk, or
-  locomote without leaving the contact to the floor, at velocities
+  locomote without leaving the contact with the floor, at velocities
   high enough to make considerable the inertial forces maintaining
   stability. That means the robot should walk indefinitely without
-  falling if there are no obstacle in its way.
+  falling if there are no obstacles in its way.
 
 \item To locally minimize energy consumption: For a given path
   minimize the energy consumption of the gait pattern.
@@ -102,9 +103,10 @@ accomplished by biped locomotion proposed are:
   not only in terms of path, but also joint coordination.
 
 \item To move across unstructured environments: Perform biped
-  locomotion in environment with variable conditions which are not
-  previously given to the robot, and plan according to perception of
-  those environment variable conditions.
+  locomotion in environments with variable conditions which are not
+  previously given to the robot, and plan according to the perception
+  of those variable conditions.
+
 \item To globally minimize energy consumption: For a given objective
   in an arbitrary environment, select and perform the gait trajectory
   that minimizes energy consumption.
@@ -118,10 +120,10 @@ cases it would be useful to satisfy, at least partially, a previous
 one before the one following it.
 
 The last goal proposed, the global minimization of energy consumption,
-has not been satisfied by any of the works reviewed so far, and the
-goals of motion across unstructured environments and planning of
-trajectories to attain specific objectives have been taken into
-account by few of them . Particularly, in the area of computational
+has not been completely satisfied by any of the works reviewed so far,
+and the goals of motion across unstructured environments and planning
+of trajectories to attain specific objectives have been taken into
+account by few of them. Particularly, in the area of computational
 intelligence it is necessary first to address consistently the problem
 of planning previous to studying the remaining goals.
 
@@ -147,46 +149,93 @@ set of inputs.
 % \section{Research Objectives}
 
 % \subsection{General Research Objective}
-% To perform the motion planning and control of biped locomotion in a computer-simulated environment using a goal-oriented integrated architecture based on computational intelligence.
+% To perform the motion planning and control of biped locomotion in a
+% computer-simulated environment using a goal-oriented integrated
+% architecture based on computational intelligence.
 
 % \subsection{Specific Research Objectives}
 
 % \begin{itemize}
-% \item To develop or configure a computer-simulated environment that allows to perform dynamical experiments of motion tasks with the biped
-% \item To develop or configure a visualization module that allows to evaluate the performance of the simulations made in the simulation environment
-% \item To design and implement algorithmically a goal-based integrated architecture of motion planning and control of biped locomotion and develop the interface with the simulation environment
+% \item To develop or configure a computer-simulated environment that
+%   allows to perform dynamical experiments of motion tasks with the
+%   biped
+% \item To develop or configure a visualization module that allows to
+%   evaluate the performance of the simulations made in the simulation
+%   environment
+% \item To design and implement algorithmically a goal-based
+%   integrated architecture of motion planning and control of biped
+%   locomotion and develop the interface with the simulation
+%   environment
 % \end{itemize}
 
 
 \section{Main Contributions}
-The goal-oriented integrated architecture proposed is the main
-contribution of the thesis proposal, since in the work reviewed there
-are no goal-oriented motion planning strategies applied to biped
-locomotion, and therefore there are no planning and control
-integration proposals. In order to be able to move consistently across
-an unstructured environment and to be useful for any specific task it
-is required that the biped can pursue specific goals. The integration
-of planning and control has two purposes. The first one is to allow a
-uniform and hierarchical implementation across the architecture,
-allowing the same adaptation strategies and analysis tools to be
-applied to both planning and control systems, and performing the
-planning task dynamically in the same time scale in which the control
-system is working. The second one is to be able to change softly from
-one operation mode to another when goals have changed, controlling
-undesired high frequency components of the reference control signal.
+The goal-oriented \sidecomm{control architecture} using neural fields
+proposed here, is the main contribution of this work. It shows that
+neural fields may be used as a useful component to build motion
+controllers, taking into account that they are also biologically
+plausible.
 
+In order to be able to move consistently across an unstructured
+environment and to be useful for any specific task it is required that
+the biped can pursue specific goals. Being able to perform both
+planning and control is important for two reasons. The first one is to
+allow a uniform and hierarchical implementation across the
+architecture, allowing the same adaptation strategies and analysis
+tools to be applied to both planning and control systems, and
+performing the planning task dynamically in the same time scale in
+which the control system is working. The second one is to be able to
+change softly from one operation mode to another when goals have
+changed, controlling undesired high frequency components of the
+reference control signal.
+
+An additional but important contribution, related to the goal of
+minimization of \sidecomm{global energy consumption}\!, is the
+optimization by means of evolutionary algorithms and neural fields of
+the previous work on pseudo-Passive Dynamic Walking controllers (see
+\cite{Wisse05How}) for the Simplest Biped Walking model (as proposed
+in \cite{Garcia98simplest}). With this contribution, we are advancing
+towards what could be the most valuable goal on biped walking control.
 
 The proposed problem will face dynamic biped walking in structured
 environments without perturbations. With the contribution in
 goal-oriented planning and its integration to motion control using a
-computational intelligence approach, it is expected that there will be
-a framework such that the motion across unstructured environments and
-the global energy minimization fall in the field of study in short
-time.  
-
+computational intelligence approach, and furthermore with improvement
+of energy consumption, it is expected that there will be a framework
+such that the motion across unstructured environments and the global
+energy minimization for general environment will fall in the field of
+study in short time.
 
 \section{Contents Overview}
+The contents of this work are organized as follows:
 
+\begin{itemize}
+\item First some preliminaries are presented, including:
+  \begin{itemize}
+  \item The problem of biped walking and some general approaches to
+    solve it;
+  \item An introduction to neural fields.
+  \item An introduction to evolutionary algorithms.
+  \item And finally, a survey of computational intelligence applied to
+    biped robotics.
+  \end{itemize}
+\item Then, a first approach to a neural field control architecture is
+  shown. It is used to solve the stability problem for the inverted
+  pendulum, and compared against a recurrent neural network
+  controller. Also, it is shown a second neural field controller,
+  where adaptation using evolutionary algorithms is applied.
+\item Later, an extended neural field control and planning
+  architecture is developed and applied to the stability problem for
+  the Simplest Biped Walking model. In this chapter we show how the
+  control architecture may be used at a planning level by changing the
+  control policy to be applied, and also how it is able to minimize
+  the global energy consumption. The neural field control architecture
+  is compared to the linear controller proposed by Wisse et al., and
+  to the optimized but not biologically inspired Sliding-mode
+  controller proposed by us.
+\item Finally, some conclusions are drawn and possibilities for future
+  work are presented.
+\end{itemize}
 
 
 
