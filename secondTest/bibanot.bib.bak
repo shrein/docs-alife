@@ -980,6 +980,28 @@
   timestamp = {2006.12.14}
 }
 
+@INPROCEEDINGS{Figueredo09Applying,
+  author = {Figueredo, J. and Gomez, J.},
+  title = {Applying neural fields to the stability problem of an inverted pendulum
+	as a simple biped walking model},
+  booktitle = {Neural Networks, 2009. IJCNN 2009. International Joint Conference
+	on},
+  year = {2009},
+  pages = {820--827},
+  organization = {IEEE}
+}
+
+@INPROCEEDINGS{Figueredo09Evolved,
+  author = {Figueredo, J.J. and G{\'o}mez, J.},
+  title = {Evolved neural fields applied to the stability problem of a simple
+	biped walking model},
+  booktitle = {Proceedings of the 11th Annual conference on Genetic and evolutionary
+	computation},
+  year = {2009},
+  pages = {1775--1776},
+  organization = {ACM}
+}
+
 @BOOK{Fogel99Evolutionary,
   title = {Evolutionary Computation: Towards a New Philosophy of Machine Intelligence},
   publisher = {Wiley-IEEE Press},
@@ -1140,7 +1162,7 @@
   volume = {3102},
   series = {Lecture Notes in Computer Science},
   pages = {1162-1173},
-  note = {10.1007/978-3-540-24854-5_113},
+  note = {10.1007/978-3-540-24854-5-113},
   abstract = {This work introduces a new evolutionary algorithm that adapts the
 	operator probabilities (rates) while evolves the solution of the
 	problem. Each individual encodes its genetic rates. In every generation,
@@ -3267,7 +3289,7 @@
 }
 
 @INPROCEEDINGS{Stroesslin03Reinforcement,
-  author = {Thomas Strösslin and Wulfram Gerstner},
+  author = {Thomas Str\"{o}sslin and Wulfram Gerstner},
   title = { Reinforcement learning in continuous state and action space},
   booktitle = { ARTIFICIAL NEURAL NETWORKS - ICANN},
   year = {2003},

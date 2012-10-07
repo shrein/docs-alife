@@ -433,25 +433,26 @@ by the neural field is the parameter $k_{\phi}$, used as constant for
 the locally linear critically-damped PD controller. An interpretation
 of the neural field controller structure is detailed next.
 
-The input layer a two dimensional neural population, with one
-dimension for $\theta_n^+$ and another for $\dot{\theta_n^+}$, the
-elements in the Poincaré section $v_n^+$ (just after heel-strike), but
-rescaled to be in the set $[0,1] \times [0,1]$. For these populations,
-the function $f$ in the equation $u_1(x,t)=f(v_n^+)$ (shown in the
-previous subsection) performs a vector coding, i.e. an specific value
-of the input variable $v_n^+$ causes an activation $u_1(x)$ with
-amplitude 1 at some position $x$, and an activation of 0 at any other
-position. For implementation purposes, note that this value does not
-need discretization, as the input layer is not explicitly modeled,
-given that it does not add state variables to the bundled
-system-controller differential equation.
+The input layer has a two-dimensional (non-dynamic) neural population,
+with one dimension for $\theta_n^+$ and another for
+$\dot{\theta_n^+}$, the elements in the Poincaré section $v_n^+$ (just
+after heel-strike), but rescaled to be in the set $[0,1] \times
+[0,1]$. For these populations, the function $f$ in the equation
+$u_1(x,t)=f(v_n^+)$ (shown in the previous subsection) performs a
+vector coding, i.e. an specific value of the input variable $v_n^+$
+causes an activation $u_1(x)$ with amplitude 1 at some position $x$,
+and an activation of 0 at any other position. For implementation
+purposes, note that this value does not need discretization, as the
+input layer is not explicitly modeled, given that it does not add
+state variables to the bundled system-controller differential
+equation.
 
-The representation layer has one neural population, where the position
+The representation layer also a neural population, where the position
 $x$ resides in the same two-dimensional space of the input layer
 population. An activation of an element of the input layer population
 (e.g the one corresponding to $v_n^+$) causes an activation bump that
 reaches its maximum at some position in the representation layer, and
-decreases as the row are farther away. This configuration gives the
+decreases as the nodes are farther away. This configuration gives the
 representation population an structure that resembles the Poincaré
 section space. The implementation has 17x17 elements, an equal number
 than that of the mapping found in the section
@@ -519,6 +520,38 @@ the SMNF (with the kernel function parameters used) approaches quite
 closely the behavior in the long term of the OSM controller, but with
 a soft and continuous change in the control parameter $k_{\phi}$.
 
+Figure \ref{fig:chp3-activation-movie} shows a sequence of captures,
+at increasingly longer intervals, of the activation potential of the
+representation layer neural field population. In it can be observed
+that the dynamics over the neural field converge as the system
+approaches the attractor in the Poincaré section.
+
+\begin{figure}[hp]
+  \centering 
+  \subfloat[$t=0$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t00}}
+  \subfloat[$t=1$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t1}}
+  \subfloat[$t=2$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t2}} \\
+  \subfloat[$t=5$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t5}}
+  \subfloat[$t=10$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t10}}
+  \subfloat[$t=15$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t15}} \\
+  \subfloat[$t=20$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t20}} 
+  \subfloat[$t=50$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t50}}
+  \subfloat[$t=100$ (s)]
+  {\includegraphics[width=0.33\textwidth]{cph3-SMNF-activation-t100}}
+  \caption{Activation potentials for the representation layer
+    vs. time, for $t \in {0,1,2,5,10,15,20,50,100}$ (s), for the SMNF
+    controller. Centroid marked with a black asterisk (*).}
+  \label{fig:chp3-activation-movie}
+\end{figure}
+
 \begin{figure}[p]
   \centering \subfloat[$k_{\phi}$ parameter values for the
   controllers.]
@@ -543,9 +576,9 @@ plotted). The SF controller converges faster to its fixed point (as
 would be expected for a greater control action), but even in
 steady-state the control action stays almost unaltered. On the other
 hand, the OSM controller has an slightly higher cumulative control
-action than the SMNF controller, but it provides a monotonic
-decrease in $k_{\phi}$ across time, behaving more properly as an
-Sliding-mode controller.
+action than the SMNF controller, but it provides a monotonic decrease
+in $k_{\phi}$ across time, behaving more properly as an Sliding-mode
+controller.
 
 \begin{figure}[h]
   \centering \subfloat[SF Controller]

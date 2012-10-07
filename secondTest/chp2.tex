@@ -1,10 +1,6 @@
 %\chapter{Neural Fields as Control and Planning Systems} 
 \label{ch:chp2}
 \section{Introduction}
-\emph{The contents of this chapter were published, in two parts, in
-  the Proceedings of the International Joint Conference of Neural
-  Networks (IJCNN) 2009 and the Genetic and Evolutionary Computation
-  Conference (GECCO) 2009.}
 
 Artificial life aims to devise and study those emergent phenomena that
 give complex attributes to the living beings, like self-organization,
@@ -70,7 +66,11 @@ study its applications to control and compare it with the recurrent
 neural network control scheme. We briefly compare its properties with
 traditional control schemes, and then we test it with the
 inverted-pendulum problem. Finally, we show how evolution algorithms
-are applied to the neural field, and discuss the results obtained.
+are applied to the neural field, and discuss the results obtained. The
+contents of this chapter were published, in two parts, in the
+Proceedings of the International Joint Conference of Neural Networks
+(IJCNN) 2009 and the Genetic and Evolutionary Computation Conference
+(GECCO) 2009 (\cite{Figueredo09Applying} and \cite{Figueredo09Evolved}).
 
 % \section{Goal-Based Planning and Control Planning}
 
@@ -712,8 +712,7 @@ solve the problem at hand, the number of parameters to configure (or
 in this case to evolve) is of a quadratic order in relation to the
 number of nodes (or neurons). This was not a particular problem for
 the evolutionary algorithm used, but limits its potential
-scalability. Furthermore, while it is expressive enough, does not show
-a particular suitability to the dynamic stability problem of the
+scalability. Furthermore, while it is expressive enough, it does not hold an internal representation that resembles in a meaningful way the problem of the
 inverted pendulum and there are no reasons to expect something
 different for a more complex biped model.
 
@@ -739,16 +738,16 @@ performance measure desired.
 It is worth noting that the neural field has a spatial representation
 which allows interpretation of field potentials (as shown in
 fig. \ref{fig:processings}). Indeed, its geometrical representation
-allows for a small switch between a state-space like controller to a
-neural field controller. The interpretation or understanding of
+allows for a small effort to go from an state-space like controller to
+a neural field controller. The interpretation or understanding of
 recurrent neural networks tends to be difficult and even more with
 increasing states involved. This makes the neural field controller not
 as black-box as the a recurrent neural network controller. This holds
-even in the case of the evolved neural field controller.
+even for the evolved neural field controller.
 
 More complex control problems could benefit from the strategy of
 parametrization of neural field controllers by evolution here
-developed. This way, it is left for future work the task of
+developed. Therefore, it is left for future work the task of
 integration of multiple goals in different populations and the design
 of an arbitration scheme compatible with the architecture.
 

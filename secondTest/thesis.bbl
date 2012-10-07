@@ -71,13 +71,6 @@ Capi, G., Kaneko, S., Mitobe, K., Barolli, L., and Nasu, Y. (2002).
   genetic algorithms.
 \newblock {\em Rob Autom Syst\/}, {\bf 38}(2), 119--128.
 
-\bibitem[Chaisukkosol and Chongstitvatana(2001)Chaisukkosol and
-  Chongstitvatana]{Chaisukkosol01Automatic}
-Chaisukkosol, C. and Chongstitvatana, P. (2001).
-\newblock Automatic synthesis of robot programs for a biped static walker by
-  evolutionary computation.
-\newblock Second Asian Symposium on Industrial Automation and Robotics.
-
 \bibitem[Chang {\em et~al.}(2002)Chang, Hwang, and Hsie]{Chang02self-tuning}
 Chang, W.-D., Hwang, R.-C., and Hsie, J.-G. (2002).
 \newblock A self-tuning pid control for a class of nonlinear systems based on
@@ -131,6 +124,21 @@ Dyer, M.~G. (1994).
 \newblock Toward synthesizing artificial neural networks that exhibit
   cooperative intelligent behavior: some open issues in artificial life.
 \newblock {\em Artif. Life\/}, {\bf 1}(1-2), 111--134.
+
+\bibitem[Figueredo and Gomez(2009)Figueredo and Gomez]{Figueredo09Applying}
+Figueredo, J. and Gomez, J. (2009).
+\newblock Applying neural fields to the stability problem of an inverted
+  pendulum as a simple biped walking model.
+\newblock In {\em Neural Networks, 2009. IJCNN 2009. International Joint
+  Conference on\/}, pages 820--827. IEEE.
+
+\bibitem[Figueredo and G{\'o}mez(2009)Figueredo and
+  G{\'o}mez]{Figueredo09Evolved}
+Figueredo, J. and G{\'o}mez, J. (2009).
+\newblock Evolved neural fields applied to the stability problem of a simple
+  biped walking model.
+\newblock In {\em Proceedings of the 11th Annual conference on Genetic and
+  evolutionary computation\/}, pages 1775--1776. ACM.
 
 \bibitem[Garcia {\em et~al.}(1998)Garcia, Chatterjee, Ruina, and
   Coleman]{Garcia98simplest}
@@ -358,9 +366,9 @@ Stepanenko, Y. and Vukobratovic, M. (1976).
 \newblock Dynamics of articulated open-chain active mechanisms.
 \newblock {\em Mathematical Biosciences\/}, {\bf 28}, 137--170.
 
-\bibitem[Strösslin and Gerstner(2003)Strösslin and
+\bibitem[Str\"{o}sslin and Gerstner(2003)Str\"{o}sslin and
   Gerstner]{Stroesslin03Reinforcement}
-Strösslin, T. and Gerstner, W. (2003).
+Str\"{o}sslin, T. and Gerstner, W. (2003).
 \newblock Reinforcement learning in continuous state and action space.
 \newblock In {\em ARTIFICIAL NEURAL NETWORKS - ICANN\/}.
 

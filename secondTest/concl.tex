@@ -6,16 +6,18 @@ fields may be used as a useful component to build motion controllers,
 taking into account that they are also biologically plausible.
 
 An additional but important contribution, related to the goal of
-minimization of \sidecomm{global energy consumption}\!, is the
-optimization by means of evolutionary algorithms and neural fields of
-the previous work on pseudo-Passive Dynamic Walking controllers (see
+minimization of global energy consumption, is the optimization by
+means of evolutionary algorithms and neural fields of the previous
+work on pseudo-Passive Dynamic Walking controllers (see
 \cite{Wisse05How}) for the Simplest Biped Walking model (as proposed
-in \cite{Garcia98simplest}). With this contribution, we are advancing
-towards what could be the most valuable goal on biped walking control.
+in \cite{Garcia98simplest}). With this contribution, this work
+advances towards what could be the most valuable goal on biped walking
+control.
 
 \subsection{Neural Field Controller for the Inverted Pendulum}
 In chapter \ref{ch:chp2}, which was published in two parts in the
-Proceedings of IJCNN 2009 and GECCO 2009, we developed a neural field
+Proceedings of IJCNN 2009 and GECCO 2009 (\cite{Figueredo09Applying}
+and \cite{Figueredo09Evolved}), it was developed a neural field
 controller that is able to solve the stability problem for the
 inverted pendulum (cart-and-pole). Both a neural field controller
 manually tuned, and a neural field controller parametrized using
@@ -61,8 +63,9 @@ Walking model. Also it was shown how the control architecture may be
 used at a planning level by changing the control policy to be applied,
 and also how it is able to minimize the global energy consumption. The
 neural field control architecture was compared to the linear
-controller proposed by Wisse et al., and to the optimized but not
-biologically inspired Sliding-mode controller proposed by us.
+controller proposed by Wisse et al. \cite{Wisse05How}, and to the
+optimized but not biologically inspired Sliding-mode controller
+proposed in this work.
 
 Those controllers proposed in chapter \ref{ch:chp3}, while being
 active, approach more closely Passive Dynamic Walking (PDW) than
@@ -71,9 +74,9 @@ the two controllers proposed was implemented using a control
 architecture based on neural fields, which extends and formalizes the
 structure of the controller for the inverted pendulum shown in the
 previous chapter. Also, a parametrization using evolutionary
-algorithms (HAEA by Gomez, see \cite{Gomez04Self}) was performed on the
-mappings between the representation layer and the action layer of the
-neural field controller proposed (also used directly in the other
+algorithms (HAEA by Gomez, see \cite{Gomez04Self}) was performed on
+the mappings between the representation layer and the action layer of
+the neural field controller proposed (also used directly in the other
 controller presented).
 
 It is important to note that the control strategies presented in
@@ -107,10 +110,10 @@ Sliding-mode controller in the following sense:
 Also, it was shown that given the output function the SMNF uses, and
 the dynamic estimation of the system state implemented in the
 representation layer, could cause the loss of stability, as it may lag
-or otherwise underestimate the required $k_{\phi}$. Nonetheless, as
-was also shown, the SMNF approaches quite closely the behavior in the
-long term of the OSM controller, but with a soft and continuous change
-in the control parameter $k_{\phi}$.
+or otherwise underestimate the required $k_{\phi}$. Nonetheless, the
+SMNF approaches quite closely to the behavior in the long term of the
+OSM controller, but with a soft and continuous change in the control
+parameter $k_{\phi}$.
 
 The overall performance of the SMNF controller was better than the SF
 in terms of energy consumption and actuator strain, progressively
