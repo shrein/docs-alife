@@ -1,0 +1,132 @@
+%\section{A}
+
+\begin{abstract}
+  This work explores the application of neural fields, a model in the
+  intersection of computational intelligence and neuroscience, to
+  dynamical control tasks in the domain of biped walking. The neural
+  field model has been shown previously to be capable of addressing
+  goal-based planning problems and to have properties that potentially
+  make it well-fitted for dynamic control tasks, but it has not been
+  significantly applied to them.
+
+  In a first approximation, a controller architecture that uses
+  one-dimensional neural fields is proposed, composed by an input
+  layer which performs the vector coding from the input error
+  variables to the nerual field 1-D space; and a processing layer
+  which has the usual dynamics of a neural field with inputs, from
+  where the output control action is decoded by a centroid
+  method. This controller architecture is evaluated using the stability
+  problem for the cart-and-pole inverted pendulum, as a
+  simplified biped walking model where the cart models the center of
+  pressure and the pole models the center of mass. The neural field
+  controller is compared to a controller architecture based on a
+  recurrent neural neuron (RNN) of dimension four, parametrized by an
+  evolutionary algorithm (EA). A first comparison is performed between
+  the RNN controller and the hand-tuned neural field controller, also
+  evaluating the behavior of the neural field controller if the
+  processing layer is omitted (to give a better insight of the
+  contribution of the processing layer). Then, a second comparison is
+  performed between the hand-tuned neural field controller and the
+  same controller parametrized using an EA, where an strategy for the
+  evolution of the kernel function is proposed. The non-evolved neural
+  field controller performs better than the RNN controller. Also, the
+  evolved neural field controller performs better than the non-evolved
+  one and is able to recover fast from worst-case initial conditions.
+
+  This work continues with the development of a set of approximations
+  to optimal linear state-feedback controllers for the Simplest Biped
+  Walking (SBW) problem, found using an EA, for each discretized
+  sub-region on a delimited state-space region, which can be used
+  directly to get an optimized sliding-mode controller, by sampling
+  the system as it crosses the defined Poincaré Section and changing
+  the relevant parameter in a base linear controller. Then, an
+  extended control and planning architecture using two-dimensional
+  neural fields is developed and applied to the SBW problem. This
+  architecture has an input layer which performs vector coding to 2D,
+  a representation layer which holds an internal representation of the
+  system location in the Poincaré section, and an action layer with a
+  unique node whose activation determines the value of the parameter
+  to be modified on the base linear controller. The set of optimal
+  parameter values previously found is used as weights between the
+  representation layer and the action layer. The Sliding-mode-like
+  neural field controller is compared to the linear controller
+  proposed by Wisse et al., and to the optimized but not biologically
+  inspired Sliding-mode controller proposed in this work. While being
+  an active control strategy, the controllers proposed here for the
+  SBW problem approach more closely Passive Dynamic Walking (PDW) than
+  previous works, by diminishing the cumulative control action.  It is
+  worth noting that these proposed control strategies would also work,
+  mostly unaltered, for any other system were there is a controller
+  for which exists a parameter so that the attraction basin widens as
+  that parameter is increased.
+\end{abstract}
+\begin{otherlanguage}{spanish}
+  \begin{abstract}
+    Este trabajo explora la aplicación de campos neuronales, un modelo
+    en la intersección de inteligencia computacional y neurociencia,
+    a tareas de control dinámico en el domino de caminata bípeda. Se
+    ha mostrado previamente que el modelo de campos neuronales es
+    capaz de abordar el problema de planificación basada en objetivos y
+    que tiene propiedades que potencialmente lo harían propicio para
+    abordar tareas de control dinámico, más aún no se ha aplicado
+    significativamente a tales.
+
+    En una primera aproximación, se propone una arquitectura de
+    control que usa campos neuronales unidimensionales, compuesta por
+    una capa de entrada que ejecuta codificado vectorial desde las
+    variables de error hacia el espacio 1D, y una capa de
+    procesamiento que tiene la dinámica usual de un campo neuronal con
+    entradas, desde donde se decodifica la acción de control usando un
+    método por centroide. Esta arquitectura de control es evaluada en
+    el problema de estabilidad para el péndulo invertido de carro y
+    barra, usado como modelo simplificado de caminata bípeda, donde el
+    carro modela el centro de presión y la barra el centro de masa. El
+    controlador por campos neuronales se compara con una arquitectura
+    de control basada en redes neuronales recurrentes (RNN) de
+    dimensión cuatro, parametrizada por por un algoritmo evolutivo
+    (EA). Se lleva a cabo una comparación entre el controlador por RNN
+    y el controlador por campos neuronales; así como se evalúa el
+    comportamiento del controlador por campos neuronales si se omite
+    la capa de procesamiento (para proveer una intuición mejor su
+    contribución). Posteriormente, se lleva a cabo una comparación
+    entre el controlador por campos neuronales parametrizado
+    manualmente y el mismo controlador parametrizado por EA, donde se
+    propone una estrategia para la evolución de la función de
+    kernel. El controlador por campos neuronales parametrizado por EA
+    se desempeña mejor que el parametrizado manualmente, y es capaz de
+    recuperarse rápidamente de las condiciones iniciales más
+    problemáticas.
+
+    Este trabajo continúa con el desarrollo de un conjunto de
+    aproximaciones a controladores óptimos lineales de
+    retroalimentación de estado, encontrados usando un EA, para cada
+    subregión discretizada de una región delimitada del espacio de
+    estado, los cuales pueden ser utilizados directamente para obtener
+    un controlador optimizado de modo deslizante, muestreando el
+    sistema cuando cruza la sección definida de Poincaré, y cambiando
+    el parámetro relevante en el controlador linear
+    base. Posteriormente, se desarrolla una arquitectura extendida de
+    control y planificación usando campos neurales en dos dimensiones, y
+    se aplica al problema SBW. Tal arquitectura tiene una capa de
+    entrada que ejecuta el codificado vectorial a 2D, una capa de
+    representación de mantiene una representación interna de la
+    ubicación del sistema en la sección de Poincaré, y una capa de
+    acción con un único nodo cuya activación determina el valor del
+    parámetro modificado en el controlador lineal base. Se usa el
+    conjunto de valores óptimos para el parámetro de control
+    encontrados previamente como pesos entre la capas de
+    representación y de acción. El controlador por campos neuronales
+    de tipo modo deslizante se compara con el controlador lineal
+    propuesto por Wisse et al., y al controlador optimizado de modo
+    deslizante no inspirado biológicamente propuesto. Si bien los
+    controladores propuestos para el problema SBW implementan una
+    estrategia activa de control, se aproximan de manera más cercana a
+    la caminata dinámica pasiva (PDW) que trabajos previos,
+    disminuyendo la acción de control acumulada. Es importante
+    resaltar que estas estrategias de control propuestas también
+    pueden funcionar, sin alteraciones importantes, para cualquier
+    otro sistema para el cual exista un controlador con un parámetro
+    tal que, a medida que se aumenta, la cuenca de atracción se
+    amplía.
+  \end{abstract}
+\end{otherlanguage}
