@@ -1,0 +1,53 @@
+%\newpage
+%\setcounter{page}{1}
+\begin{center}
+\thispagestyle{empty} \vspace*{0.5cm} \textbf{\huge
+Termodin\'{a}mica: Gu\'{\i}a de Clase}\\[5.5cm] \Large Departamento de
+Ingenier\'{\i}a Mec\'{a}nica y Mecatr\'{o}nica \\ Facultad de Ingenier\'{\i}a \\
+Universidad Nacional de Colombia\\ Bogot\'{a}, Colombia\\
+Alex\'{a}nder G\'{o}mez\\[9cm]
+Bogot\'{a}, 2007
+\\[1ex]
+
+\end{center}
+
+\newpage
+\thispagestyle{empty} \vspace*{15cm}
+\bt{@{}ll}%
+A. G\'{o}mez\\
+Divisi\'{o}n de Termodin\'{a}mica - Unidad de Ciencias T\'{e}rmicas y Fluidos\\
+Departamento de Ingenier\'{\i}a Mec\'{a}nica y Mecatr\'{o}nica\\
+Facultad de Ingenier\'{\i}a\\
+Universidad Nacional de Colombia - Bogot\'{a}, Colombia.\\\\
+\et
+\\\\%
+Bogot\'{a}, 2007
+\newpage
+\thispagestyle{empty} \textbf{}\normalsize
+\\\\\\%
+
+\textbf{\LARGE Aclaraci\'{o}n}
+\addcontentsline{toc}{chapter}{\numberline{}Aclaraci\'{o}n} Este
+documento contiene una gu\'{\i}a sobre el contenido te\'{o}r\'{\i}co b\'{a}sico que se
+cubre en el curso de Termodin\'{a}mica (c\'{o}digo: 2001762), ofrecido por
+el Departamento de Ingenier\'{\i}a Mec\'{a}nica y Mecatr\'{o}nica de la Facultad
+de Ingenier\'{\i}a de la Universidad Nacional de Colombia. Su objetivo es
+el de permitir una mejor presentaci\'{o}n del contenido de la materia a
+los estudiantes en clase, pero no constituye por s\'{\i} s\'{o}lo el \'{u}nico
+documento de estudio durante el curso. El contenido de esta gu\'{\i}a de
+clase nace de los apuntes de clase; debe complementarse
+obligatoriamente con la consulta y estudio de textos de la materia y
+mediante la soluci\'{o}n de problemas t\'{\i}picos, de acuerdo a la lista
+bibliogr\'{a}fica indicada. El contenido de esta gu\'{\i}a sigue la
+presentaci\'{o}n normal de la mayor\'{\i}a de los textos en la materia. Se
+sigue especialmente la presentaci\'{o}n elaborada en el texto de U.
+Grigull: \emph{Technische Thermodynamik}. A trav\'{e}s de los aportes y
+cr\'{\i}ticas recibidas por parte de los estudiantes, se pretende
+elaborar un texto en Termodin\'{a}mica T\'{e}cnica a partir de la presente
+gu\'{\i}a. Al ser la Termodin\'{a}mica una ciencia b\'{a}sica, los autores no
+reclaman originalidad en ninguno de los conceptos presentados. La
+gu\'{\i}a es para uso exclusivo durante el desarrollo del curso de
+Termodin\'{a}mica (c\'{o}digo: 2001762) del Departamento de Ingenier\'{\i}a
+Mec\'{a}nica de la Universidad Nacional de Colombia. Su distribuci\'{o}n y
+publicaci\'{o}n para fines ajenos a su uso en este curso est\'{a}n
+expresamente prohibidas.

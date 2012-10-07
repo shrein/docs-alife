@@ -1,0 +1,55 @@
+%\newpage
+%\setcounter{page}{1}
+\begin{center}
+\thispagestyle{empty} \vspace*{0.5cm} \textbf{\huge
+Seminario de Investigaci\'{o}n I (2014291-1): Gu\'{\i}a de Clase}\\[5.5cm] \Large Departamento de
+Ingenier\'{\i}a Mec\'{a}nica y Mecatr\'{o}nica \\ Facultad de Ingenier\'{\i}a \\
+Universidad Nacional de Colombia\\ Bogot\'{a}, Colombia\\
+Alex\'{a}nder G\'{o}mez\\[9cm]
+Bogot\'{a}, 2007
+\\[1ex]
+
+\end{center}
+
+\newpage
+\Autor{Fernando J. Rodr\'{\i}guez} \Titulo{An\'{a}lisis y Desarrollo de una
+Mano Artificial} \Title{Analysis and Development of a Artificial
+Hand} \AnoGrado{2007} \MesGrado{Septiembre} \Sede{Bogot\'{a} D. C.}
+\Grado{Magister en Ingenier\'{\i}a} \Programa{Automatizaci\'{o}n Industrial}
+\Facultad{Ingenier\'{\i}a} \Tutor{Andr\'{e}s Tov\'{a}r P., Ph. D.}
+\TituloTutor{Profesor Titular} \JuradoD{XXXx XXXX XXXXXXXXX}
+\JuradoC{yyyyyyyyy Yyyyyyyyy Yyyyy} \JuradoA{CCCCCCCCCCC CCCCCCC
+CCCCCCCCc} \JuradoB{DDDDDDD DDDDDDDDD DDDDDDDDDDD}
+\NumeroDeJurados{3} \Sede{Bogot\'{a} D. C.} \thispagestyle{empty}
+\vspace*{15cm}
+\bt{@{}ll}%
+A. G\'{o}mez\\
+Divisi\'{o}n de Termodin\'{a}mica - Unidad de Ciencias T\'{e}rmicas y Fluidos\\
+Departamento de Ingenier\'{\i}a Mec\'{a}nica y Mecatr\'{o}nica\\
+Facultad de Ingenier\'{\i}a\\
+Universidad Nacional de Colombia - Bogot\'{a}, Colombia.\\\\
+\et
+\\\\%
+Bogot\'{a}, 2007
+\newpage
+\thispagestyle{empty} \textbf{}\normalsize
+\\\\\\%
+
+\textbf{\LARGE Aclaraci\'{o}n}
+\addcontentsline{toc}{chapter}{\numberline{}Aclaraci\'{o}n} Este
+documento contiene una gu\'{\i}a sobre el contenido te\'{o}rico y
+metodol\'{o}gico b\'{a}sicos que se cubren en el Seminario de Investigaci\'{o}n
+I (c\'{o}digo: 2014291-1), ofrecido en la Maestr\'{\i}a en Ingenier\'{\i}a
+Mec\'{a}nica por el Departamento de Ingenier\'{\i}a Mec\'{a}nica y Mecatr\'{o}nica de
+la Facultad de Ingenier\'{\i}a de la Universidad Nacional de Colombia. Su
+objetivo es el de permitir una mejor presentaci\'{o}n del contenido del
+Seminario a los estudiantes en clase, pero no constituye por s\'{\i} s\'{o}lo
+el \'{u}nico documento de estudio durante el curso. El contenido de esta
+gu\'{\i}a de clase nace de los apuntes de clase; debe complementarse
+obligatoriamente con la consulta y estudio de textos especializados,
+de acuerdo a la lista bibliogr\'{a}fica indicada. La gu\'{\i}a es para uso
+exclusivo durante el desarrollo del Seminario de Investigaci\'{o}n I
+(c\'{o}digo: 2014291) del Departamento de Ingenier\'{\i}a Mec\'{a}nica y
+Mecatr\'{o}nica de la Universidad Nacional de Colombia. Su distribuci\'{o}n
+y publicaci\'{o}n para fines ajenos a su uso en este curso est\'{a}n
+expresamente prohibidas.
