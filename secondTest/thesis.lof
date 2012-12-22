@@ -1,0 +1,32 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Static Equilibrium by CoM vertical projection over support polygon.\relax }}{10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Dynamic Equilibrium not attained because of ZMP and floor reaction point not coincident. The robot is falling backwards.\relax }}{11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A taxonomy tree of motion planning and control methods in biped walking\relax }}{14}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Topology of an Amari-Hopfield neural oscillator\relax }}{15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Neural fields for stability control\relax }}{32}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces System dynamics with an untrained RNN controller. The first figure shows the pendulum trace, and the second shows the pendulum at $t=3.5$s.\relax }}{37}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces System dynamics with a trained RNN controller. The first figure shows the pendulum trace and the second the pendulum at $t=3.5$s.\relax }}{37}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces System dynamics with a non-trained Neural Field Controller.\relax }}{38}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Pendulum simulations with neural controllers between $t=0$s and $t=10$. The three controllers shown are: a RNN controller, an input field controller and a processing field controller. In the top, the angular position is plotted ($\theta $). In the middle, the angular velocity is plotted ($\omega $). In the bottom, the linear velocity ($v$) is plotted.\relax }}{39}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces System dynamics with an evolved Neural Field Controller, at time $t=4$. Left: trace of the pendulum (cart in blue and pole tip in red). Right: snapshot of the animation at time $t$.\relax }}{40}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Input layer activation for simulations between $t=0$s and $t=10$s with steps $h=1/40$s and positions between $x_{min}=-10$ and $x_{max}=10$. First: direct (without processing layer) controller. Second: non-evolved controller. Third: evolved controller.\relax }}{42}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Processing layer activation for simulations between $t=0$s and $t=10$s with steps $h=1/40$s and positions between $x_{min}=-10$ and $x_{max}=10$. First: direct (output from input layer) controller, illustrative of field dynamics excluded of the control action. Second: non-evolved controller. Third: evolved controller.\relax }}{43}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pendulum simulation states with several neural field controllers between $t=0$s and $t=10$. Each state is coded with a position (so that the pendulum can be simulated as a field on its own) this way: $x$:0, $\theta $:1, $\mathaccentV {dot}05F{x}$:2, $\mathaccentV {dot}05F{\theta }$:3. It can be seen the little variation in the angular position ($\theta $). The discontinuity in $x$ is present because position wraps in the simulation so that $x=5$ is equivalent to $x=-5$. First: direct (without processing layer) controller. Second: non-evolved controller. Third: evolved controller.\relax }}{44}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Search result for the mapping $k_{\phi }=M(\theta _0,\mathaccentV {dot}05F{\theta _0})$.\relax }}{49}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Neural field controller architecture for Chapter 3.\relax }}{52}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Controller action vs. time, for $t \in [0,100]$ (s), for the three controllers presented in this chapter: Constant $k_{\phi }$ for SF controller, step-wise adaptation of $k_{\phi }$ for OSM controller, and continuous variation of $k_{\phi }$ for SMNF controller.\relax }}{56}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$k_{\phi }$ parameter values for the controllers.}}}{56}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Integral of squared control action ($\DOTSI \intop \ilimits@ {\tau _{\phi }^2\tmspace +\thickmuskip {.2777em}dt}$) for the controllers.}}}{56}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Poincar\'e Section for the reduced-dimensionality system after heel-strike, for $t \in [0,100]$ (s), for each controller evaluated.\relax }}{57}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {SF Controller}}}{57}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {OSM Controller}}}{57}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {SMNF Controller}}}{57}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces System evolution (state variables after heel-strike vs. time) for $t \in [0,10]$ (s), for each controller evaluated.\relax }}{58}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {SF Controller}}}{58}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {OSM Controller}}}{58}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {SMNF Controller}}}{58}
+\addvspace {10\p@ }

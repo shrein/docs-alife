@@ -1,97 +1,106 @@
 %\newpage
 %\setcounter{page}{1}
 \begin{center}
-\begin{figure}
-\centering%
-\epsfig{file=HojaTitulo/EscudoUN.eps,scale=1}%
-\end{figure}
+%\begin{figure}
+%\centering%
+\includegraphics[scale=0.9]{EscudoUN}\\
+%\epsfig{file=HojaTitulo/EscudoUN.eps,scale=1}%
+%\end{figure}
 \thispagestyle{empty} \vspace*{2.0cm} \textbf{\huge
-T\'{\i}tulo de la tesis  o trabajo de investigaci\'{o}n}\\[6.0cm]
-\Large\textbf{Nombres y apellidos completos del autor}\\[6.0cm]
+Goal-Based Control and
+  Planning in Biped Locomotion Using Computational Intelligence
+  Methods}\\[5.0cm]
+\Large\textbf{Juan José Figueredo Uribe}\\[6.0cm]
 \small Universidad Nacional de Colombia\\
-Facultad, Departamento (Escuela, etc.)\\
-Ciudad, Colombia\\
-A\~{n}o\\
+Facultad de Ingeniería, Departamento de Ingeniería de Sistemas e Industrial\\
+Bogotá D.C., Colombia\\
+2012\\
 \end{center}
 
 \newpage{\pagestyle{empty}\cleardoublepage}
 
 \newpage
 \begin{center}
-\thispagestyle{empty} \vspace*{0cm} \textbf{\huge
-T\'{\i}tulo de la tesis  o trabajo de investigaci\'{o}n}\\[3.0cm]
-\Large\textbf{Nombres y apellidos completos del autor}\\[3.0cm]
-\small Tesis o trabajo de grado presentada(o) como requisito parcial para optar al
-t\'{\i}tulo de:\\
-\textbf{Indicar el t\'{\i}tulo que se obtendr\'{a}. Por ejemplo, Magister en Ingenier\'{\i}a Qu\'{\i}mica}\\[2.5cm]
-Director(a):\\
-T\'{\i}tulo (Ph.D., Doctor, Qu\'{\i}mico, etc.) y nombre del director(a)\\[2.0cm]
-L\'{\i}nea de Investigaci\'{o}n:\\
-Nombrar la l\'{\i}nea de investigaci\'{o}n en la que enmarca la tesis  o trabajo de investigaci\'{o}n\\
-Grupo de Investigaci\'{o}n:\\
-Nombrar el grupo en caso que sea posible\\[2.5cm]
-Universidad Nacional de Colombia\\
-Facultad, Departamento (Escuela, etc.)\\
-Ciudad, Colombia\\
-A\~{n}o\\
+  \thispagestyle{empty} \vspace*{0cm} \textbf{\huge Goal-Based Control
+    and Planning in Biped Locomotion Using Computational Intelligence
+    Methods}\\[2.5cm]
+  \Large\textbf{Juan José Figueredo Uribe}\\[2.0cm]
+  \small Thesis submitted as partial fulfillment of the requirements for the degree of:\\
+  \textbf{Magister en Ingeniería de Sistemas y Computación}\\[2.0cm]
+  Tutor:\\
+  Jonatan Gómez Perdomo, PhD\\[2.0cm]
+  Research Area:\\
+  Computational Intelligence\\
+  Research Group:\\
+  Grupo de Investigación en Vida Artificial - Alife\\[2.5cm]
+  Universidad Nacional de Colombia\\
+  Facultad de Ingeniería, Departamento de Ingeniería de Sistemas e Industrial\\
+  Bogotá D.C., Colombia\\
+  2012\\
 \end{center}
 
 \newpage{\pagestyle{empty}\cleardoublepage}
 
-\newpage
-\thispagestyle{empty} \textbf{}\normalsize
-\\\\\\%
-\textbf{(Dedicatoria o un lema)}\\[4.0cm]
-
-\begin{flushright}
-\begin{minipage}{8cm}
-    \noindent
-        \small
-        Su uso es opcional y cada autor podr\'{a} determinar la distribuci\'{o}n del texto en la p\'{a}gina, se sugiere esta presentaci\'{o}n. En ella el autor dedica su trabajo en forma especial a personas y/o entidades.\\[1.0cm]\\
-        Por ejemplo:\\[1.0cm]
-        A mis padres\\[1.0cm]\\
-        o\\[1.0cm]
-        La preocupaci\'{o}n por el hombre y su destino siempre debe ser el
-        inter\'{e}s primordial de todo esfuerzo t\'{e}cnico. Nunca olvides esto
-        entre tus diagramas y ecuaciones.\\\\
-        Albert Einstein\\
-\end{minipage}
-\end{flushright}
-
-\newpage{\pagestyle{empty}\cleardoublepage}
-
-\newpage
-\thispagestyle{empty} \textbf{}\normalsize
-\\\\\\%
-\textbf{\LARGE Agradecimientos}
-\addcontentsline{toc}{chapter}{\numberline{}Agradecimientos}\\\\
-Esta secci\'{o}n es opcional, en ella el autor agradece a las personas o instituciones que colaboraron en la realizaci\'{o}n de la tesis  o trabajo de investigaci\'{o}n. Si se incluye esta secci\'{o}n, deben aparecer los nombres completos, los cargos y su aporte al documento.\\
-
-\newpage{\pagestyle{empty}\cleardoublepage}
-
-\newpage
-\textbf{\LARGE Resumen}
+\newpage \textbf{\LARGE Resumen}
 \addcontentsline{toc}{chapter}{\numberline{}Resumen}\\\\
-El resumen es una presentaci\'{o}n abreviada y precisa (la NTC 1486 de 2008 recomienda revisar la norma ISO 214 de 1976). Se debe usar una extensi\'{o}n m\'{a}xima de 12 renglones. Se recomienda que este resumen sea anal\'{\i}tico, es decir, que sea completo, con informaci\'{o}n cuantitativa y cualitativa, generalmente incluyendo los siguientes aspectos: objetivos, dise\~{n}o, lugar y circunstancias, pacientes (u objetivo del estudio), intervenci\'{o}n, mediciones y principales resultados, y conclusiones. Al final del resumen se deben usar palabras claves tomadas del texto (m\'{\i}nimo 3 y m\'{a}ximo 7 palabras), las cuales permiten la recuperaci\'{o}n de la informaci\'{o}n.\\
+Este trabajo explora la aplicación de campos neuronales, a tareas de
+control dinámico en el domino de caminata bípeda.  
 
-\textbf{\small Palabras clave: (m\'{a}ximo 10 palabras, preferiblemente seleccionadas de las listas internacionales que permitan el indizado cruzado)}.\\
+En una primera aproximación, se propone una arquitectura de control
+que usa campos neuronales en 1D. Esta arquitectura de control es
+evaluada en el problema de estabilidad para el péndulo invertido de
+carro y barra, usado como modelo simplificado de caminata bípeda. El
+controlador por campos neuronales, parametrizado tanto manualmente
+como usando un algoritmo evolutivo (EA), se compara con una
+arquitectura de control basada en redes neuronales recurrentes (RNN),
+también parametrizada por por un EA. El controlador por campos
+neuronales parametrizado por EA se desempeña mejor que el
+parametrizado manualmente, y es capaz de recuperarse rápidamente de
+las condiciones iniciales más problemáticas.
 
-A continuaci\'{o}n se presentan algunos ejemplos de tesauros que se pueden consultar para asignar las palabras clave, seg\'{u}n el \'{a}rea tem\'{a}tica:\\
+Luego, se desarrolla una arquitectura extendida de control y
+planificación usando campos neurales en 2D, y se aplica al problema
+caminata bipeda simple (SBW). Para ello se usa un conjunto de valores
+óptimos para el parámetro de control, encontrado previamente usando
+algoritmos evolutivos. El controlador óptimo por campos neuronales
+obtenido se compara con el controlador lineal propuesto por Wisse et
+al., y a un controlador óptimo tabular que usa los mismos parámetros
+óptimos. Si bien los controladores propuestos para el problema SBW
+implementan una estrategia activa de control, se aproximan de manera
+más cercana a la caminata dinámica pasiva (PDW) que trabajos previos,
+disminuyendo la acción de control acumulada.
+\\
 
-\textbf{Artes}: AAT: Art y Architecture Thesaurus.
+\textbf{campos neuronales, neurocontrol, robótica evolutiva,
+  vida artifical, control óptimo, caminata bípeda, péndulo invertido, caminata bípeda pasiva}.\\
 
-\textbf{Ciencias agropecuarias}: 1) Agrovoc: Multilingual Agricultural Thesaurus - F.A.O. y 2)GEMET: General Multilingual Environmental Thesaurus.
-
-\textbf{Ciencias sociales y humanas}: 1) Tesauro de la UNESCO y 2) Population Multilingual Thesaurus.
-
-\textbf{Ciencia y tecnolog\'{\i}a}: 1) Astronomy Thesaurus Index. 2) Life Sciences Thesaurus, 3) Subject Vocabulary, Chemical Abstracts Service y 4) InterWATER: Tesauro de IRC - Centro Internacional de Agua Potable y Saneamiento.
-
-\textbf{Tecnolog\'{\i}as y ciencias m\'{e}dicas}: 1) MeSH: Medical Subject Headings (National Library of Medicine's USA) y 2) DECS: Descriptores en ciencias de la Salud (Biblioteca Regional de Medicina BIREME-OPS).
-
-\textbf{Multidisciplinarias}: 1) LEMB - Listas de Encabezamientos de Materia y 2) LCSH- Library of Congress Subject Headings.\\
-
-Tambi\'{e}n se pueden encontrar listas de temas y palabras claves, consultando las distintas bases de datos disponibles a trav\'{e}s del Portal del Sistema Nacional de Bibliotecas\footnote{ver: www.sinab.unal.edu.co}, en la secci\'{o}n "Recursos bibliogr\'{a}ficos" opci\'{o}n "Bases de datos".\\
-
+\newpage
 \textbf{\LARGE Abstract}\\\\
-Es el mismo resumen pero traducido al ingl\'{e}s. Se debe usar una extensi\'{o}n m\'{a}xima de 12 renglones. Al final del Abstract se deben traducir las anteriores palabras claves tomadas del texto (m\'{\i}nimo 3 y m\'{a}ximo 7 palabras), llamadas keywords. Es posible incluir el resumen en otro idioma diferente al espa\~{n}ol o al ingl\'{e}s, si se considera como importante dentro del tema tratado en la investigaci\'{o}n, por ejemplo: un trabajo dedicado a problemas ling\"{u}\'{\i}sticos del mandar\'{\i}n seguramente estar\'{\i}a mejor con un resumen en mandar\'{\i}n.\\[2.0cm]
-\textbf{\small Keywords: palabras clave en ingl\'{e}s(m\'{a}ximo 10 palabras, preferiblemente seleccionadas de las listas internacionales que permitan el indizado cruzado)}\\
+This work explores the application of neural fields to dynamical
+control tasks in the domain of biped walking.
+
+In a first approximation, a controller architecture that uses 1D
+neural fields is proposed. This controller architecture is evaluated
+using the stability problem for the cart-and-pole inverted pendulum,
+as a simplified biped walking model.  The neural field controller is
+compared, parameterized both manually and using an evolutionary
+algorithm (EA), to a controller architecture based on a recurrent
+neural neuron (RNN), also parametrized by an EA. The non-evolved
+neural field controller performs better than the RNN controller. Also,
+the evolved neural field controller performs better than the
+non-evolved one and is able to recover fast from worst-case initial
+conditions.
+
+Then, an extended control and planning architecture using 2D neural
+fields is developed and applied to the SBW problem. A set of optimal
+parameter values, previously found using an EA, is used as parameters
+for neural field controller. The optimal neural field controller is
+compared to the linear controller proposed by Wisse et al., and to a
+table-lookup controller using the same optimal parameters. While being
+an active control strategy, the controllers proposed here for the SBW
+problem approach more closely Passive Dynamic Walking (PDW) than
+previous works, by diminishing the cumulative control action.
+\\[2.0cm]
+
+\textbf{neural fields, neurocontrol, evolutionary robotics,
+  artificial life, optimal control, biped walking, inverted pendulum, passive dynamic walking}\\

@@ -1,0 +1,161 @@
+\chapter{Conclusions} \label{ch:concl}
+\section{Main Contributions}
+The goal-oriented control architecture using neural fields proposed
+here, is the main contribution of this work. It shows that neural
+fields may be used as a useful component to build motion controllers,
+taking into account that they are also biologically plausible.
+
+An additional but important contribution, related to the goal of
+minimization of global energy consumption, is the optimization by
+means of evolutionary algorithms and neural fields of the previous
+work on pseudo-Passive Dynamic Walking controllers (see
+\cite{Wisse05How}) for the Simplest Biped Walking model (as proposed
+in \cite{Garcia98simplest}). With this contribution, this work
+advances towards what could be the most valuable goal on biped walking
+control.
+
+\subsection{Neural Field Controller for the Inverted Pendulum}
+In chapter \ref{ch:chp2}, which was published in two parts in the
+Proceedings of IJCNN 2009 and GECCO 2009 (\cite{Figueredo09Applying}
+and \cite{Figueredo09Evolved}), it was developed a neural field
+controller that is able to solve the stability problem for the
+inverted pendulum (cart-and-pole). Both a neural field controller
+manually tuned, and a neural field controller parametrized using
+evolutionary algorithms were presented. Also, two additional
+controllers were presented for comparison: a controller using evolved
+recurrent neural networks, and the non-evolved neural field controller
+omitting the processing layer for output.
+
+It could be seen that, while the recurrent neural network controller
+is expressive enough to solve the problem at hand, the number of
+parameters to configure is of a quadratic order in relation to the
+number of neurons.
+
+On the other hand, the neural field controller was found to be more
+complex and its simulation more costly, but had some notable
+advantages: The stability of its natural dynamics, and its suitability
+to the problem at hand, being able to solve it with a acceptable
+degree of performance for low and mid perturbations, even without
+evolution.
+
+The evolved controller performed better than the other two, is more
+general because eliminates the need for manual conscious
+parametrization and allows the designer to specify more precisely the
+performance measure desired. Also it allows interpretation of field
+potentials. and its geometrical representation allows for a small
+switch between a state-space like controller to a neural field
+controller. The interpretation or understanding of recurrent neural
+networks tends to be difficult and even more with increasing states
+involved. This makes the neural field controller not as black-box as
+the a recurrent neural network controller.
+
+\subsection{Neural Field Controller for SBW}
+
+While the cart-and-pole biped walking model is useful as a first
+approach to the problem of locomotion, in order to develop a more
+realistic controller of biped walking, a model closer to human biped
+walking was explored in chapter \ref{ch:chp3}, and also some new
+controllers were presented.
+
+An extended neural field control and planning architecture was
+developed and applied to the stability problem for the Simplest Biped
+Walking model. Also it was shown how the control architecture may be
+used at a planning level by changing the control policy to be applied,
+and also how it is able to minimize the global energy consumption. The
+neural field control architecture was compared to the linear
+controller proposed by Wisse et al. \cite{Wisse05How}, and to the
+optimized but not biologically inspired Sliding-mode controller
+proposed in this work.
+
+Those controllers proposed in chapter \ref{ch:chp3}, while being
+active, approach more closely Passive Dynamic Walking (PDW) than
+previous works, by diminishing the cumulative control action. One of
+the two controllers proposed was implemented using a control
+architecture based on neural fields, which extends and formalizes the
+structure of the controller for the inverted pendulum shown in the
+previous chapter. Also, a parametrization using evolutionary
+algorithms (HAEA by Gomez, see \cite{Gomez04Self}) was performed on
+the mappings between the representation layer and the action layer of
+the neural field controller proposed (also used directly in the other
+controller presented).
+
+It is important to note that the control strategies presented in
+chapter \ref{ch:chp3}, would also work, mostly unaltered, for any
+other system were there is a controller for which exists a parameter
+so that the attraction basin widens as that parameter is increased.
+
+While the State feedback (SF) controller of Wisse et al. keeps
+constant the $k_{\phi}=100$ value in order to attain stability, both
+the optimized Sliding-mode controller (OSM) and Sliding-mode-like
+neural field (SMNF) controller proposed were shown to recalculate the
+$k_{\phi}$ (at least) on each step using the current Poincaré section
+and the embedded mapping $k_{\phi}=M(v_n^+)$, directly for the OSM,
+and indirectly for the SMNF.
+
+It was shown that the output values of the OSM take the form of a
+Sliding-mode controller in the following sense:
+\begin{itemize}
+\item A subset of Poincaré section at heel-strike defines the section
+  of state-space where the system ``slides'' along.
+\item At each heel-strike the parameter $k_{\phi}$ is re-evaluated,
+  effectively changing the structure of the controller in a
+  discontinuous fashion.
+\item The matrix of control values $M(v_n^+)$ is built so that the
+  system always stays in the subset of the Poincaré section, and
+  furthermore, approaches the sliding surface in finite time.
+\item Once reaches the sliding surface (fixed point in the Poincaré
+  section), the system stays there.
+\end{itemize}
+
+Also, it was shown that given the output function the SMNF uses, and
+the dynamic estimation of the system state implemented in the
+representation layer, could cause the loss of stability, as it may lag
+or otherwise underestimate the required $k_{\phi}$. Nonetheless, the
+SMNF approaches quite closely to the behavior in the long term of the
+OSM controller, but with a soft and continuous change in the control
+parameter $k_{\phi}$.
+
+The overall performance of the SMNF controller was better than the SF
+in terms of energy consumption and actuator strain, progressively
+diminishing its $k_{\phi}$ value and thus the cumulative control
+action. The SF controller converges faster to its fixed point, but
+even in steady-state the control action stays almost unaltered. On the
+other hand, the OSM controller has an slightly higher cumulative
+control action than the SMNF controller, but it provides a monotonic
+decrease in $k_{\phi}$ across time, behaving more properly as an
+Sliding-mode controller.
+
+The Poincaré Sections of the biped using both the SMNF controller and
+the OSM controller did show how the system moves from a configuration
+that requires higher $k_{\phi}$ values to configurations that require
+lower ones, and that fact is exploited by the controllers.
+
+The time simulation did show how the SMNF changes the control policy
+(as parametrized by $k_{\phi}$) softly enough to provide a
+qualitatively natural gait for the biped. It should be noted that
+sudden changes of behavior are common in Sliding-mode controllers, but
+that is mitigated in this case by three facts: 1) The neural field
+applies an interpolation using the centroid of activation to calculate
+the output $k_{\phi}$. 2) The neural field has natural dynamics
+qualitatively equal to a low-band filter. 3) The change in the
+$k_{\phi}$ occur at a non-linear point in the biped dynamics that
+anyway would cause a jump in its state.
+
+\section{Future Work}
+More complex control problems could benefit from the strategy of
+parametrization of neural field controllers by evolution here
+developed. This way, it is left for future work the task of
+integration of multiple goals in different populations and the design
+of an arbitration scheme compatible with the architecture.
+
+Also, the neural field controller presented in chapter \ref{ch:chp3}
+may be extended using reinforcement learning, specially a form of
+Q-learning, to efficiently identify the optimal action-values (mapping
+between reinforcement and action layers). It could be done using
+biologically plausible techniques, as shown by Strösslin et al. in
+\cite{Stroesslin03Reinforcement}.
+
+Finally, further application of the extended neural field controller
+architecture, used at a policy modification level, could be explored
+to further asses its performance in a wider variety of problems.
+
